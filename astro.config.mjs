@@ -27,7 +27,7 @@ export default defineConfig({
     functionPerRoute: false,
     edgeMiddleware: false,
     includeFiles: [],
-    runtime: 'nodejs20.x',
+    imageService: true,
   }),
   vite: {
     ssr: {
