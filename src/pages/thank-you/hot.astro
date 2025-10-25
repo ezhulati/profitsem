@@ -37,15 +37,15 @@ import { Button } from '../../components/ui/Button';
             Pick a time that works for you:
           </p>
 
-          {/* TODO: Integrate Cal.com embed */}
-          <div class="bg-white rounded-lg p-8 min-h-[400px] flex items-center justify-center">
-            <div class="text-gray-600 text-center">
-              <svg class="w-16 h-16 mx-auto mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p class="font-semibold mb-2">Calendar Booking</p>
-              <p class="text-sm">Cal.com integration will be embedded here</p>
-            </div>
+          {/* Google Calendar Appointment Scheduling */}
+          <div class="bg-white rounded-lg overflow-hidden">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22TZn1GblrfkptTo90nvQGoIoG9NUl6lJMGihnSt9VS_RjlrbtS1YNLFlvFwwp3hdyoOw6clyC?gv=true"
+              style="border: 0"
+              width="100%"
+              height="600"
+              frameborder="0"
+            ></iframe>
           </div>
         </div>
 
