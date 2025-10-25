@@ -7,36 +7,36 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: 'How is ProfitSEM different from other Google Ads agencies?',
-      answer: 'We focus on profit, not clicks. Flat-rate pricing means we succeed when you profit, not when you spend more.',
+      question: 'Why does it take 90 days to see results?',
+      answer: 'Google\'s AI needs time to learn what a customer looks like for your business. Week 1-2, we connect your CRM so Google learns from actual sales (not just clicks). Week 3-6, Google identifies patterns in who buys. Week 7-9, smart bidding activates and costs stabilize. Week 10-12, you can scale confidently because the math is predictable. You can\'t train AI faster without sacrificing accuracy—it\'s like trying to learn a language in a week.',
     },
     {
-      question: 'Do you offer any guarantees?',
-      answer: 'No. Too many factors are outside our control. What we promise: proven tactics, transparent reporting, and constant optimization. Not satisfied? Cancel anytime.',
+      question: 'What is "AI training" and why does it matter?',
+      answer: 'Google Ads is a machine learning system. It needs quality data (real customer sales from your CRM), consolidated campaign structure (not hundreds of fragmented keywords), and time to identify patterns. Most accounts feed Google garbage data and change things daily, which resets the learning. We feed it quality data and let it learn without interference. The result is predictable customer acquisition costs you can scale.',
     },
     {
-      question: 'Do you require long-term contracts?',
-      answer: 'No. Month-to-month. Cancel anytime.',
+      question: 'What happens during the first 90 days?',
+      answer: 'Week 1-2: We integrate your CRM and fix tracking (foundation). Week 3-6: Google\'s AI learns customer patterns (results fluctuate—this is normal). Week 7-9: Smart bidding activates, costs become predictable. Week 10-12: Confident scaling based on proven math. Month 4+: Predictable growth engine. Each phase builds on the previous. Skip steps = poor results.',
+    },
+    {
+      question: 'Do you guarantee results?',
+      answer: 'Yes. If we don\'t improve your ROI within 90 days, you get a full refund of our management fees. We can make this guarantee because the AI training process works when done properly. The 90-day timeline isn\'t arbitrary—it\'s how long Google\'s AI actually needs to learn.',
+    },
+    {
+      question: 'How do you charge?',
+      answer: 'Flat monthly rate based on your ad spend tier, not a percentage. We don\'t make more money when you spend more—we make money when you get results. See our pricing page for specific tiers. No setup fees. Cancel anytime after 90 days.',
+    },
+    {
+      question: 'What makes your approach different?',
+      answer: 'We treat Google Ads like what it is: an AI system that needs training. That means CRM integration (so Google learns from real customers), consolidated campaigns (concentrated data beats fragmented data), and strategic patience (letting AI learn without constant interference). It\'s not flashy, but the math works.',
     },
     {
       question: 'What industries do you work with?',
-      answer: 'E-commerce, SaaS, B2B services, and home services. Different industry? Contact us—we\'ll tell you if we can help.',
+      answer: 'Any business where you can track a customer from ad click to sale. E-commerce, SaaS, B2B services, professional services, home services. If you have a CRM or can track actual customers (not just leads), we can train Google\'s AI for you.',
     },
     {
-      question: 'How much should I budget for Google Ads?',
-      answer: 'Depends on your industry and goals. We\'ll tell you what makes sense after reviewing your account. Start with the free audit.',
-    },
-    {
-      question: 'How do you charge for your services?',
-      answer: 'Custom pricing based on your needs. NOT a percentage of ad spend. We evaluate your account size, industry, and goals, then give you a transparent monthly rate.',
-    },
-    {
-      question: 'How quickly will I see results?',
-      answer: 'Most clients see improvements within 30-45 days. Results vary by industry and competition.',
-    },
-    {
-      question: 'Do you offer PPC audits?',
-      answer: 'Yes. Free. We analyze your account, identify profit leaks and wasted spend, then give you a custom plan.',
+      question: 'Can I see faster results?',
+      answer: 'Not without compromising quality. You can launch ads in a day, but training Google\'s AI to find customers efficiently takes 90 days. We\'ve tried every shortcut—they all lead to wasted money. The good news: once trained, the system keeps improving and costs stay predictable. The 90 days is an investment that pays off long-term.',
     },
   ];
 
@@ -45,10 +45,10 @@ export function FAQSection() {
       <Container size="lg">
         <div className="text-center mb-16">
           <Heading as="h2" size="5xl" className="mb-4">
-            "Yeah, But What About..."
+            Common Questions About the Process
           </Heading>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get answers. No sales call.
+            Understanding the 90-day AI training timeline and what to expect
           </p>
         </div>
 

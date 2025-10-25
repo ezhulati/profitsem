@@ -10,82 +10,57 @@ import { CTASection } from '../../components/sections/CTASection';
 
 const services = [
   {
-    slug: 'google-ads-management',
+    slug: 'google-ads',
     icon: 'target' as const,
-    title: 'Google Ads Management',
-    description: 'Full-service campaign management focused on profit, not vanity metrics',
+    title: 'Complete AI Training Program',
+    description: 'Full 90-day process: CRM integration, consolidated campaigns, smart bidding, and strategic patience',
     features: [
-      'Search, Display, Shopping & Video campaigns',
-      'Profit-focused optimization (not just clicks)',
-      'Advanced bid strategies & automation',
-      'Weekly performance reviews',
+      'CRM integration (Google learns from real customers)',
+      'Consolidated campaign structure (concentrated data)',
+      'Smart bidding implementation (AI-driven pricing)',
+      'Strategic guidance (not daily micro-management)',
+      'All campaign types: Search, Display, Shopping, Performance Max',
     ],
-    results: '247% Avg ROI',
+    results: 'Predictable CAC in 90 days',
   },
   {
-    slug: 'ppc-audit',
+    slug: 'audit',
     icon: 'chart' as const,
-    title: 'PPC Audit & Strategy',
-    description: 'Comprehensive account analysis identifying profit leaks',
+    title: 'AI Readiness Assessment',
+    description: 'Evaluate your account\'s current state and identify what needs fixing before AI training',
     features: [
-      'Complete account audit (50+ checkpoints)',
-      'Profit leak identification',
-      'Custom 90-day roadmap',
-      'Competitor analysis',
+      'Tracking quality audit (is Google learning from real sales?)',
+      'Campaign structure analysis (fragmented vs consolidated)',
+      'Budget waste identification',
+      'Custom 90-day AI training roadmap',
     ],
-    results: '$497 One-time',
-  },
-  {
-    slug: 'landing-page-optimization',
-    icon: 'zap' as const,
-    title: 'Landing Page Optimization',
-    description: 'High-converting pages designed to turn clicks into customers',
-    features: [
-      'Conversion-focused design',
-      'A/B testing framework',
-      'Mobile optimization',
-      'Speed & performance tuning',
-    ],
-    results: '68% CPA Reduction',
+    results: 'Free Assessment',
   },
   {
     slug: 'conversion-tracking',
     icon: 'trending-up' as const,
-    title: 'Conversion Tracking Setup',
-    description: 'Bulletproof tracking so you know where every dollar goes',
+    title: 'CRM Integration & Tracking',
+    description: 'Connect your CRM so Google learns from actual customers, not just clicks or form fills',
     features: [
-      'GA4 & Google Ads integration',
-      'Multi-channel attribution',
-      'Enhanced conversions setup',
-      'Custom event tracking',
+      'CRM → Google Ads integration',
+      'Enhanced conversion tracking',
+      'Offline conversion import setup',
+      'Customer match audience building',
     ],
-    results: '100% Accuracy',
+    results: 'Foundation of AI Training',
   },
   {
-    slug: 'shopping-ads',
-    icon: 'dollar' as const,
-    title: 'Google Shopping Ads',
-    description: 'E-commerce campaigns that drive profitable sales',
+    slug: 'landing-pages',
+    icon: 'zap' as const,
+    title: 'Landing Page Optimization',
+    description: 'Better conversion rates mean better data for Google\'s AI to learn from',
     features: [
-      'Product feed optimization',
-      'Smart Shopping campaigns',
-      'Performance Max for e-commerce',
-      'Shopping ads best practices',
+      'Conversion-focused page design',
+      'A/B testing framework',
+      'Mobile & speed optimization',
+      'Message-to-market fit analysis',
     ],
-    results: '4.2x Avg ROAS',
-  },
-  {
-    slug: 'account-recovery',
-    icon: 'shield' as const,
-    title: 'Account Recovery',
-    description: 'Rescue underperforming accounts and turn them profitable',
-    features: [
-      'Emergency account audit',
-      'Rapid profit optimization',
-      'Wasted spend elimination',
-      '30-day turnaround plan',
-    ],
-    results: '90-Day Guarantee',
+    results: 'Higher Quality AI Training Data',
   },
 ];
 ---
@@ -99,14 +74,13 @@ const services = [
     <Container>
       <div class="text-center text-white max-w-4xl mx-auto">
         <Heading as="h1" size="6xl" className="mb-6">
-          Profit-Focused Google Ads Services
+          AI Training Services for Google Ads
         </Heading>
         <p class="text-xl text-blue-100 mb-8">
-          Everything you need to turn Google Ads into a profitable revenue channel.
-          No fluff. No unnecessary add-ons. Just results.
+          We train Google's AI to find your best customers through CRM integration, consolidated campaigns, smart bidding, and strategic patience. The result: predictable customer acquisition costs in 90 days.
         </p>
         <Button variant="secondary" size="lg" href="/free-analysis">
-          Get Free Analysis
+          Get Free Assessment
         </Button>
       </div>
     </Container>
@@ -168,42 +142,55 @@ const services = [
     <Container>
       <div class="text-center mb-12">
         <Heading as="h2" size="4xl" className="mb-4">
-          How We Work
+          The 90-Day AI Training Process
         </Heading>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Our proven process delivers results in 90 days
+          Each phase builds on the previous. Skip steps = poor results.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
             1
           </div>
-          <h3 class="font-bold text-lg mb-2">Audit</h3>
-          <p class="text-gray-600 text-sm">Deep dive analysis of your current setup</p>
+          <h3 class="font-bold text-base mb-2">Connect The Dots</h3>
+          <p class="text-gray-600 text-xs">CRM integration & tracking audit (Week 1-2)</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
             2
           </div>
-          <h3 class="font-bold text-lg mb-2">Strategy</h3>
-          <p class="text-gray-600 text-sm">Custom roadmap to profitability</p>
+          <h3 class="font-bold text-base mb-2">Build Foundation</h3>
+          <p class="text-gray-600 text-xs">Consolidated campaigns & AI learning (Week 3-6)</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
             3
           </div>
-          <h3 class="font-bold text-lg mb-2">Optimize</h3>
-          <p class="text-gray-600 text-sm">Launch and continuous improvement</p>
+          <h3 class="font-bold text-base mb-2">Let AI Take Over</h3>
+          <p class="text-gray-600 text-xs">Smart bidding activation (Week 7-9)</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
             4
           </div>
-          <h3 class="font-bold text-lg mb-2">Scale</h3>
-          <p class="text-gray-600 text-sm">Double down on what works</p>
+          <h3 class="font-bold text-base mb-2">Scale Confidently</h3>
+          <p class="text-gray-600 text-xs">Predictable expansion (Week 10-12)</p>
         </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
+            5
+          </div>
+          <h3 class="font-bold text-base mb-2">Maintain & Grow</h3>
+          <p class="text-gray-600 text-xs">Strategic guidance (Month 4+)</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <Button variant="primary" size="md" href="/process">
+          See Detailed Timeline →
+        </Button>
       </div>
     </Container>
   </Section>
