@@ -7,6 +7,9 @@ import { Resend } from 'resend';
  * Receives contact form data and sends email notification via Resend
  */
 
+// Ensure this route is server-rendered, not prerendered
+export const prerender = false;
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -19,6 +22,9 @@ interface ContactFormData {
 
 export const POST: APIRoute = async ({ request }) => {
   try {
+    console.log('Contact API called - Content-Type:', request.headers.get('content-type'));
+    console.log('Request method:', request.method);
+
     const data: ContactFormData = await request.json();
 
     // Validate required fields

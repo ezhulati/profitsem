@@ -8,6 +8,9 @@ import { Resend } from 'resend';
  * Returns success/error response
  */
 
+// Ensure this route is server-rendered, not prerendered
+export const prerender = false;
+
 interface LeadSubmission {
   fullName: string;
   email: string;
