@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+---
+
+<BaseLayout
+  title="Case Study: Law Firm Generates $2.4M in Cases with $18K Ad Spend | ProfitSEM"
+  description="How a personal injury law firm achieved 13,333% ROI using hyper-local Google Ads targeting and conversion rate optimization."
+>
+  <Section background="white" spacing="lg">
+    <Container size="lg">
+      <div class="max-w-4xl mx-auto">
+        <nav class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-gray-600">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li>/</li>
+            <li><a href="/case-studies" class="hover:text-blue-600">Case Studies</a></li>
+            <li>/</li>
+            <li class="text-gray-900">Law Firm Local Ads</li>
+          </ol>
+        </nav>
+
+        <Badge variant="success" size="md" className="mb-6">Legal / Local Services</Badge>
+        <Heading as="h1" size="5xl" className="mb-6">
+          How a Law Firm Turned $18K into $2.4M in Signed Cases
+        </Heading>
+        <p class="text-xl text-gray-600 mb-8">
+          A personal injury law firm in Chicago was wasting money on broad keywords. We went hyper-local and ultra-targeted. ROI: 13,333%.
+        </p>
+
+        <div class="grid md:grid-cols-4 gap-6 mb-12">
+          <Card className="text-center p-6">
+            <div class="text-4xl font-bold text-green-600 mb-2">13,333%</div>
+            <div class="text-sm text-gray-600">ROI</div>
+          </Card>
+          <Card className="text-center p-6">
+            <div class="text-4xl font-bold text-blue-600 mb-2">$2.4M</div>
+            <div class="text-sm text-gray-600">Case Value</div>
+          </Card>
+          <Card className="text-center p-6">
+            <div class="text-4xl font-bold text-purple-600 mb-2">127</div>
+            <div class="text-sm text-gray-600">Signed Cases</div>
+          </Card>
+          <Card className="text-center p-6">
+            <div class="text-4xl font-bold text-orange-600 mb-2">$142</div>
+            <div class="text-sm text-gray-600">Cost Per Lead</div>
+          </Card>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <Heading as="h2" size="3xl" className="mb-4">
+            The Client
+          </Heading>
+
+          <p>
+            <strong>Industry:</strong> Personal Injury Law<br />
+            <strong>Location:</strong> Chicago, IL<br />
+            <strong>Previous Ad Spend:</strong> $22K/month<br />
+            <strong>Problem:</strong> Too many unqualified leads, low case acceptance rate
+          </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            The Problem
+          </Heading>
+
+          <p>
+            When this law firm came to us, they were spending $22,000/month on Google Ads with minimal returns:
+          </p>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 my-6">
+            <ul class="space-y-2">
+              <li><strong>Ad Spend:</strong> $22,000/month</li>
+              <li><strong>Leads:</strong> 380/month</li>
+              <li><strong>Cost Per Lead:</strong> $58</li>
+              <li><strong>Cases Signed:</strong> 12/month</li>
+              <li><strong>Case Acceptance Rate:</strong> 3.2%</li>
+            </ul>
+          </div>
+
+          <p>
+            The issues were clear:
+          </p>
+
+          <ul>
+            <li>Targeting too broad (entire Chicago metro area + suburbs)</li>
+            <li>Keywords too general ("lawyer", "attorney")</li>
+            <li>Landing pages not conversion-optimized</li>
+            <li>No call tracking or attribution</li>
+            <li>Form leads mixed with phone calls (couldn't tell which converted better)</li>
+          </ul>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Our Strategy
+          </Heading>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            1. Hyper-Local Targeting
+          </Heading>
+
+          <p>
+            We cut their targeting from a 50-mile radius down to specific high-value neighborhoods in Chicago where personal injury cases were most common.
+          </p>
+
+          <div class="bg-blue-50 p-6 rounded-lg my-6">
+            <p class="font-semibold mb-3">Geographic Strategy:</p>
+            <ul class="space-y-2 text-sm">
+              <li>✓ High-traffic corridors (I-90, I-94, Lake Shore Drive)</li>
+              <li>✓ Neighborhoods with higher accident rates</li>
+              <li>✓ Areas within 15-minute drive of their office</li>
+              <li>✓ Excluded wealthy suburbs (lower conversion rates)</li>
+            </ul>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            2. Intent-Specific Keywords
+          </Heading>
+
+          <p>
+            We killed generic keywords and focused on high-intent, case-specific terms:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4 my-6">
+            <div class="bg-gray-50 p-4 rounded">
+              <p class="text-sm text-red-600 font-semibold mb-2">❌ BEFORE (Generic)</p>
+              <ul class="text-sm space-y-1">
+                <li>• "lawyer"</li>
+                <li>• "attorney near me"</li>
+                <li>• "legal help"</li>
+                <li>• "chicago law firm"</li>
+              </ul>
+              <p class="text-xs text-gray-600 mt-2">Result: High volume, low quality</p>
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded">
+              <p class="text-sm text-green-600 font-semibold mb-2">✓ AFTER (Specific)</p>
+              <ul class="text-sm space-y-1">
+                <li>• "car accident lawyer chicago"</li>
+                <li>• "truck accident attorney"</li>
+                <li>• "motorcycle crash lawyer"</li>
+                <li>• "hit and run attorney"</li>
+              </ul>
+              <p class="text-xs text-gray-600 mt-2">Result: Lower volume, 10x quality</p>
+            </div>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            3. Call-First Landing Pages
+          </Heading>
+
+          <p>
+            Legal clients don't want to fill out forms. They want to talk to a lawyer. We redesigned their landing pages to prioritize phone calls:
+          </p>
+
+          <ul>
+            <li>Click-to-call button above the fold (mobile)</li>
+            <li>Phone number in headline</li>
+            <li>Live chat widget for immediate connection</li>
+            <li>Form as secondary CTA (for after-hours)</li>
+          </ul>
+
+          <p>
+            <strong>Result:</strong> 78% of leads became phone calls instead of forms. Case acceptance rate jumped from 3.2% to 18.6%.
+          </p>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            4. Call Tracking & Attribution
+          </Heading>
+
+          <p>
+            We implemented CallRail to track which keywords and ads drove signed cases, not just phone calls.
+          </p>
+
+          <p>
+            This revealed that "car accident lawyer" calls had a 24% case acceptance rate, while "personal injury attorney" calls had only 8%.
+          </p>
+
+          <p>
+            We shifted budget accordingly.
+          </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            The Results
+          </Heading>
+
+          <div class="grid md:grid-cols-2 gap-8 my-8">
+            <div>
+              <Heading as="h3" size="xl" className="mb-4">
+                Before
+              </Heading>
+              <div class="bg-gray-50 p-6 rounded-lg space-y-3">
+                <div>
+                  <p class="text-sm text-gray-600">Ad Spend</p>
+                  <p class="text-2xl font-bold">$22,000/mo</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Leads</p>
+                  <p class="text-2xl font-bold">380</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Cost Per Lead</p>
+                  <p class="text-2xl font-bold">$58</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Cases Signed</p>
+                  <p class="text-2xl font-bold text-red-600">12</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Avg Case Value</p>
+                  <p class="text-2xl font-bold">$18,500</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Monthly Revenue</p>
+                  <p class="text-2xl font-bold text-red-600">$222K</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Heading as="h3" size="xl" className="mb-4">
+                After (Month 6)
+              </Heading>
+              <div class="bg-green-50 p-6 rounded-lg space-y-3 border-2 border-green-500">
+                <div>
+                  <p class="text-sm text-gray-600">Ad Spend</p>
+                  <p class="text-2xl font-bold">$18,000/mo</p>
+                  <p class="text-xs text-green-600">(-18% spend)</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Leads</p>
+                  <p class="text-2xl font-bold">126</p>
+                  <p class="text-xs text-green-600">(but 10x more qualified)</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Cost Per Lead</p>
+                  <p class="text-2xl font-bold">$142</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Cases Signed</p>
+                  <p class="text-2xl font-bold text-green-600">127</p>
+                  <p class="text-xs text-green-600">(+958%)</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Avg Case Value</p>
+                  <p class="text-2xl font-bold">$19,200</p>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Monthly Revenue</p>
+                  <p class="text-2xl font-bold text-green-600">$2.4M</p>
+                  <p class="text-xs text-green-600">(+982%)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border-2 border-green-500 rounded-lg p-8 my-8 text-center">
+            <p class="text-6xl font-bold text-green-600 mb-4">13,333%</p>
+            <p class="text-2xl font-semibold text-gray-900 mb-2">ROI</p>
+            <p class="text-gray-700">
+              Spent $18,000 | Generated $2,400,000 in case value
+            </p>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Key Lessons
+          </Heading>
+
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
+            <ol class="space-y-2">
+              <li><strong>1. Local services need hyper-local targeting.</strong> Don't waste money on people 50 miles away.</li>
+              <li><strong>2. Phone calls > forms for high-value services.</strong> Make it easy to call.</li>
+              <li><strong>3. Track to case acceptance, not just leads.</strong> Leads mean nothing if they don't sign.</li>
+              <li><strong>4. Quality beats quantity.</strong> 126 good leads > 380 terrible leads.</li>
+            </ol>
+          </div>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="flex gap-1 mb-6">
+              {[1,2,3,4,5].map(() => (
+                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+
+            <blockquote class="text-xl text-gray-900 mb-6 italic">
+              "ProfitSEM didn't just improve our ads—they transformed our entire practice. We went from struggling to keep the lights on to having more cases than we can handle. Best decision we ever made."
+            </blockquote>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                DK
+              </div>
+              <div>
+                <p class="font-semibold">David Kim, Esq.</p>
+                <p class="text-sm text-gray-600">Managing Partner, Chicago Personal Injury Law</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center shadow-xl my-12">
+            <Heading as="h2" size="3xl" className="mb-4 text-white">
+              Run a Professional Services Firm?
+            </Heading>
+            <p class="text-xl text-blue-100 mb-8">
+              Get a free Google Ads audit tailored to local service businesses.
+            </p>
+            <Button variant="secondary" size="lg">
+              <a href="/free-analysis">Get Free Audit</a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Container } from '../components/layout/Container';
+import { Section } from '../components/layout/Section';
+import { Heading } from '../components/ui/Heading';
+import { FAQSection } from '../components/sections/FAQSection';
+import { CTASection } from '../components/sections/CTASection';
+---
+
+<BaseLayout
+  title="Frequently Asked Questions - Google Ads Management - ProfitSEM"
+  description="Get answers to common questions about ProfitSEM's Google Ads management services, pricing, process, and results."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h1" size="5xl" className="mb-6">
+          Frequently Asked Questions
+        </Heading>
+        <p class="text-xl text-blue-100">
+          Everything you need to know about working with ProfitSEM
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Main FAQ Section -->
+  <FAQSection client:visible />
+
+  <!-- Additional FAQs by Category -->
+  <Section background="white" spacing="lg">
+    <Container size="lg">
+      <div class="space-y-12">
+        <!-- Getting Started -->
+        <div>
+          <Heading as="h2" size="3xl" className="mb-8">
+            Getting Started
+          </Heading>
+          <div class="space-y-4">
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>What information do you need to get started?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                We'll need:
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>Admin access to your Google Ads account</li>
+                  <li>Google Analytics access (if applicable)</li>
+                  <li>Website access for conversion tracking setup</li>
+                  <li>Product catalogs or service details</li>
+                  <li>Historical performance data (if available)</li>
+                </ul>
+                <br/>
+                Don't have Google Ads set up yet? No problem—we'll create everything from scratch.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>How long does onboarding take?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Typically 5-7 business days:
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li><strong>Days 1-2:</strong> Account access, kickoff call, and audit</li>
+                  <li><strong>Days 3-4:</strong> Strategy development and campaign setup</li>
+                  <li><strong>Days 5-7:</strong> Tracking implementation and campaign launch</li>
+                </ul>
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Can you work with my existing Google Ads account?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Absolutely. We work with both new and existing accounts. For existing accounts, we'll audit what you have, keep what's working, and fix what's not. You retain full ownership of your account—we're just managing it for you.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Pricing & Billing -->
+        <div>
+          <Heading as="h2" size="3xl" className="mb-8">
+            Pricing & Billing
+          </Heading>
+          <div class="space-y-4">
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Why don't you charge a percentage of ad spend?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Because percentage-based pricing creates the wrong incentives. If we charge 15% of spend, we make more money when you spend more—even if that spending isn't profitable for you.
+                <br/><br/>
+                With flat-rate pricing, our goals are 100% aligned with yours: maximize your profit, not your budget.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Are there any hidden fees or setup costs?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                None. What you see is what you pay. Your monthly fee covers everything: strategy, setup, management, reporting, optimization, and support. The only additional cost is your Google Ads spend, which goes directly to Google.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>What payment methods do you accept?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                We accept all major credit cards, ACH bank transfers, and wire transfers for Enterprise clients. Billing is automated and occurs on the 1st of each month.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Results & Performance -->
+        <div>
+          <Heading as="h2" size="3xl" className="mb-8">
+            Results & Performance
+          </Heading>
+          <div class="space-y-4">
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Can you guarantee specific results?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                We can't guarantee specific ROAS or revenue numbers (anyone who does is lying). What we CAN guarantee:
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>We'll improve your ROI within 90 days or you get a full refund</li>
+                  <li>We'll provide weekly progress reports</li>
+                  <li>We'll be transparent about what's working and what's not</li>
+                  <li>We'll optimize for profit, not vanity metrics</li>
+                </ul>
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>What if my ads don't perform well?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                First, we diagnose why. Is it the targeting? The offer? The landing page? Tracking issues? We'll identify the problem and fix it.
+                <br/><br/>
+                If after 90 days we haven't improved your ROI, you get a full refund of our management fees. That's our 90-Day Profit Guarantee.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>How do you measure success?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                We measure true ROI: (Net Profit - Ad Spend) / Ad Spend. Not ROAS. Not conversion rate. Not clicks.
+                <br/><br/>
+                Your business succeeds when you're profitable. That's what we optimize for.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Technical Questions -->
+        <div>
+          <Heading as="h2" size="3xl" className="mb-8">
+            Technical Questions
+          </Heading>
+          <div class="space-y-4">
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Do I need to give you access to my website?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                For conversion tracking setup, yes—we'll need admin access to your website (or access to Google Tag Manager). We take security seriously and use read-only access whenever possible.
+                <br/><br/>
+                If you have a developer, they can implement our tracking code instead.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>What platforms do you use for tracking?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                We primarily use Google Analytics 4 (GA4) and Google Ads conversion tracking. For e-commerce clients, we integrate with Shopify, WooCommerce, or your platform's native tracking.
+                <br/><br/>
+                We can also work with third-party analytics tools like Segment, Mixpanel, or custom solutions.
+              </p>
+            </details>
+
+            <details class="bg-gray-50 rounded-lg p-6 group">
+              <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
+                <span>Can you integrate with my CRM?</span>
+                <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="mt-4 text-gray-700">
+                Yes. We commonly integrate with HubSpot, Salesforce, Pipedrive, and most major CRMs. This allows us to track lead quality and optimize for SQLs, not just form fills.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <CTASection client:visible />
+</BaseLayout>

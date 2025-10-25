@@ -1,0 +1,438 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Badge } from '../../components/ui/Badge';
+---
+
+<BaseLayout
+  title="Google Ads Quality Score: The Complete Optimization Guide (2025)"
+  description="Master Quality Score optimization to cut costs and improve ad rank. Data-driven strategies that actually work."
+>
+  <Section background="white" spacing="lg">
+    <Container size="lg">
+      <div class="max-w-3xl mx-auto">
+        <Badge variant="success" size="md" className="mb-6">Advanced Strategy</Badge>
+        <Heading as="h1" size="5xl" className="mb-6">
+          Google Ads Quality Score: The Complete Optimization Guide
+        </Heading>
+        <p class="text-xl text-gray-600 mb-8">
+          Quality Score isn't just a number. It's the difference between paying $2/click and $8/click for the same keyword. Here's how to master it.
+        </p>
+
+        <div class="prose prose-lg max-w-none">
+          <p>
+            Last month, a SaaS client came to us burning $45K/month on Google Ads with an average Quality Score of 4/10. Three weeks later: QS jumped to 8/10, CPC dropped 62%, same ad position.
+          </p>
+
+          <p class="font-semibold text-xl bg-green-50 border-l-4 border-green-500 p-6">
+            Same budget. Same keywords. 62% cost reduction. That's the power of Quality Score.
+          </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            What Is Quality Score? (The Real Answer)
+          </Heading>
+
+          <p>
+            Google's official definition: "An estimate of the quality of your ads, keywords, and landing pages."
+          </p>
+
+          <p>
+            The real definition: Google's way of punishing bad advertisers and rewarding good ones.
+          </p>
+
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-6 my-8">
+            <p class="font-semibold text-blue-900 mb-4">Quality Score Formula (Simplified):</p>
+            <p class="text-lg font-bold text-gray-900 text-center my-4">
+              QS = Expected CTR (40%) + Ad Relevance (30%) + Landing Page Experience (30%)
+            </p>
+            <p class="text-sm text-gray-700">
+              Scored 1-10 for each keyword. Calculated in real-time at auction.
+            </p>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Why Quality Score Actually Matters
+          </Heading>
+
+          <p>
+            Most articles tell you "QS affects CPC." That's not helpful. Here's what actually happens:
+          </p>
+
+          <div class="space-y-6 my-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p class="font-semibold text-lg mb-3">Example: Keyword "project management software"</p>
+              <div class="space-y-3">
+                <div>
+                  <p class="font-semibold text-red-600">Quality Score 3/10:</p>
+                  <p class="text-gray-700">Max CPC: $12, Avg Position: 3.2, Actual CPC: $11.80</p>
+                </div>
+                <div>
+                  <p class="font-semibold text-green-600">Quality Score 9/10:</p>
+                  <p class="text-gray-700">Max CPC: $12, Avg Position: 1.8, Actual CPC: $4.20</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">
+                <strong>Result:</strong> Same max bid. Better position. 64% lower cost. That's QS in action.
+              </p>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Component 1: Expected CTR (40% Weight)
+          </Heading>
+
+          <p>
+            This is Google predicting how often your ad will get clicked when shown for a specific keyword. Based on historical performance of your keyword/ad combo.
+          </p>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            How to Improve Expected CTR
+          </Heading>
+
+          <div class="space-y-4 my-6">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Put the keyword in Headline 1</p>
+                <p class="text-gray-700 text-sm">If keyword is "CRM software", H1 should be "CRM Software | [Benefit]" not "Manage Customers Better"</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Use all 15 headlines (Responsive Search Ads)</p>
+                <p class="text-gray-700 text-sm">More headline variations = more testing = better CTR prediction</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Add emotional triggers</p>
+                <p class="text-gray-700 text-sm">"Free", "Guaranteed", "Limited", "New", "Proven" all boost CTR when relevant</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Use all extensions</p>
+                <p class="text-gray-700 text-sm">Sitelinks, callouts, structured snippets = bigger ad = higher CTR</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Pause low-CTR keywords</p>
+                <p class="text-gray-700 text-sm">If a keyword has <2% CTR after 200 impressions, pause it. It's hurting your account-wide QS.</p>
+              </div>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Component 2: Ad Relevance (30% Weight)
+          </Heading>
+
+          <p>
+            How closely your ad matches the searcher's intent. Google literally scores how relevant your ad copy is to the keyword.
+          </p>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            The Single-Keyword Ad Group (SKAG) Hack
+          </Heading>
+
+          <p>
+            Most agencies still recommend SKAGs. We don't. But here's when they work:
+          </p>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-6">
+            <p class="font-semibold text-yellow-900 mb-3">Use SKAGs for:</p>
+            <ul class="space-y-2 text-yellow-800">
+              <li>✓ Your top 10 highest-spend keywords</li>
+              <li>✓ Brand terms</li>
+              <li>✓ Competitor terms</li>
+              <li>✓ High-intent commercial keywords</li>
+            </ul>
+            <p class="text-sm text-yellow-700 mt-3">
+              Don't use SKAGs for long-tail keywords. Group those by theme instead.
+            </p>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            Dynamic Keyword Insertion (DKI)
+          </Heading>
+
+          <p>
+            The fastest way to improve ad relevance. But most people use it wrong.
+          </p>
+
+          <div class="space-y-4 my-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p class="text-sm text-red-600 font-semibold mb-1">❌ WRONG</p>
+              <p class="font-mono text-sm text-gray-700 mb-3">"Get &#123;KeyWord:Software&#125; Today!"</p>
+              <p class="text-xs text-gray-600">Problem: Capitalization issues. "Get crm software Today!" looks terrible.</p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p class="text-sm text-green-600 font-semibold mb-1">✓ CORRECT</p>
+              <p class="font-mono text-sm text-gray-900 mb-3">"&#123;keyword:CRM Software&#125; - Free Trial, No Credit Card"</p>
+              <p class="text-xs text-gray-600">Proper capitalization + default fallback. Clean and professional.</p>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Component 3: Landing Page Experience (30% Weight)
+          </Heading>
+
+          <p>
+            This is where most agencies fail. They obsess over ads and ignore the landing page.
+          </p>
+
+          <div class="bg-red-50 border-2 border-red-500 rounded-lg p-6 my-8">
+            <p class="font-semibold text-red-900 mb-4">Landing Page Quality Score Killers:</p>
+            <ul class="space-y-2 text-red-800">
+              <li>❌ Load time >3 seconds (death sentence)</li>
+              <li>❌ No keyword on the page</li>
+              <li>❌ Misleading CTA ("Free trial" → forced to pay)</li>
+              <li>❌ Mobile broken or unresponsive</li>
+              <li>❌ Too many form fields (asking for 15 fields kills conversions)</li>
+              <li>❌ Generic homepage instead of dedicated landing page</li>
+            </ul>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            The Perfect Landing Page for QS
+          </Heading>
+
+          <ol class="space-y-4 my-6">
+            <li>
+              <strong>Hero headline matches ad headline</strong>
+              <p class="text-gray-700">If your ad says "Project Management Software," your H1 should too. Message match = higher QS.</p>
+            </li>
+            <li>
+              <strong>Keyword density 2-3%</strong>
+              <p class="text-gray-700">Use your target keyword naturally throughout the page. Not stuffed, but present.</p>
+            </li>
+            <li>
+              <strong>Load time under 2.5 seconds</strong>
+              <p class="text-gray-700">Use Google PageSpeed Insights. 90+ score = happy Google.</p>
+            </li>
+            <li>
+              <strong>Mobile-first design</strong>
+              <p class="text-gray-700">60%+ of clicks are mobile. Your mobile page better be perfect.</p>
+            </li>
+            <li>
+              <strong>Single clear CTA</strong>
+              <p class="text-gray-700">One form. One button. One goal. Don't confuse visitors with 5 CTAs.</p>
+            </li>
+            <li>
+              <strong>Trust signals above the fold</strong>
+              <p class="text-gray-700">Logos, testimonials, ratings. Show proof immediately.</p>
+            </li>
+          </ol>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Advanced QS Tactics (Used by Top 1% of Advertisers)
+          </Heading>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            1. The Fresh Start Method
+          </Heading>
+
+          <p>
+            If a keyword has terrible historical QS (3 or below), sometimes it's impossible to recover. The history is too bad.
+          </p>
+
+          <div class="bg-blue-50 p-6 rounded-lg my-6">
+            <p class="font-semibold mb-3">Fresh Start Process:</p>
+            <ol class="space-y-2 text-sm">
+              <li>1. Pause the low-QS keyword</li>
+              <li>2. Wait 7 days (let Google forget)</li>
+              <li>3. Add same keyword to NEW ad group with NEW ads</li>
+              <li>4. Use perfect ad relevance + landing page</li>
+              <li>5. Watch QS start at 6-7 instead of 3</li>
+            </ol>
+            <p class="text-xs text-gray-600 mt-3">
+              <strong>Warning:</strong> Only do this if the keyword is genuinely valuable. Not worth it for low-volume keywords.
+            </p>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            2. The Exact Match Boost
+          </Heading>
+
+          <p>
+            Exact match keywords almost always have higher QS than broad match. Why? Better ad relevance.
+          </p>
+
+          <div class="space-y-3 my-6">
+            <div class="bg-gray-50 p-4 rounded">
+              <p class="font-semibold">Broad Match: "project management tool"</p>
+              <p class="text-sm text-gray-600">Shows for: project management software, free project tools, agile management, etc.</p>
+              <p class="text-sm text-red-600 mt-1">QS: 5-6 (inconsistent relevance)</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded">
+              <p class="font-semibold">Exact Match: [project management tool]</p>
+              <p class="text-sm text-gray-600">Shows for: exact searches only</p>
+              <p class="text-sm text-green-600 mt-1">QS: 8-9 (perfect relevance)</p>
+            </div>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            3. The Location Exclusion Trick
+          </Heading>
+
+          <p>
+            Some geographic locations have terrible CTR (low engagement, high bounce). They drag down your account-wide QS.
+          </p>
+
+          <div class="bg-green-50 border-l-4 border-green-500 p-6 my-6">
+            <p class="font-semibold text-green-900 mb-3">How to find bad locations:</p>
+            <ol class="space-y-2 text-green-800 text-sm">
+              <li>1. Go to Locations report</li>
+              <li>2. Sort by CTR (ascending)</li>
+              <li>3. Find locations with CTR <1%</li>
+              <li>4. Exclude them</li>
+              <li>5. Watch account-wide QS improve</li>
+            </ol>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Quality Score Myths (Debunked)
+          </Heading>
+
+          <div class="space-y-6 my-6">
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
+              <p class="font-semibold text-lg mb-2">❌ Myth: "Account-level QS doesn't exist"</p>
+              <p class="text-gray-700">
+                <strong>Truth:</strong> While Google scores each keyword individually, poor account performance absolutely affects new keywords. Clean accounts start with higher baseline QS.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
+              <p class="font-semibold text-lg mb-2">❌ Myth: "Budget affects Quality Score"</p>
+              <p class="text-gray-700">
+                <strong>Truth:</strong> False. Google doesn't care if you spend $100 or $100K. QS is purely about ad quality.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
+              <p class="font-semibold text-lg mb-2">❌ Myth: "Display URL affects QS"</p>
+              <p class="text-gray-700">
+                <strong>Truth:</strong> Partially true. The display URL doesn't directly affect QS, but it does affect CTR (which affects QS). Use keywords in your display path when relevant.
+              </p>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            The 7-Day Quality Score Blitz
+          </Heading>
+
+          <p>
+            Want to see improvement fast? Follow this 7-day plan:
+          </p>
+
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-6 my-8">
+            <p class="font-semibold text-blue-900 mb-4">Week-Long QS Optimization Plan:</p>
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-blue-800">Day 1: Audit</p>
+                <p class="text-sm text-gray-700">Run QS report. Identify keywords scoring 6 or below. Focus on high-volume keywords only.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 2: Landing Pages</p>
+                <p class="text-sm text-gray-700">Fix top 5 landing pages: speed, mobile, keyword presence, clear CTA.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 3: Ad Copy</p>
+                <p class="text-sm text-gray-700">Rewrite ads for low-QS keywords. Headline 1 = exact keyword. All 15 headlines filled.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 4: Extensions</p>
+                <p class="text-sm text-gray-700">Add/update all ad extensions. Sitelinks must be relevant to keyword theme.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 5: Negatives</p>
+                <p class="text-sm text-gray-700">Add 100+ negative keywords. Stop showing for irrelevant searches = better CTR.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 6: Structure</p>
+                <p class="text-sm text-gray-700">Create SKAGs for top 10 keywords. Tighter theme = better ad relevance.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-800">Day 7: Monitor</p>
+                <p class="text-sm text-gray-700">Check QS. It won't jump to 10 overnight, but you should see 6→7 or 7→8 movement.</p>
+              </div>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Real Results: Before/After
+          </Heading>
+
+          <div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 my-8">
+            <p class="font-semibold text-green-900 mb-4">SaaS Client (Project Management Software):</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white p-4 rounded-lg">
+                <p class="text-sm text-gray-600 mb-2">BEFORE (QS Avg: 4.2)</p>
+                <ul class="space-y-1 text-sm">
+                  <li>Ad Spend: $45,000/mo</li>
+                  <li>Clicks: 5,625</li>
+                  <li>Avg CPC: $8.00</li>
+                  <li>Conversions: 168</li>
+                  <li>CPA: $267</li>
+                </ul>
+              </div>
+
+              <div class="bg-white p-4 rounded-lg border-2 border-green-500">
+                <p class="text-sm text-green-600 font-semibold mb-2">AFTER (QS Avg: 8.1)</p>
+                <ul class="space-y-1 text-sm">
+                  <li>Ad Spend: $45,000/mo</li>
+                  <li>Clicks: 14,850 <span class="text-green-600 font-semibold">(+164%)</span></li>
+                  <li>Avg CPC: $3.03 <span class="text-green-600 font-semibold">(-62%)</span></li>
+                  <li>Conversions: 521 <span class="text-green-600 font-semibold">(+210%)</span></li>
+                  <li>CPA: $86 <span class="text-green-600 font-semibold">(-68%)</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="text-sm text-gray-700 mt-4">
+              <strong>Timeline:</strong> 21 days. Changes: landing page speed, ad copy rewrite, SKAG structure, 200+ negative keywords.
+            </p>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Bottom Line
+          </Heading>
+
+          <p>
+            Quality Score optimization isn't optional. It's the difference between profitable and unprofitable Google Ads.
+          </p>
+
+          <p>
+            Most advertisers ignore it. Smart advertisers obsess over it.
+          </p>
+
+          <p class="font-semibold text-lg mt-8 bg-blue-50 border-l-4 border-blue-500 p-6">
+            Want us to audit your Quality Score? <a href="/free-analysis" class="text-blue-600 hover:underline">Get a free account analysis</a> and we'll show you exactly where you're losing money on poor QS.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

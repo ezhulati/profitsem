@@ -1,0 +1,82 @@
+---
+/**
+ * Google Analytics 4 Component
+ *
+ * Adds GA4 tracking to the site
+ * Configure with PUBLIC_GA_ID environment variable
+ *
+ * Usage in BaseLayout:
+ * import GoogleAnalytics from '../components/analytics/GoogleAnalytics.astro';
+ * <GoogleAnalytics />
+ */
+
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_ID;
+---
+
+{GA_MEASUREMENT_ID && (
+  <>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      is:inline
+    ></script>
+    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID, {
+        page_path: window.location.pathname,
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=None;Secure',
+      });
+
+      // Track page views on client-side navigation
+      document.addEventListener('astro:page-load', () => {
+        gtag('config', GA_MEASUREMENT_ID, {
+          page_path: window.location.pathname,
+        });
+      });
+
+      // Track custom events
+      window.trackEvent = function(action, category, label, value) {
+        gtag('event', action, {
+          event_category: category,
+          event_label: label,
+          value: value,
+        });
+      };
+
+      // Track form submissions
+      document.addEventListener('submit', (e) => {
+        if (e.target.dataset.trackForm) {
+          gtag('event', 'form_submit', {
+            event_category: 'engagement',
+            event_label: e.target.dataset.trackForm,
+          });
+        }
+      });
+
+      // Track button clicks
+      document.addEventListener('click', (e) => {
+        const button = e.target.closest('[data-track-button]');
+        if (button) {
+          gtag('event', 'button_click', {
+            event_category: 'engagement',
+            event_label: button.dataset.trackButton,
+          });
+        }
+      });
+    </script>
+  </>
+)}
+
+{!GA_MEASUREMENT_ID && (
+  <!-- Google Analytics not configured -->
+  <!-- Set PUBLIC_GA_ID in .env to enable -->
+  <script is:inline>
+    console.info('Google Analytics not configured. Set PUBLIC_GA_ID in .env to enable.');
+  </script>
+)}

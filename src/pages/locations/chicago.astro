@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Button } from '../../components/ui/Button';
+import { StatCounter } from '../../components/ui/StatCounter';
+import { CTASection } from '../../components/sections/CTASection';
+
+const city = 'Chicago';
+const state = 'Illinois';
+const stateAbbr = 'IL';
+---
+
+<BaseLayout
+  title={`Google Ads Management ${city}, ${stateAbbr} - ProfitSEM`}
+  description={`Top-rated Google Ads agency in ${city}. Profit-focused PPC management for ${city} businesses. 90-day guarantee. No contracts.`}
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Heading as="h1" size="6xl" className="mb-6">
+          Google Ads Management in {city}
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Turn Google Ads into profit for your {city} business. No contracts. Just results in 90 days.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg">
+            Get Free Profit Analysis
+          </Button>
+          <Button variant="ghost" size="lg" className="text-white border-white/30">
+            Call (555) 123-4567
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Local Stats -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <StatCounter value="56" suffix="+" label={`${city} Clients`} variant="success" />
+        </div>
+        <div>
+          <StatCounter value="271" suffix="%" label="Average ROI" variant="success" />
+        </div>
+        <div>
+          <StatCounter prefix="$" value="1.9M" label="Client Revenue (Monthly)" variant="primary" />
+        </div>
+        <div>
+          <StatCounter value="4.8" suffix="/5" label="Google Rating" variant="success" />
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Local Benefits -->
+  <Section background="gray" spacing="xl">
+    <Container size="lg">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <Heading as="h2" size="4xl" className="mb-6">
+            Why {city} Businesses Choose ProfitSEM
+          </Heading>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Deep {city} Market Knowledge</h3>
+                <p class="text-gray-700">
+                  We understand the {city} market—from the Loop to Lincoln Park, from manufacturing to SaaS. Our strategies account for Midwest seasonality, local competition, and what actually converts {city} customers.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Profit-Focused Approach</h3>
+                <p class="text-gray-700">
+                  Unlike typical {city} agencies that charge percentage fees, we use flat-rate pricing aligned with your profit goals. We succeed when you succeed.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Central Time Zone Support</h3>
+                <p class="text-gray-700">
+                  Our {city} clients get dedicated account managers in {stateAbbr} time zone. No East Coast delays. No offshore support. We work when you work.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-lg mb-2">90-Day Guarantee</h3>
+                <p class="text-gray-700">
+                  We improve your Google Ads ROI within 90 days or you get a full refund. That's our promise to {city} businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+          <Heading as="h3" size="2xl" className="mb-6">
+            Industries We Serve in {city}
+          </Heading>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Manufacturing & Industrial</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>SaaS & Technology</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>E-commerce & Retail</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Professional Services</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Healthcare & Medical</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Real Estate & Construction</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-sm text-gray-600 mb-4">
+              Don't see your industry? We work with {city} businesses across all sectors.
+            </p>
+            <Button variant="primary" size="md" fullWidth>
+              Schedule Free Consultation
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Local Testimonial -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12">
+        <div class="flex gap-1 mb-6">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+
+        <blockquote class="text-xl text-gray-900 mb-6 italic">
+          "We manufacture industrial equipment in {city} and needed qualified leads, not tire-kickers. ProfitSEM restructured our campaigns around buyer intent—our cost per qualified lead dropped 67% in 9 weeks."
+        </blockquote>
+
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+            TK
+          </div>
+          <div>
+            <p class="font-semibold">Tom Kowalski</p>
+            <p class="text-sm text-gray-600">VP Sales, {city} Manufacturing Co.</p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Local SEO Content -->
+  <Section background="gray" spacing="lg">
+    <Container size="lg">
+      <div class="prose prose-lg max-w-none">
+        <Heading as="h2" size="3xl" className="mb-6">
+          Google Ads Services for {city} Businesses
+        </Heading>
+
+        <p>
+          {city} is one of the most diverse business markets in the Midwest. From Fortune 500 headquarters in the Loop to growing startups in River North, the competition for digital advertising space is fierce.
+        </p>
+
+        <p>
+          That's where ProfitSEM comes in. We've helped over 55 {city} businesses turn Google Ads from a cost center into their #1 profit driver—with an average ROI of 271%.
+        </p>
+
+        <Heading as="h3" size="2xl" className="mb-4 mt-8">
+          Our {city} Google Ads Process
+        </Heading>
+
+        <ol class="space-y-4">
+          <li>
+            <strong>Week 1-2: {city} Market Analysis</strong>
+            <p>We analyze your {city} competitors, local and national search trends, and target audience behavior to build a profit-focused strategy tailored to the {city} market.</p>
+          </li>
+          <li>
+            <strong>Week 3-4: Campaign Setup & Launch</strong>
+            <p>We build conversion-optimized campaigns targeting high-intent {city} searchers ready to buy. Whether you serve local {city} customers or sell nationwide from {state}, we structure campaigns for maximum profit.</p>
+          </li>
+          <li>
+            <strong>Week 5-12: Optimize & Scale</strong>
+            <p>Weekly optimization based on performance data. We double down on what works and cut what doesn't. Continuous testing and refinement to beat your {city} competitors.</p>
+          </li>
+        </ol>
+
+        <Heading as="h3" size="2xl" className="mb-4 mt-8">
+          Why {city} Businesses Trust ProfitSEM
+        </Heading>
+
+        <ul>
+          <li><strong>No Long-Term Contracts:</strong> Month-to-month service. Cancel anytime.</li>
+          <li><strong>Flat-Rate Pricing:</strong> No percentage fees. Our incentives align with yours.</li>
+          <li><strong>90-Day Guarantee:</strong> Improve ROI in 90 days or get a full refund.</li>
+          <li><strong>Central Time Support:</strong> Dedicated account managers in {stateAbbr} time zone.</li>
+          <li><strong>Proven Results:</strong> Average 271% ROI for {city} clients.</li>
+        </ul>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+          <p class="font-semibold text-blue-900 mb-2">
+            Ready to grow your {city} business with Google Ads?
+          </p>
+          <p class="text-blue-800">
+            Get a free profit analysis. We'll audit your current setup (or help you start from scratch) and show you exactly how we'll improve your ROI.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <CTASection client:visible />
+</BaseLayout>

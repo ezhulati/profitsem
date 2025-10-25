@@ -1,0 +1,323 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Container } from '../components/layout/Container';
+import { Section } from '../components/layout/Section';
+import { Heading } from '../components/ui/Heading';
+import { Card } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
+import { Badge } from '../components/ui/Badge';
+
+const plans = [
+  {
+    name: 'Growth',
+    price: '2,500',
+    description: 'Perfect for businesses ready to scale profitably',
+    recommended: false,
+    adSpend: 'Up to $20K/month',
+    features: [
+      { name: 'Google Search campaigns', included: true },
+      { name: 'Google Display campaigns', included: true },
+      { name: 'Shopping campaigns', included: false },
+      { name: 'Performance Max', included: false },
+      { name: 'Monthly strategy sessions', included: true, detail: '1 per month' },
+      { name: 'Landing page audit', included: true, detail: 'One-time' },
+      { name: 'Conversion tracking setup', included: true },
+      { name: 'Monthly performance reports', included: true },
+      { name: 'Dedicated account manager', included: false },
+      { name: 'Bi-weekly optimization reviews', included: false },
+      { name: 'A/B testing & CRO', included: false },
+      { name: 'Advanced automation', included: false },
+      { name: 'Custom reporting dashboard', included: false },
+      { name: 'Priority support', included: false },
+    ],
+  },
+  {
+    name: 'Scale',
+    price: '4,500',
+    description: 'For businesses serious about dominating their market',
+    recommended: true,
+    adSpend: 'Up to $50K/month',
+    features: [
+      { name: 'Google Search campaigns', included: true },
+      { name: 'Google Display campaigns', included: true },
+      { name: 'Shopping campaigns', included: true },
+      { name: 'Performance Max', included: true },
+      { name: 'Monthly strategy sessions', included: true, detail: '2 per month' },
+      { name: 'Landing page audit', included: true, detail: 'Ongoing' },
+      { name: 'Conversion tracking setup', included: true },
+      { name: 'Monthly performance reports', included: true },
+      { name: 'Dedicated account manager', included: true },
+      { name: 'Bi-weekly optimization reviews', included: true },
+      { name: 'A/B testing & CRO', included: true },
+      { name: 'Advanced automation', included: true },
+      { name: 'Custom reporting dashboard', included: true },
+      { name: 'Priority support', included: true },
+    ],
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    description: 'Custom solutions for high-growth companies',
+    recommended: false,
+    adSpend: 'Unlimited',
+    features: [
+      { name: 'Google Search campaigns', included: true },
+      { name: 'Google Display campaigns', included: true },
+      { name: 'Shopping campaigns', included: true },
+      { name: 'Performance Max', included: true },
+      { name: 'Monthly strategy sessions', included: true, detail: 'Weekly' },
+      { name: 'Landing page audit', included: true, detail: 'Continuous' },
+      { name: 'Conversion tracking setup', included: true },
+      { name: 'Monthly performance reports', included: true },
+      { name: 'Dedicated account manager', included: true },
+      { name: 'Bi-weekly optimization reviews', included: true },
+      { name: 'A/B testing & CRO', included: true },
+      { name: 'Advanced automation', included: true },
+      { name: 'Custom reporting dashboard', included: true },
+      { name: 'Priority support', included: true, detail: '24/7' },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: 'Do you charge a percentage of ad spend?',
+    a: 'No! We charge flat monthly rates. This aligns our incentives with yours—we want to maximize your profit, not your budget.',
+  },
+  {
+    q: 'What if I spend less than the tier maximum?',
+    a: 'No problem. The tiers are maximums, not requirements. If you spend $10K/month, the Growth plan works great.',
+  },
+  {
+    q: 'Is there a setup fee?',
+    a: 'No setup fees. Your first month includes onboarding, audit, and strategy at no extra cost.',
+  },
+  {
+    q: 'Can I change plans?',
+    a: 'Absolutely. As your ad spend grows, you can upgrade. We\'ll let you know when it makes sense.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pricing - Transparent, No-BS Google Ads Management - ProfitSEM"
+  description="Flat-rate pricing for Google Ads management. No percentages, no hidden fees, no surprises."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Heading as="h1" size="6xl" className="mb-6">
+          Transparent Pricing, Zero Surprises
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Flat monthly rates. No percentage of spend. No hidden fees.
+          Cancel anytime.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>No long-term contracts</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>90-day money-back guarantee</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>No setup fees</span>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing Cards -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="grid lg:grid-cols-3 gap-8 mb-12">
+        {plans.map((plan) => (
+          <Card
+            variant="bordered"
+            padding="none"
+            className={`overflow-hidden ${plan.recommended ? 'ring-2 ring-blue-500 relative' : ''}`}
+          >
+            {plan.recommended && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                <Badge variant="info" size="md" className="shadow-lg">
+                  Most Popular
+                </Badge>
+              </div>
+            )}
+
+            <div class={`p-8 ${plan.recommended ? 'bg-gradient-to-br from-blue-50 to-blue-100' : 'bg-gray-50'}`}>
+              <Heading as="h2" size="2xl" className="mb-2">
+                {plan.name}
+              </Heading>
+              <p class="text-gray-600 text-sm mb-6">{plan.description}</p>
+
+              <div class="mb-6">
+                {plan.price === 'Custom' ? (
+                  <div class="text-4xl font-bold text-gray-900">Custom</div>
+                ) : (
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-gray-600 text-lg">$</span>
+                    <span class="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span class="text-gray-600">/month</span>
+                  </div>
+                )}
+                <p class="text-sm text-gray-600 mt-2">{plan.adSpend} ad spend</p>
+              </div>
+
+              <Button
+                variant={plan.recommended ? 'primary' : 'ghost'}
+                size="lg"
+                fullWidth
+              >
+                {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
+              </Button>
+            </div>
+
+            <div class="p-8">
+              <p class="text-sm font-semibold text-gray-900 mb-4">What's included:</p>
+              <ul class="space-y-3">
+                {plan.features.map((feature) => (
+                  <li class="flex items-start gap-3">
+                    {feature.included ? (
+                      <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg class="w-5 h-5 text-gray-300 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                      </svg>
+                    )}
+                    <span class={`text-sm ${feature.included ? 'text-gray-700' : 'text-gray-400'}`}>
+                      {feature.name}
+                      {feature.detail && (
+                        <span class="text-xs text-gray-500 ml-1">({feature.detail})</span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      {/* Guarantee */}
+      <div class="bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-200 rounded-xl p-8 text-center max-w-4xl mx-auto">
+        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <Heading as="h3" size="2xl" className="mb-4">
+          90-Day Money-Back Guarantee
+        </Heading>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          If we don't improve your ROI within 90 days, you get a full refund of our management fees.
+          No fine print. No questions asked. That's how confident we are.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Comparison Table -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Detailed Feature Comparison
+        </Heading>
+        <p class="text-xl text-gray-600">
+          See exactly what you get with each plan
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-gray-50 border-b-2 border-gray-200">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Growth</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900 bg-blue-50">Scale</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              {plans[0].features.map((feature, idx) => (
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 text-sm text-gray-700">{feature.name}</td>
+                  {plans.map((plan, planIdx) => (
+                    <td class={`px-6 py-4 text-center ${planIdx === 1 ? 'bg-blue-50' : ''}`}>
+                      {plan.features[idx].included ? (
+                        <div class="flex flex-col items-center gap-1">
+                          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                          </svg>
+                          {plan.features[idx].detail && (
+                            <span class="text-xs text-gray-500">{plan.features[idx].detail}</span>
+                          )}
+                        </div>
+                      ) : (
+                        <svg class="w-5 h-5 text-gray-300 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="lg">
+    <Container size="lg">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="3xl" className="mb-4">
+          Pricing FAQs
+        </Heading>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">{faq.q}</h3>
+            <p class="text-gray-700">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Ready to Turn Ads Into Profit?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Get a custom profit analysis and see exactly how we'll grow your revenue
+        </p>
+        <Button variant="secondary" size="lg">
+          Get Free Profit Analysis
+        </Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

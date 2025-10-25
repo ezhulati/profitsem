@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Button } from '../../components/ui/Button';
+---
+
+<BaseLayout
+  title="Thank You - We'll Be In Touch - ProfitSEM"
+  description="Thanks for your interest in ProfitSEM. We'll review your details and reach out shortly."
+>
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center">
+        {/* Success Icon */}
+        <div class="mb-8 inline-flex">
+          <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center animate-scale-in">
+            <svg class="w-12 h-12 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+
+        <Heading as="h1" size="5xl" className="mb-4">
+          Thanks! We'll Be In Touch
+        </Heading>
+
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          We're reviewing your information to create a custom profit analysis.
+          Our team will reach out within 24 hours with next steps.
+        </p>
+
+        {/* What Happens Next */}
+        <div class="bg-gray-50 rounded-xl p-8 mb-8 text-left">
+          <Heading as="h3" size="xl" className="mb-6 text-center">
+            What Happens Next:
+          </Heading>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
+                1
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Review Your Details</h4>
+                <p class="text-gray-600 text-sm">
+                  Our team analyzes your current situation and determines the best approach for your business.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
+                2
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Custom Analysis (24 hours)</h4>
+                <p class="text-gray-600 text-sm">
+                  We'll send you a personalized profit analysis via email showing exactly how we can help.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
+                3
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-1">Strategy Call (If It's a Fit)</h4>
+                <p class="text-gray-600 text-sm">
+                  If we think we can help, we'll schedule a call to walk through your custom roadmap.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* While You Wait */}
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+          <Heading as="h3" size="lg" className="mb-4">
+            While You Wait, Check These Out:
+          </Heading>
+          <div class="grid md:grid-cols-3 gap-4">
+            <a href="/case-studies" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <div class="text-blue-500 font-semibold mb-2">Case Studies</div>
+              <p class="text-sm text-gray-600">See real results from businesses like yours</p>
+            </a>
+            <a href="/blog/google-ads-roi-guide" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <div class="text-blue-500 font-semibold mb-2">ROI Guide</div>
+              <p class="text-sm text-gray-600">Learn how we calculate true Google Ads ROI</p>
+            </a>
+            <a href="/process" class="block p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <div class="text-blue-500 font-semibold mb-2">Our Process</div>
+              <p class="text-sm text-gray-600">How we deliver results in 90 days</p>
+            </a>
+          </div>
+        </div>
+
+        <p class="text-gray-600">
+          Have questions? Email us at <a href="mailto:hello@profitsem.com" class="text-blue-500 underline">hello@profitsem.com</a>
+        </p>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

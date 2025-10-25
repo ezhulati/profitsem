@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Badge } from '../../components/ui/Badge';
+---
+
+<BaseLayout
+  title="Shopping Feed Optimization: Turn Product Titles Into Profit"
+  description="Learn how to optimize your Google Shopping feed for maximum ROAS. Product titles, custom labels, and feed structure explained."
+>
+  <Section background="white" spacing="lg">
+    <Container size="lg">
+      <div class="max-w-3xl mx-auto">
+        <Badge variant="info" size="md" className="mb-6">E-commerce</Badge>
+        <Heading as="h1" size="5xl" className="mb-6">
+          Shopping Feed Optimization: Turn Product Titles Into Profit
+        </Heading>
+        <p class="text-xl text-gray-600 mb-8">
+          Your product feed is leaving money on the table. Here's how to optimize titles, custom labels, and feed structure for maximum ROAS.
+        </p>
+
+        <div class="prose prose-lg max-w-none">
+          <p>
+            I audited a furniture retailer's Shopping feed last month. They had 2,400 products. Every single title was identical: "Furniture - Free Shipping."
+          </p>
+
+          <p>
+            No wonder their ROAS was 1.2x. Google had no idea what they were selling.
+          </p>
+
+          <p class="font-semibold text-xl bg-blue-50 border-l-4 border-blue-500 p-6">
+            After optimizing their feed, ROAS jumped to 4.8x in 3 weeks. Same products. Same prices. Better titles.
+          </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Why Most Shopping Feeds Fail
+          </Heading>
+
+          <p>
+            Google Shopping is dominated by your product feed. If your feed sucks, your ads will suck. Here are the most common mistakes:
+          </p>
+
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 my-6">
+            <p class="font-semibold text-red-900 mb-3">Fatal Feed Mistakes:</p>
+            <ul class="space-y-2 text-red-800">
+              <li>❌ Generic titles ("T-Shirt" instead of "Men's Navy Cotton Crew Neck T-Shirt Size L")</li>
+              <li>❌ Missing custom labels (can't segment by margin/bestseller)</li>
+              <li>❌ Poor image quality (blurry, bad lighting, wrong size)</li>
+              <li>❌ Wrong product categories</li>
+              <li>❌ No GTINs when competitors have them</li>
+            </ul>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Product Title Optimization
+          </Heading>
+
+          <p>
+            Your title is the single most important ranking factor in Shopping. Here's the formula:
+          </p>
+
+          <div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 my-8 text-center">
+            <p class="text-sm text-green-600 mb-2">High-Converting Title Formula</p>
+            <p class="text-lg font-bold text-gray-900">
+              [Brand] + [Product Type] + [Key Attribute 1] + [Key Attribute 2] + [Size/Color]
+            </p>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            Title Examples: Before vs After
+          </Heading>
+
+          <div class="space-y-6 my-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="mb-4">
+                <p class="text-sm text-red-600 font-semibold mb-1">❌ BEFORE (Generic)</p>
+                <p class="font-mono text-sm text-gray-700">"Sofa - Free Shipping"</p>
+              </div>
+              <div>
+                <p class="text-sm text-green-600 font-semibold mb-1">✓ AFTER (Optimized)</p>
+                <p class="font-mono text-sm text-gray-900">"West Elm Mid-Century Modern Leather Sofa 3-Seater Tan 84 inch"</p>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">
+                <strong>Result:</strong> 340% increase in impressions, 5.2x ROAS
+              </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="mb-4">
+                <p class="text-sm text-red-600 font-semibold mb-1">❌ BEFORE</p>
+                <p class="font-mono text-sm text-gray-700">"Running Shoes"</p>
+              </div>
+              <div>
+                <p class="text-sm text-green-600 font-semibold mb-1">✓ AFTER</p>
+                <p class="font-mono text-sm text-gray-900">"Nike Air Zoom Pegasus 40 Men's Running Shoes Black Size 10.5 Wide"</p>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">
+                <strong>Result:</strong> CPC dropped 62%, conversion rate up 180%
+              </p>
+            </div>
+          </div>
+
+          <Heading as="h3" size="2xl" className="mb-4">
+            Title Optimization Rules
+          </Heading>
+
+          <ol class="space-y-3">
+            <li>
+              <strong>Put the most important info first</strong>
+              <p class="text-gray-700">Google truncates at ~70 characters on mobile. Front-load brand and product type.</p>
+            </li>
+            <li>
+              <strong>Use numbers and specifics</strong>
+              <p class="text-gray-700">"24-inch" beats "large." "100% cotton" beats "soft material."</p>
+            </li>
+            <li>
+              <strong>Match search intent</strong>
+              <p class="text-gray-700">If people search "buy leather jacket men," include those exact words.</p>
+            </li>
+            <li>
+              <strong>Don't keyword stuff</strong>
+              <p class="text-gray-700">Google penalizes "Men Jacket Leather Jacket Men's Leather Bomber Jacket Black."</p>
+            </li>
+          </ol>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Custom Labels: The Secret Weapon
+          </Heading>
+
+          <p>
+            Custom labels let you segment your products any way you want. Here's how we use them:
+          </p>
+
+          <div class="bg-blue-50 p-6 rounded-lg my-6">
+            <p class="font-semibold mb-4">Our Custom Label Framework:</p>
+
+            <div class="space-y-3 text-sm">
+              <div>
+                <p class="font-semibold text-blue-900">custom_label_0: Profit Margin</p>
+                <p class="text-gray-700">high (50%+), medium (30-50%), low (&lt;30%)</p>
+              </div>
+
+              <div>
+                <p class="font-semibold text-blue-900">custom_label_1: Performance</p>
+                <p class="text-gray-700">bestseller, new, slow-mover, clearance</p>
+              </div>
+
+              <div>
+                <p class="font-semibold text-blue-900">custom_label_2: Seasonality</p>
+                <p class="text-gray-700">all-season, summer, winter, holiday</p>
+              </div>
+
+              <div>
+                <p class="font-semibold text-blue-900">custom_label_3: Price Tier</p>
+                <p class="text-gray-700">budget (&lt;$50), mid ($50-150), premium ($150+)</p>
+              </div>
+
+              <div>
+                <p class="font-semibold text-blue-900">custom_label_4: Stock Level</p>
+                <p class="text-gray-700">in-stock, low-stock (&lt;10), pre-order</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="font-semibold text-lg">
+            Why this matters: You can now create separate campaigns for high-margin products with aggressive bids, while limiting spend on low-margin clearance items.
+          </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Image Optimization
+          </Heading>
+
+          <p>
+            Your image is the second most important element after title. Here's what works:
+          </p>
+
+          <div class="space-y-4 my-6">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">White or neutral background</p>
+                <p class="text-gray-700 text-sm">Product should take up 75-80% of frame</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Minimum 800x800px (1200x1200 recommended)</p>
+                <p class="text-gray-700 text-sm">Higher res = better zoom = higher conversion</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Professional lighting</p>
+                <p class="text-gray-700 text-sm">No shadows, no watermarks, no text overlays</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-semibold">Show product in use (when possible)</p>
+                <p class="text-gray-700 text-sm">Lifestyle images convert 40% better than product-only</p>
+              </div>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Campaign Structure by Custom Labels
+          </Heading>
+
+          <div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 my-8">
+            <p class="font-semibold text-green-900 mb-4">Example Structure:</p>
+
+            <div class="space-y-4 text-sm">
+              <div class="bg-white p-4 rounded">
+                <p class="font-semibold">Campaign: High-Margin Bestsellers</p>
+                <p class="text-gray-600">custom_label_0 = "high" AND custom_label_1 = "bestseller"</p>
+                <p class="text-green-600 font-semibold mt-1">Target ROAS: 300% | Budget: 50% of total</p>
+              </div>
+
+              <div class="bg-white p-4 rounded">
+                <p class="font-semibold">Campaign: Medium-Margin New Products</p>
+                <p class="text-gray-600">custom_label_0 = "medium" AND custom_label_1 = "new"</p>
+                <p class="text-blue-600 font-semibold mt-1">Target ROAS: 400% | Budget: 30% of total</p>
+              </div>
+
+              <div class="bg-white p-4 rounded">
+                <p class="font-semibold">Campaign: Low-Margin Clearance</p>
+                <p class="text-gray-600">custom_label_0 = "low" OR custom_label_1 = "clearance"</p>
+                <p class="text-yellow-600 font-semibold mt-1">Target ROAS: 600% | Budget: 20% of total</p>
+              </div>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Action Checklist
+          </Heading>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
+            <p class="font-semibold mb-4">This Week:</p>
+            <ol class="space-y-3">
+              <li class="flex items-start gap-2">
+                <input type="checkbox" class="mt-1" />
+                <span>Audit your top 50 products - rewrite titles using the formula</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <input type="checkbox" class="mt-1" />
+                <span>Add custom_label_0 (profit margin) to your entire feed</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <input type="checkbox" class="mt-1" />
+                <span>Create separate campaigns for high/medium/low margin products</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <input type="checkbox" class="mt-1" />
+                <span>Review image quality - replace any blurry/dark photos</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <input type="checkbox" class="mt-1" />
+                <span>Set up automated feed rules for new products</span>
+              </li>
+            </ol>
+          </div>
+
+          <p class="font-semibold text-lg mt-12 bg-green-50 border-l-4 border-green-500 p-6">
+            Want us to optimize your Shopping feed? <a href="/free-analysis" class="text-blue-600 hover:underline">Get a free audit</a> and we'll show you exactly what's killing your ROAS.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

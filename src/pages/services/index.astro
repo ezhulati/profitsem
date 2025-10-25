@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Icon } from '../../components/ui/Icon';
+import { CTASection } from '../../components/sections/CTASection';
+
+const services = [
+  {
+    slug: 'google-ads-management',
+    icon: 'target' as const,
+    title: 'Google Ads Management',
+    description: 'Full-service campaign management focused on profit, not vanity metrics',
+    features: [
+      'Search, Display, Shopping & Video campaigns',
+      'Profit-focused optimization (not just clicks)',
+      'Advanced bid strategies & automation',
+      'Weekly performance reviews',
+    ],
+    results: '247% Avg ROI',
+  },
+  {
+    slug: 'ppc-audit',
+    icon: 'chart' as const,
+    title: 'PPC Audit & Strategy',
+    description: 'Comprehensive account analysis identifying profit leaks',
+    features: [
+      'Complete account audit (50+ checkpoints)',
+      'Profit leak identification',
+      'Custom 90-day roadmap',
+      'Competitor analysis',
+    ],
+    results: '$497 One-time',
+  },
+  {
+    slug: 'landing-page-optimization',
+    icon: 'zap' as const,
+    title: 'Landing Page Optimization',
+    description: 'High-converting pages designed to turn clicks into customers',
+    features: [
+      'Conversion-focused design',
+      'A/B testing framework',
+      'Mobile optimization',
+      'Speed & performance tuning',
+    ],
+    results: '68% CPA Reduction',
+  },
+  {
+    slug: 'conversion-tracking',
+    icon: 'trending-up' as const,
+    title: 'Conversion Tracking Setup',
+    description: 'Bulletproof tracking so you know where every dollar goes',
+    features: [
+      'GA4 & Google Ads integration',
+      'Multi-channel attribution',
+      'Enhanced conversions setup',
+      'Custom event tracking',
+    ],
+    results: '100% Accuracy',
+  },
+  {
+    slug: 'shopping-ads',
+    icon: 'dollar' as const,
+    title: 'Google Shopping Ads',
+    description: 'E-commerce campaigns that drive profitable sales',
+    features: [
+      'Product feed optimization',
+      'Smart Shopping campaigns',
+      'Performance Max for e-commerce',
+      'Shopping ads best practices',
+    ],
+    results: '4.2x Avg ROAS',
+  },
+  {
+    slug: 'account-recovery',
+    icon: 'shield' as const,
+    title: 'Account Recovery',
+    description: 'Rescue underperforming accounts and turn them profitable',
+    features: [
+      'Emergency account audit',
+      'Rapid profit optimization',
+      'Wasted spend elimination',
+      '30-day turnaround plan',
+    ],
+    results: '90-Day Guarantee',
+  },
+];
+---
+
+<BaseLayout
+  title="Google Ads Services - ProfitSEM"
+  description="Comprehensive Google Ads services focused on profit. From full management to audits and optimization."
+>
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="text-center text-white max-w-4xl mx-auto">
+        <Heading as="h1" size="6xl" className="mb-6">
+          Profit-Focused Google Ads Services
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Everything you need to turn Google Ads into a profitable revenue channel.
+          No fluff. No unnecessary add-ons. Just results.
+        </p>
+        <Button variant="secondary" size="lg">
+          Get Free Analysis
+        </Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Services Grid -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <Card variant="bordered" padding="lg" className="hover:shadow-xl transition-shadow">
+            <div class="mb-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <Icon name={service.icon} size="lg" className="text-white" />
+              </div>
+            </div>
+
+            <Heading as="h2" size="xl" className="mb-3">
+              {service.title}
+            </Heading>
+
+            <p class="text-gray-600 mb-6">
+              {service.description}
+            </p>
+
+            <ul class="space-y-2 mb-6">
+              {service.features.map((feature) => (
+                <li class="flex items-start gap-2 text-sm">
+                  <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+              <div class="text-sm font-semibold text-green-600">
+                {service.results}
+              </div>
+              <a
+                href={`/services/${service.slug}`}
+                class="text-blue-500 hover:text-blue-600 font-semibold text-sm flex items-center gap-1"
+              >
+                Learn More
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Process Overview -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          How We Work
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our proven process delivers results in 90 days
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            1
+          </div>
+          <h3 class="font-bold text-lg mb-2">Audit</h3>
+          <p class="text-gray-600 text-sm">Deep dive analysis of your current setup</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            2
+          </div>
+          <h3 class="font-bold text-lg mb-2">Strategy</h3>
+          <p class="text-gray-600 text-sm">Custom roadmap to profitability</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            3
+          </div>
+          <h3 class="font-bold text-lg mb-2">Optimize</h3>
+          <p class="text-gray-600 text-sm">Launch and continuous improvement</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            4
+          </div>
+          <h3 class="font-bold text-lg mb-2">Scale</h3>
+          <p class="text-gray-600 text-sm">Double down on what works</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
+</BaseLayout>

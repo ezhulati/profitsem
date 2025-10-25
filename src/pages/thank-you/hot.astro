@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Button } from '../../components/ui/Button';
+---
+
+<BaseLayout
+  title="Let's Get Started! - ProfitSEM"
+  description="You're a perfect fit! Let's schedule your strategy session."
+>
+  <Section background="gradient" spacing="xl">
+    <Container size="md">
+      <div class="text-center text-white">
+        {/* Success Icon */}
+        <div class="mb-8 inline-flex">
+          <div class="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center animate-scale-in">
+            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+
+        <Heading as="h1" size="5xl" className="mb-4">
+          You're a Perfect Fit! 🎉
+        </Heading>
+
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Based on your responses, we can definitely help you turn Google Ads into a profit machine.
+          Let's schedule a strategy session to map out your 90-day roadmap.
+        </p>
+
+        {/* Cal.com Embed Placeholder */}
+        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-xl p-8 mb-8">
+          <p class="text-white mb-6">
+            Pick a time that works for you:
+          </p>
+
+          {/* TODO: Integrate Cal.com embed */}
+          <div class="bg-white rounded-lg p-8 min-h-[400px] flex items-center justify-center">
+            <div class="text-gray-600 text-center">
+              <svg class="w-16 h-16 mx-auto mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p class="font-semibold mb-2">Calendar Booking</p>
+              <p class="text-sm">Cal.com integration will be embedded here</p>
+            </div>
+          </div>
+        </div>
+
+        {/* What to Expect */}
+        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6 text-left">
+          <Heading as="h3" size="xl" className="text-white mb-4">
+            What to Expect on the Call:
+          </Heading>
+          <ul class="space-y-3 text-blue-100">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Deep dive into your current Google Ads performance</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Identify profit leaks and missed opportunities</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Custom 90-day roadmap to profitability</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Projected ROI based on your specific situation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>No pressure, just honest advice on next steps</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mt-6 text-sm text-blue-200">
+          Can't find a time? Email us at <a href="mailto:hello@profitsem.com" class="underline">hello@profitsem.com</a>
+        </p>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

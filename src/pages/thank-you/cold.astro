@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Button } from '../../components/ui/Button';
+---
+
+<BaseLayout
+  title="Thanks for Your Interest - ProfitSEM"
+  description="Thanks for reaching out. Here are some resources to help you get started."
+>
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center">
+        {/* Icon */}
+        <div class="mb-8 inline-flex">
+          <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center animate-scale-in">
+            <svg class="w-12 h-12 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+
+        <Heading as="h1" size="5xl" className="mb-4">
+          Thanks for Your Interest!
+        </Heading>
+
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          We appreciate you taking the time to learn about ProfitSEM. We'll keep you updated
+          with helpful Google Ads tips and resources to help you grow.
+        </p>
+
+        {/* Email Subscription */}
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 mb-8">
+          <Heading as="h3" size="xl" className="mb-4">
+            Get Our Free Google Ads Profit Guide
+          </Heading>
+          <p class="text-gray-600 mb-6">
+            Learn the exact framework we use to turn Google Ads into profit machines.
+            Join 5,000+ marketers getting our weekly tips.
+          </p>
+
+          <form class="max-w-md mx-auto flex gap-2">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <Button variant="primary" size="lg">
+              Subscribe
+            </Button>
+          </form>
+        </div>
+
+        {/* Free Resources */}
+        <div class="mb-8">
+          <Heading as="h3" size="2xl" className="mb-6">
+            Free Resources to Get Started:
+          </Heading>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <a href="/resources/roi-calculator" class="block p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all text-left">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Google Ads ROI Calculator</h4>
+              <p class="text-gray-600 text-sm">Calculate your actual ROI and see where you're leaving money on the table.</p>
+            </a>
+
+            <a href="/blog" class="block p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all text-left">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Google Ads Blog</h4>
+              <p class="text-gray-600 text-sm">Actionable strategies to improve your Google Ads performance.</p>
+            </a>
+
+            <a href="/resources/google-ads-guide" class="block p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all text-left">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Complete Google Ads Guide</h4>
+              <p class="text-gray-600 text-sm">Our comprehensive guide to profitable Google Ads campaigns.</p>
+            </a>
+
+            <a href="/case-studies" class="block p-6 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all text-left">
+              <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Success Stories</h4>
+              <p class="text-gray-600 text-sm">See how we've helped businesses turn ads into profit.</p>
+            </a>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div class="bg-gray-50 rounded-xl p-6">
+          <p class="text-gray-600 mb-4">
+            When you're ready to talk, we're here to help.
+          </p>
+          <Button variant="secondary" size="lg">
+            Schedule a Call
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
