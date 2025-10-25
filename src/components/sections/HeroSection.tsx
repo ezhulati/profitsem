@@ -24,30 +24,12 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Left Content */}
           <div className="lg:col-span-2 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur border border-emerald-400/40 rounded-full mb-6">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                <defs>
-                  <linearGradient id="rocketGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#10b981' }} />
-                    <stop offset="100%" style={{ stopColor: '#3b82f6' }} />
-                  </linearGradient>
-                </defs>
-                <path fill="url(#rocketGradient)" d="M12 2L4 12h6v9l8-10h-6V2z" />
-              </svg>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 text-sm font-bold">
-                AI-Driven Google Ads Management
-              </span>
-            </div>
-
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              Train Google's AI to Find <span className="gradient-text">Your Best Customers</span>
-              <span className="block text-gray-300 text-2xl sm:text-3xl lg:text-4xl mt-2">
-                Then Scale Predictably
-              </span>
+              AI-Driven <span className="gradient-text">Google Ads</span> Management
             </Heading>
 
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              We feed Google's AI high-quality data about your actual customers, build consolidated campaigns that learn efficiently, and let smart bidding optimize automatically. The result? Predictable customer acquisition costs in 90 days.
+            <p className="text-2xl sm:text-3xl text-gray-300 mb-8 max-w-2xl font-medium">
+              Train Google's AI to Find Your Best Customers, Then Scale Predictably
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

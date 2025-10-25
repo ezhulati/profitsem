@@ -441,18 +441,20 @@ export function QualificationForm() {
             </Select>
 
             <Select
-              label="Monthly Budget for PPC Management"
+              label="Current Monthly Google Ads Spend"
               value={formData.budget}
               onChange={(e) => updateFormData('budget', e.target.value)}
               error={errors.budget}
               fullWidth
               required
             >
-              <option value="">Select budget range</option>
-              <option value="2.5k">$2,500/month (Growth Plan)</option>
-              <option value="4.5k">$4,500/month (Scale Plan)</option>
-              <option value="custom">Custom / Enterprise</option>
-              <option value="not-sure">Not sure yet</option>
+              <option value="">Select ad spend range</option>
+              <option value="under-5k">Under $5K/month</option>
+              <option value="5k-10k">$5K - $10K/month</option>
+              <option value="10k-25k">$10K - $25K/month</option>
+              <option value="25k-50k">$25K - $50K/month</option>
+              <option value="50k-plus">$50K+/month</option>
+              <option value="not-sure">Not sure / Just getting started</option>
             </Select>
 
             <TextArea
