@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://profitsem.vercel.app',
+  site: 'https://profitsem.com',
   integrations: [
     react(),
     tailwind({
@@ -27,6 +27,7 @@ export default defineConfig({
     functionPerRoute: false,
     edgeMiddleware: false,
     includeFiles: [],
+    runtime: 'nodejs20.x',
   }),
   vite: {
     ssr: {
