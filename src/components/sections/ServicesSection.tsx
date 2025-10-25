@@ -65,14 +65,14 @@ export function ServicesSection() {
                 </div>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-6 text-center">
                 <p className="text-sm font-bold text-emerald-600 mb-2">{service.title}</p>
                 <Heading as="h3" size="2xl" className="text-gray-900">
                   {service.phase}
                 </Heading>
               </div>
 
-              <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+              <p className="text-gray-700 mb-6 leading-relaxed font-medium text-center">
                 {service.description}
               </p>
 

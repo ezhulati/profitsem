@@ -1,73 +1,100 @@
 import { Container } from '../layout/Container';
 import { Heading } from '../ui/Heading';
-import { Card } from '../ui/Card';
-import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 
 export function CaseStudiesPreview() {
   const results = [
     {
-      industry: 'Furniture Store',
-      before: 'Spending $12K/month. Getting $1.80 back per dollar.',
-      after: 'Now getting $5.60 back. Monthly sales went from $45K to $186K.',
+      industry: 'E-commerce Furniture',
+      metric: 'ROAS',
+      before: '1.8x',
+      after: '5.6x',
+      improvement: '+211%',
+      secondary: 'Revenue: $45K → $186K/mo',
+      color: 'emerald'
     },
     {
-      industry: 'SaaS Company',
-      before: 'Paying $246 per lead. Only 12% were qualified.',
-      after: 'Now paying $89 per lead. 51% are qualified.',
+      industry: 'SaaS Platform',
+      metric: 'Cost Per Lead',
+      before: '$246',
+      after: '$89',
+      improvement: '-64%',
+      secondary: 'Lead Quality: 12% → 51%',
+      color: 'blue'
     },
     {
-      industry: 'HVAC Installer',
-      before: 'Spending $142 per job. Getting 28 jobs per month.',
-      after: 'Now spending $56 per job. Getting 80 jobs per month.',
+      industry: 'HVAC Services',
+      metric: 'Cost Per Job',
+      before: '$142',
+      after: '$56',
+      improvement: '-61%',
+      secondary: 'Monthly Jobs: 28 → 80',
+      color: 'purple'
     },
   ];
 
   return (
-    <section className="py-24 bg-white" id="proof">
+    <section className="py-32 bg-gradient-to-br from-gray-50 to-white" id="proof">
       <Container>
-        <div className="text-center mb-16">
-          <Heading as="h2" size="5xl" className="mb-4">
+        <div className="text-center mb-20">
+          <Heading as="h2" size="5xl" className="mb-6">
             Will This Work For My Business?
           </Heading>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Here's what happened with three different industries.
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            Here's what happened with three completely different industries.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 mb-12">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-16">
           {results.map((result) => (
-            <div key={result.industry} className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full mb-4">
+            <div key={result.industry} className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-emerald-500 hover:shadow-2xl transition-all duration-300 text-center">
+              {/* Industry Badge */}
+              <div className="mb-8">
+                <span className={`inline-block px-4 py-2 bg-${result.color}-100 text-${result.color}-700 text-sm font-bold rounded-lg`}>
                   {result.industry}
                 </span>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <p className="text-xs font-bold text-red-600 mb-1">BEFORE</p>
-                  <p className="text-sm text-gray-700">{result.before}</p>
-                </div>
+              {/* Metric Label */}
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">
+                {result.metric}
+              </p>
 
-                <div className="flex justify-center">
-                  <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              {/* Before/After Display */}
+              <div className="mb-6">
+                <div className="flex items-end justify-center gap-4 mb-2">
+                  <div className="text-2xl font-bold text-gray-400 line-through">
+                    {result.before}
+                  </div>
+                  <svg className="w-6 h-6 text-emerald-500 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
+                  <div className="text-5xl font-bold text-gray-900">
+                    {result.after}
+                  </div>
                 </div>
 
-                <div className="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r">
-                  <p className="text-xs font-bold text-emerald-600 mb-1">AFTER</p>
-                  <p className="text-sm font-semibold text-gray-900">{result.after}</p>
+                {/* Improvement Badge */}
+                <div className="flex justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-bold rounded-full">
+                    {result.improvement}
+                  </span>
                 </div>
+              </div>
+
+              {/* Secondary Metric */}
+              <div className="pt-6 border-t border-gray-200">
+                <p className="text-sm text-gray-600 font-medium">
+                  {result.secondary}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center">
-          <Button variant="ghost" size="lg" href="/case-studies">
-            See Full Case Studies
+          <Button variant="primary" size="lg" href="/case-studies">
+            View Full Case Studies
           </Button>
         </div>
       </Container>
