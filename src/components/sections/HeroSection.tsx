@@ -21,7 +21,7 @@ export function HeroSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-3 gap-12 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
           {/* Left Content */}
           <div className="lg:col-span-2 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur border border-emerald-400/40 rounded-full mb-6">
