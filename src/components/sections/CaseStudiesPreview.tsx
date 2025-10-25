@@ -9,12 +9,12 @@ export function CaseStudiesPreview() {
     {
       industry: 'E-commerce',
       company: 'Premium Furniture Retailer',
-      challenge: 'High ad spend with poor ROAS',
-      result: '312% increase in ROAS in 60 days',
+      challenge: 'High ad spend with poor returns',
+      result: '312% increase in sales in 60 days',
       metrics: [
-        { label: 'ROAS', before: '1.8x', after: '5.6x' },
-        { label: 'Monthly Revenue', before: '$45K', after: '$186K' },
-        { label: 'CPA', before: '$78', after: '$24' },
+        { label: 'Return', before: '$1.80 back', after: '$5.60 back' },
+        { label: 'Monthly Sales', before: '$45K', after: '$186K' },
+        { label: 'Cost Per Sale', before: '$78', after: '$24' },
       ],
     },
     {
@@ -23,9 +23,9 @@ export function CaseStudiesPreview() {
       challenge: 'Low-quality leads, wasted budget',
       result: '4.2x increase in qualified demos',
       metrics: [
-        { label: 'SQL Rate', before: '12%', after: '51%' },
-        { label: 'CPL', before: '$246', after: '$89' },
-        { label: 'MRR from Ads', before: '$12K', after: '$68K' },
+        { label: 'Lead Quality', before: '12%', after: '51%' },
+        { label: 'Cost Per Lead', before: '$246', after: '$89' },
+        { label: 'Monthly Revenue', before: '$12K', after: '$68K' },
       ],
     },
     {
@@ -42,7 +42,7 @@ export function CaseStudiesPreview() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" id="proof">
       <Container>
         <div className="text-center mb-16">
           <Heading as="h2" size="5xl" className="mb-4">

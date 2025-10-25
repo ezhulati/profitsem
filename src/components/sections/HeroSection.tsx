@@ -24,52 +24,54 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur border border-white/20 rounded-full mb-6">
-              <span className="text-green-400 text-sm font-semibold">
-                90-Day Profit Guarantee
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 backdrop-blur border border-green-400/40 rounded-full mb-6">
+              <span className="text-green-400 text-sm font-bold">
+                $2.4M In Sales Last Month
               </span>
             </div>
 
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              Turn Google Ads Into
+              Stop Wasting Money On
               <span className="block gradient-text">
-                Pure Profit
+                Google Ads
+              </span>
+              <span className="block text-gray-300 text-2xl sm:text-3xl lg:text-4xl mt-2">
+                Start Making Profit in 90 Days
               </span>
             </Heading>
 
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              We don't chase clicks. We maximize profit. Data-driven Google Ads campaigns
-              that deliver measurable ROI in 90 days. No contracts. No fluff. Just results.
+              Most businesses waste 60%+ of their Google Ads budget on the wrong clicks. We'll show you exactly where your money is going and how to turn it into consistent, profitable sales.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button variant="primary" size="lg" href="/free-analysis">
-                Get Free Profit Analysis
+                Get Your Free Audit ($2,500 Value)
               </Button>
-              <Button variant="secondary" size="lg" href="/case-studies">
-                View Case Studies
+              <Button variant="secondary" size="lg" href="#proof">
+                See The Proof
               </Button>
             </div>
 
-            {/* Trust Indicators */}
+            {/* Specific Trust Indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
+                <span>$47M+ In Client Sales</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Top 3% Google Partner</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
                 <span>No Long-Term Contracts</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Google Premier Partner</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Money-Back Guarantee</span>
               </div>
             </div>
           </div>
@@ -78,9 +80,8 @@ export function HeroSection() {
           <div className="grid grid-cols-2 gap-6">
             <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
-                value="247"
-                suffix="%"
-                label="Average ROI"
+                value="$3.47"
+                label="Back For Every $1 Spent"
                 variant="success"
                 className="text-white"
               />
@@ -89,7 +90,7 @@ export function HeroSection() {
               <StatCounter
                 prefix="$"
                 value="2.4M"
-                label="Client Revenue (30 Days)"
+                label="In Sales (Last 30 Days)"
                 variant="primary"
                 className="text-white"
               />
@@ -97,7 +98,7 @@ export function HeroSection() {
             <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
                 value="90"
-                label="Days to Profit"
+                label="Days to Profitability"
                 variant="primary"
                 className="text-white"
               />
@@ -106,7 +107,7 @@ export function HeroSection() {
               <StatCounter
                 value="4.8"
                 suffix="/5"
-                label="Client Rating"
+                label="Client Satisfaction"
                 variant="success"
                 className="text-white"
               />

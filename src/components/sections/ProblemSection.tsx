@@ -1,67 +1,55 @@
 import { Container } from '../layout/Container';
 import { Heading } from '../ui/Heading';
-import { Icon } from '../ui/Icon';
-
-interface Problem {
-  title: string;
-  description: string;
-}
 
 export function ProblemSection() {
-  const problems: Problem[] = [
-    {
-      title: 'Wasted Ad Spend',
-      description:
-        'Your budget disappears on irrelevant clicks, with no clear strategy to stop the bleeding.',
-    },
-    {
-      title: 'Stagnant ROAS',
-      description:
-        "Campaigns that once worked have plateaued, and can't find new paths to growth.",
-    },
-    {
-      title: 'Lack of Transparency',
-      description:
-        "You get campaign reports you can't decipher, leaving you well-guessing into what your agency is doing.",
-    },
+  const stats = [
+    { number: '67%', label: 'Of ad budgets wasted on wrong keywords' },
+    { number: '3-6mo', label: 'Most agencies take to see results' },
+    { number: '80%', label: 'Of campaigns never see positive ROI' },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-red-50 to-orange-50">
       <Container>
-        <div className="max-w-4xl mx-auto">
-          {/* Heading */}
-          <div className="text-center mb-12 md:mb-16">
-            <Heading as="h2" size="4xl" className="mb-4 text-balance">
-              Is This What Your Google Ads Look Like?
+        <div className="max-w-5xl mx-auto">
+          {/* Main Problem */}
+          <div className="text-center mb-12">
+            <Heading as="h2" size="5xl" className="mb-6 text-balance">
+              You're Spending $10,000+/Month on Google Ads
+              <span className="block text-red-600 mt-2">
+                And Have Nothing to Show For It
+              </span>
             </Heading>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-balance">
-              Most agencies set it and forget it. We see the same costly mistakes robbing
-              businesses of their true potential every single day.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Your current agency sends pretty reports full of "impressions" and "click-through rates."
+              Meanwhile, your bank account tells a different story. You're burning cash on campaigns
+              that don't convert, can't scale what works, and have zero visibility into where your
+              money actually goes.
             </p>
           </div>
 
-          {/* Problem Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {problems.map((problem, index) => (
+          {/* Stat Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center p-6 md:p-8"
+                className="bg-white rounded-xl p-6 border-2 border-red-200 text-center"
               >
-                {/* Icon Circle */}
-                <div className="w-16 h-16 rounded-full bg-red-50 border-2 border-red-200 flex items-center justify-center mb-6">
-                  <Icon name="x" size="lg" className="text-red-500" />
+                <div className="text-4xl font-bold text-red-600 mb-2">
+                  {stat.number}
                 </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {problem.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-relaxed">{problem.description}</p>
+                <p className="text-sm text-gray-700 font-medium">
+                  {stat.label}
+                </p>
               </div>
             ))}
+          </div>
+
+          {/* Bottom Text */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 font-semibold">
+              Sound familiar? You're not alone. And it's not your fault.
+            </p>
           </div>
         </div>
       </Container>

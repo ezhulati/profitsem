@@ -1,32 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { HeroSection } from '../components/sections/HeroSection';
-import { TrustSection } from '../components/sections/TrustSection';
 import { ProblemSection } from '../components/sections/ProblemSection';
 import { ServicesSection } from '../components/sections/ServicesSection';
-import { ProcessSection } from '../components/sections/ProcessSection';
-import { ResultsSection } from '../components/sections/ResultsSection';
 import { CaseStudiesPreview } from '../components/sections/CaseStudiesPreview';
-import { PricingSection } from '../components/sections/PricingSection';
 import { TestimonialsSection } from '../components/sections/TestimonialsSection';
+import { PricingSection } from '../components/sections/PricingSection';
 import { FAQSection } from '../components/sections/FAQSection';
-import { IndustriesSection } from '../components/sections/IndustriesSection';
-import { WhyChooseSection } from '../components/sections/WhyChooseSection';
 import { CTASection } from '../components/sections/CTASection';
 ---
 
 <BaseLayout>
   <HeroSection />
-  <TrustSection />
   <ProblemSection />
   <ServicesSection />
-  <ProcessSection />
-  <ResultsSection />
   <CaseStudiesPreview />
-  <PricingSection />
   <TestimonialsSection client:visible />
+  <PricingSection />
   <FAQSection client:visible />
-  <IndustriesSection />
-  <WhyChooseSection />
   <CTASection />
 </BaseLayout>

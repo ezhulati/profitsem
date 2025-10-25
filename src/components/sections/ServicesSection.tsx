@@ -7,88 +7,99 @@ export function ServicesSection() {
   const services = [
     {
       icon: 'target' as const,
-      title: 'Google Ads Management',
-      description: 'Full-service campaign management focused on profit, not vanity metrics. We optimize for revenue, not just traffic.',
-    },
-    {
-      icon: 'chart' as const,
-      title: 'PPC Audit & Strategy',
-      description: 'Comprehensive account audit identifying profit leaks and missed opportunities. Get a custom roadmap to profitability.',
-    },
-    {
-      icon: 'zap' as const,
-      title: 'Landing Page Optimization',
-      description: 'High-converting landing pages designed to turn clicks into customers. CRO-driven approach for maximum ROI.',
+      title: 'We Fix Your Campaigns',
+      metric: '3x More Sales',
+      description: 'Complete campaign overhaul in 30 days. We eliminate wasted spend, fix tracking, and scale what actually converts. Average client triples their sales in 90 days.',
+      outcomes: [
+        'Stop spending on clicks that don\'t buy',
+        'Fix tracking so you see real results',
+        'Rebuild campaigns that actually sell',
+        'Scale what works, cut what doesn\'t'
+      ]
     },
     {
       icon: 'trending-up' as const,
-      title: 'Conversion Tracking',
-      description: 'Bulletproof tracking setup so you know exactly where every dollar goes. No guesswork, just accurate data.',
-    },
-    {
-      icon: 'dollar' as const,
-      title: 'Shopping Ads',
-      description: 'E-commerce Google Shopping campaigns that drive profitable sales. Product feed optimization included.',
+      title: 'We Scale What Works',
+      metric: '3-5x Revenue Growth',
+      description: 'Once profitable, we scale fast. Expand to new customers while keeping your cost per sale low. Growth without waste.',
+      outcomes: [
+        'Reach more buyers without raising costs',
+        'Test new ways to get customers',
+        'Keep cost per sale low as you grow',
+        'Hit $100k+/month profitably'
+      ]
     },
     {
       icon: 'shield' as const,
-      title: 'Account Recovery',
-      description: 'Rescue underperforming accounts and turn them profitable. We fix what others break.',
+      title: 'We Guarantee Results',
+      metric: '90-Day Money-Back',
+      description: 'If we don\'t triple your sales from Google Ads in 90 days, you get every penny back. No excuses. We only win when you win.',
+      outcomes: [
+        'Triple sales or full refund',
+        'No long-term contracts',
+        'Cancel anytime, no penalty',
+        'Clear weekly reports you can understand'
+      ]
     },
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" id="solution">
       <Container>
         <div className="text-center mb-16">
           <Heading as="h2" size="5xl" className="mb-4">
-            Profit-Focused Services
+            How We Triple Your Sales in 90 Days
           </Heading>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to turn Google Ads into a profitable revenue channel.
-            No fluff. No unnecessary add-ons.
+            Three steps. Guaranteed results. No agency BS.
           </p>
         </div>
 
-        <div className="bento-grid grid-cols-1 md:grid-cols-3">
-          {/* Featured Service - Large Card */}
-          <Card key={services[0].title} variant="bordered" padding="lg" className="bento-item-large magnetic-hover-sm bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200 fade-in-scroll">
-            <div className="mb-6">
-              <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-glow-blue">
-                <Icon name={services[0].icon} size="xl" className="text-white" />
-              </div>
-            </div>
-            <Heading as="h3" size="3xl" className="mb-4">
-              {services[0].title}
-            </Heading>
-            <p className="text-gray-700 text-lg">
-              {services[0].description}
-            </p>
-          </Card>
-
-          {/* Regular Services */}
-          {services.slice(1).map((service, index) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
             <Card
               key={service.title}
               variant="bordered"
               padding="lg"
-              className={`magnetic-hover-sm smooth-transition hover:shadow-xl ${
-                index % 3 === 0 ? 'slide-in-left' :
-                index % 3 === 1 ? 'fade-in-scroll' :
-                'slide-in-right'
-              }`}
+              className="magnetic-hover-sm smooth-transition hover:shadow-xl border-2 fade-in-scroll"
             >
-              <div className="mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Icon name={service.icon} size="lg" className="text-blue-500" />
+              {/* Step Number */}
+              <div className="mb-4 flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">{index + 1}</span>
+                </div>
+                <div className="text-sm font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                  {service.metric}
                 </div>
               </div>
-              <Heading as="h3" size="xl" className="mb-3">
+
+              <Heading as="h3" size="2xl" className="mb-3">
                 {service.title}
               </Heading>
-              <p className="text-gray-600">
+
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 {service.description}
               </p>
+
+              {/* Outcomes */}
+              <ul className="space-y-2">
+                {service.outcomes.map((outcome, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <svg
+                      className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-sm text-gray-700">{outcome}</span>
+                  </li>
+                ))}
+              </ul>
             </Card>
           ))}
         </div>

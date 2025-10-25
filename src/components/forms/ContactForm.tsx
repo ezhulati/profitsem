@@ -204,10 +204,7 @@ export function ContactForm() {
       </Button>
 
       <p className="text-sm text-gray-500 text-center">
-        We typically respond within 24 hours. For urgent matters, call us at{' '}
-        <a href="tel:+15551234567" className="text-blue-500 hover:underline">
-          +1 (555) 123-4567
-        </a>
+        We typically respond within 24 hours.
       </p>
     </form>
   );
