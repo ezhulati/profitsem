@@ -9,6 +9,7 @@ interface FormData {
   fullName: string;
   email: string;
   company: string;
+  website: string;
   phone: string;
 
   // Qualification Questions
@@ -48,6 +49,7 @@ export function QualificationForm() {
     fullName: '',
     email: '',
     company: '',
+    website: '',
     phone: '',
     monthlyAdSpend: '',
     monthlyRevenue: '',
@@ -140,6 +142,10 @@ export function QualificationForm() {
         newErrors.email = 'Invalid email format';
       }
       if (!formData.company.trim()) newErrors.company = 'Company is required';
+      if (!formData.website.trim()) newErrors.website = 'Website is required';
+      else if (!/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(formData.website)) {
+        newErrors.website = 'Please enter a valid website URL';
+      }
       if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
     }
 
@@ -285,6 +291,17 @@ export function QualificationForm() {
               onChange={(e) => updateFormData('company', e.target.value)}
               error={errors.company}
               placeholder="Acme Inc."
+              fullWidth
+              required
+            />
+
+            <Input
+              label="Company Website"
+              type="url"
+              value={formData.website}
+              onChange={(e) => updateFormData('website', e.target.value)}
+              error={errors.website}
+              placeholder="https://www.yourcompany.com"
               fullWidth
               required
             />

@@ -36,6 +36,14 @@ export function Footer({ className = '' }: FooterProps) {
       { label: 'ROI Calculator', href: '/resources/roi-calculator' },
       { label: 'FAQs', href: '/faqs' },
     ],
+    locations: [
+      { label: 'New York', href: '/locations/new-york' },
+      { label: 'Los Angeles', href: '/locations/los-angeles' },
+      { label: 'Chicago', href: '/locations/chicago' },
+      { label: 'San Francisco', href: '/locations/san-francisco' },
+      { label: 'Boston', href: '/locations/boston' },
+      { label: 'View All Cities →', href: '/locations' },
+    ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
@@ -83,7 +91,7 @@ export function Footer({ className = '' }: FooterProps) {
     <footer className={`bg-navy-950 text-white ${className}`.trim()}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 mb-12">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <a href="/" className="mb-6 inline-block group">
@@ -152,6 +160,24 @@ export function Footer({ className = '' }: FooterProps) {
             <h3 className="text-sm font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    variant="secondary"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">Locations</h3>
+            <ul className="space-y-3">
+              {footerLinks.locations.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

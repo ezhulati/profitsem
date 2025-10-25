@@ -25,42 +25,42 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="lg:col-span-2 text-center lg:text-left">
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              AI-Driven <span className="gradient-text">Google Ads</span> Management
+              Spending $10k+/Month<br/>But <span className="gradient-text">Stuck at a Ceiling?</span>
             </Heading>
 
             <p className="text-2xl sm:text-3xl text-gray-300 mb-8 max-w-2xl font-medium">
-              Train Google's AI to Find Your Best Customers, Then Scale Predictably
+              We fix accounts that stopped scaling—then build you a predictable customer acquisition machine in 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12 relative z-20">
               <a
-                href="/process"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-xl magnetic-hover relative z-20"
+                href="/free-analysis"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white shadow-lg hover:shadow-xl magnetic-hover relative z-20"
               >
-                Learn About Our Process →
+                Get Your Free Audit
               </a>
               <a
-                href="/free-analysis"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white text-navy-900 hover:bg-gray-100 active:bg-gray-200 shadow-lg hover:shadow-xl magnetic-hover relative z-20"
+                href="/process"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white/10 text-white hover:bg-white/20 active:bg-white/30 border-2 border-white/20 shadow-lg hover:shadow-xl magnetic-hover relative z-20"
               >
-                Get Free Analysis
+                How We Do It →
               </a>
             </div>
 
             {/* Specific Trust Indicators */}
-            <div className="flex items-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>90 Days to Predictable Revenue</span>
+                <span>For accounts spending $10k-$100k+/month</span>
               </div>
-              <span className="text-gray-600">•</span>
+              <span className="hidden sm:inline text-gray-600">•</span>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>$2.3M+ In Tracked Profit</span>
+                <span>Avg. client ROI: 247%</span>
               </div>
             </div>
           </div>

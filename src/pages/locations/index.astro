@@ -1,0 +1,392 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Button } from '../../components/ui/Button';
+
+const cities = [
+  {
+    name: 'New York',
+    state: 'NY',
+    slug: 'new-york',
+    description: 'Competitive digital advertising market. Finance, tech, and professional services.',
+    clients: '78+',
+    roi: '285%',
+  },
+  {
+    name: 'Los Angeles',
+    state: 'CA',
+    slug: 'los-angeles',
+    description: 'Entertainment, e-commerce, and tech. Year-round market with diverse opportunities.',
+    clients: '42+',
+    roi: '265%',
+  },
+  {
+    name: 'Chicago',
+    state: 'IL',
+    slug: 'chicago',
+    description: 'Manufacturing, SaaS, and professional services. Midwest business hub.',
+    clients: '56+',
+    roi: '271%',
+  },
+  {
+    name: 'Houston',
+    state: 'TX',
+    slug: 'houston',
+    description: 'Energy capital. Oil & gas, healthcare, and manufacturing.',
+    clients: '89+',
+    roi: '298%',
+  },
+  {
+    name: 'Phoenix',
+    state: 'AZ',
+    slug: 'phoenix',
+    description: 'Fast-growing market. Real estate, HVAC, and home services.',
+    clients: '51+',
+    roi: '279%',
+  },
+  {
+    name: 'Philadelphia',
+    state: 'PA',
+    slug: 'philadelphia',
+    description: 'Healthcare, education, and biotech corridor. Highly educated audience.',
+    clients: '67+',
+    roi: '283%',
+  },
+  {
+    name: 'San Antonio',
+    state: 'TX',
+    slug: 'san-antonio',
+    description: 'Military, healthcare, and tourism. Growing tech scene.',
+    clients: '38+',
+    roi: '262%',
+  },
+  {
+    name: 'San Diego',
+    state: 'CA',
+    slug: 'san-diego',
+    description: 'Biotech, life sciences, and tourism. Innovation-driven economy.',
+    clients: '48+',
+    roi: '276%',
+  },
+  {
+    name: 'Dallas',
+    state: 'TX',
+    slug: 'dallas',
+    description: 'Finance, tech, and real estate. DFW metroplex opportunities.',
+    clients: '72+',
+    roi: '291%',
+  },
+  {
+    name: 'San Francisco',
+    state: 'CA',
+    slug: 'san-francisco',
+    description: 'Global tech capital. B2B SaaS, fintech, and AI/ML.',
+    clients: '93+',
+    roi: '312%',
+  },
+  {
+    name: 'Austin',
+    state: 'TX',
+    slug: 'austin',
+    description: 'Tech startup hub. Fast-growing SaaS and e-commerce market.',
+    clients: '64+',
+    roi: '287%',
+  },
+  {
+    name: 'Seattle',
+    state: 'WA',
+    slug: 'seattle',
+    description: 'Cloud/SaaS and e-commerce. Amazon and Microsoft ecosystem.',
+    clients: '59+',
+    roi: '294%',
+  },
+  {
+    name: 'Denver',
+    state: 'CO',
+    slug: 'denver',
+    description: 'Outdoor recreation, cannabis, and emerging tech scene.',
+    clients: '44+',
+    roi: '268%',
+  },
+  {
+    name: 'Boston',
+    state: 'MA',
+    slug: 'boston',
+    description: 'Biotech, healthcare, and higher education. Northeast business hub.',
+    clients: '71+',
+    roi: '289%',
+  },
+  {
+    name: 'Atlanta',
+    state: 'GA',
+    slug: 'atlanta',
+    description: 'Southeast business hub. Enterprise SaaS and Fortune 500.',
+    clients: '53+',
+    roi: '281%',
+  },
+  {
+    name: 'Miami',
+    state: 'FL',
+    slug: 'miami',
+    description: 'Real estate, crypto/fintech, and Latin America gateway.',
+    clients: '49+',
+    roi: '274%',
+  },
+  {
+    name: 'Charlotte',
+    state: 'NC',
+    slug: 'charlotte',
+    description: 'Second-largest banking center. Financial services and fintech.',
+    clients: '47+',
+    roi: '277%',
+  },
+  {
+    name: 'Portland',
+    state: 'OR',
+    slug: 'portland',
+    description: 'Pacific Northwest tech hub. Outdoor brands and sustainability.',
+    clients: '41+',
+    roi: '272%',
+  },
+];
+---
+
+<BaseLayout
+  title="Google Ads Management - Major US Cities | ProfitSEM"
+  description="Expert Google Ads management in 15+ major US cities. Local market knowledge, flat-rate pricing, 90-day guarantee. Find your city."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Heading as="h1" size="6xl" className="mb-6">
+          Google Ads Management Across America
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Local expertise in 17 major metros. We understand your market and deliver results in 90 days—or you get a full refund.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/free-analysis">
+            Get Free Analysis
+          </Button>
+          <Button variant="ghost" size="lg" className="text-white border-white/30" href="/contact">
+            Contact Us
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Stats Overview -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-navy-900 mb-2">17</div>
+          <div class="text-gray-600">Major Cities</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-navy-900 mb-2">1,000+</div>
+          <div class="text-gray-600">Active Clients</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-navy-900 mb-2">284%</div>
+          <div class="text-gray-600">Avg ROI</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-navy-900 mb-2">90</div>
+          <div class="text-gray-600">Day Guarantee</div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- City Grid -->
+  <Section background="gray" spacing="xl">
+    <Container size="lg">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Find Your City
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Click any city to see local market insights, client results, and industry-specific strategies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cities.map((city) => (
+          <a
+            href={`/locations/${city.slug}`}
+            class="group bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-500"
+          >
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-600 transition-colors mb-1">
+                  {city.name}
+                </h3>
+                <div class="text-sm text-gray-500">{city.state}</div>
+              </div>
+              <svg
+                class="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+
+            <p class="text-gray-600 mb-4 text-sm">
+              {city.description}
+            </p>
+
+            <div class="flex items-center gap-6 pt-4 border-t border-gray-100">
+              <div>
+                <div class="text-xs text-gray-500 mb-1">Clients</div>
+                <div class="font-bold text-navy-900">{city.clients}</div>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 mb-1">Avg ROI</div>
+                <div class="font-bold text-emerald-600">{city.roi}</div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Why Local Expertise Matters -->
+  <Section background="white" spacing="xl">
+    <Container size="lg">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <Heading as="h2" size="4xl" className="mb-6">
+            Why Local Market Knowledge Matters
+          </Heading>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Regional Search Behavior</h3>
+                <p class="text-gray-700">
+                  Search patterns vary by region. Houston searches for "oilfield services" while Seattle searches for "cloud software." We know your market.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Competitive Landscape</h3>
+                <p class="text-gray-700">
+                  CPCs in San Francisco ($50+ for SaaS keywords) require different strategies than Phoenix ($12 for HVAC). We optimize for your local competition.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Seasonal & Cultural Factors</h3>
+                <p class="text-gray-700">
+                  Miami peaks during snowbird season. Denver surges for outdoor gear in spring. Boston education services spike in fall. We time campaigns perfectly.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+                  <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-2">Industry Concentrations</h3>
+                <p class="text-gray-700">
+                  Boston biotech, Austin SaaS, Atlanta enterprise—we target the decision-makers in your city's dominant industries with surgical precision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl p-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg mb-6">
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Our Guarantee</h3>
+            <p class="text-gray-700 mb-6">
+              No matter which city you're in, you get the same promise: improve your Google Ads ROI within 90 days or get a full refund.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>No long-term contracts</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Flat-rate pricing (not percentage)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Local time zone support</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>90-day money-back guarantee</span>
+              </li>
+            </ul>
+          </div>
+
+          <Button variant="primary" size="lg" fullWidth href="/free-analysis">
+            Get Your Free Analysis
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Don't See Your City?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          We work with businesses nationwide. If your city isn't listed, we still understand your market and can deliver results.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/contact">
+            Contact Us
+          </Button>
+          <Button variant="ghost" size="lg" className="text-white border-white/30" href="/free-analysis">
+            Get Free Analysis
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

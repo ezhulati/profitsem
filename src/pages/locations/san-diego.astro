@@ -1,28 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Container } from '../../components/layout/Container';
-import { Section } from '../../components/layout/Section';
-import { Heading } from '../../components/ui/Heading';
-import { Button } from '../../components/ui/Button';
 
-const city = 'Chicago';
-const state = 'Illinois';
-const stateAbbr = 'IL';
+const city = 'San Diego';
+const stateAbbr = 'CA';
 
 const stats = {
-  clients: '56+',
-  roi: '271%',
-  revenue: '$1.9M',
+  clients: '48+',
+  roi: '276%',
+  revenue: '$1.5M',
   rating: '4.8/5'
 };
 
 const industries = [
-  'Manufacturing & Industrial',
+  'Biotech & Life Sciences',
   'SaaS & Technology',
-  'E-commerce & Retail',
-  'Professional Services',
+  'Hospitality & Tourism',
   'Healthcare & Medical',
-  'Real Estate & Construction'
+  'Real Estate & Property',
+  'E-commerce & Retail'
 ];
 ---
 
@@ -105,7 +101,7 @@ const industries = [
           </div>
           <h3 class="text-xl font-bold text-navy-900 mb-3">Deep {city} Market Knowledge</h3>
           <p class="text-gray-700 leading-relaxed">
-            We understand {city}'s competitive landscape, local search behavior, and what actually converts in the Midwest's largest market—from manufacturing to SaaS.
+            We understand {city}'s diverse economy—from biotech in La Jolla to tourism in the Gaslamp Quarter. Our strategies account for seasonal patterns, neighborhood dynamics, and what actually converts Southern California customers.
           </p>
         </div>
 
@@ -186,16 +182,16 @@ const industries = [
           </div>
 
           <blockquote class="text-xl text-navy-900 mb-6 font-medium leading-relaxed">
-            "We manufacture industrial equipment in {city} and needed qualified leads, not tire-kickers. ProfitSEM restructured our campaigns around buyer intent—our cost per qualified lead dropped 67% in 9 weeks."
+            "Our biotech startup in {city} needed to generate qualified investor leads and pilot customers. ProfitSEM's B2B targeting was surgical—we went from 2 qualified leads/month to 23. Worth every penny."
           </blockquote>
 
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-              TK
+              KP
             </div>
             <div>
-              <p class="font-semibold text-navy-900">Tom Kowalski</p>
-              <p class="text-sm text-gray-600">VP Sales, {city} Manufacturing Co.</p>
+              <p class="font-semibold text-navy-900">Dr. Kevin Park</p>
+              <p class="text-sm text-gray-600">CEO, {city} BioSolutions</p>
             </div>
           </div>
         </div>

@@ -1,28 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Container } from '../../components/layout/Container';
-import { Section } from '../../components/layout/Section';
-import { Heading } from '../../components/ui/Heading';
-import { Button } from '../../components/ui/Button';
 
-const city = 'Chicago';
-const state = 'Illinois';
-const stateAbbr = 'IL';
+const city = 'Phoenix';
+const state = 'Arizona';
+const stateAbbr = 'AZ';
 
 const stats = {
-  clients: '56+',
-  roi: '271%',
-  revenue: '$1.9M',
+  clients: '51+',
+  roi: '279%',
+  revenue: '$1.7M',
   rating: '4.8/5'
 };
 
 const industries = [
-  'Manufacturing & Industrial',
+  'Real Estate & Property Management',
+  'Healthcare & Medical Services',
+  'Home Services & HVAC',
   'SaaS & Technology',
   'E-commerce & Retail',
-  'Professional Services',
-  'Healthcare & Medical',
-  'Real Estate & Construction'
+  'Professional Services'
 ];
 ---
 
@@ -105,7 +102,7 @@ const industries = [
           </div>
           <h3 class="text-xl font-bold text-navy-900 mb-3">Deep {city} Market Knowledge</h3>
           <p class="text-gray-700 leading-relaxed">
-            We understand {city}'s competitive landscape, local search behavior, and what actually converts in the Midwest's largest market—from manufacturing to SaaS.
+            We understand {city}'s explosive growth, seasonal patterns (winter snowbirds!), and what actually converts in the Valley of the Sun. From Scottsdale to Tempe, we know the market.
           </p>
         </div>
 
@@ -186,16 +183,16 @@ const industries = [
           </div>
 
           <blockquote class="text-xl text-navy-900 mb-6 font-medium leading-relaxed">
-            "We manufacture industrial equipment in {city} and needed qualified leads, not tire-kickers. ProfitSEM restructured our campaigns around buyer intent—our cost per qualified lead dropped 67% in 9 weeks."
+            "We run three HVAC companies across the {city} metro. ProfitSEM understood the seasonality of our business and built campaigns that crush it during peak season while staying profitable year-round. Revenue up 247% in 6 months."
           </blockquote>
 
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-              TK
+              SC
             </div>
             <div>
-              <p class="font-semibold text-navy-900">Tom Kowalski</p>
-              <p class="text-sm text-gray-600">VP Sales, {city} Manufacturing Co.</p>
+              <p class="font-semibold text-navy-900">Sarah Chen</p>
+              <p class="text-sm text-gray-600">Owner, {city} Cool Air</p>
             </div>
           </div>
         </div>

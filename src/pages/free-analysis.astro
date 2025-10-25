@@ -6,56 +6,44 @@ import { QualificationForm } from '../components/forms/QualificationForm';
 ---
 
 <BaseLayout
-  title="Free Growth Assessment - GrowMyAds"
-  description="Discover your Google Ads account's growth potential. Get a custom AI training roadmap and optimization opportunities for predictable customer acquisition."
+  title="Free Google Ads Audit - Get Your Account Reviewed | GrowMyAds"
+  description="Get a free 30-minute audit of your Google Ads account. We'll review your setup, find what's broken, and give you the exact roadmap to fix it."
 >
   <Section background="gray" spacing="xl">
     <Container size="lg">
       <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 border border-emerald-300 rounded-full mb-6">
-          <span class="text-emerald-700 text-sm font-semibold">
-            Free Growth Assessment
-          </span>
-        </div>
-
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-          Discover Your Account's Growth Potential
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Get Your Free Google Ads Audit
         </h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          We'll analyze your Google Ads account to identify optimization opportunities, build a custom AI training roadmap, and show you the path to predictable customer acquisition in 90 days.
+        <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto mb-8">
+          We'll audit your account and show you exactly what's working, what's broken, and how to fix it.
         </p>
 
-        <div class="max-w-2xl mx-auto mt-8 bg-gradient-to-br from-emerald-50 to-blue-50 border-2 border-emerald-200 rounded-xl p-6">
-          <p class="font-semibold text-gray-900 mb-3">Your custom assessment includes:</p>
-          <div class="grid sm:grid-cols-2 gap-3 text-left">
-            <div class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+        <div class="max-w-2xl mx-auto bg-gradient-to-br from-navy-50 to-blue-50 border-2 border-blue-200 rounded-xl p-8">
+          <p class="font-bold text-navy-950 mb-4 text-lg">Your audit includes:</p>
+          <div class="space-y-3 text-left">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>
-              <span class="text-sm text-gray-700">Budget optimization opportunities</span>
+              <span class="text-gray-800 font-medium">Account structure review (campaigns, ad groups, targeting)</span>
             </div>
-            <div class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>
-              <span class="text-sm text-gray-700">Tracking & attribution improvements</span>
+              <span class="text-gray-800 font-medium">Conversion tracking assessment (are you feeding Google the right data?)</span>
             </div>
-            <div class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>
-              <span class="text-sm text-gray-700">Custom 90-day AI training roadmap</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="text-sm text-gray-700">Honest analysis, no sales pressure</span>
+              <span class="text-gray-800 font-medium">Your custom roadmap to predictable customer acquisition</span>
             </div>
           </div>
         </div>
 
-        <p class="text-sm text-gray-500 mt-6">Takes 3 minutes • No credit card required</p>
+        <p class="text-sm text-gray-500 mt-8">Answer 10 questions below → Schedule your 30-minute audit call → Get your roadmap</p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
@@ -64,11 +52,13 @@ import { QualificationForm } from '../components/forms/QualificationForm';
 
       {/* Trust Badges */}
       <div class="mt-12 text-center">
-        <p class="text-sm text-gray-500 mb-4">Trusted by 200+ businesses</p>
-        <div class="flex items-center justify-center gap-8 opacity-60">
+        <p class="text-sm text-gray-600 mb-4 font-medium">100+ accounts trained and scaled using this framework</p>
+        <div class="flex items-center justify-center gap-6 sm:gap-8 text-sm">
           <div class="text-gray-600 font-semibold">Google Partner</div>
-          <div class="text-gray-600 font-semibold">4.8/5 Rating</div>
-          <div class="text-gray-600 font-semibold">247% Avg ROI</div>
+          <div class="text-gray-600 font-semibold">•</div>
+          <div class="text-gray-600 font-semibold">No pushy sales</div>
+          <div class="text-gray-600 font-semibold">•</div>
+          <div class="text-gray-600 font-semibold">Honest analysis</div>
         </div>
       </div>
     </Container>

@@ -72,64 +72,48 @@ const whatToExpect = [
   title="You're a Perfect Fit! - Schedule Your Strategy Session | ProfitSEM"
   description="Based on your responses, we can help you turn Google Ads into a profit machine. Let's schedule your strategy session."
 >
-  <!-- Success Hero -->
-  <section class="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 md:py-24 relative overflow-hidden">
-    <!-- Background Elements -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
-      <div class="absolute bottom-20 left-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl" />
-    </div>
-
-    <Container className="relative z-10">
-      <div class="max-w-3xl mx-auto text-center">
-        <!-- Success Icon -->
-        <div class="w-24 h-24 mx-auto mb-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-2xl animate-scale-in">
-          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+  <!-- Compact Success Banner -->
+  <section class="bg-gradient-to-r from-emerald-500 to-blue-600 py-4 md:py-6">
+    <Container>
+      <div class="flex items-center justify-center gap-3 text-center">
+        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
           </svg>
         </div>
-
-        <Heading as="h1" size="6xl" className="mb-6 text-white">
-          You're a Perfect Fit!
-        </Heading>
-
-        <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-          Based on your responses, we can definitely help you turn Google Ads into a profit machine. Let's schedule your strategy session.
-        </p>
-
-        <div class="bg-white/10 backdrop-blur border border-emerald-400/30 rounded-2xl p-8 text-left">
-          <p class="text-white text-lg leading-relaxed mb-4">
-            You'll be meeting with a Google Ads strategist who specializes in your industry and will map out your custom 90-day roadmap to profitability.
+        <div>
+          <p class="text-white font-bold text-lg md:text-xl">
+            You're a Perfect Fit! We can definitely help you.
           </p>
-          <a
-            href="#calendar"
-            class="text-emerald-400 font-semibold text-lg hover:text-emerald-300 transition-colors inline-flex items-center gap-2"
-          >
-            Pick a time below that works for you
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
+          <p class="text-white/90 text-sm md:text-base">
+            Complete the final step below to secure your spot
+          </p>
         </div>
       </div>
     </Container>
   </section>
 
-  <!-- Booking Calendar Section -->
-  <section id="calendar" class="bg-white py-16 md:py-20">
+  <!-- Booking Calendar Section - PRIMARY CTA -->
+  <section class="bg-white py-12 md:py-16">
     <Container>
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <Heading as="h2" size="4xl" className="mb-4">
-            Schedule Your Strategy Session
+        <div class="text-center mb-8">
+          <Heading as="h1" size="5xl" className="mb-4 text-navy-950">
+            Final Step: Schedule Your Strategy Session
           </Heading>
-          <p class="text-lg text-gray-600">
-            Pick a time that works best for you
+          <p class="text-xl text-gray-700 mb-3">
+            Pick a time that works for you. You'll meet with a Google Ads strategist who specializes in your industry.
           </p>
+          <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-2">
+            <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-emerald-900 font-semibold text-sm">30-minute call • Free account review • No obligation</span>
+          </div>
         </div>
 
         <!-- Google Calendar Appointment Scheduling -->
-        <div class="bg-white rounded-2xl p-4 md:p-6 shadow-xl border border-gray-200">
+        <div class="bg-white rounded-2xl p-4 md:p-6 shadow-2xl border-2 border-emerald-200 ring-4 ring-emerald-100">
           <iframe
             src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22TZn1GblrfkptTo90nvQGoIoG9NUl6lJMGihnSt9VS_RjlrbtS1YNLFlvFwwp3hdyoOw6clyC?gv=true"
             style="border: 0"
