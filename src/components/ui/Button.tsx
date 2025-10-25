@@ -35,10 +35,10 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variantStyles = {
-    primary: 'bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white focus:ring-blue-500 shadow-lg hover:shadow-xl magnetic-hover',
-    secondary: 'bg-white/10 hover:bg-white/20 active:bg-white/30 text-white backdrop-blur border border-white/20 focus:ring-white/50 glass magnetic-hover-sm',
-    ghost: 'bg-transparent hover:bg-gray-100 active:bg-gray-200 text-gray-900 focus:ring-gray-300 smooth-transition',
-    danger: 'bg-error-500 hover:bg-error-600 active:bg-error-700 text-white focus:ring-error-500',
+    primary: 'bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white hover:text-white focus:ring-emerald-500 shadow-lg hover:shadow-xl magnetic-hover',
+    secondary: 'bg-white/10 hover:bg-white/20 active:bg-white/30 text-white hover:text-white backdrop-blur border border-white/20 focus:ring-white/50 glass magnetic-hover-sm',
+    ghost: 'bg-transparent hover:bg-gray-100 active:bg-gray-200 text-gray-900 hover:text-gray-900 focus:ring-gray-300 smooth-transition',
+    danger: 'bg-error-500 hover:bg-error-600 active:bg-error-700 text-white hover:text-white focus:ring-error-500',
   };
 
   const sizeStyles = {

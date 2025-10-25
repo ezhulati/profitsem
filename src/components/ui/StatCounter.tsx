@@ -40,7 +40,7 @@ export function StatCounter({
 }: StatCounterProps) {
   const variantStyles = {
     default: 'text-gray-900',
-    success: 'text-green-500',
+    success: 'text-emerald-500',
     primary: 'text-blue-500',
   };
 

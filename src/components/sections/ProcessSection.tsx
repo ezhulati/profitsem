@@ -96,7 +96,7 @@ export function ProcessSection() {
                     {step.items.map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <svg
-                          className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                          className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >

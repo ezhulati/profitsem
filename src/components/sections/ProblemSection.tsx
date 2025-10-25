@@ -15,16 +15,13 @@ export function ProblemSection() {
           {/* Main Problem */}
           <div className="text-center mb-12">
             <Heading as="h2" size="5xl" className="mb-6 text-balance">
-              You're Spending $10,000+/Month on Google Ads
+              You Shouldn't Need a PhD
               <span className="block text-red-600 mt-2">
-                And Have Nothing to Show For It
+                To Understand Your Own Ad Account
               </span>
             </Heading>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Your current agency sends pretty reports full of "impressions" and "click-through rates."
-              Meanwhile, your bank account tells a different story. You're burning cash on campaigns
-              that don't convert, can't scale what works, and have zero visibility into where your
-              money actually goes.
+              The dashboard is confusing. The reports make no sense. And you have no idea if you're getting ripped off.
             </p>
           </div>
 

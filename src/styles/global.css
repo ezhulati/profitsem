@@ -4,14 +4,16 @@
 
 @layer base {
   :root {
-    /* Colors */
+    /* Brand Colors - Deep Emerald for Growth/Profit */
     --color-navy-950: #0a1628;
     --color-navy-900: #132038;
     --color-navy-800: #1a2c48;
-    --color-blue-500: #0066ff;
+    --color-emerald-400: #34d399; /* Light accent */
+    --color-emerald-500: #10b981; /* Primary brand - readable with white */
+    --color-emerald-600: #059669; /* Darker shade */
+    --color-emerald-700: #047857; /* Even darker */
+    --color-blue-500: #0066ff; /* Secondary */
     --color-blue-600: #0052cc;
-    --color-green-400: #00ff88;
-    --color-green-500: #00e077;
     --color-gray-50: #f5f7fa;
     --color-gray-100: #e8ecf1;
     --color-gray-800: #1a1a1a;
@@ -129,7 +131,7 @@
 
   /* Gradient Text Animations */
   .gradient-text {
-    background: linear-gradient(90deg, var(--color-green-400), var(--color-blue-500));
+    background: linear-gradient(90deg, var(--color-emerald-400), var(--color-blue-500));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -163,7 +165,7 @@
 
   /* Enhanced Shadow Effects */
   .shadow-glow {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
   }
 
   .shadow-glow-blue {
@@ -334,17 +336,17 @@
   .gradient-border {
     position: relative;
     background: linear-gradient(var(--color-navy-950), var(--color-navy-950)) padding-box,
-                linear-gradient(135deg, var(--color-green-400), var(--color-blue-500)) border-box;
+                linear-gradient(135deg, var(--color-emerald-400), var(--color-blue-500)) border-box;
     border: 2px solid transparent;
   }
 
   /* Pulsing glow effect */
   @keyframes pulse-glow {
     0%, 100% {
-      box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
     }
     50% {
-      box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
     }
   }
 

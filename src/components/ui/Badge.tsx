@@ -29,7 +29,7 @@ export function Badge({
 
   const variantStyles = {
     default: 'bg-gray-100 text-gray-800',
-    success: 'bg-green-100 text-green-800',
+    success: 'bg-emerald-100 text-emerald-800',
     warning: 'bg-warning-100 text-warning-800',
     error: 'bg-error-100 text-error-800',
     info: 'bg-blue-100 text-blue-800',

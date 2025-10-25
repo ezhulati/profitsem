@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Link } from '../ui/Link';
+import { Logo } from '../ui/Logo';
 
 export interface NavigationProps {
   /** Make navigation sticky */
@@ -34,13 +35,8 @@ export function Navigation({ sticky = true, className = '' }: NavigationProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xl">P</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Profit<span className="text-blue-500">SEM</span>
-            </span>
+          <a href="/" className="group">
+            <Logo size="md" className="group-hover:scale-105 transition-transform" />
           </a>
 
           {/* Desktop Navigation */}
@@ -50,7 +46,7 @@ export function Navigation({ sticky = true, className = '' }: NavigationProps) {
                 key={link.href}
                 href={link.href}
                 variant="secondary"
-                className="hover:text-blue-500"
+                className="hover:text-emerald-500"
               >
                 {link.label}
               </Link>
@@ -91,7 +87,7 @@ export function Navigation({ sticky = true, className = '' }: NavigationProps) {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-500 rounded-lg transition-colors"
+                  className="px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-emerald-500 rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>

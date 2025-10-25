@@ -76,7 +76,7 @@ export function CustomCursor() {
         .custom-cursor-dot {
           width: 8px;
           height: 8px;
-          background: var(--color-green-400);
+          background: var(--color-emerald-400);
           border-radius: 50%;
           transform: translate(-50%, -50%);
           mix-blend-mode: difference;
@@ -85,7 +85,7 @@ export function CustomCursor() {
         .custom-cursor-ring {
           width: 40px;
           height: 40px;
-          border: 2px solid var(--color-green-400);
+          border: 2px solid var(--color-emerald-400);
           border-radius: 50%;
           transform: translate(-50%, -50%);
           opacity: 0.5;
@@ -104,7 +104,7 @@ export function CustomCursor() {
         }
 
         .cursor-text {
-          color: var(--color-green-400);
+          color: var(--color-emerald-400);
           font-size: 10px;
           font-weight: 600;
           text-transform: uppercase;

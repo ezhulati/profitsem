@@ -8,35 +8,35 @@ export function FAQSection() {
   const faqs = [
     {
       question: 'How is ProfitSEM different from other Google Ads agencies?',
-      answer: 'We focus on profit, not vanity metrics. While others chase clicks and impressions, we optimize for actual revenue and ROI. Our flat-rate pricing means our incentives align with yours—we succeed when you profit, not when you spend more.',
+      answer: 'We focus on profit, not clicks. Flat-rate pricing means we succeed when you profit, not when you spend more.',
     },
     {
-      question: 'What is your 90-Day Money-Back Guarantee?',
-      answer: 'If we don\'t improve your ROI within 90 days of starting, you get a full refund of our management fees. No fine print. No questions asked. We\'re confident in our process and put our money where our mouth is.',
+      question: 'Do you offer any guarantees?',
+      answer: 'No. Too many factors are outside our control. What we promise: proven tactics, transparent reporting, and constant optimization. Not satisfied? Cancel anytime.',
     },
     {
       question: 'Do you require long-term contracts?',
-      answer: 'No. We work month-to-month. If you\'re not seeing results, you can cancel anytime. We earn your business every single month through performance, not by locking you into a contract.',
+      answer: 'No. Month-to-month. Cancel anytime.',
     },
     {
       question: 'What industries do you work with?',
-      answer: 'We specialize in e-commerce, SaaS, B2B services, and home services. These are industries where Google Ads can be extremely profitable when managed correctly. If you\'re in a different industry, contact us—we\'ll let you know if we can help.',
+      answer: 'E-commerce, SaaS, B2B services, and home services. Different industry? Contact us—we\'ll tell you if we can help.',
     },
     {
       question: 'How much should I budget for Google Ads?',
-      answer: 'We recommend a minimum ad spend of $3,000/month for our Growth plan and $8,000/month for Scale. This gives us enough data to optimize effectively. If your budget is lower, we can discuss options or recommend starting with a PPC audit.',
+      answer: 'Depends on your industry and goals. We\'ll tell you what makes sense after reviewing your account. Start with the free audit.',
     },
     {
       question: 'How do you charge for your services?',
-      answer: 'Flat monthly rate based on the plan you choose, NOT a percentage of ad spend. Our Growth plan is $2,500/month, Scale is $4,500/month, and Enterprise is custom. No hidden fees. No surprise charges.',
+      answer: 'Custom pricing based on your needs. NOT a percentage of ad spend. We evaluate your account size, industry, and goals, then give you a transparent monthly rate.',
     },
     {
       question: 'How quickly will I see results?',
-      answer: 'Most clients see measurable improvements within 30-45 days. Our 90-Day Profit Sprint is designed to get you to profitability within 3 months. However, results vary based on industry, competition, and starting point.',
+      answer: 'Most clients see improvements within 30-45 days. Results vary by industry and competition.',
     },
     {
       question: 'Do you offer PPC audits?',
-      answer: 'Yes! Our comprehensive PPC audit identifies profit leaks, wasted spend, and missed opportunities. It\'s $497 and includes a custom roadmap to profitability. If you sign up for management within 30 days, we credit the audit fee to your first month.',
+      answer: 'Yes. Free. We analyze your account, identify profit leaks and wasted spend, then give you a custom plan.',
     },
   ];
 
@@ -45,45 +45,47 @@ export function FAQSection() {
       <Container size="lg">
         <div className="text-center mb-16">
           <Heading as="h2" size="5xl" className="mb-4">
-            Frequently Asked Questions
+            "Yeah, But What About..."
           </Heading>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about working with ProfitSEM
+            Get answers. No sales call.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={faq.question}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden"
+              className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-emerald-500 transition-colors"
             >
               <button
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-semibold text-gray-900 pr-8">
+                <span className="font-semibold text-gray-900 pr-8 text-base">
                   {faq.question}
                 </span>
-                <svg
-                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                <div className={`w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 group-hover:bg-emerald-100 transition-colors ${openIndex === index ? 'bg-emerald-100' : ''}`}>
+                  <svg
+                    className={`w-5 h-5 text-gray-600 group-hover:text-emerald-600 transition-all ${
+                      openIndex === index ? 'rotate-180 text-emerald-600' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-600 animate-slide-down">
+                <div className="px-6 pb-5 text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
                   {faq.answer}
                 </div>
               )}

@@ -11,7 +11,7 @@ export interface IconProps {
  * Icon component wrapper for consistent SVG icons
  *
  * @example
- * <Icon name="check" size="lg" className="text-green-500" />
+ * <Icon name="check" size="lg" className="text-emerald-500" />
  * <Icon name="arrow-right" />
  */
 export function Icon({ name, size = 'md', className = '' }: IconProps) {
