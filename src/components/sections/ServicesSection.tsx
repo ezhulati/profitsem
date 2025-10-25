@@ -7,35 +7,38 @@ export function ServicesSection() {
   const services = [
     {
       title: 'Week 1-2',
-      phase: 'The Audit',
-      description: 'Pull every report. Check every keyword. Find every leak.',
+      phase: 'Connect The Dots',
+      description: 'Your agency shows you clicks and conversions. We show you which ads lead to actual paying customers.',
+      details: 'We connect your CRM so Google knows who became a customer (not just who filled a form). We find where you\'re wasting money right now. We set up tracking so there\'s no more guessing.',
       outcomes: [
-        'Screen recording walking through your account',
-        'Spreadsheet showing waste by campaign',
+        'CRM integration (track actual sales, not form fills)',
+        'Waste identification report (where you\'re bleeding money)',
         'Tracking audit (most accounts are broken)',
-        '30-min call explaining findings'
+        '90-day roadmap (phases 2-5)'
       ]
     },
     {
-      title: 'Week 3-8',
-      phase: 'The Fix',
-      description: 'Cut bad keywords. Fix tracking. Rebuild campaigns.',
+      title: 'Week 3-9',
+      phase: 'Train Google\'s AI',
+      description: 'Most agencies panic and start tweaking things on Day 3. That\'s why your ads never improve.',
+      details: 'We do the opposite: We feed Google high-quality data about your actual customers, then we let it learn. No constant changes. No resetting the system. Just patience while Google figures out who your ideal customers are.',
       outcomes: [
-        'Monday: Performance review',
-        'Tuesday: Campaign changes',
-        'Friday: Week recap + screenshots',
-        'Monthly: 30-min strategy session'
+        'Simplified campaign structure (consolidated, not fragmented)',
+        'Smart bidding implementation (AI-driven pricing)',
+        'Weekly reports (conversions → sales, not vanity metrics)',
+        'Strategic patience (we don\'t panic on week 2)'
       ]
     },
     {
-      title: 'Month 3+',
-      phase: 'Growth',
-      description: 'Scale what works. Test new stuff. Handle Google updates.',
+      title: 'Week 10+',
+      phase: 'Predictable Growth',
+      description: 'This is when it clicks. Google\'s AI knows who your customers are. Your cost per sale becomes predictable.',
+      details: 'You can confidently increase spend because the math works. We\'re not tweaking campaigns daily. We\'re monitoring performance and feeding the system better data as your business evolves.',
       outcomes: [
-        'Weekly reporting continues',
-        'New tests every week',
-        'Direct Slack access',
-        'Cancel with 30 days notice'
+        'Predictable cost-per-customer math',
+        'Expansion into new customer types Google discovered',
+        'Monthly strategy reviews (not daily micro-management)',
+        'Transparent reporting (you see everything)'
       ]
     },
   ];
@@ -45,10 +48,10 @@ export function ServicesSection() {
       <Container>
         <div className="text-center mb-16">
           <Heading as="h2" size="5xl" className="mb-4">
-            Here's Exactly What We Do
+            Here's How We're Different
           </Heading>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Week by week. Nothing hidden.
+            We work WITH Google's AI, not against it. Here's what that actually means for your business.
           </p>
         </div>
 
@@ -72,8 +75,12 @@ export function ServicesSection() {
                 </Heading>
               </div>
 
-              <p className="text-gray-700 mb-6 leading-relaxed font-medium text-center">
+              <p className="text-gray-900 mb-4 leading-relaxed font-semibold text-center">
                 {service.description}
+              </p>
+
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
+                {service.details}
               </p>
 
               <div className="border-t border-gray-200 pt-6">

@@ -6,46 +6,62 @@ export function ProcessSection() {
   const steps = [
     {
       phase: 'Week 1-2',
-      title: 'Deep Dive Analysis',
-      description: 'Comprehensive audit of your current setup, target audience research, and competitor analysis. We identify profit opportunities others miss.',
+      title: 'Connect The Dots',
+      description: 'Most accounts are broken from day one. You\'re tracking form fills, but Google doesn\'t know which forms became customers. You\'re optimizing for clicks, not sales. We fix that first.',
+      whatThisMeans: 'Week 1-2 is setup. No campaigns running yet. We\'re building the foundation that everything else depends on. Without this, the rest doesn\'t work.',
       items: [
-        'Account audit & profit leak identification',
-        'Customer journey mapping',
-        'Competitor intelligence gathering',
-        'Tracking & attribution setup',
+        'Track real sales: Connect your CRM so we see which ads lead to paying customers',
+        'Find the waste: Audit shows where you\'re bleeding money (usually 30-50% of budget)',
+        'Fix broken tracking: Most accounts can\'t accurately attribute sales to ads',
+        'Set expectations: Here\'s the realistic 90-day timeline',
       ],
     },
     {
-      phase: 'Week 3-4',
-      title: 'Campaign Architecture',
-      description: 'Strategic campaign structure designed for profit. We build conversion-focused campaigns with precise targeting.',
+      phase: 'Week 3-6',
+      title: 'Build The Foundation',
+      description: 'Your old agency launched 20 campaigns with 500 keywords. That fragments your data and starves Google\'s AI. We do the opposite: Fewer campaigns, more data per campaign. Then we wait while Google learns.',
+      whatThisMeans: 'This is the hardest month for clients. Nothing\'s broken - Google\'s learning. But you\'re used to agencies changing things daily. We don\'t. Patience here = results later.',
       items: [
-        'Profit-optimized campaign structure',
-        'High-intent keyword research',
-        'Ad copy testing framework',
-        'Landing page recommendations',
+        'Simplified structure: Consolidated campaigns grouped by customer intent',
+        'High-quality keywords: Fewer, better keywords focused on buyers',
+        'Stop the tweaking: No more daily \'optimizations\' that reset learning',
+        'Initial learning period: Google starts figuring out who your customers are',
       ],
     },
     {
-      phase: 'Week 5-8',
-      title: 'Launch & Optimize',
-      description: 'Campaigns go live with aggressive testing and optimization. Daily monitoring ensures peak performance.',
+      phase: 'Week 7-9',
+      title: 'Let AI Take Over',
+      description: 'Manual bidding = you guessing what each click is worth. Smart bidding = Google automatically adjusting prices to hit your goals. But it only works if Phases 1-2 were done right.',
+      whatThisMeans: 'Week 7-9 is when things start clicking. Your cost-per-sale becomes predictable. Less daily volatility. Google\'s proactively finding ideal customers.',
       items: [
-        'Phased campaign launch',
-        'A/B testing ads & landing pages',
-        'Bid strategy optimization',
-        'Quality Score improvements',
+        'Smart bidding activation: Google manages pricing automatically',
+        'Conversion optimization: Focus on customers, not clicks',
+        'Predictable cost-per-sale: Your customer acquisition cost stabilizes',
+        'AI pattern recognition: Google finds customers you wouldn\'t have targeted manually',
       ],
     },
     {
-      phase: 'Week 9-12',
-      title: 'Scale & Profit',
-      description: 'Double down on what works. Scale profitable campaigns while cutting waste. This is where ROI accelerates.',
+      phase: 'Week 10-12',
+      title: 'Scale What\'s Working',
+      description: 'Most agencies try to scale in Week 2 and blow your budget on garbage traffic. We wait until Week 10 when the system is trained and the math is predictable. Then we expand confidently.',
+      whatThisMeans: 'This is \'unlock\' month. You can confidently spend more because you know what revenue to expect. New customer acquisition becomes predictable.',
       items: [
-        'Profitable campaign scaling',
-        'Audience expansion testing',
-        'Advanced bid automation',
-        'Monthly strategy reviews',
+        'Expansion testing: New customer types Google discovered',
+        'Budget scaling: Increase spend without increasing risk',
+        'Advanced targeting: Lookalike audiences based on real customers',
+        'Growth acceleration: Revenue compounds as AI gets smarter',
+      ],
+    },
+    {
+      phase: 'Month 4+',
+      title: 'Predictable Growth Engine',
+      description: 'We\'re not optimizing campaigns daily. We\'re monitoring performance and maintaining the system. The AI does the heavy lifting. We guide it strategically based on your business goals.',
+      whatThisMeans: 'You know what revenue to expect from ad spend. We\'re not in a black box. You can plan your business around predictable customer acquisition.',
+      items: [
+        'Monthly strategy reviews: Align Google Ads with business priorities',
+        'System maintenance: Keep AI trained as business evolves',
+        'Expansion opportunities: Test new channels when timing is right',
+        'Complete transparency: You see everything, understand everything',
       ],
     },
   ];
@@ -90,6 +106,13 @@ export function ProcessSection() {
                   <p className="text-gray-600 mb-4">
                     {step.description}
                   </p>
+
+                  <div className="bg-gradient-to-br from-emerald-50 to-blue-50 border-l-4 border-emerald-500 rounded-r-lg p-4 mb-6">
+                    <p className="text-xs font-bold text-emerald-700 uppercase tracking-wide mb-2">What This Means For You</p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {step.whatThisMeans}
+                    </p>
+                  </div>
 
                   <ul className="grid sm:grid-cols-2 gap-3">
                     {step.items.map((item) => (

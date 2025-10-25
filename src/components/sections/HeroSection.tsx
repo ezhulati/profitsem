@@ -35,27 +35,27 @@ export function HeroSection() {
                 <path fill="url(#rocketGradient)" d="M12 2L4 12h6v9l8-10h-6V2z" />
               </svg>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 text-sm font-bold">
-                Google Premier Partner
+                Most agencies still run Google Ads like it's 2015. We don't.
               </span>
             </div>
 
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              Stop Wondering If <span className="gradient-text">Your Ads Are Working</span>
+              Your Agency Treats Your Ads Like <span className="gradient-text">a Science Experiment</span>
               <span className="block text-gray-300 text-2xl sm:text-3xl lg:text-4xl mt-2">
-                Know Where Every Dollar Goes
+                We Turn Them Into a Predictable Revenue Engine
               </span>
             </Heading>
 
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              You're running a business, not a marketing department. We'll tell you what's working.
+              Stop getting reports you don't understand. Start knowing exactly where your money goes and what revenue to expect. We train Google's AI to find your ideal customers—then we let it work.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="primary" size="lg" href="/free-analysis">
-                Get Your Free Audit →
+              <Button variant="primary" size="lg" href="/process">
+                Show Me How This Works →
               </Button>
-              <Button variant="secondary" size="lg" href="#proof">
-                See The Proof
+              <Button variant="secondary" size="lg" href="/free-analysis">
+                Assess My Account
               </Button>
             </div>
 
@@ -65,14 +65,14 @@ export function HeroSection() {
                 <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>$47M+ In Client Sales</span>
+                <span>90 Days to Predictable Revenue</span>
               </div>
               <span className="text-gray-600">•</span>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>No Long-Term Contracts</span>
+                <span>$2.3M+ In Tracked Profit</span>
               </div>
             </div>
           </div>
