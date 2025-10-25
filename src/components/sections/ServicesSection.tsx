@@ -50,9 +50,34 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Card key={service.title} variant="bordered" padding="lg" className="hover:shadow-lg transition-shadow">
+        <div className="bento-grid grid-cols-1 md:grid-cols-3">
+          {/* Featured Service - Large Card */}
+          <Card key={services[0].title} variant="bordered" padding="lg" className="bento-item-large magnetic-hover-sm bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200 fade-in-scroll">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-glow-blue">
+                <Icon name={services[0].icon} size="xl" className="text-white" />
+              </div>
+            </div>
+            <Heading as="h3" size="3xl" className="mb-4">
+              {services[0].title}
+            </Heading>
+            <p className="text-gray-700 text-lg">
+              {services[0].description}
+            </p>
+          </Card>
+
+          {/* Regular Services */}
+          {services.slice(1).map((service, index) => (
+            <Card
+              key={service.title}
+              variant="bordered"
+              padding="lg"
+              className={`magnetic-hover-sm smooth-transition hover:shadow-xl ${
+                index % 3 === 0 ? 'slide-in-left' :
+                index % 3 === 1 ? 'fade-in-scroll' :
+                'slide-in-right'
+              }`}
+            >
               <div className="mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                   <Icon name={service.icon} size="lg" className="text-blue-500" />

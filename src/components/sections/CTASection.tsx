@@ -27,10 +27,10 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100" href="/free-analysis">
               Get Free Profit Analysis
             </Button>
-            <Button variant="ghost" size="lg" className="text-white border-white/30 hover:bg-white/10">
+            <Button variant="ghost" size="lg" className="text-white border-white/30 hover:bg-white/10" href="/contact">
               Schedule a Call
             </Button>
           </div>

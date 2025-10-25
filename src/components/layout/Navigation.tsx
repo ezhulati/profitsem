@@ -59,7 +59,7 @@ export function Navigation({ sticky = true, className = '' }: NavigationProps) {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="primary" size="md">
+            <Button variant="primary" size="md" href="/free-analysis">
               Get Free Audit
             </Button>
           </div>
@@ -97,7 +97,7 @@ export function Navigation({ sticky = true, className = '' }: NavigationProps) {
                 </a>
               ))}
               <div className="px-4 pt-2">
-                <Button variant="primary" size="md" fullWidth>
+                <Button variant="primary" size="md" fullWidth href="/free-analysis">
                   Get Free Audit
                 </Button>
               </div>

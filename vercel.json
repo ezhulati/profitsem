@@ -1,15 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "astro",
-  "regions": ["iad1"],
-  "functions": {
-    "_render.func": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "git": {
     "deploymentEnabled": true
   }

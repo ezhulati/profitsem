@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Container } from '../components/layout/Container';
+
+const caseStudies = [
+  {
+    industry: 'Medical Product Wholesaler',
+    from: '$6.6k',
+    to: '$21.7k',
+    duration: '3 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Return On Ad Spend went from 4x to 7x',
+  },
+  {
+    industry: 'Building/Hardware Company',
+    from: '$13.4k',
+    to: '$33.5k',
+    duration: '4 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Return On Ad Spend went from 5.5x to 10.3x',
+  },
+  {
+    industry: 'Baby Product Company',
+    from: '$5.3k',
+    to: '$23.5k',
+    duration: '3 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Ad Spend went from 5x Return On Ad Spend',
+  },
+  {
+    industry: 'Luxury Watch Store',
+    from: '$99k',
+    to: '$250k',
+    duration: '6 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Return On Ad Spend went from 1.3x to 2.7x',
+  },
+  {
+    industry: 'Supplement Company',
+    from: '$48k',
+    to: '$135k',
+    duration: '4 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Return On Ad Spend went from 1.9x to 3.7x',
+  },
+  {
+    industry: 'Furniture Company',
+    from: '$16.5k',
+    to: '$106.8k',
+    duration: '5 months',
+    metric: 'Monthly sales',
+    roiMetric: 'Return On Ad Spend went from 2x to 4.4x',
+  },
+  {
+    industry: 'Driving School',
+    from: '637',
+    to: '2,483',
+    duration: '16 months',
+    metric: 'Monthly registrations',
+    roiMetric: 'Reducing cost per conversion by almost 50%',
+  },
+  {
+    industry: 'Car Repair Company',
+    from: '789',
+    to: '2,676',
+    duration: '4 months',
+    metric: 'Monthly qualified leads',
+    roiMetric: 'Reducing cost per conversion by 42%',
+  },
+  {
+    industry: 'Catering Company',
+    from: '30',
+    to: '255',
+    duration: '45 days',
+    metric: 'Qualified leads per month',
+    roiMetric: 'Reducing cost per conversion by more than 70%',
+  },
+  {
+    industry: 'Recruitment Software Company',
+    from: '6',
+    to: '29',
+    duration: '5 months',
+    metric: 'Monthly qualified leads',
+    roiMetric: 'Reducing cost per conversion by 90%',
+  },
+  {
+    industry: 'Tax Software Company',
+    from: '978',
+    to: '3,111',
+    duration: '5 months',
+    metric: 'Monthly qualified leads',
+    roiMetric: 'Reducing cost per conversion by 16%',
+  },
+  {
+    industry: 'B2B Enterprise SAAS Company',
+    from: '198',
+    to: '1,492',
+    duration: '3 months',
+    metric: 'Monthly signups',
+    roiMetric: 'Reducing cost per conversion by 45%',
+  },
+];
+---
+
+<BaseLayout title="Thank You - Account Review Confirmed">
+  <!-- Warning Banner -->
+  <section class="bg-gradient-to-r from-green-400 to-blue-500 py-4 border-b-4 border-green-500">
+    <Container>
+      <div class="text-center">
+        <h1 class="text-2xl md:text-3xl font-bold text-navy-950 mb-2">
+          STOP: WATCH THE VIDEO BELOW BEFORE CLOSING THIS PAGE
+        </h1>
+        <p class="text-sm md:text-base font-semibold text-navy-900 uppercase tracking-wide">
+          Follow the steps in the video below to confirm your Google Ads account review
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Video Section -->
+  <section class="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-12 md:py-16 relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-green-400 rounded-full blur-3xl" />
+    </div>
+
+    <Container className="relative z-10">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <!-- Video Player -->
+        <div class="aspect-video bg-navy-800 rounded-xl overflow-hidden shadow-2xl border border-white/10">
+          <div class="w-full h-full flex items-center justify-center">
+            <div class="text-center text-white">
+              <svg class="w-20 h-20 mx-auto mb-4 text-green-400 opacity-75" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+              </svg>
+              <p class="text-sm opacity-50">Video placeholder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="space-y-4">
+          <div class="bg-white/5 backdrop-blur border border-green-400/30 rounded-xl p-6 md:p-8">
+            <p class="text-white leading-relaxed mb-4">
+              You have been sent an email with the <strong class="text-green-400">time and date of your Google Ads account review call</strong> and a link.
+            </p>
+            <p class="text-white font-bold text-lg mb-4">
+              Please accept the meeting invite to confirm your attendance.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+              Looking forward to helping you grow your results from Google Ads!
+            </p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="bg-gray-50 py-12 md:py-16 border-b border-gray-200">
+    <Container>
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-navy-950 mb-2">
+          1000+ Ad Accounts Reviewed, 250+ Success Stories
+        </h2>
+        <p class="text-lg text-gray-600">Rated <span class="text-green-500 font-bold">4.8/5 Stars</span> On Clutch</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {[1, 2, 3].map((i) => (
+          <div class="aspect-video bg-navy-900 rounded-xl overflow-hidden shadow-lg border border-navy-800">
+            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-navy-900 to-navy-800">
+              <svg class="w-16 h-16 text-green-400 opacity-50" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+              </svg>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Results Section -->
+  <section class="bg-gradient-to-b from-navy-950 to-navy-900 py-16 md:py-24 relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-green-400 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+    </div>
+
+    <Container className="relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          RESULTS LIKE THIS STARTED WITH AN ACCOUNT REVIEW
+        </h2>
+        <p class="text-green-400 text-lg md:text-xl font-bold mb-2">
+          ALL OF THE ACCOUNTS WENT THROUGH A GOOGLE ADS ANALYSIS.
+        </p>
+        <p class="text-green-400 text-lg md:text-xl font-bold">
+          NOW THESE COMPANIES ARE OVERFLOWING WITH NEW CUSTOMERS.
+        </p>
+      </div>
+
+      <!-- Case Studies Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {caseStudies.map((study) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100">
+            <!-- Chart Placeholder -->
+            <div class="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center border-b border-gray-200">
+              <svg class="w-32 h-32 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+              <h3 class="text-blue-500 font-bold text-lg mb-4">{study.industry}</h3>
+              <p class="text-gray-900 text-sm leading-relaxed">
+                <strong>{study.metric} went from {study.from} to {study.to}</strong> in {study.duration} while maintaining more than 5x Return On Ad Spend!
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Instructions Section -->
+  <section class="bg-white py-16 md:py-20">
+    <Container>
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-navy-950 mb-4">Next Steps</h2>
+          <p class="text-lg text-gray-600">Here's what you need to know before your account review</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-500">
+            <p class="text-gray-900 leading-relaxed">
+              Thank you for booking a call with one of our Google Ads strategists. You'll be meeting with an expert who knows your industry, understands Google Ads inside and out, and can deliver a comprehensive review for better performance.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-green-400">
+            <p class="text-gray-900 leading-relaxed">
+              <strong class="text-navy-950">Check your email:</strong> You've been sent a confirmation including the time and date of the call. Please make sure you accept this meeting invite.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-500">
+            <p class="text-gray-900 leading-relaxed">
+              <strong class="text-navy-950">Duration:</strong> Our call will last <strong class="text-blue-500">30 minutes</strong>. The meeting link is in your calendar event. <strong class="text-red-600">Please do not be late or your call will be canceled and you will not be able to reschedule.</strong>
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-green-400">
+            <p class="text-gray-900 leading-relaxed">
+              <strong class="text-navy-950">Be prepared:</strong> Have your computer ready and access to your Google Ads account for the review.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-500">
+            <p class="text-gray-900 leading-relaxed">
+              <strong class="text-navy-950">Environment:</strong> Ensure you're in a quiet room with no distractions - not in a car or airport. Give the call your full attention.
+            </p>
+          </div>
+
+          <div class="text-center mt-12 pt-8 border-t border-gray-200">
+            <p class="text-lg text-gray-900 mb-4">
+              We look forward to helping you <span class="text-green-500 font-bold">increase sales and ROI</span> from Google Ads!
+            </p>
+            <p class="text-navy-950 font-semibold text-lg">To your success!</p>
+            <p class="text-gray-600 font-semibold">- The ProfitSEM Team</p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 md:py-20 relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-64 h-64 bg-green-400 rounded-full blur-3xl" />
+      <div class="absolute bottom-10 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+    </div>
+
+    <Container className="relative z-10">
+      <div class="text-center">
+        <div class="w-24 h-24 mx-auto mb-6 bg-green-400/20 rounded-full flex items-center justify-center backdrop-blur">
+          <svg class="w-12 h-12 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+            Your Review Is Confirmed
+          </span>
+        </h2>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+          Check your email for the meeting details and calendar invite. We'll see you soon!
+        </p>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

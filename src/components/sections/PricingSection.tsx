@@ -107,6 +107,7 @@ export function PricingSection() {
                 size="lg"
                 fullWidth
                 className="mb-6"
+                href={plan.price === 'Custom' ? '/contact' : '/free-analysis'}
               >
                 {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
               </Button>

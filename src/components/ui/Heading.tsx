@@ -24,7 +24,7 @@ export function Heading({
   children,
   as: Tag = 'h2',
   size = '3xl',
-  align = 'left',
+  align = 'center',
   className = '',
 }: HeadingProps) {
   const sizeStyles = {

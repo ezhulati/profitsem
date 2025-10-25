@@ -29,3 +29,8 @@ pnpm-debug.log*
 
 # Vercel
 .vercel
+
+# Test scripts
+test-email.js
+test-resend-simple.js
+check-domain.js

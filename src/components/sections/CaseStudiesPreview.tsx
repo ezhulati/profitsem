@@ -53,9 +53,58 @@ export function CaseStudiesPreview() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study) => (
-            <Card key={study.company} variant="bordered" padding="lg">
+        <div className="bento-grid grid-cols-1 lg:grid-cols-3 mb-12">
+          {/* Featured Case - Large Card */}
+          <Card
+            key={caseStudies[0].company}
+            variant="bordered"
+            padding="lg"
+            className="bento-item-large bg-gradient-to-br from-green-50 to-blue-50 border-2 border-green-300 hover-lift fade-in-scroll"
+          >
+            <Badge variant="info" size="sm" className="mb-6">
+              {caseStudies[0].industry}
+            </Badge>
+
+            <Heading as="h3" size="3xl" className="mb-4">
+              {caseStudies[0].company}
+            </Heading>
+
+            <p className="text-base text-gray-700 mb-6">
+              <span className="font-semibold">Challenge:</span> {caseStudies[0].challenge}
+            </p>
+
+            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 mb-8 pulse-glow">
+              <p className="text-white font-bold text-xl">
+                {caseStudies[0].result}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {caseStudies[0].metrics.map((metric) => (
+                <div key={metric.label} className="flex items-center justify-between">
+                  <span className="text-gray-700 font-medium">{metric.label}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-gray-400 text-sm">{metric.before}</span>
+                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-bold text-green-600 text-lg">{metric.after}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          {/* Other Cases - Standard Cards */}
+          {caseStudies.slice(1).map((study, index) => (
+            <Card
+              key={study.company}
+              variant="bordered"
+              padding="lg"
+              className={`magnetic-hover-sm smooth-transition hover:shadow-xl ${
+                index === 0 ? 'slide-in-left' : 'slide-in-right'
+              }`}
+            >
               <Badge variant="info" size="sm" className="mb-4">
                 {study.industry}
               </Badge>
@@ -93,7 +142,7 @@ export function CaseStudiesPreview() {
         </div>
 
         <div className="text-center">
-          <Button variant="primary" size="lg">
+          <Button variant="primary" size="lg" href="/case-studies">
             View All Case Studies
           </Button>
         </div>

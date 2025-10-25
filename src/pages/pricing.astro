@@ -179,6 +179,7 @@ const faqs = [
                 variant={plan.recommended ? 'primary' : 'ghost'}
                 size="lg"
                 fullWidth
+                href={plan.price === 'Custom' ? '/contact' : '/free-analysis'}
               >
                 {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
               </Button>
@@ -314,7 +315,7 @@ const faqs = [
         <p class="text-xl text-blue-100 mb-8">
           Get a custom profit analysis and see exactly how we'll grow your revenue
         </p>
-        <Button variant="secondary" size="lg">
+        <Button variant="secondary" size="lg" href="/free-analysis">
           Get Free Profit Analysis
         </Button>
       </div>

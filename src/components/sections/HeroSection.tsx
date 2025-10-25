@@ -6,10 +6,18 @@ import { StatCounter } from '../ui/StatCounter';
 export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white py-24 lg:py-32 overflow-hidden">
-      {/* Background Elements */}
+      {/* Background Elements with Parallax */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-green-400 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl parallax-slow" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-green-400 rounded-full blur-3xl parallax-fast" />
+      </div>
+
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(var(--color-green-400) 1px, transparent 1px), linear-gradient(90deg, var(--color-green-400) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }} />
       </div>
 
       <Container className="relative z-10">
@@ -22,9 +30,9 @@ export function HeroSection() {
               </span>
             </div>
 
-            <Heading as="h1" size="6xl" className="mb-6">
+            <Heading as="h1" size="6xl" align="left" className="mb-6">
               Turn Google Ads Into
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+              <span className="block gradient-text">
                 Pure Profit
               </span>
             </Heading>
@@ -35,10 +43,10 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" href="/free-analysis">
                 Get Free Profit Analysis
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" href="/case-studies">
                 View Case Studies
               </Button>
             </div>
@@ -68,7 +76,7 @@ export function HeroSection() {
 
           {/* Right Content - Stats */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+            <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
                 value="247"
                 suffix="%"
@@ -77,7 +85,7 @@ export function HeroSection() {
                 className="text-white"
               />
             </div>
-            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+            <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
                 prefix="$"
                 value="2.4M"
@@ -86,7 +94,7 @@ export function HeroSection() {
                 className="text-white"
               />
             </div>
-            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+            <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
                 value="90"
                 label="Days to Profit"
@@ -94,7 +102,7 @@ export function HeroSection() {
                 className="text-white"
               />
             </div>
-            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6">
+            <div className="glass rounded-2xl p-6 magnetic-hover-sm fade-in-scroll">
               <StatCounter
                 value="4.8"
                 suffix="/5"
