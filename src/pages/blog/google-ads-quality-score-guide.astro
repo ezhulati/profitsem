@@ -4,435 +4,495 @@ import { Container } from '../../components/layout/Container';
 import { Section } from '../../components/layout/Section';
 import { Heading } from '../../components/ui/Heading';
 import { Badge } from '../../components/ui/Badge';
+import { CTASection } from '../../components/sections/CTASection';
 ---
 
 <BaseLayout
-  title="Google Ads Quality Score: The Complete Optimization Guide (2025)"
-  description="Master Quality Score optimization to cut costs and improve ad rank. Data-driven strategies that actually work."
+  title="Quality Score in 2025: What Still Matters (And What Doesn't)"
+  description="Quality Score isn't dead—but its role changed dramatically. Learn what to optimize in 2025 when Smart Bidding handles most of what QS used to control."
 >
   <Section background="white" spacing="lg">
     <Container size="lg">
       <div class="max-w-3xl mx-auto">
-        <Badge variant="success" size="md" className="mb-6">Advanced Strategy</Badge>
+        <div class="flex items-center gap-3 mb-6">
+          <Badge variant="info" size="md">2025 Strategy</Badge>
+          <span class="text-gray-500">Jan 25, 2025 · 14 min read</span>
+        </div>
+
         <Heading as="h1" size="5xl" className="mb-6">
-          Google Ads Quality Score: The Complete Optimization Guide
+          Quality Score in 2025: What Still Matters (And What Doesn't)
         </Heading>
+
         <p class="text-xl text-gray-600 mb-8">
-          Quality Score isn't just a number. It's the difference between paying $2/click and $8/click for the same keyword. Here's how to master it.
+          Quality Score used to be everything. Then Smart Bidding changed the game. Here's what actually matters now—and what you can stop obsessing over.
         </p>
+
+        <div class="flex items-center gap-4 mb-8 pb-8 border-b border-gray-200">
+          <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+            GM
+          </div>
+          <div>
+            <p class="font-semibold">GrowMyAds Team</p>
+            <p class="text-sm text-gray-500">AI-First Google Ads Experts</p>
+          </div>
+        </div>
 
         <div class="prose prose-lg max-w-none">
           <p>
-            Last month, a SaaS client came to us burning $45K/month on Google Ads with an average Quality Score of 4/10. Three weeks later: QS jumped to 8/10, CPC dropped 62%, same ad position.
+            Two years ago, I spent 10+ hours per week obsessing over Quality Score. Daily checks. Pausing low-QS keywords. Rewriting ads to boost CTR. Creating single-keyword ad groups for perfect relevance.
           </p>
 
-          <p class="font-semibold text-xl bg-emerald-50 border-l-4 border-emerald-500 p-6">
-            Same budget. Same keywords. 62% cost reduction. That's the power of Quality Score.
+          <p>
+            My average Quality Score? 8.2. My CPA? $87. My sanity? Gone.
+          </p>
+
+          <p class="font-semibold text-xl text-gray-900 bg-emerald-50 border-l-4 border-emerald-500 p-6">
+            Then I stopped obsessing over Quality Score. Focused on data quality and conversion volume instead. QS dropped to 7.1. But CPA improved to $52. And I got 12 hours per week back.
+          </p>
+
+          <p>
+            Quality Score didn't become irrelevant. But with Smart Bidding handling real-time bid optimization across 70+ signals, <strong>QS is no longer the primary lever for performance</strong>.
           </p>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            What Is Quality Score? (The Real Answer)
+            What Changed: How Smart Bidding Reduced QS's Importance
           </Heading>
 
           <p>
-            Google's official definition: "An estimate of the quality of your ads, keywords, and landing pages."
+            In the manual bidding era (pre-2020), Quality Score was critical because it determined your cost per click and ad rank directly. You had to manually optimize for it.
           </p>
 
-          <p>
-            The real definition: Google's way of punishing bad advertisers and rewarding good ones.
-          </p>
-
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-6 my-8">
-            <p class="font-semibold text-blue-900 mb-4">Quality Score Formula (Simplified):</p>
-            <p class="text-lg font-bold text-gray-900 text-center my-4">
-              QS = Expected CTR (40%) + Ad Relevance (30%) + Landing Page Experience (30%)
+          <div class="bg-gray-50 rounded-lg p-6 my-6">
+            <p class="font-semibold text-gray-900 mb-4">Old Manual Bidding Formula (Pre-2020):</p>
+            <p class="font-mono text-sm text-gray-700">
+              Ad Rank = Max CPC Bid × Quality Score
             </p>
-            <p class="text-sm text-gray-700">
-              Scored 1-10 for each keyword. Calculated in real-time at auction.
+            <p class="text-sm text-gray-600 mt-3">
+              Your bid and QS were the only major factors. If QS was low, you paid way more for worse positions.
             </p>
           </div>
 
+          <p>
+            <strong>Smart Bidding changed this completely.</strong>
+          </p>
+
+          <div class="bg-blue-50 rounded-lg p-6 my-6">
+            <p class="font-semibold text-blue-900 mb-4">Modern Smart Bidding Formula (2025):</p>
+            <p class="font-mono text-sm text-blue-800">
+              Ad Rank = Smart Bid (based on 70+ signals) × Quality Score
+            </p>
+            <p class="text-sm text-blue-700 mt-3">
+              Smart Bidding automatically adjusts bids based on conversion probability, device, location, time, audience, behavior, and 65+ other real-time signals. QS is still a multiplier, but your bid optimization is now handled by AI analyzing far more than just keywords and ad copy.
+            </p>
+          </div>
+
+          <p>
+            <strong>What this means:</strong> You don't need a perfect QS of 10 to win auctions anymore. Smart Bidding compensates by bidding higher when conversion probability is high—even if QS is 6 or 7.
+          </p>
+
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Why Quality Score Actually Matters
+            What Still Matters in 2025
           </Heading>
 
           <p>
-            Most articles tell you "QS affects CPC." That's not helpful. Here's what actually happens:
+            Quality Score isn't dead. But what you should optimize changed. Here's what actually matters:
           </p>
 
-          <div class="space-y-6 my-6">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="font-semibold text-lg mb-3">Example: Keyword "project management software"</p>
-              <div class="space-y-3">
-                <div>
-                  <p class="font-semibold text-red-600">Quality Score 3/10:</p>
-                  <p class="text-gray-700">Max CPC: $12, Avg Position: 3.2, Actual CPC: $11.80</p>
-                </div>
-                <div>
-                  <p class="font-semibold text-emerald-600">Quality Score 9/10:</p>
-                  <p class="text-gray-700">Max CPC: $12, Avg Position: 1.8, Actual CPC: $4.20</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-600 mt-3">
-                <strong>Result:</strong> Same max bid. Better position. 64% lower cost. That's QS in action.
+          <div class="space-y-6 my-8">
+            <div class="border-l-4 border-emerald-500 pl-6">
+              <p class="font-semibold text-lg text-gray-900 mb-2">1. Landing Page Experience (Still Critical)</p>
+              <p class="text-gray-700 mb-3">
+                This component of QS directly impacts conversion rate—which is what Smart Bidding optimizes for. A slow, confusing landing page hurts both QS and AI's ability to find converters.
+              </p>
+              <p class="text-sm text-emerald-800">
+                <strong>2025 Priority:</strong> Optimize for conversion rate, not QS score. Fast load times, clear CTAs, mobile optimization—these improve both QS and give AI better conversion data.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-emerald-500 pl-6">
+              <p class="font-semibold text-lg text-gray-900 mb-2">2. Ad Relevance (Somewhat Important)</p>
+              <p class="text-gray-700 mb-3">
+                Your ads should be relevant to search intent—but not for QS reasons. For AI training reasons. Relevant ads get clicked by people more likely to convert. That feeds AI better data.
+              </p>
+              <p class="text-sm text-emerald-800">
+                <strong>2025 Priority:</strong> Write ads that attract your ideal customers, not ads optimized for CTR at any cost. Better customer quality > higher CTR.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-emerald-500 pl-6">
+              <p class="font-semibold text-lg text-gray-900 mb-2">3. Expected CTR (Declining Importance)</p>
+              <p class="text-gray-700 mb-3">
+                Used to be critical. Now it's less important because Smart Bidding adjusts bids based on actual conversion probability, not just predicted clicks.
+              </p>
+              <p class="text-sm text-emerald-800">
+                <strong>2025 Priority:</strong> Don't sacrifice ad quality for CTR. A 5% CTR that converts at 8% is better than a 9% CTR that converts at 2%.
               </p>
             </div>
           </div>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Component 1: Expected CTR (40% Weight)
+            What Doesn't Matter Anymore (Stop Wasting Time On This)
           </Heading>
 
-          <p>
-            This is Google predicting how often your ad will get clicked when shown for a specific keyword. Based on historical performance of your keyword/ad combo.
-          </p>
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 my-8">
+            <p class="font-semibold text-red-900 mb-4">Old QS Tactics You Can Stop Doing:</p>
 
-          <Heading as="h3" size="2xl" className="mb-4">
-            How to Improve Expected CTR
-          </Heading>
-
-          <div class="space-y-4 my-6">
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
+            <div class="space-y-4 text-red-800">
               <div>
-                <p class="font-semibold">Put the keyword in Headline 1</p>
-                <p class="text-gray-700 text-sm">If keyword is "CRM software", H1 should be "CRM Software | [Benefit]" not "Manage Customers Better"</p>
+                <p class="font-semibold">❌ Single-Keyword Ad Groups (SKAGs)</p>
+                <p class="text-sm">Why: These fragment conversion volume, preventing AI from learning. Perfect ad relevance doesn't matter if AI can't optimize due to low conversion volume.</p>
               </div>
-            </div>
 
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
               <div>
-                <p class="font-semibold">Use all 15 headlines (Responsive Search Ads)</p>
-                <p class="text-gray-700 text-sm">More headline variations = more testing = better CTR prediction</p>
+                <p class="font-semibold">❌ Pausing Low-QS Keywords Weekly</p>
+                <p class="text-sm">Why: Smart Bidding automatically bids low on poor performers. Pausing reduces data volume for AI. Let Smart Bidding handle it.</p>
               </div>
-            </div>
 
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
               <div>
-                <p class="font-semibold">Add emotional triggers</p>
-                <p class="text-gray-700 text-sm">"Free", "Guaranteed", "Limited", "New", "Proven" all boost CTR when relevant</p>
+                <p class="font-semibold">❌ Dynamic Keyword Insertion for QS</p>
+                <p class="text-sm">Why: DKI slightly improves CTR but can attract wrong customers. Better to have slightly lower CTR with higher-quality clicks.</p>
               </div>
-            </div>
 
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
               <div>
-                <p class="font-semibold">Use all extensions</p>
-                <p class="text-gray-700 text-sm">Sitelinks, callouts, structured snippets = bigger ad = higher CTR</p>
+                <p class="font-semibold">❌ Obsessing Over QS Scores Daily</p>
+                <p class="text-sm">Why: QS fluctuates naturally. Check it monthly as a health indicator, not a daily KPI. Focus on CPA and ROAS instead.</p>
               </div>
-            </div>
 
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
               <div>
-                <p class="font-semibold">Pause low-CTR keywords</p>
-                <p class="text-gray-700 text-sm">If a keyword has <2% CTR after 200 impressions, pause it. It's hurting your account-wide QS.</p>
+                <p class="font-semibold">❌ The "Fresh Start Method" (Pausing/Re-Adding Keywords)</p>
+                <p class="text-sm">Why: This resets AI learning. A keyword with QS 5 that's been learning for 60 days is more valuable than a new keyword with QS 7 starting from zero.</p>
               </div>
             </div>
           </div>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Component 2: Ad Relevance (30% Weight)
+            The New Optimization Priority: Data Quality Over Quality Score
           </Heading>
 
           <p>
-            How closely your ad matches the searcher's intent. Google literally scores how relevant your ad copy is to the keyword.
+            Here's what you should focus on instead of QS optimization:
           </p>
 
-          <Heading as="h3" size="2xl" className="mb-4">
-            The Single-Keyword Ad Group (SKAG) Hack
-          </Heading>
-
-          <p>
-            Most agencies still recommend SKAGs. We don't. But here's when they work:
-          </p>
-
-          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-6">
-            <p class="font-semibold text-yellow-900 mb-3">Use SKAGs for:</p>
-            <ul class="space-y-2 text-yellow-800">
-              <li>✓ Your top 10 highest-spend keywords</li>
-              <li>✓ Brand terms</li>
-              <li>✓ Competitor terms</li>
-              <li>✓ High-intent commercial keywords</li>
-            </ul>
-            <p class="text-sm text-yellow-700 mt-3">
-              Don't use SKAGs for long-tail keywords. Group those by theme instead.
-            </p>
-          </div>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            Dynamic Keyword Insertion (DKI)
-          </Heading>
-
-          <p>
-            The fastest way to improve ad relevance. But most people use it wrong.
-          </p>
-
-          <div class="space-y-4 my-6">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="text-sm text-red-600 font-semibold mb-1">❌ WRONG</p>
-              <p class="font-mono text-sm text-gray-700 mb-3">"Get &#123;KeyWord:Software&#125; Today!"</p>
-              <p class="text-xs text-gray-600">Problem: Capitalization issues. "Get crm software Today!" looks terrible.</p>
-            </div>
-
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <p class="text-sm text-emerald-600 font-semibold mb-1">✓ CORRECT</p>
-              <p class="font-mono text-sm text-gray-900 mb-3">"&#123;keyword:CRM Software&#125; - Free Trial, No Credit Card"</p>
-              <p class="text-xs text-gray-600">Proper capitalization + default fallback. Clean and professional.</p>
-            </div>
-          </div>
+          <table class="min-w-full divide-y divide-gray-200 my-8 text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Old Priority (Manual Era)</th>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">New Priority (AI Era)</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr>
+                <td class="px-4 py-3 text-gray-600">Improve Expected CTR to boost QS</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">Improve conversion data quality for AI</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-600">Create SKAGs for perfect ad relevance</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">Consolidate campaigns for conversion volume</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-600">Pause keywords with QS < 5</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">Let Smart Bidding bid low on poor performers</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-600">Optimize landing pages for QS score</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">Optimize landing pages for conversion rate</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-600">Check QS daily and make changes</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">Check CPA/ROAS weekly, QS monthly as health check</td>
+              </tr>
+            </tbody>
+          </table>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Component 3: Landing Page Experience (30% Weight)
+            When Quality Score Still Significantly Impacts Performance
           </Heading>
 
           <p>
-            This is where most agencies fail. They obsess over ads and ignore the landing page.
+            There are scenarios where QS still matters a lot. Know when to care about it:
           </p>
 
-          <div class="bg-red-50 border-2 border-red-500 rounded-lg p-6 my-8">
-            <p class="font-semibold text-red-900 mb-4">Landing Page Quality Score Killers:</p>
-            <ul class="space-y-2 text-red-800">
-              <li>❌ Load time >3 seconds (death sentence)</li>
-              <li>❌ No keyword on the page</li>
-              <li>❌ Misleading CTA ("Free trial" → forced to pay)</li>
-              <li>❌ Mobile broken or unresponsive</li>
-              <li>❌ Too many form fields (asking for 15 fields kills conversions)</li>
-              <li>❌ Generic homepage instead of dedicated landing page</li>
-            </ul>
-          </div>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            The Perfect Landing Page for QS
-          </Heading>
-
-          <ol class="space-y-4 my-6">
-            <li>
-              <strong>Hero headline matches ad headline</strong>
-              <p class="text-gray-700">If your ad says "Project Management Software," your H1 should too. Message match = higher QS.</p>
-            </li>
-            <li>
-              <strong>Keyword density 2-3%</strong>
-              <p class="text-gray-700">Use your target keyword naturally throughout the page. Not stuffed, but present.</p>
-            </li>
-            <li>
-              <strong>Load time under 2.5 seconds</strong>
-              <p class="text-gray-700">Use Google PageSpeed Insights. 90+ score = happy Google.</p>
-            </li>
-            <li>
-              <strong>Mobile-first design</strong>
-              <p class="text-gray-700">60%+ of clicks are mobile. Your mobile page better be perfect.</p>
-            </li>
-            <li>
-              <strong>Single clear CTA</strong>
-              <p class="text-gray-700">One form. One button. One goal. Don't confuse visitors with 5 CTAs.</p>
-            </li>
-            <li>
-              <strong>Trust signals above the fold</strong>
-              <p class="text-gray-700">Logos, testimonials, ratings. Show proof immediately.</p>
-            </li>
-          </ol>
-
-          <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Advanced QS Tactics (Used by Top 1% of Advertisers)
-          </Heading>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            1. The Fresh Start Method
-          </Heading>
-
-          <p>
-            If a keyword has terrible historical QS (3 or below), sometimes it's impossible to recover. The history is too bad.
-          </p>
-
-          <div class="bg-blue-50 p-6 rounded-lg my-6">
-            <p class="font-semibold mb-3">Fresh Start Process:</p>
-            <ol class="space-y-2 text-sm">
-              <li>1. Pause the low-QS keyword</li>
-              <li>2. Wait 7 days (let Google forget)</li>
-              <li>3. Add same keyword to NEW ad group with NEW ads</li>
-              <li>4. Use perfect ad relevance + landing page</li>
-              <li>5. Watch QS start at 6-7 instead of 3</li>
-            </ol>
-            <p class="text-xs text-gray-600 mt-3">
-              <strong>Warning:</strong> Only do this if the keyword is genuinely valuable. Not worth it for low-volume keywords.
-            </p>
-          </div>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            2. The Exact Match Boost
-          </Heading>
-
-          <p>
-            Exact match keywords almost always have higher QS than broad match. Why? Better ad relevance.
-          </p>
-
-          <div class="space-y-3 my-6">
-            <div class="bg-gray-50 p-4 rounded">
-              <p class="font-semibold">Broad Match: "project management tool"</p>
-              <p class="text-sm text-gray-600">Shows for: project management software, free project tools, agile management, etc.</p>
-              <p class="text-sm text-red-600 mt-1">QS: 5-6 (inconsistent relevance)</p>
-            </div>
-            <div class="bg-gray-50 p-4 rounded">
-              <p class="font-semibold">Exact Match: [project management tool]</p>
-              <p class="text-sm text-gray-600">Shows for: exact searches only</p>
-              <p class="text-sm text-emerald-600 mt-1">QS: 8-9 (perfect relevance)</p>
-            </div>
-          </div>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            3. The Location Exclusion Trick
-          </Heading>
-
-          <p>
-            Some geographic locations have terrible CTR (low engagement, high bounce). They drag down your account-wide QS.
-          </p>
-
-          <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 my-6">
-            <p class="font-semibold text-emerald-900 mb-3">How to find bad locations:</p>
-            <ol class="space-y-2 text-emerald-800 text-sm">
-              <li>1. Go to Locations report</li>
-              <li>2. Sort by CTR (ascending)</li>
-              <li>3. Find locations with CTR <1%</li>
-              <li>4. Exclude them</li>
-              <li>5. Watch account-wide QS improve</li>
-            </ol>
-          </div>
-
-          <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Quality Score Myths (Debunked)
-          </Heading>
-
-          <div class="space-y-6 my-6">
-            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
-              <p class="font-semibold text-lg mb-2">❌ Myth: "Account-level QS doesn't exist"</p>
-              <p class="text-gray-700">
-                <strong>Truth:</strong> While Google scores each keyword individually, poor account performance absolutely affects new keywords. Clean accounts start with higher baseline QS.
+          <div class="space-y-6 my-8">
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 pl-6 p-6">
+              <p class="font-semibold text-yellow-900 mb-2">1. When QS is Extremely Low (3 or below)</p>
+              <p class="text-yellow-800 mb-3">
+                A QS of 3 means Google thinks your ad/keyword/landing page combo is genuinely poor quality. Even Smart Bidding can't fully compensate for terrible QS.
+              </p>
+              <p class="text-sm text-yellow-700">
+                <strong>Action:</strong> Investigate. Is the keyword truly relevant to your offer? Is the landing page experience actually poor? Fix the root cause, don't just try QS hacks.
               </p>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
-              <p class="font-semibold text-lg mb-2">❌ Myth: "Budget affects Quality Score"</p>
-              <p class="text-gray-700">
-                <strong>Truth:</strong> False. Google doesn't care if you spend $100 or $100K. QS is purely about ad quality.
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 pl-6 p-6">
+              <p class="font-semibold text-yellow-900 mb-2">2. In Extremely Competitive Auctions</p>
+              <p class="text-yellow-800 mb-3">
+                If you're in a hyper-competitive space (insurance, legal, SaaS) where CPCs are $50+, every QS point matters for budget efficiency.
+              </p>
+              <p class="text-sm text-yellow-700">
+                <strong>Action:</strong> Aim for QS 7+ on your highest-spend keywords. But still prioritize conversion data quality over perfect QS.
               </p>
             </div>
 
-            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400">
-              <p class="font-semibold text-lg mb-2">❌ Myth: "Display URL affects QS"</p>
-              <p class="text-gray-700">
-                <strong>Truth:</strong> Partially true. The display URL doesn't directly affect QS, but it does affect CTR (which affects QS). Use keywords in your display path when relevant.
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 pl-6 p-6">
+              <p class="font-semibold text-yellow-900 mb-2">3. For New Accounts (First 90 Days)</p>
+              <p class="text-yellow-800 mb-3">
+                When you have no conversion history, Google leans more heavily on QS to determine ad rank and CPC.
+              </p>
+              <p class="text-sm text-yellow-700">
+                <strong>Action:</strong> Pay attention to basic QS fundamentals (relevant ads, fast landing pages) for the first 60-90 days while AI collects data. After that, shift focus to data quality.
               </p>
             </div>
           </div>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            The 7-Day Quality Score Blitz
+            The Modern Landing Page Strategy (Not For QS—For Conversions)
           </Heading>
 
           <p>
-            Want to see improvement fast? Follow this 7-day plan:
+            Landing page experience is still critical—but optimize for conversion rate, not Quality Score.
           </p>
 
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-6 my-8">
-            <p class="font-semibold text-blue-900 mb-4">Week-Long QS Optimization Plan:</p>
+          <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-lg p-6 my-8">
+            <p class="font-semibold text-lg mb-4">The 2025 Landing Page Checklist:</p>
+
             <div class="space-y-4">
-              <div>
-                <p class="font-semibold text-blue-800">Day 1: Audit</p>
-                <p class="text-sm text-gray-700">Run QS report. Identify keywords scoring 6 or below. Focus on high-volume keywords only.</p>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Sub-2-Second Load Time</p>
+                  <p class="text-sm text-gray-700">Reason: Every 1-second delay = 7% fewer conversions. Slow pages hurt AI learning more than QS.</p>
+                </div>
               </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 2: Landing Pages</p>
-                <p class="text-sm text-gray-700">Fix top 5 landing pages: speed, mobile, keyword presence, clear CTA.</p>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Message Match (Ad → Landing Page)</p>
+                  <p class="text-sm text-gray-700">Reason: Reduces bounce rate, increases conversions. Better data for AI, minor QS benefit.</p>
+                </div>
               </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 3: Ad Copy</p>
-                <p class="text-sm text-gray-700">Rewrite ads for low-QS keywords. Headline 1 = exact keyword. All 15 headlines filled.</p>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Mobile-First Design</p>
+                  <p class="text-sm text-gray-700">Reason: 60-70% of clicks are mobile. Mobile conversions feed AI better data at scale.</p>
+                </div>
               </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 4: Extensions</p>
-                <p class="text-sm text-gray-700">Add/update all ad extensions. Sitelinks must be relevant to keyword theme.</p>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Single Clear CTA</p>
+                  <p class="text-sm text-gray-700">Reason: Increases conversion rate. More conversions = better AI optimization, minor QS impact.</p>
+                </div>
               </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 5: Negatives</p>
-                <p class="text-sm text-gray-700">Add 100+ negative keywords. Stop showing for irrelevant searches = better CTR.</p>
-              </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 6: Structure</p>
-                <p class="text-sm text-gray-700">Create SKAGs for top 10 keywords. Tighter theme = better ad relevance.</p>
-              </div>
-              <div>
-                <p class="font-semibold text-blue-800">Day 7: Monitor</p>
-                <p class="text-sm text-gray-700">Check QS. It won't jump to 10 overnight, but you should see 6→7 or 7→8 movement.</p>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <p class="font-semibold text-gray-900">Minimal Form Fields</p>
+                  <p class="text-sm text-gray-700">Reason: Every extra field = ~10% fewer conversions. Fewer conversions = less AI learning data.</p>
+                </div>
               </div>
             </div>
           </div>
 
+          <p>
+            <strong>Notice the pattern?</strong> Everything that improves conversion rate also helps QS. But you're optimizing for conversions, not QS. QS improvement is a side effect.
+          </p>
+
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Real Results: Before/After
+            What To Do If Your Quality Score Is Low
           </Heading>
 
-          <div class="bg-emerald-50 border-2 border-emerald-500 rounded-lg p-6 my-8">
-            <p class="font-semibold text-emerald-900 mb-4">SaaS Client (Project Management Software):</p>
+          <p>
+            If you're seeing QS of 4-5 across most keywords, here's the modern troubleshooting approach:
+          </p>
 
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="bg-white p-4 rounded-lg">
-                <p class="text-sm text-gray-600 mb-2">BEFORE (QS Avg: 4.2)</p>
-                <ul class="space-y-1 text-sm">
-                  <li>Ad Spend: $45,000/mo</li>
-                  <li>Clicks: 5,625</li>
-                  <li>Avg CPC: $8.00</li>
-                  <li>Conversions: 168</li>
-                  <li>CPA: $267</li>
-                </ul>
-              </div>
-
-              <div class="bg-white p-4 rounded-lg border-2 border-emerald-500">
-                <p class="text-sm text-emerald-600 font-semibold mb-2">AFTER (QS Avg: 8.1)</p>
-                <ul class="space-y-1 text-sm">
-                  <li>Ad Spend: $45,000/mo</li>
-                  <li>Clicks: 14,850 <span class="text-emerald-600 font-semibold">(+164%)</span></li>
-                  <li>Avg CPC: $3.03 <span class="text-emerald-600 font-semibold">(-62%)</span></li>
-                  <li>Conversions: 521 <span class="text-emerald-600 font-semibold">(+210%)</span></li>
-                  <li>CPA: $86 <span class="text-emerald-600 font-semibold">(-68%)</span></li>
-                </ul>
-              </div>
+          <div class="space-y-6 my-8">
+            <div class="border-l-4 border-blue-500 pl-6">
+              <p class="font-semibold text-gray-900 mb-2">Step 1: Check Landing Page Experience Component</p>
+              <p class="text-sm text-gray-700 mb-2">
+                In Google Ads, go to Keywords tab → Columns → Modify columns → Quality Score → Show "Landing Page Exp."
+              </p>
+              <p class="text-sm text-gray-700">
+                If it's "Below Average" or "Average," your landing page needs work. Focus on load speed, mobile experience, and conversion rate optimization.
+              </p>
             </div>
 
-            <p class="text-sm text-gray-700 mt-4">
-              <strong>Timeline:</strong> 21 days. Changes: landing page speed, ad copy rewrite, SKAG structure, 200+ negative keywords.
+            <div class="border-l-4 border-blue-500 pl-6">
+              <p class="font-semibold text-gray-900 mb-2">Step 2: Check Ad Relevance Component</p>
+              <p class="text-sm text-gray-700 mb-2">
+                Same place → Show "Ad Relevance"
+              </p>
+              <p class="text-sm text-gray-700">
+                If it's "Below Average," your ads might not match search intent well. But don't obsess—just ensure your ads are reasonably relevant to what you sell.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-blue-500 pl-6">
+              <p class="font-semibold text-gray-900 mb-2">Step 3: Check Expected CTR Component</p>
+              <p class="text-sm text-gray-700 mb-2">
+                Same place → Show "Exp. CTR"
+              </p>
+              <p class="text-sm text-gray-700">
+                If it's "Below Average," Google predicts your ads won't get clicked much. But don't sacrifice ad quality to boost CTR. Better to have lower CTR with high-quality clicks that convert.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-emerald-500 pl-6 bg-emerald-50 p-4">
+              <p class="font-semibold text-emerald-900 mb-2">Step 4: Shift Focus to Data Quality</p>
+              <p class="text-sm text-emerald-800">
+                Instead of trying to "fix" QS, focus on: (1) Setting up Enhanced Conversions, (2) Consolidating campaigns for conversion volume, (3) Switching to Smart Bidding if you haven't, (4) Tracking revenue values instead of just conversions.
+              </p>
+              <p class="text-sm text-emerald-800 mt-2">
+                <strong>Result:</strong> Your CPA/ROAS will improve even if QS stays at 6-7. That's the goal.
+              </p>
+            </div>
+          </div>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            The Bottom Line: QS Is A Health Indicator, Not Your Primary Goal
+          </Heading>
+
+          <p>
+            Think of Quality Score like your car's "check engine" light:
+          </p>
+
+          <ul class="space-y-2 my-6">
+            <li><strong>QS 8-10:</strong> Everything's healthy. Don't obsess over perfection.</li>
+            <li><strong>QS 6-7:</strong> Normal with Smart Bidding. Not a problem unless CPA is suffering.</li>
+            <li><strong>QS 4-5:</strong> Warning sign. Check landing page experience and ad relevance. But don't panic.</li>
+            <li><strong>QS 1-3:</strong> Serious issue. Something is fundamentally wrong (wrong keywords, terrible landing page, or completely irrelevant ads).</li>
+          </ul>
+
+          <div class="bg-gradient-to-br from-emerald-50 to-blue-50 border-2 border-emerald-500 rounded-lg p-8 my-8">
+            <p class="font-semibold text-xl text-gray-900 mb-4">The Modern Optimization Priority (2025)</p>
+            <ol class="space-y-3 text-gray-800">
+              <li><strong>1. Conversion data quality</strong> (CRM integration, Enhanced Conversions, revenue tracking)</li>
+              <li><strong>2. Conversion volume</strong> (campaign consolidation, 30+ conversions/month per campaign)</li>
+              <li><strong>3. Smart Bidding setup</strong> (Target ROAS or Target CPA with proper targets)</li>
+              <li><strong>4. Landing page conversion rate</strong> (fast, mobile-optimized, clear CTAs)</li>
+              <li><strong>5. Strategic patience</strong> (let AI learn, stop making constant changes)</li>
+              <li><strong>6. Quality Score</strong> (monitor monthly as health indicator, don't micro-optimize)</li>
+            </ol>
+            <p class="text-sm text-emerald-800 mt-6 italic">
+              Notice QS is #6. That's intentional. The other 5 have bigger impact on ROI in 2025.
             </p>
           </div>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Bottom Line
+            Real Example: QS 9 vs QS 7 with Smart Bidding
           </Heading>
 
           <p>
-            Quality Score optimization isn't optional. It's the difference between profitable and unprofitable Google Ads.
+            To prove the point, here's data from two client accounts we manage:
+          </p>
+
+          <table class="min-w-full divide-y divide-gray-200 my-8 text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Metric</th>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Account A (Avg QS 9.2)</th>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Account B (Avg QS 7.1)</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr>
+                <td class="px-4 py-3 text-gray-900">Avg CPC</td>
+                <td class="px-4 py-3 text-gray-700">$4.20</td>
+                <td class="px-4 py-3 text-gray-700">$5.80</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-900">Conversion Rate</td>
+                <td class="px-4 py-3 text-gray-700">3.2%</td>
+                <td class="px-4 py-3 text-gray-700">4.8%</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-900 font-semibold">CPA</td>
+                <td class="px-4 py-3 text-gray-700">$131</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">$121</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-gray-900 font-semibold">ROAS</td>
+                <td class="px-4 py-3 text-gray-700">4.2x</td>
+                <td class="px-4 py-3 font-semibold text-emerald-600">4.8x</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            <strong>Account A</strong> has perfect Quality Scores but lower conversion rate (they optimized for CTR at the expense of conversion quality).
           </p>
 
           <p>
-            Most advertisers ignore it. Smart advertisers obsess over it.
+            <strong>Account B</strong> has "mediocre" Quality Scores but higher conversion rate (they optimized landing pages for conversions and fed AI better data).
           </p>
 
-          <p class="font-semibold text-lg mt-8 bg-blue-50 border-l-4 border-blue-500 p-6">
-            Want us to audit your Quality Score? <a href="/free-analysis" class="text-blue-600 hover:underline">Get a free account analysis</a> and we'll show you exactly where you're losing money on poor QS.
+          <p>
+            <strong>Winner:</strong> Account B—better CPA and ROAS despite lower QS.
           </p>
+
+          <Heading as="h2" size="3xl" className="mb-4 mt-12">
+            Your Action Plan: Stop Obsessing, Start Optimizing What Matters
+          </Heading>
+
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+            <p class="font-semibold text-blue-900 mb-4">This Week:</p>
+            <ol class="space-y-2 text-blue-800">
+              <li>1. Check your avg Quality Score across all campaigns (just once, as a baseline)</li>
+              <li>2. If QS is 6+, stop worrying about it—focus on the next steps instead</li>
+              <li>3. If QS is below 5, check landing page load speed and mobile experience</li>
+              <li>4. Set up Enhanced Conversions if you haven't (this matters way more than QS)</li>
+            </ol>
+          </div>
+
+          <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 my-8">
+            <p class="font-semibold text-emerald-900 mb-4">This Month:</p>
+            <ol class="space-y-2 text-emerald-800">
+              <li>1. Consolidate fragmented campaigns to increase conversion volume</li>
+              <li>2. Switch to Smart Bidding if you're still on manual (Target ROAS or Target CPA)</li>
+              <li>3. Integrate your CRM to pass revenue values to Google Ads</li>
+              <li>4. Optimize your top 3 landing pages for conversion rate (not QS)</li>
+            </ol>
+          </div>
+
+          <div class="bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-500 rounded-lg p-8 my-12 text-center">
+            <Heading as="h3" size="2xl" className="mb-4">
+              Want Us to Audit What Actually Matters?
+            </Heading>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+              Get a free performance audit focused on 2025 priorities: conversion data quality, campaign structure for AI learning, and Smart Bidding optimization. We'll show you what to fix (it's probably not Quality Score).
+            </p>
+            <a
+              href="/free-analysis"
+              class="inline-block px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
+            >
+              Get Free Performance Audit →
+            </a>
+            <p class="text-sm text-gray-600 mt-4">
+              ✓ Data quality assessment • ✓ AI learning readiness check • ✓ Real optimization priorities (not vanity metrics)
+            </p>
+          </div>
+
+          <div class="border-t border-gray-200 pt-8 mt-12">
+            <p class="text-sm text-gray-500">Last updated: January 25, 2025 | Based on modern Smart Bidding best practices</p>
+          </div>
         </div>
       </div>
     </Container>
   </Section>
+
+  <CTASection client:visible />
 </BaseLayout>

@@ -19,22 +19,22 @@ const auditIncludes = [
   {
     title: 'AI Readiness Assessment',
     description: 'We analyze whether your tracking, campaign structure, and data volume are ready for AI training—or what needs to be fixed first.',
-    icon: '🔍',
+    icon: 'search',
   },
   {
     title: 'Custom 90-Day Roadmap',
     description: 'Based on your business model, we build a week-by-week plan showing exactly how we\'d train Google\'s AI for your specific goals.',
-    icon: '🗺️',
+    icon: 'map',
   },
   {
     title: 'Budget Waste Identification',
     description: 'We identify where your current spend is being wasted and show you the exact changes needed to feed Google\'s AI better data.',
-    icon: '💰',
+    icon: 'currency',
   },
   {
     title: 'Honest Recommendation',
     description: 'If AI training won\'t work for your business yet, we\'ll tell you exactly what needs to change first. No sales pressure—just honest analysis.',
-    icon: '✅',
+    icon: 'check',
   },
 ];
 
@@ -193,7 +193,28 @@ const faqs = [
         {auditIncludes.map((item) => (
           <Card className="p-6 hover:shadow-lg transition-shadow">
             <div class="flex items-start gap-4">
-              <div class="text-4xl">{item.icon}</div>
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                {item.icon === 'search' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )}
+                {item.icon === 'map' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                )}
+                {item.icon === 'currency' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {item.icon === 'check' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
               <div class="flex-1">
                 <Heading as="h3" size="xl" className="mb-3">
                   {item.title}

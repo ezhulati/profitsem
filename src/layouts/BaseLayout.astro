@@ -10,14 +10,17 @@ import Analytics from '@vercel/analytics/astro';
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
 }
 
 const {
   title = 'ProfitSEM - Profitable Google Ads in 90 Days',
-  description = 'World-class Google Ads agency focused on profit, not just traffic. No contracts. Just results. Book your free analysis today.'
+  description = 'World-class Google Ads agency focused on profit, not just traffic. No contracts. Just results. Book your free analysis today.',
+  ogImage = '/images/og-default.jpg'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
@@ -39,11 +42,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:site_name" content="ProfitSEM" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:image:alt" content={title} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

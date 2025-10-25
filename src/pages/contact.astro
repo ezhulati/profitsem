@@ -20,21 +20,21 @@ const contactMethods = [
     title: 'Email Us',
     description: 'Send us an email and we\'ll respond within 24 hours during business days.',
     detail: 'hello@profitsem.com',
-    icon: '📧',
+    icon: 'email',
     link: 'mailto:hello@profitsem.com',
   },
   {
     title: 'Schedule a Call',
     description: 'Book a 30-minute strategy call to discuss your Google Ads goals.',
     detail: 'Free consultation',
-    icon: '📅',
+    icon: 'calendar',
     link: '/free-analysis',
   },
   {
     title: 'Office Hours',
     description: 'We\'re available Monday through Friday to answer your questions.',
     detail: '9AM - 6PM EST',
-    icon: '🕐',
+    icon: 'clock',
     link: null,
   },
 ];
@@ -44,25 +44,25 @@ const whatHappensNext = [
     step: '1',
     title: 'We Review Your Message',
     description: 'Our team reads every submission within 24 hours and assesses how we can help.',
-    icon: '📋',
+    icon: 'clipboard',
   },
   {
     step: '2',
     title: 'Initial Response',
     description: 'We send a personalized reply with next steps, usually a quick intro call or account audit.',
-    icon: '💬',
+    icon: 'chat',
   },
   {
     step: '3',
     title: 'Free Account Analysis',
     description: 'If you\'re interested, we audit your Google Ads account and identify opportunities (no strings attached).',
-    icon: '🔍',
+    icon: 'search',
   },
   {
     step: '4',
     title: 'Custom Proposal',
     description: 'We present a 90-day AI training roadmap specific to your business goals and ad spend.',
-    icon: '🎯',
+    icon: 'target',
   },
 ];
 
@@ -149,7 +149,23 @@ const faqs = [
       <div class="grid md:grid-cols-3 gap-8">
         {contactMethods.map((method) => (
           <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-            <div class="text-5xl mb-4">{method.icon}</div>
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+              {method.icon === 'email' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              )}
+              {method.icon === 'calendar' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              )}
+              {method.icon === 'clock' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+            </div>
             <Heading as="h3" size="xl" className="mb-3">
               {method.title}
             </Heading>
@@ -248,7 +264,28 @@ const faqs = [
             <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg relative z-10">
               {phase.step}
             </div>
-            <div class="text-4xl mb-3">{phase.icon}</div>
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+              {phase.icon === 'clipboard' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              )}
+              {phase.icon === 'chat' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              )}
+              {phase.icon === 'search' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              )}
+              {phase.icon === 'target' && (
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+            </div>
             <Heading as="h3" size="xl" className="mb-3">
               {phase.title}
             </Heading>

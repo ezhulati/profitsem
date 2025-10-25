@@ -70,22 +70,22 @@ const methodology = [
   {
     title: 'CRM Integration First',
     description: 'We connected their CRM so Google\'s AI could learn from actual customers and revenue, not just clicks and form fills.',
-    icon: '🔗',
+    icon: 'link',
   },
   {
     title: 'Consolidated Campaign Structure',
     description: 'We rebuilt fragmented campaigns into consolidated structures that feed AI concentrated conversion data for faster learning.',
-    icon: '🎯',
+    icon: 'target',
   },
   {
     title: 'Smart Bidding Implementation',
     description: 'After sufficient data volume, we activated AI-powered bidding strategies that optimize for actual business outcomes.',
-    icon: '🤖',
+    icon: 'cpu',
   },
   {
     title: 'Strategic Patience',
     description: 'We guided clients through the 60-90 day learning period without constant changes that reset AI progress.',
-    icon: '⏱️',
+    icon: 'clock',
   },
 ];
 
@@ -259,7 +259,28 @@ const industries = [
         {methodology.map((method) => (
           <Card className="p-6 hover:shadow-lg transition-shadow">
             <div class="flex items-start gap-4">
-              <div class="text-4xl">{method.icon}</div>
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                {method.icon === 'link' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  </svg>
+                )}
+                {method.icon === 'target' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {method.icon === 'cpu' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                )}
+                {method.icon === 'clock' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
               <div class="flex-1">
                 <Heading as="h3" size="xl" className="mb-3">
                   {method.title}

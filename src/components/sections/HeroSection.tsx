@@ -32,16 +32,16 @@ export function HeroSection() {
               Train Google's AI to Find Your Best Customers, Then Scale Predictably
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 relative z-20">
               <a
                 href="/process"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-xl magnetic-hover"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-xl magnetic-hover relative z-20"
               >
                 Learn About Our Process →
               </a>
               <a
                 href="/free-analysis"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white text-navy-900 hover:bg-gray-100 active:bg-gray-200 shadow-lg hover:shadow-xl magnetic-hover"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white text-navy-900 hover:bg-gray-100 active:bg-gray-200 shadow-lg hover:shadow-xl magnetic-hover relative z-20"
               >
                 Get Free Analysis
               </a>
