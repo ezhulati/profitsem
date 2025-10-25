@@ -1,0 +1,252 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { ROICalculator } from '../../components/calculators/ROICalculator';
+---
+
+<BaseLayout
+  title="Google Ads ROI Calculator - Calculate Your True Profit | ProfitSEM"
+  description="Free Google Ads ROI calculator. Calculate your true ROI accounting for profit margins, customer lifetime value, and operating costs. Know if your ads are profitable."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h1" size="6xl" className="mb-6">
+          Google Ads ROI Calculator
+        </Heading>
+        <p class="text-xl text-blue-100 mb-4">
+          Calculate your true Google Ads ROI accounting for profit margins, customer lifetime value, and operating costs.
+        </p>
+        <p class="text-blue-200">
+          Know exactly if your campaigns are profitable—and by how much.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Calculator -->
+  <Section background="white" spacing="xl">
+    <Container size="full">
+      <ROICalculator client:load />
+    </Container>
+  </Section>
+
+  <!-- How It Works -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Understanding Your Results
+      </Heading>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">Cost Per Click (CPC)</h3>
+          <p class="text-gray-700 mb-4">
+            How much you pay on average for each click on your ads. Lower CPC means more efficient campaigns.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> Total Ad Spend ÷ Total Clicks
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">Conversion Rate</h3>
+          <p class="text-gray-700 mb-4">
+            The percentage of clicks that turn into customers. Higher is better.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> (Conversions ÷ Clicks) × 100
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">Cost Per Acquisition (CPA)</h3>
+          <p class="text-gray-700 mb-4">
+            How much you spend to acquire one customer. Must be lower than your customer lifetime value to be profitable.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> Total Ad Spend ÷ Total Conversions
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">ROAS (Return on Ad Spend)</h3>
+          <p class="text-gray-700 mb-4">
+            For every $1 spent on ads, how much revenue you generate. A ROAS of 4x means $4 in revenue for every $1 spent.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> Total Revenue ÷ Total Ad Spend
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">ROI (Return on Investment)</h3>
+          <p class="text-gray-700 mb-4">
+            Your actual profit as a percentage of ad spend. This is the most important metric—it accounts for costs and margins.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> (Profit ÷ Ad Spend) × 100
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="text-xl font-bold mb-3">Lifetime Value (LTV) ROI</h3>
+          <p class="text-gray-700 mb-4">
+            The long-term profitability including repeat purchases. Much more accurate for subscription or repeat purchase businesses.
+          </p>
+          <p class="text-sm text-gray-600">
+            <strong>Formula:</strong> (LTV Profit ÷ Ad Spend) × 100
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benchmarks -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Industry Benchmarks
+      </Heading>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="px-6 py-3 text-left text-sm font-bold text-gray-900 border-b-2 border-gray-300">Metric</th>
+              <th class="px-6 py-3 text-left text-sm font-bold text-gray-900 border-b-2 border-gray-300">E-commerce</th>
+              <th class="px-6 py-3 text-left text-sm font-bold text-gray-900 border-b-2 border-gray-300">SaaS</th>
+              <th class="px-6 py-3 text-left text-sm font-bold text-gray-900 border-b-2 border-gray-300">Lead Gen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Avg CPC</td>
+              <td class="px-6 py-4 text-sm text-gray-700">$1.50 - $3.00</td>
+              <td class="px-6 py-4 text-sm text-gray-700">$3.00 - $7.00</td>
+              <td class="px-6 py-4 text-sm text-gray-700">$2.00 - $5.00</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Conversion Rate</td>
+              <td class="px-6 py-4 text-sm text-gray-700">2% - 5%</td>
+              <td class="px-6 py-4 text-sm text-gray-700">3% - 7%</td>
+              <td class="px-6 py-4 text-sm text-gray-700">5% - 10%</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Target ROAS</td>
+              <td class="px-6 py-4 text-sm text-gray-700">4x - 6x</td>
+              <td class="px-6 py-4 text-sm text-gray-700">3x - 5x</td>
+              <td class="px-6 py-4 text-sm text-gray-700">5x - 10x</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-sm font-medium text-gray-900">Target ROI</td>
+              <td class="px-6 py-4 text-sm text-gray-700">150% - 300%</td>
+              <td class="px-6 py-4 text-sm text-gray-700">200% - 400%</td>
+              <td class="px-6 py-4 text-sm text-gray-700">300% - 500%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 p-6 bg-blue-50 border-l-4 border-blue-500 rounded">
+        <p class="text-blue-900">
+          <strong>Note:</strong> These are industry averages. Your results will vary based on product price point, market competition, and campaign optimization. Use these as guidelines, not absolutes.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Tips -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        How to Improve Your ROI
+      </Heading>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card className="p-6">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-emerald-600 font-bold">1</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Increase Conversion Rate</h3>
+              <p class="text-sm text-gray-700">
+                Optimize your landing pages, simplify checkout, add trust signals, and test different offers.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-blue-600 font-bold">2</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Lower Cost Per Click</h3>
+              <p class="text-sm text-gray-700">
+                Improve Quality Score, use exact match keywords, add negative keywords, and target less competitive terms.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-purple-600 font-bold">3</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Increase Average Order Value</h3>
+              <p class="text-sm text-gray-700">
+                Add upsells, cross-sells, bundles, and free shipping thresholds to boost transaction size.
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-yellow-600 font-bold">4</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Maximize Customer Lifetime Value</h3>
+              <p class="text-sm text-gray-700">
+                Focus on retention, repeat purchases, subscriptions, and referrals to increase long-term value.
+              </p>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Want Us to Optimize Your Campaigns?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          This calculator shows you the potential. We make it happen. Get a free profit analysis and custom roadmap.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/free-analysis">
+            Get Free Profit Analysis
+          </Button>
+          <Button variant="primary" size="lg" href="/services/google-ads">
+            See Our Services
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

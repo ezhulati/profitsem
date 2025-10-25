@@ -1,0 +1,421 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+import { CTASection } from '../../components/sections/CTASection';
+
+const benefits = [
+  {
+    title: 'Conversion-Focused Design',
+    description: 'Every element engineered to drive one action: getting the visitor to convert. No distractions, just results.',
+    icon: 'target',
+  },
+  {
+    title: 'Mobile-First Development',
+    description: 'Over 60% of your traffic is mobile. We design for thumbs first, desktop second.',
+    icon: 'mobile',
+  },
+  {
+    title: 'A/B Testing Built-In',
+    description: 'Launch with multiple variants pre-configured. Know what converts before scaling your budget.',
+    icon: 'chart',
+  },
+  {
+    title: 'Lightning-Fast Load Times',
+    description: 'Sub-2-second page loads. Every 1-second delay costs you 7% in conversions.',
+    icon: 'lightning',
+  },
+  {
+    title: 'Psychology-Driven Copy',
+    description: 'Headlines and CTAs crafted using proven conversion copywriting frameworks.',
+    icon: 'brain',
+  },
+  {
+    title: 'Conversion Tracking Integrated',
+    description: 'Analytics, heatmaps, and event tracking configured from day one. Know exactly what\'s working.',
+    icon: 'analytics',
+  },
+];
+
+const process = [
+  {
+    step: '1',
+    title: 'Analyze & Research',
+    description: 'Audit your current pages, study top competitors, and identify what drives conversions in your industry.',
+    timeline: 'Days 1-3',
+  },
+  {
+    step: '2',
+    title: 'Design & Copywriting',
+    description: 'Create wireframes, write persuasive copy, and design high-fidelity mockups aligned with your brand.',
+    timeline: 'Days 4-7',
+  },
+  {
+    step: '3',
+    title: 'Build & Test',
+    description: 'Develop the page with clean code, integrate tracking, and run QA across devices and browsers.',
+    timeline: 'Days 8-12',
+  },
+  {
+    step: '4',
+    title: 'Launch & Optimize',
+    description: 'Deploy the page, set up A/B tests, and monitor performance for continuous improvement.',
+    timeline: 'Day 13+',
+  },
+];
+
+const features = [
+  'Custom design tailored to your brand',
+  'Mobile-responsive (works on all devices)',
+  'SEO-optimized page structure',
+  'Conversion-focused copywriting',
+  'Clear call-to-action hierarchy',
+  'Social proof integration (reviews, logos)',
+  'Form design & validation',
+  'Page speed optimization (<2s load)',
+  'Google Analytics 4 integration',
+  'Heatmap & session recording setup',
+  'A/B testing configuration (3 variants)',
+  'Cross-browser compatibility testing',
+];
+
+const beforeAfter = [
+  {
+    metric: 'Conversion Rate',
+    before: '1.8%',
+    after: '5.2%',
+    improvement: '+189%',
+  },
+  {
+    metric: 'Bounce Rate',
+    before: '68%',
+    after: '34%',
+    improvement: '-50%',
+  },
+  {
+    metric: 'Avg. Time on Page',
+    before: '0:42',
+    after: '2:18',
+    improvement: '+229%',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How long does it take to build a landing page?',
+    answer: 'Most landing pages are delivered within 10-14 business days from kickoff. Rush delivery (7 days) is available for an additional fee.',
+  },
+  {
+    question: 'Can you write the copy for me?',
+    answer: 'Yes. Our package includes conversion-focused copywriting. We\'ll interview you to understand your offer, then craft headlines and body copy designed to convert.',
+  },
+  {
+    question: 'What if I need changes after launch?',
+    answer: 'You get 2 rounds of revisions included. After launch, we offer retainer packages for ongoing optimization and A/B testing.',
+  },
+  {
+    question: 'Do you host the landing page?',
+    answer: 'We can host it on your existing domain (recommended) or on our managed infrastructure. Hosting fees depend on your traffic volume.',
+  },
+  {
+    question: 'How many landing pages do I need?',
+    answer: 'It depends on your campaigns. Most clients start with 1-2 pages (one for each major offer or audience segment), then scale based on performance.',
+  },
+  {
+    question: 'Can you integrate with my CRM or email tool?',
+    answer: 'Absolutely. We integrate with all major platforms: HubSpot, Salesforce, Mailchimp, ActiveCampaign, and more.',
+  },
+];
+---
+
+<BaseLayout
+  title="Landing Page Optimization - Convert More Clicks Into Customers | ProfitSEM"
+  description="High-converting landing pages designed for Google Ads campaigns. Mobile-first, conversion-focused, A/B tested. Starting at $1,997 per page."
+>
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Designed to Convert
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Landing Pages That Turn
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Clicks Into Customers
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Your ads are working. Your landing page isn't. We build conversion-focused pages that 3x your ROI—guaranteed.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get a Free Page Audit →
+          </Button>
+          <Button variant="secondary" size="lg" href="#examples">
+            See Examples
+          </Button>
+        </div>
+        <p class="text-blue-200 text-sm mt-6">
+          Starting at $1,997 per page • 10-14 day delivery • Unlimited revisions
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Problem/Stats -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <Heading as="h2" size="3xl" className="mb-8">
+          Your Landing Page Is Killing Your ROI
+        </Heading>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">96%</div>
+            <p class="text-gray-600">Of visitors leave without converting</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">53%</div>
+            <p class="text-gray-600">Abandon if page loads >3 seconds</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">70%</div>
+            <p class="text-gray-600">Don't trust poorly designed pages</p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benefits -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Why Our Landing Pages Convert
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We don't just make pretty pages. We engineer conversion machines.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {benefits.map((benefit) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- How It Works -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Our 4-Step Process
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From research to launch in 10-14 days. Here's how it works.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {process.map((item, index) => (
+          <div class="relative">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                  {item.step}
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-sm text-emerald-600 font-semibold mb-2">{item.timeline}</div>
+                <h3 class="text-2xl font-bold mb-3">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Features Included -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What's Included
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Everything you need for a high-converting landing page.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        {features.map((feature) => (
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Before/After Results -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Real Results From Optimized Pages
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Average improvements after redesigning landing pages for our clients.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {beforeAfter.map((stat) => (
+          <Card className="p-8">
+            <div class="text-center mb-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">{stat.metric}</h3>
+              <div class="flex items-center justify-center gap-4">
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Before</div>
+                  <div class="text-2xl font-bold text-gray-400 line-through">{stat.before}</div>
+                </div>
+                <svg class="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">After</div>
+                  <div class="text-2xl font-bold text-emerald-600">{stat.after}</div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <Badge variant="success">{stat.improvement}</Badge>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing -->
+  <Section background="gray" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Transparent Pricing
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          One-time investment. No recurring fees. Unlimited revisions.
+        </p>
+      </div>
+
+      <Card className="p-10 max-w-2xl mx-auto border-2 border-emerald-500">
+        <div class="text-center mb-8">
+          <Badge variant="success" size="lg" className="mb-4">
+            Best Value
+          </Badge>
+          <h3 class="text-3xl font-bold mb-2">Landing Page Package</h3>
+          <div class="flex items-baseline justify-center gap-2 mb-4">
+            <span class="text-5xl font-bold text-gray-900">$1,997</span>
+          </div>
+          <p class="text-gray-600">Per page • Delivered in 10-14 days</p>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Custom conversion-focused design</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Professional copywriting included</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Mobile-responsive development</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>A/B testing setup (3 variants)</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Conversion tracking & analytics</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>2 rounds of revisions included</span>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-6">
+          <p class="text-emerald-900 text-center">
+            <strong>Need multiple pages?</strong> Get 20% off when you order 3+ landing pages.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <Button variant="primary" size="lg" href="/free-analysis" fullWidth>
+            Get Started →
+          </Button>
+        </div>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Frequently Asked Questions
+        </Heading>
+      </div>
+
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
+</BaseLayout>

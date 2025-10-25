@@ -2,41 +2,41 @@ import { Container } from '../layout/Container';
 import { Heading } from '../ui/Heading';
 
 export function ProblemSection() {
-  const stats = [
-    { number: 'Daily "Optimizations"', label: 'They tweak things constantly, resetting Google\'s learning' },
-    { number: 'Hundreds of Keywords', label: 'Fragmented campaigns that starve the AI of data' },
-    { number: 'Black Box Reporting', label: 'Metrics you don\'t understand, no clear path to sales' },
+  const requirements = [
+    { title: 'Quality Data', description: 'Google\'s AI needs real sales data, not just form fills. CRM integration is foundational.' },
+    { title: 'Consolidated Structure', description: 'High-volume campaigns feed AI better data. Fragmentation starves the learning process.' },
+    { title: 'Strategic Patience', description: 'AI needs time to learn patterns. Constant changes reset progress and delay results.' },
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-red-50 to-orange-50">
+    <section className="py-32 bg-gradient-to-br from-blue-50 to-indigo-50">
       <Container>
         <div className="max-w-5xl mx-auto">
-          {/* Main Problem */}
+          {/* Main Message */}
           <div className="text-center mb-16">
             <Heading as="h2" size="5xl" className="mb-8 text-balance">
-              Your Agency is Stuck in 2015.
-              <span className="block text-red-600 mt-2">
-                Here's How You Know.
+              Google Ads in 2025 Requires a
+              <span className="block text-blue-600 mt-2">
+                Different Approach
               </span>
             </Heading>
             <p className="text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              They treat your account like a science experiment—constantly changing things to "see what happens." You get reports full of metrics you don't understand.
+              Google's AI has evolved dramatically. Success now depends on feeding the system high-quality data, building smart campaign structures, and giving AI time to learn.
             </p>
           </div>
 
-          {/* Stat Cards */}
+          {/* Requirement Cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            {stats.map((stat, index) => (
+            {requirements.map((req, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 border-2 border-red-200 text-center"
+                className="bg-white rounded-xl p-6 border-2 border-blue-200 text-center hover:border-blue-400 hover:shadow-lg transition-all"
               >
-                <div className="text-2xl font-bold text-red-600 mb-3">
-                  {stat.number}
+                <div className="text-2xl font-bold text-blue-600 mb-3">
+                  {req.title}
                 </div>
                 <p className="text-sm text-gray-700 font-medium leading-relaxed">
-                  {stat.label}
+                  {req.description}
                 </p>
               </div>
             ))}
@@ -45,7 +45,7 @@ export function ProblemSection() {
           {/* Bottom Text */}
           <div className="text-center mt-12">
             <p className="text-lg text-gray-700 font-semibold">
-              Sound familiar? It's not your fault. Most agencies still use tactics from 10 years ago. Google's AI has evolved. They haven't.
+              We've spent years mastering this AI-driven approach. It's how we deliver predictable results in 90 days.
             </p>
           </div>
         </div>

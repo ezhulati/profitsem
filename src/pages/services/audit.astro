@@ -1,0 +1,404 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+import { CTASection } from '../../components/sections/CTASection';
+
+const benefits = [
+  {
+    title: 'Find Hidden Budget Waste',
+    description: 'We\'ll identify exactly where you\'re bleeding money—from poor keyword targeting to inefficient bid strategies.',
+    icon: 'search',
+  },
+  {
+    title: 'Custom 90-Day Roadmap',
+    description: 'Get a step-by-step action plan prioritized by ROI impact. Know exactly what to fix first.',
+    icon: 'map',
+  },
+  {
+    title: 'Competitive Intelligence',
+    description: 'See how your campaigns stack up against competitors and discover untapped opportunities.',
+    icon: 'trophy',
+  },
+  {
+    title: 'Conversion Tracking Review',
+    description: 'Ensure you\'re measuring what matters. We\'ll audit your tracking setup and fix attribution issues.',
+    icon: 'target',
+  },
+  {
+    title: 'Quality Score Analysis',
+    description: 'Improve your Quality Scores to lower costs and improve ad positions without increasing bids.',
+    icon: 'star',
+  },
+  {
+    title: 'ROI Projection Modeling',
+    description: 'Data-driven forecasts showing exactly how much revenue you could unlock with our recommendations.',
+    icon: 'chart',
+  },
+];
+
+const auditIncludes = [
+  {
+    category: 'Account Structure',
+    items: [
+      'Campaign organization review',
+      'Ad group structure analysis',
+      'Keyword grouping assessment',
+      'Negative keyword audit',
+    ],
+  },
+  {
+    category: 'Performance Analysis',
+    items: [
+      'ROAS and profitability metrics',
+      'Cost per conversion trends',
+      'Quality Score evaluation',
+      'Search term report analysis',
+    ],
+  },
+  {
+    category: 'Creative & Messaging',
+    items: [
+      'Ad copy effectiveness review',
+      'Landing page alignment check',
+      'Call-to-action optimization',
+      'Extension utilization audit',
+    ],
+  },
+  {
+    category: 'Technical Setup',
+    items: [
+      'Conversion tracking validation',
+      'Audience targeting review',
+      'Bid strategy assessment',
+      'Budget allocation analysis',
+    ],
+  },
+];
+
+const deliverables = [
+  {
+    title: '50-Point Audit Report',
+    description: 'Comprehensive analysis across 5 key areas with visual charts, data insights, and priority scores.',
+    icon: 'document',
+  },
+  {
+    title: '90-Day Action Plan',
+    description: 'Step-by-step roadmap showing what to fix, when to fix it, and expected impact on ROI.',
+    icon: 'roadmap',
+  },
+  {
+    title: '60-Minute Strategy Call',
+    description: 'Live walkthrough of findings with Q&A. Record the session for your team.',
+    icon: 'video',
+  },
+  {
+    title: 'ROI Projection Model',
+    description: 'Forecasted revenue impact if you implement our recommendations over the next 6 months.',
+    icon: 'calculator',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What if I just launched my Google Ads account?',
+    answer: 'We recommend at least 30 days of campaign data for a meaningful audit. If you\'re brand new, consider our conversion tracking setup service first to ensure clean data from day one.',
+  },
+  {
+    question: 'How long does the audit take?',
+    answer: 'We deliver the full audit report and 90-day roadmap within 5-7 business days. Your strategy call is scheduled immediately after.',
+  },
+  {
+    question: 'Can I implement the recommendations myself?',
+    answer: 'Absolutely. The audit includes detailed instructions so you (or your team) can execute in-house. Or, we offer done-for-you management if you prefer.',
+  },
+  {
+    question: 'What happens after the audit?',
+    answer: 'No obligation. If you want our help executing the roadmap, we\'ll provide a custom proposal. Otherwise, you keep the audit and implement on your own.',
+  },
+  {
+    question: 'Is the $497 fee refundable?',
+    answer: 'If you sign up for our ongoing management within 30 days, we\'ll credit the full audit fee toward your first month. Otherwise, all sales are final.',
+  },
+  {
+    question: 'What if my account is too small for the audit?',
+    answer: 'We recommend spending at least $3,000/month on Google Ads for a comprehensive audit. Below that, reach out—we might offer a simplified review instead.',
+  },
+];
+---
+
+<BaseLayout
+  title="50-Point Google Ads Audit - Find Your Profit Leaks | ProfitSEM"
+  description="Comprehensive Google Ads audit revealing hidden budget waste and untapped opportunities. Get a 90-day roadmap to maximize ROI. $497 one-time investment."
+>
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Limited Slots Available
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          50-Point Google Ads Audit:
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Find Your Profit Leaks
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Discover exactly where you're wasting money—and how to fix it. Includes a custom 90-day roadmap to double your ROI.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Book Your Audit →
+          </Button>
+          <Button variant="secondary" size="lg" href="#what-you-get">
+            What's Included
+          </Button>
+        </div>
+        <p class="text-blue-200 text-sm mt-6">
+          $497 one-time • 5-7 day turnaround • 60-minute strategy call included
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Problem/Pain Points -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <Heading as="h2" size="3xl" className="mb-8">
+          Most Google Ads Accounts Are Bleeding Money
+        </Heading>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">30-50%</div>
+            <p class="text-gray-600">Wasted on irrelevant clicks</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">67%</div>
+            <p class="text-gray-600">Have broken conversion tracking</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">$2,000+</div>
+            <p class="text-gray-600">Lost per month (average)</p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benefits -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What You'll Discover
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our 50-point audit uncovers profit opportunities most agencies miss.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {benefits.map((benefit) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- What's Included -->
+  <Section background="white" spacing="xl" id="what-you-get">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          50+ Checkpoints Analyzed
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We leave no stone unturned. Here's exactly what we audit.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {auditIncludes.map((section) => (
+          <Card className="p-8">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">{section.category}</h3>
+            <div class="space-y-3">
+              {section.items.map((item) => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Deliverables -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What You'll Receive
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Actionable insights delivered in formats you can actually use.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {deliverables.map((item) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{item.title}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Investment
+        </Heading>
+      </div>
+
+      <Card className="p-10 max-w-2xl mx-auto border-2 border-emerald-500">
+        <div class="text-center mb-8">
+          <Badge variant="success" size="lg" className="mb-4">
+            One-Time Payment
+          </Badge>
+          <h3 class="text-3xl font-bold mb-2">PPC Audit Package</h3>
+          <div class="flex items-baseline justify-center gap-2 mb-4">
+            <span class="text-5xl font-bold text-gray-900">$497</span>
+          </div>
+          <p class="text-gray-600">Delivered in 5-7 business days</p>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>50-point comprehensive audit report</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Custom 90-day implementation roadmap</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>60-minute live strategy call</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>ROI projection model (6-month forecast)</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Competitive intelligence insights</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Recording of strategy session</span>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-6">
+          <p class="text-emerald-900 text-center font-semibold">
+            Sign up for management within 30 days? We'll credit the full $497 toward your first month.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <Button variant="primary" size="lg" href="/free-analysis" fullWidth>
+            Book Your Audit Now →
+          </Button>
+        </div>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- Social Proof -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center">
+        <p class="text-xl text-gray-600 mb-6">
+          Our audits have helped clients recover over <strong class="text-emerald-600">$2.4M in wasted ad spend</strong>
+        </p>
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <Card className="p-6 text-center">
+            <div class="text-emerald-600 text-4xl font-bold mb-2">$47K</div>
+            <p class="text-gray-600 text-sm">Average annual savings identified</p>
+          </Card>
+          <Card className="p-6 text-center">
+            <div class="text-emerald-600 text-4xl font-bold mb-2">23</div>
+            <p class="text-gray-600 text-sm">Avg. high-priority issues found</p>
+          </Card>
+          <Card className="p-6 text-center">
+            <div class="text-emerald-600 text-4xl font-bold mb-2">157%</div>
+            <p class="text-gray-600 text-sm">Avg. ROI increase after fixes</p>
+          </Card>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Frequently Asked Questions
+        </Heading>
+      </div>
+
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
+</BaseLayout>

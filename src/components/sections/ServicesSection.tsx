@@ -8,37 +8,37 @@ export function ServicesSection() {
     {
       title: 'Week 1-2',
       phase: 'Connect The Dots',
-      description: 'Your agency shows you clicks and conversions. We show you which ads lead to actual paying customers.',
-      details: 'We connect your CRM so Google knows who became a customer (not just who filled a form). We find where you\'re wasting money right now. We set up tracking so there\'s no more guessing.',
+      description: 'Everything starts with quality data. We connect Google Ads to your actual sales, not just form fills.',
+      details: 'CRM integration shows Google which leads became customers. Comprehensive tracking audit identifies gaps in attribution. Waste analysis reveals where budget is being spent inefficiently. This foundation determines everything that follows.',
       outcomes: [
-        'CRM integration (track actual sales, not form fills)',
-        'Waste identification report (where you\'re bleeding money)',
-        'Tracking audit (most accounts are broken)',
-        '90-day roadmap (phases 2-5)'
+        'CRM integration (track actual sales)',
+        'Waste identification report',
+        'Complete tracking audit',
+        'Custom 90-day roadmap'
       ]
     },
     {
       title: 'Week 3-9',
       phase: 'Train Google\'s AI',
-      description: 'Most agencies panic and start tweaking things on Day 3. That\'s why your ads never improve.',
-      details: 'We do the opposite: We feed Google high-quality data about your actual customers, then we let it learn. No constant changes. No resetting the system. Just patience while Google figures out who your ideal customers are.',
+      description: 'AI learns best from consolidated, high-quality data. We build the structure and give it time to learn patterns.',
+      details: 'Simplified campaign architecture focuses AI on high-intent signals. Smart bidding automatically optimizes toward your goals. Strategic patience allows the system to identify customer patterns without interference. This learning phase is critical.',
       outcomes: [
-        'Simplified campaign structure (consolidated, not fragmented)',
-        'Smart bidding implementation (AI-driven pricing)',
-        'Weekly reports (conversions → sales, not vanity metrics)',
-        'Strategic patience (we don\'t panic on week 2)'
+        'Consolidated campaign structure',
+        'Smart bidding implementation',
+        'Weekly performance reports',
+        'AI learning cycle completion'
       ]
     },
     {
       title: 'Week 10+',
       phase: 'Predictable Growth',
-      description: 'This is when it clicks. Google\'s AI knows who your customers are. Your cost per sale becomes predictable.',
-      details: 'You can confidently increase spend because the math works. We\'re not tweaking campaigns daily. We\'re monitoring performance and feeding the system better data as your business evolves.',
+      description: 'With AI trained on your customer data, costs stabilize and scaling becomes predictable.',
+      details: 'Customer acquisition costs become consistent and forecastable. Google\'s AI identifies expansion opportunities based on learned patterns. Strategic guidance replaces daily micro-management. Revenue scales confidently as the system matures.',
       outcomes: [
-        'Predictable cost-per-customer math',
-        'Expansion into new customer types Google discovered',
-        'Monthly strategy reviews (not daily micro-management)',
-        'Transparent reporting (you see everything)'
+        'Predictable cost-per-customer',
+        'AI-driven expansion opportunities',
+        'Monthly strategy reviews',
+        'Complete performance transparency'
       ]
     },
   ];

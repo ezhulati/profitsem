@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+
+const checklistSections = [
+  {
+    title: 'Account Structure',
+    items: [
+      'Campaigns are organized by product/service category',
+      'Ad groups contain tightly themed keywords (max 10-15 per group)',
+      'Naming conventions are clear and consistent',
+      'Brand campaigns are separated from generic campaigns',
+      'Geographic targeting is properly configured',
+      'Ad schedule aligns with business hours/peak times',
+      'Budget allocation follows performance data',
+      'Campaign types are appropriate for business goals',
+    ],
+  },
+  {
+    title: 'Keyword Management',
+    items: [
+      'Keywords use appropriate match types (exact, phrase, broad)',
+      'Search term report is reviewed weekly for new negatives',
+      'Negative keyword lists are comprehensive and updated',
+      'Keyword Quality Scores are mostly 7+ (check low performers)',
+      'High-cost, low-conversion keywords are paused or optimized',
+      'Duplicate keywords across ad groups are consolidated',
+      'Long-tail keywords are being tested',
+      'Keyword bids are adjusted based on performance data',
+    ],
+  },
+  {
+    title: 'Ad Copy & Creative',
+    items: [
+      'Headlines include target keywords',
+      'At least 3 ads per ad group for A/B testing',
+      'Ad copy includes clear call-to-action (CTA)',
+      'Unique selling propositions (USPs) are highlighted',
+      'Ad extensions are fully utilized (sitelinks, callouts, structured snippets)',
+      'Call extensions are enabled for mobile searches',
+      'Location extensions are added (if applicable)',
+      'Price extensions show competitive pricing',
+      'Ad copy aligns with landing page content',
+    ],
+  },
+  {
+    title: 'Landing Pages',
+    items: [
+      'Landing pages load in under 3 seconds',
+      'Mobile experience is optimized',
+      'Headline matches ad copy (message match)',
+      'Forms are simple with minimal fields',
+      'Trust signals are visible (reviews, badges, guarantees)',
+      'Clear CTA above the fold',
+      'No broken links or 404 errors',
+      'Privacy policy and terms are linked',
+      'Exit-intent popups or retargeting pixels installed',
+    ],
+  },
+  {
+    title: 'Conversion Tracking',
+    items: [
+      'Google Ads conversion tracking is properly installed',
+      'Google Analytics 4 is configured and connected',
+      'All conversion actions are being tracked',
+      'Conversion values are assigned (if applicable)',
+      'Phone call tracking is enabled',
+      'Form submissions are tracked as conversions',
+      'E-commerce transactions track revenue',
+      'Cross-device conversions are enabled',
+      'Conversion data matches GA4 data (within 10% variance)',
+    ],
+  },
+  {
+    title: 'Bidding & Budget',
+    items: [
+      'Bidding strategy aligns with campaign goals',
+      'Manual CPC used until 30+ conversions/month achieved',
+      'Budget is sufficient to capture all branded search traffic',
+      'Shared budgets are used strategically (not by default)',
+      'High-performing campaigns receive adequate budget',
+      'Dayparting (ad scheduling) is used if performance varies by time',
+      'Location bid adjustments reflect performance differences',
+      'Device bid adjustments reflect mobile vs desktop performance',
+    ],
+  },
+  {
+    title: 'Performance Metrics',
+    items: [
+      'ROAS (Return on Ad Spend) is being tracked',
+      'Cost per acquisition (CPA) is below target',
+      'Conversion rate is above industry average (2-5%)',
+      'Quality Score average is 7 or higher',
+      'Impression share is above 70% for brand terms',
+      'Wasted spend on non-converting keywords is minimized',
+      'Click-through rate (CTR) exceeds 3% on search campaigns',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="50-Point Google Ads Audit Checklist - Free Download | ProfitSEM"
+  description="Comprehensive DIY Google Ads audit checklist. Identify profit leaks, wasted spend, and optimization opportunities. Free downloadable PDF."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Free Download
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          The 50-Point
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Google Ads Audit Checklist
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Identify profit leaks, wasted spend, and optimization opportunities in your Google Ads account. Use this checklist to audit like a pro.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="#checklist">
+            View Checklist
+          </Button>
+          <Button variant="primary" size="lg" href="/services/audit">
+            Get Professional Audit
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- How to Use -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        How to Use This Checklist
+      </Heading>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <Card className="p-6 text-center">
+          <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-emerald-600">1</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Review Each Section</h3>
+          <p class="text-sm text-gray-600">Go through all 50 checkpoints across 7 categories</p>
+        </Card>
+
+        <Card className="p-6 text-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-blue-600">2</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Mark Pass/Fail</h3>
+          <p class="text-sm text-gray-600">Check each item as passing or needing improvement</p>
+        </Card>
+
+        <Card className="p-6 text-center">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-purple-600">3</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Prioritize Fixes</h3>
+          <p class="text-sm text-gray-600">Focus on high-impact items that affect ROI most</p>
+        </Card>
+      </div>
+
+      <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded">
+        <p class="font-semibold text-emerald-900 mb-2">Pro Tip</p>
+        <p class="text-emerald-800">
+          Run this audit monthly. Even well-optimized accounts drift over time. Regular audits catch issues before they become expensive.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Checklist -->
+  <Section background="gray" spacing="xl" id="checklist">
+    <Container size="lg">
+      <Heading as="h2" size="4xl" className="mb-12 text-center">
+        Complete Audit Checklist
+      </Heading>
+
+      <div class="space-y-8">
+        {checklistSections.map((section, sectionIndex) => (
+          <Card className="p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
+                {sectionIndex + 1}
+              </div>
+              <Heading as="h3" size="2xl">
+                {section.title}
+              </Heading>
+            </div>
+
+            <div class="space-y-4">
+              {section.items.map((item, itemIndex) => (
+                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-100 hover:border-emerald-200 transition-colors">
+                  <div class="flex-shrink-0 mt-1">
+                    <input
+                      type="checkbox"
+                      id={`item-${sectionIndex}-${itemIndex}`}
+                      class="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500"
+                    />
+                  </div>
+                  <label
+                    for={`item-${sectionIndex}-${itemIndex}`}
+                    class="flex-1 text-gray-700 cursor-pointer select-none"
+                  >
+                    {item}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Scoring Guide -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        How to Score Your Account
+      </Heading>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <Card className="p-6 border-2 border-emerald-500">
+          <h3 class="text-xl font-bold text-emerald-600 mb-3">40-50 Points: Excellent</h3>
+          <p class="text-gray-700 mb-4">Your account is well-optimized. Focus on scaling what works and testing new opportunities.</p>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Continue A/B testing ad copy</li>
+            <li>✓ Expand to new keyword themes</li>
+            <li>✓ Test new campaign types (PMax, Display)</li>
+          </ul>
+        </Card>
+
+        <Card className="p-6 border-2 border-blue-500">
+          <h3 class="text-xl font-bold text-blue-600 mb-3">30-39 Points: Good</h3>
+          <p class="text-gray-700 mb-4">Solid foundation but room for improvement. Focus on conversion tracking and negative keywords.</p>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Fix conversion tracking gaps</li>
+            <li>✓ Add comprehensive negative keywords</li>
+            <li>✓ Improve landing page load times</li>
+          </ul>
+        </Card>
+
+        <Card className="p-6 border-2 border-yellow-500">
+          <h3 class="text-xl font-bold text-yellow-600 mb-3">20-29 Points: Needs Work</h3>
+          <p class="text-gray-700 mb-4">Significant optimization opportunities. You're likely wasting 30-40% of budget.</p>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Restructure campaigns and ad groups</li>
+            <li>✓ Implement proper conversion tracking</li>
+            <li>✓ Pause low-performing keywords</li>
+          </ul>
+        </Card>
+
+        <Card className="p-6 border-2 border-red-500">
+          <h3 class="text-xl font-bold text-red-600 mb-3">0-19 Points: Critical</h3>
+          <p class="text-gray-700 mb-4">Major issues burning budget. Consider professional help or pause campaigns until fixed.</p>
+          <ul class="text-sm text-gray-600 space-y-1">
+            <li>✓ Pause campaigns immediately</li>
+            <li>✓ Get professional audit</li>
+            <li>✓ Rebuild from scratch with proper structure</li>
+          </ul>
+        </Card>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+        <p class="font-semibold text-blue-900 mb-2">Need Help?</p>
+        <p class="text-blue-800">
+          If you scored below 35 points, you're likely wasting significant budget. Our professional audit ($497) includes a detailed 90-day roadmap to fix these issues.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Common Issues -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Most Common Issues We Find
+      </Heading>
+
+      <div class="space-y-4">
+        <Card className="p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Broken or Incomplete Conversion Tracking</h3>
+              <p class="text-gray-600 mb-2"><strong>67% of accounts</strong> have tracking issues</p>
+              <p class="text-sm text-gray-500">Without accurate tracking, you're optimizing blindly and wasting budget on campaigns that don't convert.</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Insufficient Negative Keywords</h3>
+              <p class="text-gray-600 mb-2"><strong>30-40%</strong> of clicks are irrelevant</p>
+              <p class="text-sm text-gray-500">Broad match keywords without negative lists waste massive budget on low-intent searches that never convert.</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Poor Landing Page Experience</h3>
+              <p class="text-gray-600 mb-2"><strong>53%</strong> of visitors abandon if load time >3s</p>
+              <p class="text-sm text-gray-500">Slow pages, weak CTAs, and message mismatch kill conversion rates even when ads perform well.</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">No Regular Optimization</h3>
+              <p class="text-gray-600 mb-2"><strong>"Set and forget"</strong> accounts waste 40%+ of budget</p>
+              <p class="text-sm text-gray-500">Google Ads requires weekly optimization. Accounts left untouched for months bleed budget on poor performers.</p>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Want Us to Do the Audit For You?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Our professional 50-point audit includes detailed analysis, ROI projections, and a custom 90-day roadmap. $497 one-time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/services/audit">
+            Get Professional Audit
+          </Button>
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Free Analysis
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

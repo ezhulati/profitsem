@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+---
+
+<BaseLayout
+  title="Google Ads Campaign Structure Template - Free Download | ProfitSEM"
+  description="Proven Google Ads account structure template used by 200+ clients. Optimize for maximum performance and easy management."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Proven Framework
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          The Perfect Google Ads
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Campaign Structure
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Our battle-tested account structure template. Used by 200+ clients managing $50M+ in ad spend.
+        </p>
+        <Button variant="secondary" size="lg" href="#structure">
+          View Template
+        </Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- The Framework -->
+  <Section background="white" spacing="xl" id="structure">
+    <Container size="lg">
+      <Heading as="h2" size="4xl" className="mb-12 text-center">
+        The ProfitSEM Account Structure
+      </Heading>
+
+      <div class="space-y-8">
+        {/* Tier 1: Brand */}
+        <Card className="p-8 border-l-4 border-emerald-500">
+          <div class="flex items-center gap-4 mb-6">
+            <Badge variant="success">Priority 1</Badge>
+            <Heading as="h3" size="2xl">Brand Campaigns</Heading>
+          </div>
+          <p class="text-gray-700 mb-6">Protect your brand and capture cheapest conversions (lowest CPA).</p>
+
+          <div class="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div class="mb-2"><strong>Campaign:</strong> Brand - Search</div>
+            <div class="ml-4 mb-2"><strong>Ad Group:</strong> [Your Brand Name]</div>
+            <div class="ml-8 mb-1">• Keyword: [your brand] (exact)</div>
+            <div class="ml-8 mb-1">• Keyword: [your brand] + product (exact)</div>
+            <div class="ml-8">• Negatives: jobs, careers, reviews</div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Budget:</strong> Unlimited (capture all)</div>
+            <div><strong>Bid Strategy:</strong> Max Conversions</div>
+            <div><strong>Expected ROAS:</strong> 10x+</div>
+          </div>
+        </Card>
+
+        {/* Tier 2: High Intent */}
+        <Card className="p-8 border-l-4 border-blue-500">
+          <div class="flex items-center gap-4 mb-6">
+            <Badge variant="primary">Priority 2</Badge>
+            <Heading as="h3" size="2xl">High-Intent Search</Heading>
+          </div>
+          <p class="text-gray-700 mb-6">Transactional keywords with "buy", "price", "best" modifiers.</p>
+
+          <div class="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div class="mb-2"><strong>Campaign:</strong> High Intent - Search</div>
+            <div class="ml-4 mb-2"><strong>Ad Group:</strong> [buy + product]</div>
+            <div class="ml-8 mb-1">• Keyword: [buy product] (exact)</div>
+            <div class="ml-8 mb-1">• Keyword: [product price] (exact)</div>
+            <div class="ml-4 mt-3 mb-2"><strong>Ad Group:</strong> [best + product]</div>
+            <div class="ml-8 mb-1">• Keyword: [best product] (exact)</div>
+            <div class="ml-8">• Keyword: [top product] (exact)</div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Budget:</strong> 60% of total</div>
+            <div><strong>Bid Strategy:</strong> Target CPA</div>
+            <div><strong>Expected ROAS:</strong> 4-6x</div>
+          </div>
+        </Card>
+
+        {/* Tier 3: Competitors */}
+        <Card className="p-8 border-l-4 border-purple-500">
+          <div class="flex items-center gap-4 mb-6">
+            <Badge>Priority 3</Badge>
+            <Heading as="h3" size="2xl">Competitor Campaigns</Heading>
+          </div>
+          <p class="text-gray-700 mb-6">Target competitor brand names (lower CPA than generic terms).</p>
+
+          <div class="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div class="mb-2"><strong>Campaign:</strong> Competitors - Search</div>
+            <div class="ml-4 mb-2"><strong>Ad Group:</strong> [Competitor A]</div>
+            <div class="ml-8 mb-1">• Keyword: [competitor name] (exact)</div>
+            <div class="ml-8 mb-1">• Keyword: [competitor name] alternative (exact)</div>
+            <div class="ml-8">• Ad: Highlight your differentiators vs competitor</div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Budget:</strong> 15% of total</div>
+            <div><strong>Bid Strategy:</strong> Manual CPC (start low)</div>
+            <div><strong>Expected ROAS:</strong> 3-5x</div>
+          </div>
+        </Card>
+
+        {/* Tier 4: Remarketing */}
+        <Card className="p-8 border-l-4 border-yellow-500">
+          <div class="flex items-center gap-4 mb-6">
+            <Badge>Priority 4</Badge>
+            <Heading as="h3" size="2xl">Remarketing</Heading>
+          </div>
+          <p class="text-gray-700 mb-6">Re-engage previous visitors (high conversion rate, low CPA).</p>
+
+          <div class="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div class="mb-2"><strong>Campaign:</strong> Remarketing - Display/Search</div>
+            <div class="ml-4 mb-2"><strong>Audience:</strong> Visited site (last 30 days)</div>
+            <div class="ml-4 mb-2"><strong>Audience:</strong> Cart abandoners (last 7 days)</div>
+            <div class="ml-4">• Offer: Discount or urgency messaging</div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Budget:</strong> 10% of total</div>
+            <div><strong>Bid Strategy:</strong> Target CPA</div>
+            <div><strong>Expected ROAS:</strong> 5-8x</div>
+          </div>
+        </Card>
+
+        {/* Tier 5: Shopping (if applicable) */}
+        <Card className="p-8 border-l-4 border-red-500">
+          <div class="flex items-center gap-4 mb-6">
+            <Badge>E-commerce</Badge>
+            <Heading as="h3" size="2xl">Shopping Campaigns</Heading>
+          </div>
+          <p class="text-gray-700 mb-6">For e-commerce only. Product feed-based campaigns.</p>
+
+          <div class="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div class="mb-2"><strong>Campaign:</strong> Shopping - High Priority</div>
+            <div class="ml-4 mb-2"><strong>Product Group:</strong> Best Sellers</div>
+            <div class="ml-4 mb-2"><strong>Bid:</strong> Aggressive (high margin products)</div>
+            <div class="mb-3 mt-3"><strong>Campaign:</strong> Shopping - Low Priority</div>
+            <div class="ml-4 mb-2"><strong>Product Group:</strong> All Products</div>
+            <div class="ml-4">• Bid: Conservative (catch-all)</div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Budget:</strong> 20-30% of total</div>
+            <div><strong>Bid Strategy:</strong> Target ROAS</div>
+            <div><strong>Expected ROAS:</strong> 4-7x</div>
+          </div>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Best Practices -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Structure Best Practices
+      </Heading>
+
+      <div class="space-y-4">
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">✓ Keep Ad Groups Tightly Themed</h3>
+          <p class="text-gray-700">5-10 keywords per ad group max. Tight themes = higher relevance = better Quality Score = lower CPC.</p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">✓ Separate Mobile Campaigns (If Performance Differs)</h3>
+          <p class="text-gray-700">If mobile converts at significantly different rates, create mobile-only campaigns with adjusted bids and mobile-specific ad copy.</p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">✓ Use Clear Naming Conventions</h3>
+          <p class="text-gray-700">
+            <span class="font-mono text-sm">Brand - Search - Desktop</span><br/>
+            <span class="font-mono text-sm">High Intent - Shopping - Mobile</span><br/>
+            Consistent naming makes optimization easier at scale.
+          </p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">✓ Launch Sequentially, Not All at Once</h3>
+          <p class="text-gray-700">Start with Brand → High Intent → Competitors → Remarketing. Prove ROI before expanding.</p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Want Us to Build Your Account Structure?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Our Google Ads management service includes complete account restructuring following this proven framework.
+        </p>
+        <Button variant="secondary" size="lg" href="/services/google-ads">
+          Get Expert Setup
+        </Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

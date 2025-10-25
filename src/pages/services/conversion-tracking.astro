@@ -1,0 +1,468 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+import { CTASection } from '../../components/sections/CTASection';
+
+const benefits = [
+  {
+    title: '100% Accurate Attribution',
+    description: 'Know exactly which ads, keywords, and campaigns drive real revenue—not just clicks.',
+    icon: 'target',
+  },
+  {
+    title: 'Multi-Channel Tracking',
+    description: 'Track the full customer journey across Google Ads, social, email, and organic search.',
+    icon: 'globe',
+  },
+  {
+    title: 'Revenue-Level Insights',
+    description: 'See not just conversions, but actual dollar amounts tied to each campaign and keyword.',
+    icon: 'dollar',
+  },
+  {
+    title: 'Real-Time Dashboard',
+    description: 'Live reporting showing conversions as they happen. No more waiting for end-of-month reports.',
+    icon: 'chart',
+  },
+  {
+    title: 'Custom Event Tracking',
+    description: 'Track micro-conversions like video views, scroll depth, and button clicks to optimize the full funnel.',
+    icon: 'cursor',
+  },
+  {
+    title: 'GDPR & Privacy Compliant',
+    description: 'Cookie consent management and server-side tracking to stay compliant with privacy regulations.',
+    icon: 'shield',
+  },
+];
+
+const whatWeSetUp = [
+  {
+    title: 'Google Analytics 4',
+    items: [
+      'GA4 property configuration',
+      'Enhanced e-commerce tracking',
+      'Custom event tracking',
+      'Audience segmentation',
+      'Cross-domain tracking setup',
+    ],
+  },
+  {
+    title: 'Google Ads Conversion Tracking',
+    items: [
+      'Conversion actions setup',
+      'Google Tag Manager integration',
+      'Enhanced conversions (hashed data)',
+      'Phone call tracking',
+      'Offline conversion imports',
+    ],
+  },
+  {
+    title: 'Advanced Attribution',
+    items: [
+      'Multi-touch attribution modeling',
+      'UTM parameter framework',
+      'CRM integration (Salesforce, HubSpot)',
+      'Revenue tracking & ROAS reporting',
+      'Custom conversion windows',
+    ],
+  },
+  {
+    title: 'Quality Assurance',
+    items: [
+      'Tag validation & testing',
+      'Data accuracy audit',
+      'Real-time debugging dashboard',
+      'Documentation & training',
+      '30-day post-launch support',
+    ],
+  },
+];
+
+const whyItMatters = [
+  {
+    stat: '67%',
+    label: 'of businesses have broken tracking',
+    description: 'Missing conversions means wasting budget on what doesn\'t work.',
+  },
+  {
+    stat: '$3,200',
+    label: 'average monthly waste without tracking',
+    description: 'If you can\'t measure it, you can\'t optimize it. You\'re flying blind.',
+  },
+  {
+    stat: '3x',
+    label: 'ROI improvement with accurate data',
+    description: 'Proper tracking reveals what to scale and what to kill.',
+  },
+];
+
+const deliverables = [
+  {
+    title: 'Complete Tracking Setup',
+    description: 'GA4, Google Ads, and GTM fully configured and tested across all devices and browsers.',
+  },
+  {
+    title: 'Custom Dashboard',
+    description: 'Real-time dashboard showing revenue, conversions, and ROAS by campaign and keyword.',
+  },
+  {
+    title: 'Documentation',
+    description: 'Step-by-step guide for your team to maintain and troubleshoot tracking.',
+  },
+  {
+    title: '30 Days of Support',
+    description: 'Post-launch monitoring to ensure data accuracy and fix any issues.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What if I already have Google Analytics installed?',
+    answer: 'We\'ll audit your current setup and fix what\'s broken. Most accounts have incorrect configurations that lead to inaccurate data. We\'ll ensure you\'re tracking conversions, revenue, and attribution properly.',
+  },
+  {
+    question: 'How long does the setup take?',
+    answer: 'Most conversion tracking setups are completed within 5-7 business days. Complex setups (e-commerce with multiple products, multi-step funnels) may take up to 10 days.',
+  },
+  {
+    question: 'Will this slow down my website?',
+    answer: 'No. We use Google Tag Manager and asynchronous loading to ensure tracking scripts don\'t impact page speed. Your site will load just as fast.',
+  },
+  {
+    question: 'Can you track phone calls?',
+    answer: 'Yes. We integrate call tracking solutions (like CallRail or Google\'s call tracking) to attribute phone conversions back to specific ads and keywords.',
+  },
+  {
+    question: 'What if my conversions happen offline (in-store, over the phone)?',
+    answer: 'We can set up offline conversion imports to feed CRM data (like closed deals from Salesforce) back into Google Ads for accurate attribution.',
+  },
+  {
+    question: 'Do you provide ongoing support?',
+    answer: 'The setup includes 30 days of post-launch support. After that, we offer monthly retainers for ongoing tracking maintenance, troubleshooting, and optimization.',
+  },
+];
+---
+
+<BaseLayout
+  title="Conversion Tracking Setup - Know Where Every Dollar Goes | ProfitSEM"
+  description="Expert Google Ads and GA4 conversion tracking setup. Track revenue, not just clicks. Multi-channel attribution, GDPR compliant. $997 one-time setup."
+>
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Stop Flying Blind
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Conversion Tracking That Shows
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Where Every Dollar Goes
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          If you can't measure it, you can't improve it. We set up bulletproof tracking so you know exactly what's driving revenue.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Your Tracking Audit →
+          </Button>
+          <Button variant="secondary" size="lg" href="#what-we-setup">
+            See What's Included
+          </Button>
+        </div>
+        <p class="text-blue-200 text-sm mt-6">
+          $997 one-time setup • 5-7 day delivery • 30 days of support included
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Problem/Stats -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="max-w-4xl mx-auto">
+        <Heading as="h2" size="3xl" className="text-center mb-12">
+          Why Most Businesses Get Tracking Wrong
+        </Heading>
+        <div class="grid md:grid-cols-3 gap-8">
+          {whyItMatters.map((item) => (
+            <Card className="p-6 text-center">
+              <div class="text-5xl font-bold text-emerald-600 mb-2">{item.stat}</div>
+              <p class="text-gray-900 font-semibold mb-3">{item.label}</p>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benefits -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What Proper Tracking Unlocks
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Accurate data transforms your entire Google Ads strategy.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {benefits.map((benefit) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- What We Set Up -->
+  <Section background="white" spacing="xl" id="what-we-setup">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What We Set Up For You
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          End-to-end tracking configuration across all platforms.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {whatWeSetUp.map((section) => (
+          <Card className="p-8">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">{section.title}</h3>
+            <div class="space-y-3">
+              {section.items.map((item) => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Process/Timeline -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          How It Works
+        </Heading>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                1
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Discovery & Audit</h3>
+              <p class="text-gray-600">We audit your current tracking (if any) and identify what's broken or missing. We'll document your conversion goals and customer journey.</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-2">Day 1-2</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                2
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Implementation</h3>
+              <p class="text-gray-600">Configure GA4, Google Ads conversion tracking, and GTM. Set up enhanced e-commerce, custom events, and attribution models.</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-2">Day 3-5</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                3
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Testing & Validation</h3>
+              <p class="text-gray-600">Run test conversions across devices and browsers. Verify data accuracy in GA4 and Google Ads. Fix any discrepancies.</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-2">Day 6-7</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                4
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Handoff & Support</h3>
+              <p class="text-gray-600">Deliver custom dashboard, documentation, and training. Monitor for 30 days to ensure everything works perfectly.</p>
+              <p class="text-sm text-emerald-600 font-semibold mt-2">Day 8 - 37</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Deliverables -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What You'll Receive
+        </Heading>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {deliverables.map((item) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{item.title}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing -->
+  <Section background="gray" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Investment
+        </Heading>
+      </div>
+
+      <Card className="p-10 max-w-2xl mx-auto border-2 border-emerald-500">
+        <div class="text-center mb-8">
+          <Badge variant="success" size="lg" className="mb-4">
+            One-Time Setup
+          </Badge>
+          <h3 class="text-3xl font-bold mb-2">Conversion Tracking Package</h3>
+          <div class="flex items-baseline justify-center gap-2 mb-4">
+            <span class="text-5xl font-bold text-gray-900">$997</span>
+          </div>
+          <p class="text-gray-600">Complete setup in 5-7 business days</p>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Google Analytics 4 full configuration</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Google Ads conversion tracking setup</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Google Tag Manager implementation</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Enhanced conversions & e-commerce tracking</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Custom revenue & ROAS dashboard</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Multi-channel attribution setup</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Documentation & training materials</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>30 days of post-launch support</span>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 mb-6">
+          <p class="text-emerald-900 text-center font-semibold">
+            Pair with our Google Ads Management? We'll waive the setup fee.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <Button variant="primary" size="lg" href="/free-analysis" fullWidth>
+            Get Started →
+          </Button>
+        </div>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Frequently Asked Questions
+        </Heading>
+      </div>
+
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
+</BaseLayout>

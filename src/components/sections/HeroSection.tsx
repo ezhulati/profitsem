@@ -35,19 +35,19 @@ export function HeroSection() {
                 <path fill="url(#rocketGradient)" d="M12 2L4 12h6v9l8-10h-6V2z" />
               </svg>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 text-sm font-bold">
-                Most agencies still run Google Ads like it's 2015. We don't.
+                AI-Driven Google Ads Management
               </span>
             </div>
 
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              Your Agency Treats Your Ads Like <span className="gradient-text">a Science Experiment</span>
+              Train Google's AI to Find <span className="gradient-text">Your Best Customers</span>
               <span className="block text-gray-300 text-2xl sm:text-3xl lg:text-4xl mt-2">
-                We Turn Them Into a Predictable Revenue Engine
+                Then Scale Predictably
               </span>
             </Heading>
 
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              Stop getting reports you don't understand. Start knowing exactly where your money goes and what revenue to expect. We train Google's AI to find your ideal customers—then we let it work.
+              We feed Google's AI high-quality data about your actual customers, build consolidated campaigns that learn efficiently, and let smart bidding optimize automatically. The result? Predictable customer acquisition costs in 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+---
+
+<BaseLayout
+  title="Conversion Tracking Setup Guide - Step-by-Step | ProfitSEM"
+  description="Learn how to set up bulletproof Google Ads and GA4 conversion tracking. Step-by-step guide with screenshots and troubleshooting tips."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Free Guide
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Bulletproof Conversion
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Tracking Setup Guide
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Set up Google Ads and GA4 conversion tracking correctly from day one. No more blind optimization.
+        </p>
+        <Button variant="secondary" size="lg" href="#setup-steps">
+          View Setup Guide
+        </Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Setup Steps -->
+  <Section background="white" spacing="xl" id="setup-steps">
+    <Container size="md">
+      <Heading as="h2" size="4xl" className="mb-12 text-center">
+        Complete Setup (30 Minutes)
+        </Heading>
+
+      <div class="space-y-12">
+        {/* Step 1 */}
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              1
+            </div>
+            <Heading as="h3" size="2xl">Set Up Google Analytics 4</Heading>
+          </div>
+          <Card className="p-6 bg-gray-50">
+            <ol class="space-y-3 text-gray-700">
+              <li><strong>1.</strong> Go to analytics.google.com and create a GA4 property</li>
+              <li><strong>2.</strong> Add your website URL and business details</li>
+              <li><strong>3.</strong> Copy your Measurement ID (starts with "G-")</li>
+              <li><strong>4.</strong> Install GA4 tag on your website (use Google Tag Manager or direct code)</li>
+              <li><strong>5.</strong> Verify data is flowing (check Realtime report)</li>
+            </ol>
+          </Card>
+        </div>
+
+        {/* Step 2 */}
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              2
+            </div>
+            <Heading as="h3" size="2xl">Define Conversion Events in GA4</Heading>
+          </div>
+          <Card className="p-6 bg-gray-50">
+            <p class="text-gray-700 mb-4">Go to <strong>Admin → Events → Create Event</strong> for each conversion type:</p>
+            <div class="space-y-3">
+              <div class="p-3 bg-white rounded border">
+                <p class="font-semibold text-sm mb-1">Form Submission</p>
+                <p class="text-xs text-gray-600 font-mono">Event: form_submit</p>
+              </div>
+              <div class="p-3 bg-white rounded border">
+                <p class="font-semibold text-sm mb-1">Purchase (E-commerce)</p>
+                <p class="text-xs text-gray-600 font-mono">Event: purchase (with value)</p>
+              </div>
+              <div class="p-3 bg-white rounded border">
+                <p class="font-semibold text-sm mb-1">Phone Call Click</p>
+                <p class="text-xs text-gray-600 font-mono">Event: phone_call</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Step 3 */}
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              3
+            </div>
+            <Heading as="h3" size="2xl">Link GA4 to Google Ads</Heading>
+          </div>
+          <Card className="p-6 bg-gray-50">
+            <ol class="space-y-3 text-gray-700">
+              <li><strong>1.</strong> In GA4, go to <strong>Admin → Google Ads Links</strong></li>
+              <li><strong>2.</strong> Click "Link" and select your Google Ads account</li>
+              <li><strong>3.</strong> Enable auto-tagging and personalized advertising</li>
+              <li><strong>4.</strong> Import GA4 conversions to Google Ads (Admin → Conversions → Import)</li>
+            </ol>
+          </Card>
+        </div>
+
+        {/* Step 4 */}
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              4
+            </div>
+            <Heading as="h3" size="2xl">Set Up Google Ads Conversion Actions</Heading>
+          </div>
+          <Card className="p-6 bg-gray-50">
+            <ol class="space-y-3 text-gray-700">
+              <li><strong>1.</strong> In Google Ads, go to <strong>Tools → Conversions → New Conversion</strong></li>
+              <li><strong>2.</strong> Choose "Website" as source</li>
+              <li><strong>3.</strong> Use "Code yourself" or import from GA4</li>
+              <li><strong>4.</strong> Assign conversion values (crucial for ROAS bidding)</li>
+              <li><strong>5.</strong> Set primary conversion for automated bidding</li>
+            </ol>
+          </Card>
+        </div>
+
+        {/* Step 5 */}
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              5
+            </div>
+            <Heading as="h3" size="2xl">Test Your Tracking</Heading>
+          </div>
+          <Card className="p-6 bg-gray-50">
+            <p class="text-gray-700 mb-4">Test each conversion to ensure tracking works:</p>
+            <ol class="space-y-2 text-gray-700">
+              <li><strong>1.</strong> Click one of your ads (use utm parameters or ad preview tool)</li>
+              <li><strong>2.</strong> Complete a test conversion on your site</li>
+              <li><strong>3.</strong> Check GA4 Realtime report for the event</li>
+              <li><strong>4.</strong> Wait 24 hours and verify in Google Ads (Tools → Conversions)</li>
+              <li><strong>5.</strong> Verify conversion value is correct (if applicable)</li>
+            </ol>
+          </Card>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Common Issues -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Troubleshooting Common Issues
+      </Heading>
+
+      <div class="space-y-4">
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">❌ Conversions Not Showing in Google Ads</h3>
+          <p class="text-gray-700 mb-3"><strong>Cause:</strong> Auto-tagging disabled or conversion import not configured</p>
+          <p class="text-sm text-gray-600"><strong>Fix:</strong> Enable auto-tagging in Google Ads settings. Re-import GA4 conversions.</p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">❌ Conversion Count Doesn't Match GA4</h3>
+          <p class="text-gray-700 mb-3"><strong>Cause:</strong> Different attribution windows or duplicate tracking pixels</p>
+          <p class="text-sm text-gray-600"><strong>Fix:</strong> Check attribution settings. Ensure GA4 tag is installed only once.</p>
+        </Card>
+
+        <Card className="p-6">
+          <h3 class="font-bold text-lg mb-2">❌ Conversion Value is $0</h3>
+          <p class="text-gray-700 mb-3"><strong>Cause:</strong> Value not being passed to GA4 event</p>
+          <p class="text-sm text-gray-600"><strong>Fix:</strong> Add value parameter to GA4 event. For e-commerce, use purchase event with transaction value.</p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="lg">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Want Us to Set Up Tracking For You?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Our conversion tracking service includes GA4, Google Ads, GTM setup, and testing. $997 one-time.
+        </p>
+        <Button variant="secondary" size="lg" href="/services/conversion-tracking">
+          Get Professional Setup
+        </Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

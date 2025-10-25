@@ -1,0 +1,379 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+import { CTASection } from '../../components/sections/CTASection';
+
+const benefits = [
+  {
+    title: 'Profit-First Optimization',
+    description: 'We optimize for revenue and profit margins, not vanity metrics like clicks or impressions.',
+    icon: 'target',
+  },
+  {
+    title: 'Dedicated Account Manager',
+    description: 'One point of contact who knows your business inside and out. No passing you around.',
+    icon: 'user',
+  },
+  {
+    title: 'Transparent Real-Time Reporting',
+    description: 'Live dashboards showing exactly where your budget goes and what results you\'re getting.',
+    icon: 'chart',
+  },
+  {
+    title: 'Industry-Specific Expertise',
+    description: 'We\'ve managed campaigns across 15+ industries. We know what works in your space.',
+    icon: 'briefcase',
+  },
+  {
+    title: 'Continuous Testing & Optimization',
+    description: 'Weekly performance reviews and constant A/B testing to improve results month over month.',
+    icon: 'refresh',
+  },
+  {
+    title: 'No Long-Term Contracts',
+    description: 'Month-to-month service. We earn your business every 30 days through results.',
+    icon: 'shield',
+  },
+];
+
+const process = [
+  {
+    step: '1',
+    title: 'Deep Dive Audit',
+    description: 'We analyze your current campaigns, competitor strategies, and market opportunities to find profit leaks.',
+    timeline: 'Week 1',
+  },
+  {
+    step: '2',
+    title: 'Custom Strategy Development',
+    description: 'Build a 90-day roadmap targeting your highest-ROI opportunities with clear benchmarks.',
+    timeline: 'Week 2',
+  },
+  {
+    step: '3',
+    title: 'Campaign Launch & Optimization',
+    description: 'Execute the strategy with proven frameworks, aggressive testing, and daily monitoring.',
+    timeline: 'Weeks 3-8',
+  },
+  {
+    step: '4',
+    title: 'Scale What Works',
+    description: 'Double down on winning campaigns while cutting underperformers. Repeat monthly.',
+    timeline: 'Ongoing',
+  },
+];
+
+const features = [
+  'Search campaigns targeting high-intent buyers',
+  'Shopping campaigns for e-commerce products',
+  'Performance Max campaigns for omnichannel reach',
+  'Display campaigns for brand awareness',
+  'YouTube video ads for engagement',
+  'Remarketing to convert previous visitors',
+  'Conversion rate optimization consulting',
+  'Landing page recommendations',
+  'Competitor analysis & market research',
+  'Custom audience segmentation',
+  'Negative keyword management',
+  'Bid strategy optimization',
+];
+
+const faqs = [
+  {
+    question: 'How long does it take to see results?',
+    answer: 'Most clients see measurable improvements within 30 days. Our 90-day framework is designed to deliver significant ROI by month 3, with continuous optimization ongoing.',
+  },
+  {
+    question: 'What\'s your fee structure?',
+    answer: 'We charge a flat monthly management fee based on your ad spend tier. No hidden costs, no percentage-based fees that incentivize waste. See our pricing page for details.',
+  },
+  {
+    question: 'Do you require long-term contracts?',
+    answer: 'No. We offer month-to-month service. If we\'re not delivering results, you can cancel anytime. We earn your business every single month.',
+  },
+  {
+    question: 'What makes you different from other agencies?',
+    answer: 'We optimize for profit, not vanity metrics. You get dedicated account management, transparent reporting, and strategies proven across 200+ clients and $47M+ in tracked sales.',
+  },
+  {
+    question: 'What ad spend do I need to get started?',
+    answer: 'We work with businesses spending $5,000/month and up on Google Ads. Below that threshold, we recommend our PPC Audit to build a roadmap first.',
+  },
+  {
+    question: 'Can you work with my existing campaigns?',
+    answer: 'Absolutely. We specialize in optimizing underperforming accounts. Our audit process identifies quick wins and long-term opportunities within your current setup.',
+  },
+];
+---
+
+<BaseLayout
+  title="Google Ads Management That Actually Makes You Money | ProfitSEM"
+  description="Turn Google Ads into a profit machine. Expert management focused on ROI, not vanity metrics. Month-to-month contracts. Proven results for 200+ clients."
+>
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Google Premier Partner
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Google Ads Management That Actually
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Makes You Money
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Stop wasting budget on clicks that don't convert. We optimize for profit, not vanity metrics. Guaranteed results in 90 days.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Your Free Audit →
+          </Button>
+          <Button variant="secondary" size="lg" href="#how-it-works">
+            See How It Works
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Overview Stats -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-5xl font-bold text-emerald-600 mb-2">$47M+</div>
+          <p class="text-gray-600">In Client Sales Tracked</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-emerald-600 mb-2">247%</div>
+          <p class="text-gray-600">Average ROI Increase</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-emerald-600 mb-2">200+</div>
+          <p class="text-gray-600">Active Clients</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benefits -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Why Choose ProfitSEM for Google Ads Management?
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We're not your typical agency. Here's what makes us different.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {benefits.map((benefit) => (
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- How It Works -->
+  <Section background="white" spacing="xl" id="how-it-works">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Our Proven 4-Step Process
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From audit to scale, here's exactly how we transform your Google Ads into a profit machine.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {process.map((item, index) => (
+          <div class="relative">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                  {item.step}
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-sm text-emerald-600 font-semibold mb-2">{item.timeline}</div>
+                <h3 class="text-2xl font-bold mb-3">{item.title}</h3>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Features Included -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          What's Included
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Everything you need to dominate your market on Google Ads.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        {features.map((feature) => (
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Results/Metrics -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-16">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Real Results From Real Clients
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Here's what businesses like yours achieved with our Google Ads management.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <Card className="p-8 text-center">
+          <div class="text-emerald-600 text-5xl font-bold mb-2">311%</div>
+          <div class="text-gray-900 font-semibold mb-2">Revenue Increase</div>
+          <p class="text-gray-600 text-sm">E-commerce client, 6 months</p>
+        </Card>
+        <Card className="p-8 text-center">
+          <div class="text-emerald-600 text-5xl font-bold mb-2">5.6x</div>
+          <div class="text-gray-900 font-semibold mb-2">ROAS Achieved</div>
+          <p class="text-gray-600 text-sm">SaaS client, 90 days</p>
+        </Card>
+        <Card className="p-8 text-center">
+          <div class="text-emerald-600 text-5xl font-bold mb-2">-64%</div>
+          <div class="text-gray-900 font-semibold mb-2">Cost Per Lead</div>
+          <p class="text-gray-600 text-sm">Service business, 4 months</p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing -->
+  <Section background="gray" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Transparent, Predictable Pricing
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Flat monthly fee. No percentage-based pricing that incentivizes waste.
+        </p>
+      </div>
+
+      <Card className="p-10 max-w-2xl mx-auto">
+        <div class="text-center mb-8">
+          <Badge variant="success" size="lg" className="mb-4">
+            Most Popular
+          </Badge>
+          <h3 class="text-3xl font-bold mb-2">Scale Plan</h3>
+          <div class="flex items-baseline justify-center gap-2 mb-4">
+            <span class="text-5xl font-bold text-gray-900">$4,500</span>
+            <span class="text-gray-600">/month</span>
+          </div>
+          <p class="text-gray-600">For businesses spending $15,000-$50,000/month on Google Ads</p>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Dedicated account manager</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>All campaign types included</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Weekly performance reports</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Real-time dashboard access</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Conversion tracking setup</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>No long-term contracts</span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <Button variant="primary" size="lg" href="/pricing" fullWidth>
+            See All Plans →
+          </Button>
+        </div>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Frequently Asked Questions
+        </Heading>
+      </div>
+
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
+</BaseLayout>

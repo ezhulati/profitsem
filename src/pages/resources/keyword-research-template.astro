@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+---
+
+<BaseLayout
+  title="Google Ads Keyword Research Template - Free Download | ProfitSEM"
+  description="Free Google Sheets template for organizing and scoring profitable keywords. Includes search intent, competition analysis, and priority scoring."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Free Google Sheets Template
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Keyword Research
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Template & Framework
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Organize, score, and prioritize profitable keywords with our battle-tested Google Sheets template. Used by 200+ ProfitSEM clients.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="#how-to-use">
+            How It Works
+          </Button>
+          <Button variant="primary" size="lg" href="https://docs.google.com/spreadsheets/d/1a2b3c4d5e6f7g8h9i0j/copy" target="_blank">
+            Copy Template →
+          </Button>
+        </div>
+        <p class="text-blue-200 text-sm mt-4">
+          Click "Copy Template" to save your own editable version to Google Drive
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- What's Included -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        What's Included in the Template
+      </Heading>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm0 3a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm0 3a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Keyword Master List</h3>
+          <p class="text-gray-600">Organized spreadsheet with columns for keyword, volume, competition, CPC, and intent</p>
+        </Card>
+
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Priority Scoring System</h3>
+          <p class="text-gray-600">Automated formulas to score keywords by profitability potential (0-100)</p>
+        </Card>
+
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Search Intent Categories</h3>
+          <p class="text-gray-600">Tag keywords by intent: Transactional, Commercial, Informational</p>
+        </Card>
+
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Negative Keyword List</h3>
+          <p class="text-gray-600">Pre-built list of 100+ common negative keywords to prevent waste</p>
+        </Card>
+
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Match Type Strategy</h3>
+          <p class="text-gray-600">Recommended match types for each keyword based on competition and intent</p>
+        </Card>
+
+        <Card className="p-6">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">ROI Calculator</h3>
+          <p class="text-gray-600">Estimate potential ROI for each keyword based on CPC, conversion rate, and AOV</p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- How to Use -->
+  <Section background="gray" spacing="xl" id="how-to-use">
+    <Container size="md">
+      <Heading as="h2" size="4xl" className="mb-12 text-center">
+        How to Use the Template
+      </Heading>
+
+      <div class="space-y-8">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              1
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-3">Brainstorm Seed Keywords</h3>
+            <p class="text-gray-700 mb-4">
+              Start with 10-20 broad keywords related to your product/service. Think about how customers search for what you offer.
+            </p>
+            <Card className="p-4 bg-white">
+              <p class="text-sm font-semibold text-gray-900 mb-2">Examples:</p>
+              <p class="text-sm text-gray-600 font-mono">
+                "crm software", "email marketing tool", "project management platform"
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              2
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-3">Use Keyword Planner for Data</h3>
+            <p class="text-gray-700 mb-4">
+              Plug seed keywords into Google Keyword Planner. Export volume, competition, and CPC data directly into the template.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Look for keywords with 100+ monthly searches</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Balance high-volume with low-competition keywords</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Don't ignore low-volume, high-intent keywords</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              3
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-3">Categorize by Search Intent</h3>
+            <p class="text-gray-700 mb-4">
+              Tag each keyword as Transactional, Commercial, or Informational. Focus budget on transactional keywords first.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <Card className="p-4 bg-emerald-50 border border-emerald-200">
+                <p class="font-bold text-emerald-900 text-sm mb-1">Transactional</p>
+                <p class="text-xs text-emerald-700">"buy crm software"</p>
+              </Card>
+              <Card className="p-4 bg-blue-50 border border-blue-200">
+                <p class="font-bold text-blue-900 text-sm mb-1">Commercial</p>
+                <p class="text-xs text-blue-700">"best crm software"</p>
+              </Card>
+              <Card className="p-4 bg-gray-50 border border-gray-200">
+                <p class="font-bold text-gray-900 text-sm mb-1">Informational</p>
+                <p class="text-xs text-gray-700">"what is crm software"</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              4
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-3">Let the Template Score Each Keyword</h3>
+            <p class="text-gray-700 mb-4">
+              The template automatically calculates a priority score (0-100) based on volume, competition, CPC, and intent. Sort by score to find your best keywords.
+            </p>
+            <Card className="p-4 bg-white">
+              <p class="text-sm font-semibold text-gray-900 mb-2">Priority Score Formula:</p>
+              <p class="text-xs text-gray-600 font-mono">
+                (Volume × Intent Weight) / (Competition × CPC) = Priority Score
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+              5
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-3">Build Your Campaigns</h3>
+            <p class="text-gray-700 mb-4">
+              Group high-scoring keywords into themed ad groups. Start with 5-10 keywords per ad group for tight relevance.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Launch brand keywords first (lowest CPA)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Then high-intent transactional keywords</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span>Save commercial/informational for later (lower ROI)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pro Tips -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Pro Tips for Keyword Research
+      </Heading>
+
+      <div class="space-y-4">
+        <Card className="p-6 border-l-4 border-emerald-500">
+          <h3 class="font-bold text-lg mb-2 text-emerald-900">Mine Competitor Keywords</h3>
+          <p class="text-gray-700">
+            Use SEMrush or Ahrefs to see what keywords competitors are bidding on. If they're spending money on it long-term, it's probably profitable.
+          </p>
+        </Card>
+
+        <Card className="p-6 border-l-4 border-blue-500">
+          <h3 class="font-bold text-lg mb-2 text-blue-900">Start with Exact Match Only</h3>
+          <p class="text-gray-700">
+            Use [exact match] for all keywords initially. This prevents wasted spend on irrelevant variations. Expand to phrase match only after proving profitability.
+          </p>
+        </Card>
+
+        <Card className="p-6 border-l-4 border-purple-500">
+          <h3 class="font-bold text-lg mb-2 text-purple-900">Don't Ignore Long-Tail Keywords</h3>
+          <p class="text-gray-700">
+            Keywords with 10-100 monthly searches often have 10x higher conversion rates than broad terms. Less competition + higher intent = better ROI.
+          </p>
+        </Card>
+
+        <Card className="p-6 border-l-4 border-yellow-500">
+          <h3 class="font-bold text-lg mb-2 text-yellow-900">Review Search Terms Weekly</h3>
+          <p class="text-gray-700">
+            Your Search Terms Report shows actual queries triggering your ads. Mine it weekly for new keyword ideas and negative keywords.
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Want Us to Do Keyword Research For You?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          Our PPC Audit includes comprehensive keyword research, competitor analysis, and a custom keyword strategy. $497 one-time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/services/audit">
+            Get Professional Audit
+          </Button>
+          <Button variant="primary" size="lg" href="https://docs.google.com/spreadsheets/d/1a2b3c4d5e6f7g8h9i0j/copy" target="_blank">
+            Copy Free Template
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

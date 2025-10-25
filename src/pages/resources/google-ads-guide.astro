@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Container } from '../../components/layout/Container';
+import { Section } from '../../components/layout/Section';
+import { Heading } from '../../components/ui/Heading';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+
+const tableOfContents = [
+  { id: 'introduction', title: '1. Introduction to Profitable Google Ads' },
+  { id: 'account-structure', title: '2. Account Structure & Organization' },
+  { id: 'keyword-research', title: '3. Keyword Research & Targeting' },
+  { id: 'ad-copy', title: '4. Writing High-Converting Ad Copy' },
+  { id: 'bidding', title: '5. Bidding Strategies & Budget Management' },
+  { id: 'tracking', title: '6. Conversion Tracking & Attribution' },
+  { id: 'optimization', title: '7. Campaign Optimization & Testing' },
+  { id: 'scaling', title: '8. Scaling Profitable Campaigns' },
+];
+
+const keyTakeaways = [
+  'Focus on profit metrics (ROAS, CPA, LTV), not vanity metrics (CTR, impressions)',
+  'Start with Search campaigns targeting high-intent keywords before expanding',
+  'Use Single Keyword Ad Groups (SKAGs) for maximum relevance and control',
+  'Test ad copy variations every 2 weeks to continuously improve performance',
+  'Implement conversion tracking from day one—you can\'t optimize what you don\'t measure',
+  'Negative keywords are just as important as positive keywords',
+  'Budget allocation should follow the 80/20 rule: 80% to winners, 20% to testing',
+  'Quality Score matters—it directly impacts your cost per click and ad position',
+];
+---
+
+<BaseLayout
+  title="The Complete Google Ads Guide (2025) - ProfitSEM"
+  description="Master Google Ads with our comprehensive 8-chapter guide covering everything from account setup to scaling profitable campaigns. Free resource from ProfitSEM."
+>
+  <!-- Hero -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Free Resource
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          The Complete Guide to
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Profitable Google Ads
+          </span>
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Everything you need to know to launch, optimize, and scale Google Ads campaigns that actually make money. Updated for 2025.
+        </p>
+        <div class="flex items-center justify-center gap-4 text-sm text-blue-200">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+            </svg>
+            <span>8 Chapters</span>
+          </div>
+          <span>•</span>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span>30-min read</span>
+          </div>
+          <span>•</span>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd" />
+            </svg>
+            <span>Download PDF</span>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Table of Contents -->
+  <Section background="white" spacing="lg">
+    <Container size="md">
+      <Card className="p-8">
+        <Heading as="h2" size="2xl" className="mb-6">
+          Table of Contents
+        </Heading>
+        <nav>
+          <ol class="space-y-3">
+            {tableOfContents.map((item) => (
+              <li>
+                <a
+                  href={`#${item.id}`}
+                  class="text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors"
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </Card>
+    </Container>
+  </Section>
+
+  <!-- Key Takeaways -->
+  <Section background="gray" spacing="lg">
+    <Container size="md">
+      <Heading as="h2" size="3xl" className="mb-8 text-center">
+        Key Takeaways
+      </Heading>
+      <div class="grid md:grid-cols-2 gap-4">
+        {keyTakeaways.map((takeaway) => (
+          <div class="flex items-start gap-3 bg-white p-4 rounded-lg">
+            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700">{takeaway}</span>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Chapter 1: Introduction -->
+  <Section background="white" spacing="xl" id="introduction">
+    <Container size="md">
+      <div class="prose prose-lg max-w-none">
+        <Heading as="h2" size="4xl" className="mb-6">
+          1. Introduction to Profitable Google Ads
+        </Heading>
+
+        <p class="text-xl text-gray-700 mb-8">
+          Google Ads is the single most powerful paid advertising channel for businesses—when done right. But most businesses waste 30-50% of their budget on irrelevant clicks, poor targeting, and campaigns optimized for the wrong metrics.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">Why Most Google Ads Campaigns Fail</h3>
+        <ul class="space-y-2 mb-8">
+          <li>They optimize for clicks and impressions (vanity metrics) instead of revenue and profit</li>
+          <li>Poor account structure makes optimization nearly impossible</li>
+          <li>Conversion tracking is broken or nonexistent</li>
+          <li>Keyword targeting is too broad, wasting budget on low-intent searches</li>
+          <li>No systematic testing or optimization process</li>
+        </ul>
+
+        <h3 class="text-2xl font-bold mb-4">The Profit-First Approach</h3>
+        <p class="mb-4">
+          This guide teaches you to build Google Ads campaigns with one goal: maximizing profit. That means:
+        </p>
+        <ul class="space-y-2 mb-8">
+          <li><strong>ROAS (Return on Ad Spend)</strong> - Not CTR or Quality Score</li>
+          <li><strong>Customer Lifetime Value (LTV)</strong> - Not just first purchase</li>
+          <li><strong>Profit margins</strong> - Not just revenue</li>
+          <li><strong>Conversion tracking</strong> - From day one, no excuses</li>
+        </ul>
+
+        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 mb-8">
+          <p class="font-semibold text-emerald-900 mb-2">Pro Tip</p>
+          <p class="text-emerald-800">
+            Before spending $1 on Google Ads, answer this: "What's my target cost per acquisition (CPA) where I'm still profitable?" If you don't know this number, pause and calculate it first.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Chapter 2: Account Structure -->
+  <Section background="gray" spacing="xl" id="account-structure">
+    <Container size="md">
+      <div class="prose prose-lg max-w-none">
+        <Heading as="h2" size="4xl" className="mb-6">
+          2. Account Structure & Organization
+        </Heading>
+
+        <p class="text-xl text-gray-700 mb-8">
+          Your account structure is the foundation of campaign success. A poorly structured account is like building a house on sand—it'll crumble under optimization efforts.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">The SKAGs Framework (Single Keyword Ad Groups)</h3>
+        <p class="mb-4">
+          We recommend Single Keyword Ad Groups (SKAGs) for maximum control and relevance:
+        </p>
+
+        <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+          <p class="font-mono text-sm mb-2">Account</p>
+          <p class="font-mono text-sm ml-4 mb-2">└── Campaign: Brand - Search</p>
+          <p class="font-mono text-sm ml-8 mb-2">└── Ad Group: [brand name]</p>
+          <p class="font-mono text-sm ml-12 mb-2">└── Keyword: [brand name] (exact match)</p>
+          <p class="font-mono text-sm ml-4 mb-2">└── Campaign: High-Intent - Search</p>
+          <p class="font-mono text-sm ml-8 mb-2">└── Ad Group: [buy product keyword]</p>
+          <p class="font-mono text-sm ml-12 mb-2">└── Keyword: [buy product keyword] (exact match)</p>
+          <p class="font-mono text-sm ml-4 mb-2">└── Campaign: Shopping</p>
+          <p class="font-mono text-sm ml-8">└── Product Group: All Products</p>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Campaign Types Priority</h3>
+        <ol class="space-y-4 mb-8">
+          <li><strong>1. Brand Campaigns</strong> - Lowest CPA, highest ROI. Protect your brand.</li>
+          <li><strong>2. High-Intent Search</strong> - "Buy", "price", "review" keywords. Second-best ROI.</li>
+          <li><strong>3. Shopping Campaigns</strong> - For e-commerce. Great for scale.</li>
+          <li><strong>4. Remarketing</strong> - Re-engage previous visitors. Low CPA.</li>
+          <li><strong>5. Competitor Campaigns</strong> - Target competitor brand names (tread carefully).</li>
+          <li><strong>6. Display/Discovery</strong> - Awareness and top-of-funnel. Test carefully.</li>
+        </ol>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
+          <p class="font-semibold text-yellow-900 mb-2">Warning</p>
+          <p class="text-yellow-800">
+            Don't launch 10 campaign types at once. Start with Brand + High-Intent Search. Prove ROI. Then scale.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Chapter 3: Keyword Research -->
+  <Section background="white" spacing="xl" id="keyword-research">
+    <Container size="md">
+      <div class="prose prose-lg max-w-none">
+        <Heading as="h2" size="4xl" className="mb-6">
+          3. Keyword Research & Targeting
+        </Heading>
+
+        <p class="text-xl text-gray-700 mb-8">
+          Keyword research isn't about finding the most searches—it's about finding the most profitable searches.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">The 3 Types of Search Intent</h3>
+        <div class="space-y-6 mb-8">
+          <Card className="p-6">
+            <h4 class="text-xl font-bold text-emerald-600 mb-2">1. Transactional (Highest Value)</h4>
+            <p class="mb-2">Intent: Ready to buy now.</p>
+            <p class="text-sm text-gray-600 font-mono">Examples: "buy ergonomic chair", "shopify pricing", "hire ppc agency"</p>
+          </Card>
+          <Card className="p-6">
+            <h4 class="text-xl font-bold text-blue-600 mb-2">2. Commercial Investigation (Medium Value)</h4>
+            <p class="mb-2">Intent: Comparing options before buying.</p>
+            <p class="text-sm text-gray-600 font-mono">Examples: "best crm for startups", "mailchimp vs convertkit", "herman miller chair review"</p>
+          </Card>
+          <Card className="p-6">
+            <h4 class="text-xl font-bold text-gray-600 mb-2">3. Informational (Low Value)</h4>
+            <p class="mb-2">Intent: Learning, not buying.</p>
+            <p class="text-sm text-gray-600 font-mono">Examples: "what is google ads", "how to set up crm", "office chair types"</p>
+          </Card>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Match Types Explained</h3>
+        <ul class="space-y-3 mb-8">
+          <li><strong>Exact Match [keyword]</strong> - Triggers only for exact keyword or close variants. Most control, lowest waste.</li>
+          <li><strong>Phrase Match "keyword"</strong> - Triggers for searches containing the phrase in order. Medium control.</li>
+          <li><strong>Broad Match keyword</strong> - Triggers for related searches Google thinks are relevant. Least control, highest waste (avoid unless you're experienced).</li>
+        </ul>
+
+        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 mb-8">
+          <p class="font-semibold text-emerald-900 mb-2">Pro Tip</p>
+          <p class="text-emerald-800">
+            Start with exact match only. Expand to phrase match only after you've proven profitability with exact match. Never use broad match unless you have years of experience and tight negative keyword lists.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Negative Keywords Are Just as Important</h3>
+        <p class="mb-4">
+          Negative keywords prevent your ads from showing for irrelevant searches. Common negatives:
+        </p>
+        <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+          <p class="font-mono text-sm">free, cheap, DIY, tutorial, how to, jobs, salary, salary, career, course, training, used, repair, broken</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Chapter 4: Ad Copy -->
+  <Section background="gray" spacing="xl" id="ad-copy">
+    <Container size="md">
+      <div class="prose prose-lg max-w-none">
+        <Heading as="h2" size="4xl" className="mb-6">
+          4. Writing High-Converting Ad Copy
+        </Heading>
+
+        <p class="text-xl text-gray-700 mb-8">
+          Your ad copy has one job: get qualified clicks. Not all clicks—just the ones likely to convert.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">The ProfitSEM Ad Copy Formula</h3>
+        <div class="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+          <p class="font-bold mb-4">Headline 1: [Keyword] + Benefit</p>
+          <p class="text-sm text-gray-600 mb-4">Example: "Enterprise CRM Software - Increase Sales by 40%"</p>
+
+          <p class="font-bold mb-4">Headline 2: Unique Value Proposition</p>
+          <p class="text-sm text-gray-600 mb-4">Example: "Built for Scale - 10,000+ Customers Trust Us"</p>
+
+          <p class="font-bold mb-4">Headline 3: Call to Action + Urgency</p>
+          <p class="text-sm text-gray-600 mb-4">Example: "Start Free Trial - No Credit Card Required"</p>
+
+          <p class="font-bold mb-4">Description: Overcome Objections + Social Proof</p>
+          <p class="text-sm text-gray-600">Example: "Easy setup in 5 minutes. Rated 4.9/5 by 2,000+ businesses. Cancel anytime, no long-term contracts."</p>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Words That Convert</h3>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+          <Card className="p-4">
+            <h4 class="font-bold text-emerald-600 mb-2">Power Words</h4>
+            <p class="text-sm">Free, Guaranteed, Proven, Fast, Easy, Save, You, New, Instant, Limited</p>
+          </Card>
+          <Card className="p-4">
+            <h4 class="font-bold text-blue-600 mb-2">Urgency Words</h4>
+            <p class="text-sm">Today, Now, Limited Time, Ends Soon, Last Chance, Hurry, Don't Miss</p>
+          </Card>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Extensions Are Mandatory</h3>
+        <p class="mb-4">Use all available ad extensions to maximize visibility:</p>
+        <ul class="space-y-2 mb-8">
+          <li><strong>Sitelink Extensions</strong> - Link to key pages (pricing, features, case studies)</li>
+          <li><strong>Callout Extensions</strong> - Short benefits ("24/7 Support", "No Setup Fee")</li>
+          <li><strong>Structured Snippets</strong> - List features or services</li>
+          <li><strong>Call Extensions</strong> - Phone number for mobile searches</li>
+          <li><strong>Location Extensions</strong> - Show your address (local businesses)</li>
+        </ul>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Chapters 5-8 Condensed -->
+  <Section background="white" spacing="xl">
+    <Container size="md">
+      <div class="space-y-16">
+        <!-- Chapter 5 -->
+        <div id="bidding" class="prose prose-lg max-w-none">
+          <Heading as="h2" size="4xl" className="mb-6">
+            5. Bidding Strategies & Budget Management
+          </Heading>
+          <p class="text-xl text-gray-700 mb-6">
+            Start with Manual CPC bidding for control. Move to automated bidding (Target CPA, Target ROAS) only after 30+ conversions/month with accurate tracking.
+          </p>
+          <h3 class="text-2xl font-bold mb-4">Budget Allocation Rule</h3>
+          <ul class="space-y-2 mb-8">
+            <li><strong>80% to proven winners</strong> - Campaigns with positive ROI</li>
+            <li><strong>20% to testing</strong> - New keywords, ad copy variants, campaign types</li>
+          </ul>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div id="tracking" class="prose prose-lg max-w-none">
+          <Heading as="h2" size="4xl" className="mb-6">
+            6. Conversion Tracking & Attribution
+          </Heading>
+          <p class="text-xl text-gray-700 mb-6">
+            If you're not tracking conversions, you're flying blind. Set up Google Analytics 4 + Google Ads conversion tracking from day one.
+          </p>
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+            <p class="font-semibold text-red-900 mb-2">Critical</p>
+            <p class="text-red-800">
+              67% of businesses have broken conversion tracking. Test your tracking weekly by completing a test conversion yourself.
+            </p>
+          </div>
+        </div>
+
+        <!-- Chapter 7 -->
+        <div id="optimization" class="prose prose-lg max-w-none">
+          <Heading as="h2" size="4xl" className="mb-6">
+            7. Campaign Optimization & Testing
+          </Heading>
+          <p class="text-xl text-gray-700 mb-6">
+            Optimization is weekly, not monthly. Follow this checklist:
+          </p>
+          <ul class="space-y-2 mb-8">
+            <li>Check Search Terms Report → Add negatives</li>
+            <li>Pause keywords with CPA > 2x target</li>
+            <li>Increase bids on keywords with CPA < target</li>
+            <li>Test new ad copy variants (2 per ad group minimum)</li>
+            <li>Review Quality Scores → Improve landing pages for low scores</li>
+          </ul>
+        </div>
+
+        <!-- Chapter 8 -->
+        <div id="scaling" class="prose prose-lg max-w-none">
+          <Heading as="h2" size="4xl" className="mb-6">
+            8. Scaling Profitable Campaigns
+          </Heading>
+          <p class="text-xl text-gray-700 mb-6">
+            Only scale what's already profitable. Never scale to "fix" an unprofitable campaign.
+          </p>
+          <h3 class="text-2xl font-bold mb-4">How to Scale Without Killing ROI</h3>
+          <ol class="space-y-3 mb-8">
+            <li>Increase budget by 20% on winning campaigns (not 100%)</li>
+            <li>Expand to related keywords (same intent level)</li>
+            <li>Add new campaign types (Shopping, Display) using proven offers</li>
+            <li>Test new ad copy angles to improve CTR</li>
+            <li>Optimize landing pages to improve conversion rate</li>
+          </ol>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA -->
+  <Section background="gradient" spacing="xl">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center text-white">
+        <Heading as="h2" size="4xl" className="mb-6">
+          Ready to Put This Into Action?
+        </Heading>
+        <p class="text-xl text-blue-100 mb-8">
+          This guide gives you the blueprint. But if you want us to build and manage your campaigns for you, get a free profit analysis.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/free-analysis">
+            Get Free Profit Analysis
+          </Button>
+          <Button variant="primary" size="lg" href="/services/google-ads">
+            See Our Services
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
