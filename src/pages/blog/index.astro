@@ -10,13 +10,22 @@ import { CTASection } from '../../components/sections/CTASection';
 
 const blogPosts = [
   {
+    slug: 'train-google-ai-not-manage-campaigns',
+    title: 'Stop Managing Google Ads. Start Training It.',
+    excerpt: 'Why the old keyword-obsessed, micro-management approach is dead—and how to train Google\'s AI to find your best customers instead. The framework behind 247% ROI.',
+    category: 'AI Strategy',
+    readTime: '18 min',
+    date: 'Jan 25, 2025',
+    icon: 'cpu',
+  },
+  {
     slug: 'google-ads-roi-complete-guide',
     title: 'The Complete Guide to Calculating Google Ads ROI',
     excerpt: 'Stop guessing. Learn how to calculate true ROI from your Google Ads campaigns and why most agencies get it wrong.',
     category: 'Strategy',
     readTime: '12 min',
     date: 'Oct 24, 2025',
-    image: '📊',
+    icon: 'chart',
   },
   {
     slug: 'profitable-google-ads-keywords',
@@ -25,7 +34,7 @@ const blogPosts = [
     category: 'Tactics',
     readTime: '8 min',
     date: 'Oct 20, 2025',
-    image: '🎯',
+    icon: 'target',
   },
   {
     slug: 'shopping-ads-feed-optimization',
@@ -34,7 +43,7 @@ const blogPosts = [
     category: 'E-commerce',
     readTime: '10 min',
     date: 'Oct 15, 2025',
-    image: '🛍️',
+    icon: 'shopping',
   },
 ];
 
@@ -49,30 +58,30 @@ const popularTopics = [
   {
     title: 'AI Training for Google Ads',
     description: 'Learn how to train Google\'s AI to find your best customers',
-    icon: '🤖',
+    icon: 'cpu',
     posts: 12,
   },
   {
     title: 'Smart Bidding Strategies',
     description: 'Master AI-powered bidding for predictable customer acquisition',
-    icon: '💰',
+    icon: 'currency',
     posts: 8,
   },
   {
     title: 'CRM Integration',
     description: 'Connect your CRM so Google learns from actual customers',
-    icon: '🔗',
+    icon: 'link',
     posts: 6,
   },
   {
     title: 'Campaign Consolidation',
     description: 'Feed AI concentrated conversion data for faster learning',
-    icon: '🎯',
+    icon: 'target',
     posts: 10,
   },
 ];
 
-const categories = ['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case Studies'];
+const categories = ['All', 'AI Strategy', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case Studies'];
 ---
 
 <BaseLayout
@@ -159,8 +168,17 @@ const categories = ['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case St
       {blogPosts.length > 0 && (
         <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-xl transition-shadow">
           <div class="grid md:grid-cols-2 gap-0">
-            <div class="bg-gradient-to-br from-emerald-500 to-blue-500 p-16 flex items-center justify-center text-white text-9xl">
-              {blogPosts[0].image}
+            <div class="bg-gradient-to-br from-emerald-500 to-blue-500 p-16 flex items-center justify-center text-white">
+              {blogPosts[0].icon === 'cpu' && (
+                <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              )}
+              {blogPosts[0].icon === 'chart' && (
+                <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              )}
             </div>
             <div class="p-10 flex flex-col justify-between bg-white">
               <div>
@@ -204,8 +222,17 @@ const categories = ['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case St
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.slice(1).map((post) => (
           <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-12 flex items-center justify-center text-7xl">
-              {post.image}
+            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-12 flex items-center justify-center">
+              {post.icon === 'target' && (
+                <svg class="w-24 h-24 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+              {post.icon === 'shopping' && (
+                <svg class="w-24 h-24 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              )}
             </div>
             <div class="p-6 flex-1 flex flex-col">
               <div class="flex items-center gap-3 mb-3">
@@ -251,7 +278,28 @@ const categories = ['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case St
         {popularTopics.map((topic) => (
           <Card className="p-6 hover:shadow-lg transition-shadow">
             <div class="flex items-start gap-4">
-              <div class="text-5xl">{topic.icon}</div>
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                {topic.icon === 'cpu' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                )}
+                {topic.icon === 'currency' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {topic.icon === 'link' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  </svg>
+                )}
+                {topic.icon === 'target' && (
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-2">
                   <Heading as="h3" size="xl">
