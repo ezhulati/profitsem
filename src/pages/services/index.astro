@@ -5,135 +5,281 @@ import { Section } from '../../components/layout/Section';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
-import { Icon } from '../../components/ui/Icon';
+import { Badge } from '../../components/ui/Badge';
 import { CTASection } from '../../components/sections/CTASection';
 
 const services = [
   {
     slug: 'google-ads',
-    icon: 'target' as const,
     title: 'Complete AI Training Program',
-    description: 'Full 90-day process: CRM integration, consolidated campaigns, smart bidding, and strategic patience',
+    description: 'Full 90-day process: CRM integration, consolidated campaigns, smart bidding implementation, and strategic patience. Train Google\'s AI to find your best customers, then scale predictably.',
+    price: 'Starting at $2,500/mo',
     features: [
-      'CRM integration (Google learns from real customers)',
-      'Consolidated campaign structure (concentrated data)',
+      'CRM integration (Google learns from real customers, not clicks)',
+      'Consolidated campaign structure (concentrated data beats fragmentation)',
       'Smart bidding implementation (AI-driven pricing)',
-      'Strategic guidance (not daily micro-management)',
-      'All campaign types: Search, Display, Shopping, Performance Max',
+      'Strategic guidance through learning periods (not daily micro-management)',
+      'Week-by-week timeline with clear expectations',
+      '90-day guarantee: improve ROI or full refund',
     ],
-    results: 'Predictable CAC in 90 days',
+    badge: 'Most Popular',
+    badgeVariant: 'success' as const,
+    results: '90 days to predictable CAC',
   },
   {
     slug: 'audit',
-    icon: 'chart' as const,
     title: 'AI Readiness Assessment',
-    description: 'Evaluate your account\'s current state and identify what needs fixing before AI training',
+    description: 'Is your account ready for AI training? We analyze tracking quality, campaign structure, and identify what\'s blocking Google\'s AI from learning efficiently.',
+    price: 'Free ($497 value)',
     features: [
-      'Tracking quality audit (is Google learning from real sales?)',
-      'Campaign structure analysis (fragmented vs consolidated)',
-      'Budget waste identification',
+      'Conversion tracking quality audit (is Google seeing real customers?)',
+      'Campaign structure review (fragmentation vs consolidation)',
+      'Data volume assessment (enough conversions for AI to learn?)',
       'Custom 90-day AI training roadmap',
+      'Budget waste identification',
+      'Honest analysis: we\'ll tell you if AI training won\'t work for you yet',
     ],
-    results: 'Free Assessment',
+    badge: 'Free',
+    badgeVariant: 'info' as const,
+    results: 'Know exactly what to fix',
   },
   {
     slug: 'conversion-tracking',
-    icon: 'trending-up' as const,
-    title: 'CRM Integration & Tracking',
-    description: 'Connect your CRM so Google learns from actual customers, not just clicks or form fills',
+    title: 'CRM Integration & Tracking Foundation',
+    description: 'Google\'s AI needs quality data to learn. We connect your CRM (Shopify, HubSpot, etc.) so Google sees which clicks become actual customers, not just form fills.',
+    price: '$997 one-time',
     features: [
-      'CRM → Google Ads integration',
-      'Enhanced conversion tracking',
+      'CRM integration (Shopify, HubSpot, Salesforce, custom APIs)',
       'Offline conversion import setup',
-      'Customer match audience building',
+      'Enhanced conversions implementation',
+      'Revenue and profit tracking (not just lead volume)',
+      'Google Analytics 4 + Google Tag Manager configuration',
+      '30 days of monitoring included (ensure data quality)',
     ],
-    results: 'Foundation of AI Training',
+    badge: 'Foundation',
+    badgeVariant: 'primary' as const,
+    results: 'AI learns from real customers',
   },
   {
     slug: 'landing-pages',
-    icon: 'zap' as const,
-    title: 'Landing Page Optimization',
-    description: 'Better conversion rates mean better data for Google\'s AI to learn from',
+    title: 'Conversion-Optimized Landing Pages',
+    description: 'High-converting landing pages that pre-qualify visitors and feed Google\'s AI better data. Fast load times, clear CTAs, mobile-optimized.',
+    price: '$1,997 per page',
     features: [
-      'Conversion-focused page design',
-      'A/B testing framework',
-      'Mobile & speed optimization',
-      'Message-to-market fit analysis',
+      'Conversion-first design (not just pretty—effective)',
+      'Mobile optimization (most traffic is mobile)',
+      'Sub-2-second load times (speed = conversions)',
+      'Pre-qualification elements (filter quality earlier)',
+      'Trust signals & social proof implementation',
+      'Works with your AI training campaigns',
     ],
-    results: 'Higher Quality AI Training Data',
+    badge: 'High Impact',
+    badgeVariant: 'default' as const,
+    results: 'Better data for AI to learn from',
+  },
+];
+
+const stats = [
+  { value: '200', suffix: '+', label: 'Active Clients' },
+  { prefix: '$', value: '47M', suffix: '+', label: 'Revenue Managed' },
+  { value: '247', suffix: '%', label: 'Average ROI' },
+  { value: '5', label: 'Years Experience' },
+];
+
+const process = [
+  {
+    step: '1',
+    title: 'Free Analysis',
+    description: 'We audit your account and identify quick wins',
+    timeline: 'Week 1',
+  },
+  {
+    step: '2',
+    title: 'Strategy Development',
+    description: 'Custom 90-day roadmap targeting high-ROI opportunities',
+    timeline: 'Week 2',
+  },
+  {
+    step: '3',
+    title: 'Campaign Launch',
+    description: 'Execute with proven frameworks and aggressive testing',
+    timeline: 'Weeks 3-8',
+  },
+  {
+    step: '4',
+    title: 'Scale & Optimize',
+    description: 'Double down on winners, cut losers, repeat monthly',
+    timeline: 'Ongoing',
   },
 ];
 ---
 
 <BaseLayout
-  title="Google Ads Services - ProfitSEM"
-  description="Comprehensive Google Ads services focused on profit. From full management to audits and optimization."
+  title="Google Ads AI Training Services - Turn Ads Into Predictable Revenue | GrowMyAds"
+  description="Train Google's AI to find your best customers. CRM integration, consolidated campaigns, smart bidding, and strategic patience. Predictable results in 90 days."
 >
   <!-- Hero Section -->
   <Section background="gradient" spacing="xl">
     <Container>
-      <div class="text-center text-white max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          AI-Driven Google Ads Specialists
+        </Badge>
         <Heading as="h1" size="6xl" className="mb-6">
-          AI Training Services for Google Ads
+          Train Google's AI to Find
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Your Best Customers
+          </span>
         </Heading>
-        <p class="text-xl text-blue-100 mb-8">
-          We train Google's AI to find your best customers through CRM integration, consolidated campaigns, smart bidding, and strategic patience. The result: predictable customer acquisition costs in 90 days.
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          We integrate your CRM, build consolidated campaigns, implement smart bidding, and let Google's AI learn customer patterns over 90 days. The result? Predictable customer acquisition costs you can scale.
         </p>
-        <Button variant="secondary" size="lg" href="/free-analysis">
-          Get Free Assessment
-        </Button>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Free Account Analysis →
+          </Button>
+          <Button variant="secondary" size="lg" href="#services">
+            View All Services
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Stats Section -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.prefix}{stat.value}{stat.suffix}
+            </div>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
+        ))}
       </div>
     </Container>
   </Section>
 
   <!-- Services Grid -->
-  <Section background="white" spacing="xl">
+  <Section background="gray" spacing="xl" id="services">
     <Container>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          AI Training Services
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Everything you need to train Google's AI and scale predictably
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
         {services.map((service) => (
-          <Card variant="bordered" padding="lg" className="hover:shadow-xl transition-shadow">
-            <div class="mb-4">
-              <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <Icon name={service.icon} size="lg" className="text-white" />
+          <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="p-8">
+              <div class="flex items-start justify-between mb-4">
+                <Badge variant={service.badgeVariant} size="md">
+                  {service.badge}
+                </Badge>
+                <div class="text-right">
+                  <div class="text-2xl font-bold text-gray-900">{service.price}</div>
+                </div>
               </div>
-            </div>
 
-            <Heading as="h2" size="xl" className="mb-3">
-              {service.title}
-            </Heading>
+              <Heading as="h3" size="2xl" className="mb-3">
+                {service.title}
+              </Heading>
 
-            <p class="text-gray-600 mb-6">
-              {service.description}
-            </p>
+              <p class="text-gray-600 mb-6">
+                {service.description}
+              </p>
 
-            <ul class="space-y-2 mb-6">
-              {service.features.map((feature) => (
-                <li class="flex items-start gap-2 text-sm">
-                  <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                  <span class="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
+              <ul class="space-y-3 mb-6">
+                {service.features.map((feature) => (
+                  <li class="flex items-start gap-2 text-sm">
+                    <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-              <div class="text-sm font-semibold text-emerald-600">
-                {service.results}
+              <div class="flex items-center justify-between pt-6 border-t border-gray-200">
+                <div class="text-sm font-semibold text-emerald-600">
+                  {service.results}
+                </div>
+                <Button variant="primary" size="md" href={`/services/${service.slug}`}>
+                  Learn More →
+                </Button>
               </div>
-              <a
-                href={`/services/${service.slug}`}
-                class="text-blue-500 hover:text-blue-600 font-semibold text-sm flex items-center gap-1"
-              >
-                Learn More
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
           </Card>
         ))}
       </div>
+    </Container>
+  </Section>
+
+  <!-- Featured Service Highlight -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <Card variant="bordered" padding="none" className="overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="bg-gradient-to-br from-emerald-500 to-blue-500 p-12 text-white flex flex-col justify-between">
+            <div>
+              <Badge variant="success" size="sm" className="mb-6 bg-white/20 text-white">
+                Most Popular Service
+              </Badge>
+              <Heading as="h2" size="4xl" className="mb-6">
+                Complete AI Training Program
+              </Heading>
+              <p class="text-blue-100 text-lg mb-8">
+                Our flagship service. Full 90-day process to train Google's AI on your best customers, then scale predictably.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold mb-1">90 Days</div>
+                <div class="text-sm text-blue-100">To Predictable CAC</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold mb-1">200+</div>
+                <div class="text-sm text-blue-100">Clients Trained</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-12 bg-gray-50">
+            <Heading as="h3" size="2xl" className="mb-6">
+              The 90-Day Process
+            </Heading>
+            <div class="space-y-4 mb-8">
+              {[
+                'Week 1-2: CRM integration & tracking foundation (Google learns from real customers)',
+                'Week 3-6: Consolidated campaign structure & AI learning period (strategic patience)',
+                'Week 7-9: Smart bidding activation (AI-driven pricing takes over)',
+                'Week 10-12: Predictable scaling (CAC stabilizes, growth becomes reliable)',
+                'Dedicated account manager through entire process',
+                'Week-by-week guidance with clear expectations',
+                'Monthly reports showing AI learning progress',
+                '90-day guarantee: improve ROI or full refund',
+              ].map((feature) => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+            <Button variant="primary" size="lg" fullWidth href="/services/google-ads">
+              View Full Details →
+            </Button>
+          </div>
+        </div>
+      </Card>
     </Container>
   </Section>
 
@@ -142,55 +288,91 @@ const services = [
     <Container>
       <div class="text-center mb-12">
         <Heading as="h2" size="4xl" className="mb-4">
-          The 90-Day AI Training Process
+          How It Works
         </Heading>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Each phase builds on the previous. Skip steps = poor results.
+          Our proven 4-step process to transform your Google Ads into a profit engine
         </p>
       </div>
 
-      <div class="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
-            1
+      <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {process.map((phase, index) => (
+          <div class="text-center relative">
+            {index < process.length - 1 && (
+              <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-emerald-500 to-transparent"></div>
+            )}
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
+              {phase.step}
+            </div>
+            <Badge variant="info" size="sm" className="mb-3">
+              {phase.timeline}
+            </Badge>
+            <Heading as="h3" size="xl" className="mb-2">
+              {phase.title}
+            </Heading>
+            <p class="text-gray-600 text-sm">
+              {phase.description}
+            </p>
           </div>
-          <h3 class="font-bold text-base mb-2">Connect The Dots</h3>
-          <p class="text-gray-600 text-xs">CRM integration & tracking audit (Week 1-2)</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
-            2
-          </div>
-          <h3 class="font-bold text-base mb-2">Build Foundation</h3>
-          <p class="text-gray-600 text-xs">Consolidated campaigns & AI learning (Week 3-6)</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
-            3
-          </div>
-          <h3 class="font-bold text-base mb-2">Let AI Take Over</h3>
-          <p class="text-gray-600 text-xs">Smart bidding activation (Week 7-9)</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
-            4
-          </div>
-          <h3 class="font-bold text-base mb-2">Scale Confidently</h3>
-          <p class="text-gray-600 text-xs">Predictable expansion (Week 10-12)</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3">
-            5
-          </div>
-          <h3 class="font-bold text-base mb-2">Maintain & Grow</h3>
-          <p class="text-gray-600 text-xs">Strategic guidance (Month 4+)</p>
-        </div>
+        ))}
       </div>
 
-      <div class="text-center mt-8">
-        <Button variant="primary" size="md" href="/process">
-          See Detailed Timeline →
+      <div class="text-center mt-12">
+        <Button variant="primary" size="lg" href="/process">
+          See Detailed Process Timeline →
         </Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Why Choose Us -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Why Our AI Training Approach Works
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We understand how Google's AI learns and build systems that feed it quality data
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Quality Data Foundation',
+            description: 'We integrate your CRM so Google learns from actual customers and revenue, not just form fills and clicks. Quality data enables everything else.',
+          },
+          {
+            title: 'Consolidated Campaign Structure',
+            description: 'We build campaigns that feed AI concentrated conversion data. Fragmented campaigns starve the learning process—we consolidate strategically.',
+          },
+          {
+            title: 'Strategic Patience',
+            description: 'AI needs time to learn patterns. We guide you through the learning period without constant changes that reset progress.',
+          },
+          {
+            title: 'Transparent 90-Day Timeline',
+            description: 'We set clear expectations for each phase: Week 1-2 (foundation), Week 3-6 (learning), Week 7-9 (smart bidding), Week 10-12 (predictable scaling).',
+          },
+          {
+            title: 'Proven with 200+ Clients',
+            description: '$47M+ managed. We\'ve trained Google\'s AI hundreds of times across e-commerce, SaaS, and service businesses. We know what works.',
+          },
+          {
+            title: '90-Day Guarantee',
+            description: 'If we don\'t improve your ROI within 90 days, full refund. We can make this guarantee because the AI training process works when done properly.',
+          },
+        ].map((benefit) => (
+          <Card className="p-6">
+            <Heading as="h3" size="xl" className="mb-3">
+              {benefit.title}
+            </Heading>
+            <p class="text-gray-600">
+              {benefit.description}
+            </p>
+          </Card>
+        ))}
       </div>
     </Container>
   </Section>

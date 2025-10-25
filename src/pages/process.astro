@@ -3,9 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Container } from '../components/layout/Container';
 import { Section } from '../components/layout/Section';
 import { Heading } from '../components/ui/Heading';
-import { ProcessSection } from '../components/sections/ProcessSection';
-import { CTASection } from '../components/sections/CTASection';
+import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
+import { Button } from '../components/ui/Button';
+import { CTASection } from '../components/sections/CTASection';
 
 const phases = [
   {
@@ -18,6 +19,7 @@ const phases = [
       'Complete tracking: Build attribution from click to customer',
       'Custom roadmap: Clear 90-day plan with milestones',
     ],
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     week: 'Week 3-6',
@@ -29,6 +31,7 @@ const phases = [
       'Learning period: AI begins pattern identification',
       'Performance monitoring: Track progress without interference',
     ],
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     week: 'Week 7-9',
@@ -40,6 +43,7 @@ const phases = [
       'Cost stabilization: Predictable acquisition costs',
       'Pattern recognition: AI identifies high-value prospects',
     ],
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     week: 'Week 10-12',
@@ -51,6 +55,7 @@ const phases = [
       'Advanced targeting: Lookalike audiences from customers',
       'Accelerated growth: Compounding returns from AI learning',
     ],
+    color: 'from-emerald-500 to-blue-600',
   },
   {
     week: 'Month 4+',
@@ -62,6 +67,7 @@ const phases = [
       'Channel expansion: Test new opportunities strategically',
       'Full transparency: Complete performance visibility',
     ],
+    color: 'from-blue-500 to-blue-600',
   },
 ];
 
@@ -73,38 +79,146 @@ const guarantees = [
   'Real-time dashboard access 24/7',
   'No hidden fees or surprise charges',
 ];
+
+const stats = [
+  { value: '90', label: 'Day Timeline' },
+  { value: '5', label: 'Key Phases' },
+  { value: '200', suffix: '+', label: 'Successful Clients' },
+  { value: '247', suffix: '%', label: 'Average ROI' },
+];
 ---
 
 <BaseLayout
-  title="Our 90-Day Profit Sprint Process - ProfitSEM"
-  description="See how we turn Google Ads into profit machines in just 90 days. Transparent process, guaranteed results."
+  title="Our Proven 90-Day Process - Turn Google Ads Into Profit | ProfitSEM"
+  description="See exactly how we transform Google Ads accounts in 90 days. Transparent process, guaranteed results."
 >
   <!-- Hero -->
   <Section background="gradient" spacing="xl">
     <Container>
       <div class="max-w-4xl mx-auto text-center text-white">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur border border-white/20 rounded-full mb-6">
-          <span class="text-emerald-400 text-sm font-semibold">
-            90-Day Profit Guarantee
-          </span>
-        </div>
-
+        <Badge variant="success" size="lg" className="mb-6">
+          90-Day Profit Sprint
+        </Badge>
         <Heading as="h1" size="6xl" className="mb-6">
-          How We Train Google's AI to Find Your Customers
+          Our Proven Process
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            90 Days to Predictable ROI
+          </span>
         </Heading>
-
-        <p class="text-xl text-blue-100 mb-8">
-          Most agencies tweak campaigns daily and reset the learning process. We do the opposite: feed Google high-quality data about your actual customers, then let AI do what it does best. Here's exactly how it works.
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Most agencies tweak campaigns daily and reset the learning process. We do the opposite: feed Google high-quality data about your actual customers, then let AI do what it does best.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Start Your 90-Day Sprint →
+          </Button>
+          <Button variant="secondary" size="lg" href="#phases">
+            See The Timeline
+          </Button>
+        </div>
       </div>
     </Container>
   </Section>
 
-  <!-- Main Process -->}
-  <ProcessSection />
+  <!-- Stats -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.value}{stat.suffix}
+            </div>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Process Overview Visual -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          The 90-Day Timeline
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Each phase builds on the previous. Skip steps = poor results.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        {phases.map((phase, index) => (
+          <div class="text-center relative">
+            {index < phases.length - 1 && (
+              <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-emerald-500 to-transparent"></div>
+            )}
+            <div class={`w-16 h-16 bg-gradient-to-br ${phase.color} text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg`}>
+              {index + 1}
+            </div>
+            <Badge variant="info" size="sm" className="mb-3">
+              {phase.week}
+            </Badge>
+            <Heading as="h3" size="base" className="mb-2">
+              {phase.title}
+            </Heading>
+            <p class="text-gray-600 text-xs">
+              {phase.description.split('.')[0]}...
+            </p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Guarantees Section -->
+  <Section background="white" spacing="xl">
+    <Container size="lg">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Our Guarantees
+        </Heading>
+        <p class="text-xl text-gray-600">
+          We put our money where our mouth is
+        </p>
+      </div>
+
+      <Card variant="bordered" padding="none" className="overflow-hidden">
+        <div class="bg-gradient-to-br from-emerald-50 to-blue-50 p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-6">
+            {guarantees.map((guarantee) => (
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="text-gray-700 font-medium">{guarantee}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-emerald-200 text-center">
+            <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <Heading as="h3" size="2xl" className="mb-2">
+              90-Day Money-Back Guarantee
+            </Heading>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+              If we don't improve your ROI within 90 days, you get a full refund of our management fees. No fine print. No questions asked.
+            </p>
+          </div>
+        </div>
+      </Card>
+    </Container>
+  </Section>
 
   <!-- Detailed Phases -->
-  <Section background="white" spacing="xl">
+  <Section background="gray" spacing="xl" id="phases">
     <Container>
       <div class="text-center mb-16">
         <Heading as="h2" size="4xl" className="mb-6">
@@ -115,83 +229,43 @@ const guarantees = [
         </p>
       </div>
 
-      <div class="space-y-6">
+      <div class="space-y-8">
         {phases.map((phase, index) => (
-          <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-            <div class="flex items-start gap-6">
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                  {index + 1}
-                </div>
-              </div>
-
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <Badge variant="info" size="sm">
+          <Card variant="bordered" padding="none" className="overflow-hidden">
+            <div class="grid lg:grid-cols-12 gap-0">
+              <div class={`lg:col-span-3 bg-gradient-to-br ${phase.color} p-8 text-white flex flex-col justify-between`}>
+                <div>
+                  <div class="w-14 h-14 bg-white/20 backdrop-blur border border-white/30 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                    {index + 1}
+                  </div>
+                  <Badge variant="success" size="sm" className="mb-4 bg-white/20 text-white">
                     {phase.week}
                   </Badge>
-                  <Heading as="h3" size="2xl">
+                  <Heading as="h3" size="3xl" className="mb-3">
                     {phase.title}
                   </Heading>
                 </div>
+              </div>
 
-                <p class="text-gray-600 mb-6 leading-relaxed">
+              <div class="lg:col-span-9 p-8">
+                <p class="text-gray-700 mb-6 leading-relaxed text-lg">
                   {phase.description}
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-3">
+                <div class="grid md:grid-cols-2 gap-4">
                   {phase.deliverables.map((item) => (
-                    <div class="flex items-start gap-2">
+                    <div class="flex items-start gap-3">
                       <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                       </svg>
-                      <span class="text-gray-700">{item}</span>
+                      <span class="text-gray-700 font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
+          </Card>
         ))}
-      </div>
-    </Container>
-  </Section>
-
-  <!-- Guarantees -->
-  <Section background="gray" spacing="xl">
-    <Container size="lg">
-      <div class="text-center mb-16">
-        <Heading as="h2" size="4xl" className="mb-6">
-          Our Guarantees
-        </Heading>
-        <p class="text-xl text-gray-600">
-          We put our money where our mouth is
-        </p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
-        <div class="grid md:grid-cols-2 gap-6">
-          {guarantees.map((guarantee) => (
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <svg class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <p class="text-gray-700 font-medium">{guarantee}</p>
-            </div>
-          ))}
-        </div>
-
-        <div class="mt-8 pt-8 border-t border-gray-200 text-center">
-          <p class="text-lg font-semibold text-gray-900 mb-2">
-            90-Day Money-Back Guarantee
-          </p>
-          <p class="text-gray-600">
-            If we don't improve your ROI within 90 days, you get a full refund of our management fees.
-            No fine print. No questions asked.
-          </p>
-        </div>
       </div>
     </Container>
   </Section>
@@ -208,52 +282,166 @@ const guarantees = [
         </p>
       </div>
 
-      <div class="max-w-3xl mx-auto">
-        <div class="space-y-6">
-          <div class="bg-gradient-to-br from-emerald-50 to-blue-50 border-l-4 border-emerald-500 rounded-r-lg p-6">
-            <p class="font-bold text-emerald-700 mb-2">📊 Week 1-2: Data Foundation</p>
-            <p class="text-gray-700 text-sm leading-relaxed">
-              Before launching campaigns, we build the data infrastructure. CRM integration, tracking setup, and waste analysis ensure Google's AI learns from quality signals. Rushing this phase means the system learns from incomplete or incorrect data.
-            </p>
+      <div class="max-w-4xl mx-auto space-y-6">
+        <Card className="p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border-l-4 border-emerald-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center text-white text-xl">
+                📊
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-emerald-900 mb-2">Week 1-2: Data Foundation</p>
+              <p class="text-gray-700 leading-relaxed">
+                Before launching campaigns, we build the data infrastructure. CRM integration, tracking setup, and waste analysis ensure Google's AI learns from quality signals. Rushing this phase means the system learns from incomplete or incorrect data.
+              </p>
+            </div>
           </div>
+        </Card>
 
-          <div class="bg-gradient-to-br from-emerald-50 to-blue-50 border-l-4 border-emerald-500 rounded-r-lg p-6">
-            <p class="font-bold text-emerald-700 mb-2">🧠 Week 3-6: AI Learning Phase</p>
-            <p class="text-gray-700 text-sm leading-relaxed">
-              This is when Google's AI identifies customer patterns. Results will fluctuate—this is normal and healthy. The system is testing hypotheses and learning from real data. Strategic patience during this phase is what enables predictable results later.
-            </p>
+        <Card className="p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border-l-4 border-emerald-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center text-white text-xl">
+                🧠
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-emerald-900 mb-2">Week 3-6: AI Learning Phase</p>
+              <p class="text-gray-700 leading-relaxed">
+                This is when Google's AI identifies customer patterns. Results will fluctuate—this is normal and healthy. The system is testing hypotheses and learning from real data. Strategic patience during this phase is what enables predictable results later.
+              </p>
+            </div>
           </div>
+        </Card>
 
-          <div class="bg-gradient-to-br from-emerald-50 to-blue-50 border-l-4 border-emerald-500 rounded-r-lg p-6">
-            <p class="font-bold text-emerald-700 mb-2">🎯 Week 7-9: Optimization Phase</p>
-            <p class="text-gray-700 text-sm leading-relaxed">
-              Smart bidding activates with all the customer data from previous phases. Google automatically optimizes pricing toward your goals. Cost-per-acquisition becomes predictable. This only works because the foundation was built properly.
-            </p>
+        <Card className="p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border-l-4 border-emerald-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center text-white text-xl">
+                🎯
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-emerald-900 mb-2">Week 7-9: Optimization Phase</p>
+              <p class="text-gray-700 leading-relaxed">
+                Smart bidding activates with all the customer data from previous phases. Google automatically optimizes pricing toward your goals. Cost-per-acquisition becomes predictable. This only works because the foundation was built properly.
+              </p>
+            </div>
           </div>
+        </Card>
 
-          <div class="bg-gradient-to-br from-emerald-50 to-blue-50 border-l-4 border-emerald-500 rounded-r-lg p-6">
-            <p class="font-bold text-emerald-700 mb-2">📈 Week 10-12: Scaling Phase</p>
-            <p class="text-gray-700 text-sm leading-relaxed">
-              With trained AI and predictable costs, scaling becomes a confident decision. You can forecast revenue from increased spend. The system has proven it can find customers efficiently. Growth accelerates with controlled risk.
-            </p>
+        <Card className="p-6 bg-gradient-to-br from-emerald-50 to-blue-100 border-l-4 border-emerald-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center text-white text-xl">
+                📈
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-emerald-900 mb-2">Week 10-12: Scaling Phase</p>
+              <p class="text-gray-700 leading-relaxed">
+                With trained AI and predictable costs, scaling becomes a confident decision. You can forecast revenue from increased spend. The system has proven it can find customers efficiently. Growth accelerates with controlled risk.
+              </p>
+            </div>
           </div>
+        </Card>
 
-          <div class="bg-gradient-to-br from-blue-50 to-purple-50 border-l-4 border-blue-500 rounded-r-lg p-6">
-            <p class="font-bold text-blue-700 mb-2">🚀 Month 4+: Mature System</p>
-            <p class="text-gray-700 text-sm leading-relaxed">
-              Customer acquisition is predictable and scalable. Strategic oversight replaces constant intervention. You can confidently plan business growth around reliable acquisition costs. The system continues improving through ongoing AI learning.
-            </p>
+        <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-l-4 border-blue-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-xl">
+                🚀
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-blue-900 mb-2">Month 4+: Mature System</p>
+              <p class="text-gray-700 leading-relaxed">
+                Customer acquisition is predictable and scalable. Strategic oversight replaces constant intervention. You can confidently plan business growth around reliable acquisition costs. The system continues improving through ongoing AI learning.
+              </p>
+            </div>
           </div>
-        </div>
+        </Card>
+      </div>
 
-        <div class="mt-12 bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl p-8 border-2 border-blue-700 text-white">
-          <p class="text-lg font-semibold mb-3">
+      <div class="mt-12 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 border-2 border-gray-700 text-white max-w-4xl mx-auto">
+        <div class="text-center">
+          <Heading as="h3" size="3xl" className="mb-4">
             The Essential Timeline
-          </p>
-          <p class="text-blue-100 leading-relaxed">
+          </Heading>
+          <p class="text-blue-100 leading-relaxed text-lg">
             Each phase builds on the previous one. Quality data enables effective learning. Effective learning enables smart bidding. Smart bidding enables predictable scaling. The 90-day timeline reflects how Google's AI actually learns—there are no shortcuts without compromising results.
           </p>
         </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Success Stories Preview -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          90-Day Transformations
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Real results from clients who completed the full 90-day process
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            industry: 'E-commerce',
+            metric: '312% ROAS Increase',
+            before: '1.8x ROAS',
+            after: '5.6x ROAS',
+            timeline: '87 days',
+          },
+          {
+            industry: 'SaaS',
+            metric: '487% More SQLs',
+            before: '34 SQLs/mo',
+            after: '200 SQLs/mo',
+            timeline: '75 days',
+          },
+          {
+            industry: 'Home Services',
+            metric: '186% More Jobs',
+            before: '28 jobs/mo',
+            after: '80 jobs/mo',
+            timeline: '90 days',
+          },
+        ].map((story) => (
+          <Card className="p-6 text-center">
+            <Badge variant="primary" size="sm" className="mb-4">
+              {story.industry}
+            </Badge>
+            <div class="text-3xl font-bold text-emerald-600 mb-4">
+              {story.metric}
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Before:</span>
+                <span class="font-semibold text-gray-900">{story.before}</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">After:</span>
+                <span class="font-semibold text-emerald-600">{story.after}</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Timeline:</span>
+                <span class="font-semibold text-blue-600">{story.timeline}</span>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <Button variant="primary" size="lg" href="/case-studies">
+          Read Full Case Studies →
+        </Button>
       </div>
     </Container>
   </Section>

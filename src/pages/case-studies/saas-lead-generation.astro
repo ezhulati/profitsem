@@ -110,142 +110,75 @@ import { Card } from '../../components/ui/Card';
           </p>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
-            Our Strategy
+            The AI Training Approach
           </Heading>
 
-          <p>
-            We didn't need more leads. We needed better leads. Here's what we changed:
+          <p class="text-gray-700 mb-6">
+            The problem wasn't lead volume—it was lead quality. We trained Google's AI to recognize the difference between a qualified SQL and a tire kicker. Here's how:
           </p>
 
-          <Heading as="h3" size="2xl" className="mb-4">
-            1. Ruthless Negative Keywords
-          </Heading>
-
-          <p>
-            We added 400+ negative keywords in week one. Stuff like:
-          </p>
-
-          <ul>
-            <li>"free project management"</li>
-            <li>"student project management"</li>
-            <li>"open source"</li>
-            <li>"alternatives to [competitor]" (price shoppers)</li>
-            <li>All educational (.edu) domains</li>
-          </ul>
-
-          <p>
-            <strong>Result:</strong> Traffic dropped 42%, but quality skyrocketed.
-          </p>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            2. Qualification Landing Pages
-          </Heading>
-
-          <p>
-            We built custom landing pages that pre-qualified before the form:
-          </p>
-
-          <div class="bg-blue-50 p-6 rounded-lg my-6">
-            <p class="font-semibold mb-3">Above-the-fold copy:</p>
-            <p class="italic">
-              "Built for teams of 10+ managing $500K+ projects. Not right for freelancers or small teams."
-            </p>
-            <p class="text-sm text-gray-600 mt-3">
-              This single line cut unqualified leads by 35%.
-            </p>
-          </div>
-
-          <p>
-            We also added progressive form fields:
-          </p>
-
-          <ul>
-            <li>Company size (blocked <10 employees)</li>
-            <li>Industry (blocked students, non-profits)</li>
-            <li>Budget qualifier ("Pricing starts at $499/month. Continue?")</li>
-          </ul>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            3. Competitor Campaign Overhaul
-          </Heading>
-
-          <p>
-            They were bidding on competitor keywords like "asana alternative" and "monday.com pricing"—but sending traffic to generic pages.
-          </p>
-
-          <p>
-            We created dedicated competitor comparison pages for each major competitor (Asana, Monday, Trello, etc.) with:
-          </p>
-
-          <ul>
-            <li>Side-by-side feature comparisons</li>
-            <li>Pricing comparisons</li>
-            <li>Migration guides ("Switch from Asana in 3 steps")</li>
-            <li>Customer testimonials from switchers</li>
-          </ul>
-
-          <p>
-            <strong>Result:</strong> Competitor campaign conversion rate went from 2.1% to 8.9%.
-          </p>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            4. Intent-Based Bidding
-          </Heading>
-
-          <p>
-            We segmented keywords into 3 tiers based on buyer intent:
-          </p>
-
-          <div class="bg-emerald-50 p-6 rounded-lg my-6">
-            <div class="space-y-4">
-              <div>
-                <p class="font-semibold text-emerald-900">High Intent (60% of budget)</p>
-                <p class="text-sm text-gray-700">
-                  Keywords: "project management software pricing", "[competitor] alternative", "buy project management tool"
-                </p>
-                <p class="text-sm text-emerald-700 font-semibold">Avg CPC: $18 | Conversion Rate: 12%</p>
+          <div class="space-y-4">
+            <div class="flex gap-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold">
+                  1
+                </div>
               </div>
-
               <div>
-                <p class="font-semibold text-blue-900">Medium Intent (30% of budget)</p>
-                <p class="text-sm text-gray-700">
-                  Keywords: "project management software", "best pm tools", "project tracking software"
-                </p>
-                <p class="text-sm text-blue-700 font-semibold">Avg CPC: $12 | Conversion Rate: 6%</p>
+                <p class="font-semibold text-emerald-900 mb-1">Week 1-2: Connect The Dots</p>
+                <p class="text-emerald-800 text-sm mb-2">Google needed to learn from actual SQLs and customers, not just form fills.</p>
+                <ul class="text-emerald-700 text-sm space-y-1 list-disc list-inside">
+                  <li>Integrated HubSpot CRM with Google Ads conversion tracking</li>
+                  <li>Set up offline conversion import: Lead → SQL → Opportunity → Closed-Won</li>
+                  <li>Google learned which keywords drove paying customers (not just demos)</li>
+                  <li>Identified $14K/month wasted on students, freelancers, and price shoppers</li>
+                  <li>Added 400+ negative keywords to block unqualified traffic immediately</li>
+                </ul>
               </div>
+            </div>
 
+            <div class="flex gap-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold">
+                  2
+                </div>
+              </div>
               <div>
-                <p class="font-semibold text-yellow-900">Low Intent (10% of budget)</p>
-                <p class="text-sm text-gray-700">
-                  Keywords: "how to manage projects", "project management tips"
-                </p>
-                <p class="text-sm text-yellow-700 font-semibold">Avg CPC: $3 | Conversion Rate: 1.5%</p>
+                <p class="font-semibold text-emerald-900 mb-1">Week 3-6: Build Foundation & Let AI Learn</p>
+                <p class="text-emerald-800 text-sm mb-2">Built systems to filter quality earlier and gave AI concentrated data to learn from.</p>
+                <ul class="text-emerald-700 text-sm space-y-1 list-disc list-inside">
+                  <li>Created qualification-first landing pages (blocked sub-10 employee companies at form level)</li>
+                  <li>Built competitor-specific pages (Asana, Monday, Trello migration guides)</li>
+                  <li>Consolidated campaigns to feed AI more concentrated data per campaign</li>
+                  <li>Let AI analyze patterns without daily interference—strategic patience</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+              <div class="flex-shrink-0">
+                <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-900 mb-1">Week 7-12: Smart Bidding & Scaling</p>
+                <p class="text-emerald-800 text-sm mb-2">AI took over bidding, automatically spending more on high-SQL-probability searches.</p>
+                <ul class="text-emerald-700 text-sm space-y-1 list-disc list-inside">
+                  <li>Activated target CPA smart bidding trained on SQL conversions (not just form fills)</li>
+                  <li>Google identified that "pricing" keywords had 24% SQL rate vs 6% for generic terms</li>
+                  <li>AI automatically bid higher on competitor comparison searches (8.9% conversion rate)</li>
+                  <li>CPL dropped 64% while SQL volume increased 325%—predictable math</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <p>
-            Old strategy: Bid $15 on everything. New strategy: Bid based on intent and SQL probability.
-          </p>
-
-          <Heading as="h3" size="2xl" className="mb-4">
-            5. CRM Integration & Attribution
-          </Heading>
-
-          <p>
-            We integrated Google Ads with their CRM (HubSpot) to track SQLs, not just leads.
-          </p>
-
-          <p>
-            This let us:
-          </p>
-
-          <ul>
-            <li>See which keywords generated SQLs (not just form fills)</li>
-            <li>Track SQL → Opportunity → Closed-Won</li>
-            <li>Calculate true CAC and LTV by campaign</li>
-            <li>Optimize for revenue, not vanity metrics</li>
-          </ul>
+          <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-4">
+            <p class="text-sm text-blue-900">
+              <strong>Why this worked:</strong> Google's AI learned the difference between a student searching "free project management" (0% SQL rate) and a VP searching "asana alternative pricing for 50 users" (38% SQL rate). Once trained on real customer data from HubSpot, it automatically optimized for SQLs instead of wasting budget on unqualified clicks.
+            </p>
+          </div>
 
           <Heading as="h2" size="3xl" className="mb-4 mt-12">
             The Results
@@ -328,13 +261,13 @@ import { Card } from '../../components/ui/Card';
           </Heading>
 
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-6">
-            <p class="font-semibold text-blue-900 mb-3">Lessons from this campaign:</p>
+            <p class="font-semibold text-blue-900 mb-3">What made this work:</p>
             <ol class="space-y-2 text-blue-800">
-              <li><strong>1. More leads ≠ better results.</strong> Quality > quantity, always.</li>
-              <li><strong>2. Negative keywords are as important as positive keywords.</strong> What you block matters.</li>
-              <li><strong>3. Landing pages should pre-qualify.</strong> Save sales time by filtering earlier.</li>
-              <li><strong>4. Track SQLs, not form fills.</strong> MQLs mean nothing if they don't convert to pipeline.</li>
-              <li><strong>5. Intent-based budgeting works.</strong> Bid more on ready-to-buy searches.</li>
+              <li><strong>1. Quality data beats quantity.</strong> Google's AI learned from actual SQLs and customers, not just form fills.</li>
+              <li><strong>2. CRM integration is foundational.</strong> Without tracking Lead → SQL → Customer, you're optimizing for the wrong thing.</li>
+              <li><strong>3. Consolidated campaigns feed AI better data.</strong> Concentrated conversion data per campaign helps AI learn faster.</li>
+              <li><strong>4. Strategic patience pays off.</strong> Let AI learn patterns over weeks instead of changing things daily.</li>
+              <li><strong>5. Smart bidding works when trained properly.</strong> AI optimized better than manual bidding once it learned what an SQL looked like.</li>
             </ol>
           </div>
 
@@ -346,32 +279,32 @@ import { Card } from '../../components/ui/Card';
             <div class="flex gap-4">
               <div class="w-20 flex-shrink-0 font-bold text-blue-600">Week 1-2</div>
               <div>
-                <p class="font-semibold">Audit & Strategy</p>
-                <p class="text-gray-700 text-sm">Deep dive into their data, CRM, sales process. Built negative keyword list and new landing pages.</p>
+                <p class="font-semibold">Connect The Dots</p>
+                <p class="text-gray-700 text-sm">Integrated HubSpot CRM with Google Ads. Set up offline conversion tracking (SQL → Closed-Won). Added 400+ negative keywords to block waste immediately.</p>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <div class="w-20 flex-shrink-0 font-bold text-blue-600">Week 3-4</div>
+              <div class="w-20 flex-shrink-0 font-bold text-blue-600">Week 3-6</div>
               <div>
-                <p class="font-semibold">Implementation</p>
-                <p class="text-gray-700 text-sm">Launched new campaign structure, landing pages, and CRM integration.</p>
+                <p class="font-semibold">Build Foundation & AI Learning</p>
+                <p class="text-gray-700 text-sm">Built qualification landing pages, competitor comparison pages, consolidated campaigns. Let AI learn customer patterns without interference.</p>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <div class="w-20 flex-shrink-0 font-bold text-blue-600">Week 5-8</div>
+              <div class="w-20 flex-shrink-0 font-bold text-blue-600">Week 7-9</div>
               <div>
-                <p class="font-semibold">Optimization</p>
-                <p class="text-gray-700 text-sm">Tested ad copy, refined bidding, expanded winning keywords. SQL count climbing weekly.</p>
+                <p class="font-semibold">Smart Bidding Activation</p>
+                <p class="text-gray-700 text-sm">Activated target CPA bidding trained on SQLs. AI started optimizing automatically. SQL count climbing weekly as AI learned patterns.</p>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <div class="w-20 flex-shrink-0 font-bold text-emerald-600">Week 9-12</div>
+              <div class="w-20 flex-shrink-0 font-bold text-emerald-600">Week 10-12</div>
               <div>
-                <p class="font-semibold">Scale</p>
-                <p class="text-gray-700 text-sm">Hit 200 SQLs/month. Sales team happy. Pipeline predictable. Closed 52 new customers.</p>
+                <p class="font-semibold">Predictable Scaling</p>
+                <p class="text-gray-700 text-sm">Hit 200 SQLs/month with predictable CAC. Sales team focused on qualified pipeline. Closed 52 new customers. Math became reliable.</p>
               </div>
             </div>
           </div>
