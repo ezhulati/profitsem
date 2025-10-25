@@ -10,9 +10,9 @@ export function TrustSection() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <Container>
-        <div className="text-center mb-8">
+        <div className="text-center mb-12">
           <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
             Trusted by 200+ Brands & Certified Partners
           </p>

@@ -51,28 +51,27 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-32 bg-gray-50">
       <Container>
-        <div className="text-center mb-16">
-          <Heading as="h2" size="5xl" className="mb-4">
-            Our 90-Day Profit Sprint
+        <div className="text-center mb-20">
+          <Heading as="h2" size="5xl" className="mb-6">
+            90-Day Roadmap
           </Heading>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A proven framework that takes you from unprofitable ads to consistent profit
-            in just 90 days. No guesswork. No trial and error.
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            From audit to profit in 90 days.
           </p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid gap-8 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="relative bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow"
+              className="relative bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-emerald-500 hover:shadow-2xl transition-all"
             >
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex flex-col lg:flex-row gap-8">
                 {/* Step Number */}
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                <div className="flex-shrink-0 flex justify-center lg:justify-start">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                     {index + 1}
                   </div>
                 </div>

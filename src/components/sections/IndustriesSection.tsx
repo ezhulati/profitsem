@@ -44,35 +44,35 @@ export function IndustriesSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white">
       <Container>
-        <div className="text-center mb-16">
-          <Heading as="h2" size="5xl" className="mb-4">
+        <div className="text-center mb-20">
+          <Heading as="h2" size="5xl" className="mb-6">
             Industries We Serve
           </Heading>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Deep expertise in high-value industries where Google Ads drives real profit
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            Deep expertise in high-value industries
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry) => (
             <Card key={industry.name} variant="bordered" padding="lg" className="hover:shadow-lg transition-shadow">
-              <div className="mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Icon name={industry.icon} size="lg" className="text-white" />
+              <div className="mb-6 flex justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur border-2 border-emerald-400/30 rounded-xl flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <Icon name={industry.icon} size="lg" className="text-emerald-400" />
                 </div>
               </div>
 
-              <Heading as="h3" size="xl" className="mb-2">
+              <Heading as="h3" size="xl" className="mb-3 text-center">
                 {industry.name}
               </Heading>
 
-              <p className="text-gray-600 mb-4 text-sm">
+              <p className="text-gray-600 mb-6 text-sm text-center">
                 {industry.description}
               </p>
 
-              <div className="flex items-center gap-2 text-emerald-600 text-sm font-semibold">
+              <div className="flex items-center justify-center gap-2 text-emerald-600 text-sm font-semibold">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
                 </svg>

@@ -43,13 +43,13 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-32 bg-gray-50">
       <Container>
-        <div className="text-center mb-16">
-          <Heading as="h2" size="5xl" className="mb-4">
+        <div className="text-center mb-20">
+          <Heading as="h2" size="5xl" className="mb-6">
             "Will You Actually Answer When I Call?"
           </Heading>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
             Yes. Here's what clients say.
           </p>
         </div>

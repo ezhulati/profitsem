@@ -42,14 +42,14 @@ export function ResultsSection() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <section className="py-32 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
       <Container>
-        <div className="text-center mb-16">
-          <Heading as="h2" size="5xl" className="mb-4">
-            Results That Speak Louder Than Words
+        <div className="text-center mb-20">
+          <Heading as="h2" size="5xl" className="mb-6">
+            Results That Speak Louder
           </Heading>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real numbers from real campaigns. This is what profit-focused Google Ads management looks like.
+          <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
+            Real numbers from real campaigns.
           </p>
         </div>
 
