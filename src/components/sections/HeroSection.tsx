@@ -23,7 +23,7 @@ export function HeroSection() {
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Left Content */}
-          <div className="lg:col-span-1 text-center lg:text-left">
+          <div className="lg:col-span-2 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur border border-emerald-400/40 rounded-full mb-6">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <defs>
@@ -78,7 +78,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Content - Before/After Results */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-3">
+          <div className="lg:col-span-1 grid grid-cols-2 gap-3">
             {/* ROAS Card */}
             <div className="glass rounded-xl p-4 magnetic-hover-sm fade-in-scroll">
               <div className="flex items-baseline justify-between mb-2">
