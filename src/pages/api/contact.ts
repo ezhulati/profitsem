@@ -25,7 +25,23 @@ export const POST: APIRoute = async ({ request }) => {
     console.log('Contact API called - Content-Type:', request.headers.get('content-type'));
     console.log('Request method:', request.method);
 
-    const data: ContactFormData = await request.json();
+    // Clone the request to read body multiple times if needed
+    const clonedRequest = request.clone();
+    const bodyText = await clonedRequest.text();
+    console.log('Raw body:', bodyText);
+
+    if (!bodyText || bodyText.trim() === '') {
+      console.error('Empty request body received');
+      return new Response(
+        JSON.stringify({ error: 'Empty request body' }),
+        {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    const data: ContactFormData = JSON.parse(bodyText);
 
     // Validate required fields
     const requiredFields = ['name', 'email', 'subject', 'message'];
