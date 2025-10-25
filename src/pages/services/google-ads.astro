@@ -281,74 +281,33 @@ const faqs = [
     </Container>
   </Section>
 
-  <!-- Pricing -->
+  <!-- Get Custom Quote -->
   <Section background="gray" spacing="xl">
-    <Container size="md">
-      <div class="text-center mb-12">
-        <Heading as="h2" size="4xl" className="mb-6">
-          Transparent, Predictable Pricing
-        </Heading>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Flat monthly fee. No percentage-based pricing that incentivizes waste.
-        </p>
-      </div>
-
-      <Card className="p-10 max-w-2xl mx-auto">
-        <div class="text-center mb-8">
-          <Badge variant="success" size="lg" className="mb-4">
-            Most Popular
-          </Badge>
-          <h3 class="text-3xl font-bold mb-2">Scale Plan</h3>
-          <div class="flex items-baseline justify-center gap-2 mb-4">
-            <span class="text-5xl font-bold text-gray-900">$4,500</span>
-            <span class="text-gray-600">/month</span>
-          </div>
-          <p class="text-gray-600">For businesses spending $15,000-$50,000/month on Google Ads</p>
-        </div>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+    <Container>
+      <Card variant="bordered" className="overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-50 to-blue-50 p-12 text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span>Dedicated account manager</span>
           </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span>All campaign types included</span>
+          <Heading as="h2" size="4xl" className="mb-4">
+            Get Your Custom AI Training Plan
+          </Heading>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Every business is different. We'll analyze your account and build a custom 90-day roadmap tailored to your ad spend, business goals, and current setup. Start with a free audit—no obligation, no sales pressure.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" size="lg" href="/free-analysis">
+              Get Free Account Audit →
+            </Button>
+            <Button variant="secondary" size="lg" href="/pricing">
+              Learn About Our Process
+            </Button>
           </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span>Weekly performance reports</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span>Real-time dashboard access</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span>Conversion tracking setup</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span>No long-term contracts</span>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <Button variant="primary" size="lg" href="/pricing" fullWidth>
-            See All Plans →
-          </Button>
+          <p class="text-sm text-gray-600 mt-6">
+            ✓ Custom quote in 48 hours • ✓ No credit card required • ✓ Completely free
+          </p>
         </div>
       </Card>
     </Container>
