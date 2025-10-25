@@ -1,6 +1,7 @@
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { Link } from '../ui/Link';
+import { Logo } from '../ui/Logo';
 
 export interface FooterProps {
   /** Additional CSS classes */
@@ -85,13 +86,8 @@ export function Footer({ className = '' }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
-            <a href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
-              <span className="text-xl font-bold">
-                Profit<span className="text-blue-400">SEM</span>
-              </span>
+            <a href="/" className="mb-6 inline-block group">
+              <Logo size="md" className="group-hover:scale-105 transition-transform" />
             </a>
             <p className="text-gray-400 mb-6">
               Turn Google Ads into pure profit. Data-driven campaigns that deliver measurable ROI in 90 days.
