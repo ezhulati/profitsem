@@ -2,10 +2,13 @@
   "name": "profitsem",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node scripts/fix-runtime.js",
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "astro check",
