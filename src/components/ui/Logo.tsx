@@ -48,9 +48,13 @@ export function Logo({ size = 'md', variant = 'full', theme = 'light', className
 
       {/* Text */}
       {variant === 'full' && (
-        <div className={`${text} tracking-tight leading-none`}>
-          <span className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} font-extrabold`}>Profit</span>
-          <span className={`${theme === 'dark' ? 'text-blue-400' : 'text-blue-500'} font-bold`}>SEM</span>
+        <div className={`${text} leading-none flex items-baseline`}>
+          <span className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} font-black tracking-tighter uppercase`}>
+            Profit
+          </span>
+          <span className={`${theme === 'dark' ? 'text-blue-400' : 'text-blue-500'} font-light tracking-widest ml-0.5`}>
+            SEM
+          </span>
         </div>
       )}
     </div>
