@@ -87,7 +87,7 @@ export function Footer({ className = '' }: FooterProps) {
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <a href="/" className="mb-6 inline-block group">
-              <Logo size="md" className="group-hover:scale-105 transition-transform" />
+              <Logo size="md" theme="dark" className="group-hover:scale-105 transition-transform" />
             </a>
             <p className="text-gray-400 mb-6">
               Turn Google Ads into pure profit. Data-driven campaigns that deliver measurable ROI in 90 days.

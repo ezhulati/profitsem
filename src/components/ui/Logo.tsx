@@ -3,6 +3,8 @@ export interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
   /** Show text or icon only */
   variant?: 'full' | 'icon';
+  /** Theme for light or dark backgrounds */
+  theme?: 'light' | 'dark';
   /** Additional CSS classes */
   className?: string;
 }
@@ -11,7 +13,7 @@ export interface LogoProps {
  * ProfitSEM Logo Component
  * Classic bullseye/target representing precision and hitting the mark
  */
-export function Logo({ size = 'md', variant = 'full', className = '' }: LogoProps) {
+export function Logo({ size = 'md', variant = 'full', theme = 'light', className = '' }: LogoProps) {
   const sizes = {
     sm: { container: 'h-8', icon: 'w-6 h-6', text: 'text-lg' },
     md: { container: 'h-12', icon: 'w-8 h-8', text: 'text-2xl' },
@@ -47,8 +49,8 @@ export function Logo({ size = 'md', variant = 'full', className = '' }: LogoProp
       {/* Text */}
       {variant === 'full' && (
         <div className={`${text} tracking-tight leading-none`}>
-          <span className="text-gray-900 font-extrabold">Profit</span>
-          <span className="text-blue-500 font-bold">SEM</span>
+          <span className={`${theme === 'dark' ? 'text-white' : 'text-gray-900'} font-extrabold`}>Profit</span>
+          <span className={`${theme === 'dark' ? 'text-blue-400' : 'text-blue-500'} font-bold`}>SEM</span>
         </div>
       )}
     </div>
