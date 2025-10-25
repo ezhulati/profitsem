@@ -5,6 +5,8 @@ import { Section } from '../../components/layout/Section';
 import { Heading } from '../../components/ui/Heading';
 import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { CTASection } from '../../components/sections/CTASection';
 
 const blogPosts = [
   {
@@ -35,113 +37,234 @@ const blogPosts = [
     image: '🛍️',
   },
 ];
+
+const stats = [
+  { value: '50', suffix: '+', label: 'Expert Articles' },
+  { value: '10K', suffix: '+', label: 'Monthly Readers' },
+  { value: '247', suffix: '%', label: 'Avg Client ROI' },
+  { value: '0', suffix: '%', label: 'Fluff Content' },
+];
+
+const popularTopics = [
+  {
+    title: 'AI Training for Google Ads',
+    description: 'Learn how to train Google\'s AI to find your best customers',
+    icon: '🤖',
+    posts: 12,
+  },
+  {
+    title: 'Smart Bidding Strategies',
+    description: 'Master AI-powered bidding for predictable customer acquisition',
+    icon: '💰',
+    posts: 8,
+  },
+  {
+    title: 'CRM Integration',
+    description: 'Connect your CRM so Google learns from actual customers',
+    icon: '🔗',
+    posts: 6,
+  },
+  {
+    title: 'Campaign Consolidation',
+    description: 'Feed AI concentrated conversion data for faster learning',
+    icon: '🎯',
+    posts: 10,
+  },
+];
+
+const categories = ['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case Studies'];
 ---
 
 <BaseLayout
   title="Google Ads Blog - Profit-Focused PPC Strategies - ProfitSEM"
   description="Learn profit-driven Google Ads strategies from experts. No fluff, just actionable tactics that improve ROI."
 >
-  <!-- Hero -->
-  <Section background="gradient" spacing="lg">
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
     <Container>
-      <div class="max-w-3xl mx-auto text-center text-white">
-        <Heading as="h1" size="5xl" className="mb-6">
-          Profit-Focused Google Ads Insights
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Expert Insights
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Profit-Focused
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Google Ads Insights
+          </span>
         </Heading>
-        <p class="text-xl text-blue-100">
-          No fluff. No theory. Just actionable strategies that actually improve ROI.
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          No fluff. No theory. Just actionable strategies from training Google's AI for 200+ businesses. Learn the systems that deliver predictable results in 90 days.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="#featured">
+            Browse Latest Articles
+          </Button>
+          <Button variant="secondary" size="lg" href="#topics">
+            Explore Topics
+          </Button>
+        </div>
       </div>
     </Container>
   </Section>
 
-  <!-- Blog Posts Grid -->
-  <Section background="white" spacing="xl">
+  <!-- Stats Section -->
+  <Section background="white" spacing="lg">
     <Container>
-      <!-- Categories Filter -->
-      <div class="flex flex-wrap gap-3 mb-12 justify-center">
-        {['All', 'Strategy', 'Tactics', 'E-commerce', 'SaaS', 'Case Studies'].map((cat) => (
-          <button class={`px-4 py-2 rounded-full border-2 transition-colors ${cat === 'All' ? 'border-blue-500 bg-blue-500 text-white' : 'border-gray-300 text-gray-700 hover:border-blue-500'}`}>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.value}{stat.suffix}
+            </div>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Categories Filter -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center mb-8">
+        <Heading as="h2" size="3xl" className="mb-4">
+          Browse by Category
+        </Heading>
+        <p class="text-gray-600">
+          Find exactly what you need to improve your Google Ads performance
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center">
+        {categories.map((cat, index) => (
+          <button class={`px-6 py-3 rounded-full border-2 font-semibold transition-all hover:shadow-md ${index === 0 ? 'border-emerald-500 bg-emerald-500 text-white' : 'border-gray-300 bg-white text-gray-700 hover:border-emerald-500 hover:text-emerald-600'}`}>
             {cat}
           </button>
         ))}
       </div>
+    </Container>
+  </Section>
 
-      <!-- Featured Post -->
+  <!-- Featured Post -->
+  <Section background="white" spacing="xl" id="featured">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Featured Article
+        </Heading>
+        <p class="text-xl text-gray-600">
+          Our most comprehensive guide to Google Ads success
+        </p>
+      </div>
+
       {blogPosts.length > 0 && (
-        <Card variant="bordered" padding="none" className="overflow-hidden mb-12 hover:shadow-xl transition-shadow">
+        <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-xl transition-shadow">
           <div class="grid md:grid-cols-2 gap-0">
-            <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-12 flex items-center justify-center text-white text-8xl">
+            <div class="bg-gradient-to-br from-emerald-500 to-blue-500 p-16 flex items-center justify-center text-white text-9xl">
               {blogPosts[0].image}
             </div>
-            <div class="p-8 flex flex-col justify-between">
+            <div class="p-10 flex flex-col justify-between bg-white">
               <div>
                 <div class="flex items-center gap-3 mb-4">
-                  <Badge variant="info" size="sm">
+                  <Badge variant="success" size="sm">
                     {blogPosts[0].category}
                   </Badge>
-                  <span class="text-sm text-gray-500">
+                  <span class="text-sm text-gray-500 font-medium">
                     {blogPosts[0].date} · {blogPosts[0].readTime} read
                   </span>
                 </div>
                 <Heading as="h2" size="3xl" className="mb-4">
                   {blogPosts[0].title}
                 </Heading>
-                <p class="text-gray-600 mb-6 text-lg">
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
                   {blogPosts[0].excerpt}
                 </p>
               </div>
-              <a
-                href={`/blog/${blogPosts[0].slug}`}
-                class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 font-semibold"
-              >
-                Read Full Article
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              <Button variant="primary" size="lg" href={`/blog/${blogPosts[0].slug}`}>
+                Read Full Article →
+              </Button>
             </div>
           </div>
         </Card>
       )}
+    </Container>
+  </Section>
 
-      <!-- Recent Posts Grid -->
-      <Heading as="h2" size="3xl" className="mb-8">
-        Recent Articles
-      </Heading>
+  <!-- Recent Posts Grid -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Recent Articles
+        </Heading>
+        <p class="text-xl text-gray-600">
+          Fresh insights and strategies updated regularly
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.slice(1).map((post) => (
-          <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-12 flex items-center justify-center text-6xl">
+          <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-12 flex items-center justify-center text-7xl">
               {post.image}
             </div>
-            <div class="p-6">
+            <div class="p-6 flex-1 flex flex-col">
               <div class="flex items-center gap-3 mb-3">
                 <Badge variant="default" size="sm">
                   {post.category}
                 </Badge>
-                <span class="text-xs text-gray-500">
+                <span class="text-xs text-gray-500 font-medium">
                   {post.readTime}
                 </span>
               </div>
               <Heading as="h3" size="xl" className="mb-3">
                 {post.title}
               </Heading>
-              <p class="text-gray-600 text-sm mb-4">
+              <p class="text-gray-600 text-sm mb-4 leading-relaxed flex-1">
                 {post.excerpt}
               </p>
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-500">{post.date}</span>
-                <a
-                  href={`/blog/${post.slug}`}
-                  class="text-blue-500 hover:text-blue-600 font-semibold text-sm flex items-center gap-1"
-                >
-                  Read More
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                <span class="text-xs text-gray-500 font-medium">{post.date}</span>
+                <Button variant="ghost" size="sm" href={`/blog/${post.slug}`}>
+                  Read More →
+                </Button>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Popular Topics Section -->
+  <Section background="white" spacing="xl" id="topics">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Popular Topics
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Explore our most-read content organized by topic
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {popularTopics.map((topic) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="text-5xl">{topic.icon}</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-2">
+                  <Heading as="h3" size="xl">
+                    {topic.title}
+                  </Heading>
+                  <Badge variant="info" size="sm">{topic.posts} articles</Badge>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  {topic.description}
+                </p>
+                <Button variant="ghost" size="sm" href={`/blog?topic=${topic.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                  Browse Articles →
+                </Button>
               </div>
             </div>
           </Card>
@@ -151,33 +274,45 @@ const blogPosts = [
   </Section>
 
   <!-- Newsletter Signup -->
-  <Section background="gradient" spacing="lg">
-    <Container size="md">
-      <div class="text-center text-white">
-        <Heading as="h2" size="3xl" className="mb-4">
-          Get Profit-Focused Tips Weekly
-        </Heading>
-        <p class="text-blue-100 mb-8">
-          Join 5,000+ marketers getting actionable Google Ads strategies every week.
-        </p>
-        <form class="flex gap-3 max-w-lg mx-auto">
-          <input
-            type="email"
-            placeholder="your@email.com"
-            class="flex-1 px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-white"
-            required
-          />
-          <button
-            type="submit"
-            class="px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors whitespace-nowrap"
-          >
-            Subscribe
-          </button>
-        </form>
-        <p class="text-xs text-blue-200 mt-4">
-          No spam. Unsubscribe anytime.
-        </p>
-      </div>
+  <Section background="gray" spacing="xl">
+    <Container>
+      <Card variant="bordered" className="overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-50 to-blue-50 p-12 text-center">
+          <div class="max-w-2xl mx-auto">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <Heading as="h2" size="3xl" className="mb-4">
+              Get Profit-Focused Tips Weekly
+            </Heading>
+            <p class="text-lg text-gray-700 mb-8">
+              Join 10,000+ marketers getting actionable Google Ads strategies every week. No fluff, no spam—just tactics that improve ROI.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                class="flex-1 px-5 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all"
+                required
+              />
+              <button
+                type="submit"
+                class="px-8 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="text-sm text-gray-600 mt-4">
+              No spam. Unsubscribe anytime. We respect your inbox.
+            </p>
+          </div>
+        </div>
+      </Card>
     </Container>
   </Section>
+
+  <!-- CTA Section -->
+  <CTASection client:visible />
 </BaseLayout>

@@ -6,323 +6,275 @@ import { Heading } from '../components/ui/Heading';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
+import { QualificationForm } from '../components/forms/QualificationForm';
 
-const plans = [
+const stats = [
+  { value: '90', label: 'Days to Predictable CAC' },
+  { value: '200', suffix: '+', label: 'Active Clients' },
+  { value: '247', suffix: '%', label: 'Average ROI' },
+  { value: '$47M', suffix: '+', label: 'Revenue Managed' },
+];
+
+const auditIncludes = [
   {
-    name: 'Growth',
-    price: '2,500',
-    description: 'Complete AI training process for growing businesses',
-    recommended: false,
-    adSpend: 'Up to $20K/month',
-    features: [
-      { name: 'CRM integration & sales tracking', included: true },
-      { name: 'Consolidated campaign structure', included: true },
-      { name: 'Smart bidding implementation', included: true },
-      { name: 'Search & Display campaigns', included: true },
-      { name: 'Shopping campaigns', included: false },
-      { name: 'Performance Max', included: false },
-      { name: 'Complete tracking audit', included: true },
-      { name: 'Monthly strategy sessions', included: true, detail: '1 per month' },
-      { name: 'Performance reporting', included: true, detail: 'Monthly' },
-      { name: 'Learning period management', included: true },
-      { name: 'Dedicated account manager', included: false },
-      { name: 'Landing page optimization', included: false },
-      { name: 'Advanced expansion testing', included: false },
-      { name: 'Custom dashboard', included: false },
-    ],
+    title: 'AI Readiness Assessment',
+    description: 'We analyze whether your tracking, campaign structure, and data volume are ready for AI training—or what needs to be fixed first.',
+    icon: '🔍',
   },
   {
-    name: 'Scale',
-    price: '4,500',
-    description: 'Full AI training with advanced optimization and support',
-    recommended: true,
-    adSpend: 'Up to $50K/month',
-    features: [
-      { name: 'CRM integration & sales tracking', included: true },
-      { name: 'Consolidated campaign structure', included: true },
-      { name: 'Smart bidding implementation', included: true },
-      { name: 'Search & Display campaigns', included: true },
-      { name: 'Shopping campaigns', included: true },
-      { name: 'Performance Max', included: true },
-      { name: 'Complete tracking audit', included: true },
-      { name: 'Monthly strategy sessions', included: true, detail: '2 per month' },
-      { name: 'Performance reporting', included: true, detail: 'Weekly' },
-      { name: 'Learning period management', included: true },
-      { name: 'Dedicated account manager', included: true },
-      { name: 'Landing page optimization', included: true },
-      { name: 'Advanced expansion testing', included: true },
-      { name: 'Custom dashboard', included: true },
-    ],
+    title: 'Custom 90-Day Roadmap',
+    description: 'Based on your business model, we build a week-by-week plan showing exactly how we\'d train Google\'s AI for your specific goals.',
+    icon: '🗺️',
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'White-glove AI training for high-growth companies',
-    recommended: false,
-    adSpend: 'Unlimited',
-    features: [
-      { name: 'CRM integration & sales tracking', included: true },
-      { name: 'Consolidated campaign structure', included: true },
-      { name: 'Smart bidding implementation', included: true },
-      { name: 'Search & Display campaigns', included: true },
-      { name: 'Shopping campaigns', included: true },
-      { name: 'Performance Max', included: true },
-      { name: 'Complete tracking audit', included: true },
-      { name: 'Monthly strategy sessions', included: true, detail: 'Weekly' },
-      { name: 'Performance reporting', included: true, detail: 'Real-time' },
-      { name: 'Learning period management', included: true },
-      { name: 'Dedicated account manager', included: true },
-      { name: 'Landing page optimization', included: true },
-      { name: 'Advanced expansion testing', included: true },
-      { name: 'Custom dashboard', included: true, detail: 'Priority' },
-    ],
+    title: 'Budget Waste Identification',
+    description: 'We identify where your current spend is being wasted and show you the exact changes needed to feed Google\'s AI better data.',
+    icon: '💰',
+  },
+  {
+    title: 'Honest Recommendation',
+    description: 'If AI training won\'t work for your business yet, we\'ll tell you exactly what needs to change first. No sales pressure—just honest analysis.',
+    icon: '✅',
+  },
+];
+
+const whyNoListing = [
+  {
+    reason: 'Every Business Is Different',
+    explanation: 'A SaaS company tracking SQLs needs different campaign structure than an e-commerce store tracking revenue. Your CRM integration, data volume, and business goals determine the right approach.',
+  },
+  {
+    reason: 'Your Current Setup Matters',
+    explanation: 'If your tracking is broken or you have 50 fragmented campaigns, we need to fix the foundation first. If your setup is solid, we can start AI training immediately. The scope varies.',
+  },
+  {
+    reason: 'AI Training Isn\'t One-Size-Fits-All',
+    explanation: 'Some businesses need full CRM integration, others just need better tracking. Some can start smart bidding in Week 7, others need 12 weeks of learning. We customize based on your reality.',
   },
 ];
 
 const faqs = [
   {
-    q: 'Do you charge a percentage of ad spend?',
-    a: 'No. We charge flat monthly rates based on your ad spend tier. This aligns our incentives—we succeed when you get predictable customer acquisition costs, not when you spend more. Our pricing encourages efficiency, not waste.',
+    q: 'Why don\'t you list pricing on your website?',
+    a: 'Because every business is different. A SaaS company with broken tracking needs foundational work before AI training. An e-commerce store with solid data can start immediately. We need to understand your specific situation before proposing the right solution and investment.',
   },
   {
-    q: 'What if I spend less than the tier maximum?',
-    a: 'No problem. The tiers are maximums, not minimums. If you spend $10K/month, the Growth plan ($2,500/mo) works perfectly. You only move to the next tier if you want to scale beyond that tier\'s ad spend maximum.',
+    q: 'What happens after the free audit?',
+    a: 'We\'ll show you exactly what needs to happen: the timeline, what we\'d fix, how we\'d train Google\'s AI for your business, and the investment required. Then you decide if it makes sense. No pressure, no tricks—just honest analysis.',
   },
   {
-    q: 'Is there a setup fee?',
-    a: 'No. Your first month includes complete onboarding: CRM integration, tracking audit, campaign setup, and Phase 1 of the AI training process. Everything needed to start is included in the monthly rate.',
+    q: 'Do you work with all business sizes?',
+    a: 'We work with businesses spending $5K+/month on Google Ads. Below that, AI training doesn\'t have enough conversion volume to learn effectively. If you\'re below that threshold, we\'ll tell you what to focus on first (usually tracking and campaign consolidation).',
   },
   {
-    q: 'Can I cancel before 90 days?',
-    a: 'Yes, but we don\'t recommend it. The AI training process takes the full 90 days to deliver predictable results. If you cancel early, you\'ve paid for setup and learning without seeing the payoff. That said, month-to-month means you can cancel anytime—we just won\'t have completed the training process.',
+    q: 'How much does AI training typically cost?',
+    a: 'It depends on your ad spend, current setup quality, and business complexity. During your free audit, we\'ll show you the exact investment for your situation. We charge flat monthly rates (not percentages of ad spend), and every engagement includes our 90-day ROI guarantee.',
+  },
+  {
+    q: 'What if my account isn\'t ready for AI training?',
+    a: 'We\'ll tell you honestly. Some businesses need to fix tracking first, or consolidate campaigns, or reach minimum conversion volume. We\'d rather be upfront about what needs to happen than take your money before you\'re ready to succeed.',
+  },
+  {
+    q: 'Is there really no obligation?',
+    a: 'Really. The audit is genuinely free. We analyze your account, show you what we\'d do, and let you decide. If you don\'t want to work with us, you still get valuable insights about your account. No hard sell, no pressure.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Pricing - Transparent, No-BS Google Ads Management - ProfitSEM"
-  description="Flat-rate pricing for Google Ads management. No percentages, no hidden fees, no surprises."
+  title="Get Your Free Google Ads Audit - Custom AI Training Plan | GrowMyAds"
+  description="Every business is different. Get a custom 90-day AI training roadmap tailored to your business goals, tracking setup, and data volume. Free, no obligation."
 >
-  <!-- Hero -->
+  <!-- Hero Section -->
   <Section background="gradient" spacing="xl">
     <Container>
       <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Free Account Audit
+        </Badge>
         <Heading as="h1" size="6xl" className="mb-6">
-          AI Training for Your Google Ads Account
+          Every Business Is Different.
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Your Plan Should Be Too.
+          </span>
         </Heading>
-        <p class="text-xl text-blue-100 mb-4">
-          We train Google's AI to find your best customers. CRM integration, consolidated campaigns, smart bidding, and strategic patience over 90 days. Then you scale predictably.
+        <p class="text-xl text-blue-100 mb-4 max-w-3xl mx-auto">
+          We don't list pricing because we don't believe in one-size-fits-all solutions. Instead, we analyze your account, understand your goals, and build a custom 90-day AI training roadmap for your specific business.
         </p>
         <p class="text-lg text-blue-200 mb-8">
-          Flat monthly rates. No percentage of ad spend. No hidden fees.
+          Start with a free audit. No obligation. No sales pressure. Just honest analysis.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-6 text-sm">
           <div class="flex items-center gap-2">
             <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span>90-day AI training process</span>
+            <span>Takes 3 minutes to request</span>
           </div>
           <div class="flex items-center gap-2">
             <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span>Full refund if no ROI improvement</span>
+            <span>Custom roadmap in 48 hours</span>
           </div>
           <div class="flex items-center gap-2">
             <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span>Cancel anytime after 90 days</span>
+            <span>Completely free, no strings attached</span>
           </div>
         </div>
       </div>
     </Container>
   </Section>
 
-  <!-- Pricing Cards -->
-  <Section background="white" spacing="xl">
+  <!-- Stats Section -->
+  <Section background="white" spacing="lg">
     <Container>
-      <div class="grid lg:grid-cols-3 gap-8 mb-12">
-        {plans.map((plan) => (
-          <Card
-            variant="bordered"
-            padding="none"
-            className={`overflow-hidden ${plan.recommended ? 'ring-2 ring-blue-500 relative' : ''}`}
-          >
-            {plan.recommended && (
-              <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                <Badge variant="info" size="md" className="shadow-lg">
-                  Most Popular
-                </Badge>
-              </div>
-            )}
-
-            <div class={`p-8 ${plan.recommended ? 'bg-gradient-to-br from-blue-50 to-blue-100' : 'bg-gray-50'}`}>
-              <Heading as="h2" size="2xl" className="mb-2">
-                {plan.name}
-              </Heading>
-              <p class="text-gray-600 text-sm mb-6">{plan.description}</p>
-
-              <div class="mb-6">
-                {plan.price === 'Custom' ? (
-                  <div class="text-4xl font-bold text-gray-900">Custom</div>
-                ) : (
-                  <div class="flex items-baseline gap-1">
-                    <span class="text-gray-600 text-lg">$</span>
-                    <span class="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span class="text-gray-600">/month</span>
-                  </div>
-                )}
-                <p class="text-sm text-gray-600 mt-2">{plan.adSpend} ad spend</p>
-              </div>
-
-              <Button
-                variant={plan.recommended ? 'primary' : 'ghost'}
-                size="lg"
-                fullWidth
-                href={plan.price === 'Custom' ? '/contact' : '/free-analysis'}
-              >
-                {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
-              </Button>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.value}{stat.suffix}
             </div>
-
-            <div class="p-8">
-              <p class="text-sm font-semibold text-gray-900 mb-4">What's included:</p>
-              <ul class="space-y-3">
-                {plan.features.map((feature) => (
-                  <li class="flex items-start gap-3">
-                    {feature.included ? (
-                      <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                      </svg>
-                    ) : (
-                      <svg class="w-5 h-5 text-gray-300 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                      </svg>
-                    )}
-                    <span class={`text-sm ${feature.included ? 'text-gray-700' : 'text-gray-400'}`}>
-                      {feature.name}
-                      {feature.detail && (
-                        <span class="text-xs text-gray-500 ml-1">({feature.detail})</span>
-                      )}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Card>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
         ))}
       </div>
-
-      {/* Guarantee */}
-      <div class="bg-gradient-to-r from-blue-50 to-emerald-50 border-2 border-blue-200 rounded-xl p-8 text-center max-w-4xl mx-auto">
-        <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <Heading as="h3" size="2xl" className="mb-4">
-          90-Day Money-Back Guarantee
-        </Heading>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-4">
-          If we don't improve your ROI within 90 days, you get a full refund of our management fees. No fine print. No questions asked.
-        </p>
-        <p class="text-base text-gray-600 max-w-2xl mx-auto">
-          We can make this guarantee because the AI training process works when done properly. The 90-day timeline isn't arbitrary—it's exactly how long Google's AI needs to learn your customer patterns and deliver predictable results.
-        </p>
-      </div>
     </Container>
   </Section>
 
-  <!-- Comparison Table -->
+  <!-- Why No Pricing Section -->
   <Section background="gray" spacing="xl">
     <Container>
       <div class="text-center mb-12">
         <Heading as="h2" size="4xl" className="mb-4">
-          Detailed Feature Comparison
+          Why We Don't List Pricing
         </Heading>
-        <p class="text-xl text-gray-600">
-          See exactly what you get with each plan
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Because your business deserves a plan built for your specific goals, not a cookie-cutter package
         </p>
       </div>
 
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="w-full">
-            <thead class="bg-gray-50 border-b-2 border-gray-200">
-              <tr>
-                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Growth</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900 bg-blue-50">Scale</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Enterprise</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              {plans[0].features.map((feature, idx) => (
-                <tr class="hover:bg-gray-50">
-                  <td class="px-6 py-4 text-sm text-gray-700">{feature.name}</td>
-                  {plans.map((plan, planIdx) => (
-                    <td class={`px-6 py-4 text-center ${planIdx === 1 ? 'bg-blue-50' : ''}`}>
-                      {plan.features[idx].included ? (
-                        <div class="flex flex-col items-center gap-1">
-                          <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                          </svg>
-                          {plan.features[idx].detail && (
-                            <span class="text-xs text-gray-500">{plan.features[idx].detail}</span>
-                          )}
-                        </div>
-                      ) : (
-                        <svg class="w-5 h-5 text-gray-300 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                        </svg>
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        {whyNoListing.map((item) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <Heading as="h3" size="xl" className="mb-3 text-emerald-600">
+              {item.reason}
+            </Heading>
+            <p class="text-gray-700 leading-relaxed">
+              {item.explanation}
+            </p>
+          </Card>
+        ))}
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-8 max-w-4xl mx-auto">
+        <p class="text-lg text-blue-900 leading-relaxed">
+          <strong>Here's the truth:</strong> We could list generic pricing tiers, but that wouldn't serve you. A business with broken tracking needs different work than one with solid data. We'd rather spend 30 minutes understanding your account and give you an honest, customized plan than sell you a package that doesn't fit.
+        </p>
       </div>
     </Container>
   </Section>
 
-  <!-- FAQs -->
-  <Section background="white" spacing="lg">
-    <Container size="lg">
+  <!-- What's Included Section -->
+  <Section background="white" spacing="xl">
+    <Container>
       <div class="text-center mb-12">
-        <Heading as="h2" size="3xl" className="mb-4">
-          Pricing FAQs
+        <Heading as="h2" size="4xl" className="mb-4">
+          What's Included in Your Free Audit
         </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We analyze your account and build a custom plan—completely free
+        </p>
       </div>
 
-      <div class="max-w-3xl mx-auto space-y-6">
-        {faqs.map((faq) => (
-          <div class="bg-gray-50 rounded-lg p-6">
-            <h3 class="font-semibold text-lg text-gray-900 mb-2">{faq.q}</h3>
-            <p class="text-gray-700">{faq.a}</p>
-          </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {auditIncludes.map((item) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="text-4xl">{item.icon}</div>
+              <div class="flex-1">
+                <Heading as="h3" size="xl" className="mb-3">
+                  {item.title}
+                </Heading>
+                <p class="text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          </Card>
         ))}
       </div>
     </Container>
   </Section>
 
-  <!-- CTA -->
-  <Section background="gradient" spacing="lg">
-    <Container>
-      <div class="max-w-3xl mx-auto text-center text-white">
-        <Heading as="h2" size="4xl" className="mb-6">
-          Ready to Turn Ads Into Profit?
+  <!-- Form Section -->
+  <Section background="gradient" spacing="xl">
+    <Container size="lg">
+      <div class="text-center mb-12 text-white">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Get Your Custom AI Training Plan
         </Heading>
-        <p class="text-xl text-blue-100 mb-8">
-          Get a custom profit analysis and see exactly how we'll grow your revenue
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+          Tell us about your business and we'll analyze your account within 48 hours
         </p>
-        <Button variant="secondary" size="lg" href="/free-analysis">
-          Get Free Profit Analysis
-        </Button>
       </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <QualificationForm client:load />
+      </div>
+
+      <p class="text-sm text-blue-200 text-center mt-6">
+        No credit card required • 48-hour turnaround • Completely free
+      </p>
+    </Container>
+  </Section>
+
+  <!-- FAQs -->
+  <Section background="white" spacing="xl">
+    <Container size="lg">
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Common Questions
+        </Heading>
+        <p class="text-xl text-gray-600">
+          Everything you need to know about our audit process
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">{faq.q}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.a}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Final CTA -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <Card variant="bordered" className="overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-50 to-blue-50 p-12 text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <Heading as="h3" size="3xl" className="mb-4">
+            Ready to See Your Custom Plan?
+          </Heading>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Get a free audit and custom 90-day AI training roadmap for your business. No generic packages. No sales pressure. Just honest analysis of what your account needs.
+          </p>
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Your Free Audit →
+          </Button>
+        </div>
+      </Card>
     </Container>
   </Section>
 </BaseLayout>

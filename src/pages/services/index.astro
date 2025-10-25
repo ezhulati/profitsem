@@ -13,7 +13,6 @@ const services = [
     slug: 'google-ads',
     title: 'Complete AI Training Program',
     description: 'Full 90-day process: CRM integration, consolidated campaigns, smart bidding implementation, and strategic patience. Train Google\'s AI to find your best customers, then scale predictably.',
-    price: 'Starting at $2,500/mo',
     features: [
       'CRM integration (Google learns from real customers, not clicks)',
       'Consolidated campaign structure (concentrated data beats fragmentation)',
@@ -29,8 +28,7 @@ const services = [
   {
     slug: 'audit',
     title: 'AI Readiness Assessment',
-    description: 'Is your account ready for AI training? We analyze tracking quality, campaign structure, and identify what\'s blocking Google\'s AI from learning efficiently.',
-    price: 'Free ($497 value)',
+    description: 'Is your account ready for AI training? We analyze tracking quality, campaign structure, and identify what\'s blocking Google\'s AI from learning efficiently. Completely free.',
     features: [
       'Conversion tracking quality audit (is Google seeing real customers?)',
       'Campaign structure review (fragmentation vs consolidation)',
@@ -47,7 +45,6 @@ const services = [
     slug: 'conversion-tracking',
     title: 'CRM Integration & Tracking Foundation',
     description: 'Google\'s AI needs quality data to learn. We connect your CRM (Shopify, HubSpot, etc.) so Google sees which clicks become actual customers, not just form fills.',
-    price: '$997 one-time',
     features: [
       'CRM integration (Shopify, HubSpot, Salesforce, custom APIs)',
       'Offline conversion import setup',
@@ -64,7 +61,6 @@ const services = [
     slug: 'landing-pages',
     title: 'Conversion-Optimized Landing Pages',
     description: 'High-converting landing pages that pre-qualify visitors and feed Google\'s AI better data. Fast load times, clear CTAs, mobile-optimized.',
-    price: '$1,997 per page',
     features: [
       'Conversion-first design (not just pretty—effective)',
       'Mobile optimization (most traffic is mobile)',
@@ -182,9 +178,6 @@ const process = [
                 <Badge variant={service.badgeVariant} size="md">
                   {service.badge}
                 </Badge>
-                <div class="text-right">
-                  <div class="text-2xl font-bold text-gray-900">{service.price}</div>
-                </div>
               </div>
 
               <Heading as="h3" size="2xl" className="mb-3">
@@ -210,8 +203,8 @@ const process = [
                 <div class="text-sm font-semibold text-emerald-600">
                   {service.results}
                 </div>
-                <Button variant="primary" size="md" href={`/services/${service.slug}`}>
-                  Learn More →
+                <Button variant="primary" size="md" href={service.slug === 'audit' ? '/free-analysis' : '/pricing'}>
+                  {service.slug === 'audit' ? 'Start Free Audit →' : 'Get Custom Quote →'}
                 </Button>
               </div>
             </div>

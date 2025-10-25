@@ -3,41 +3,318 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Container } from '../components/layout/Container';
 import { Section } from '../components/layout/Section';
 import { Heading } from '../components/ui/Heading';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { Button } from '../components/ui/Button';
 import { ContactForm } from '../components/forms/ContactForm';
+
+const stats = [
+  { value: '<24', label: 'Hour Response Time' },
+  { value: '200', suffix: '+', label: 'Active Clients' },
+  { value: '5', label: 'Days a Week Support' },
+  { value: '100', suffix: '%', label: 'Transparent Communication' },
+];
+
+const contactMethods = [
+  {
+    title: 'Email Us',
+    description: 'Send us an email and we\'ll respond within 24 hours during business days.',
+    detail: 'hello@profitsem.com',
+    icon: '📧',
+    link: 'mailto:hello@profitsem.com',
+  },
+  {
+    title: 'Schedule a Call',
+    description: 'Book a 30-minute strategy call to discuss your Google Ads goals.',
+    detail: 'Free consultation',
+    icon: '📅',
+    link: '/free-analysis',
+  },
+  {
+    title: 'Office Hours',
+    description: 'We\'re available Monday through Friday to answer your questions.',
+    detail: '9AM - 6PM EST',
+    icon: '🕐',
+    link: null,
+  },
+];
+
+const whatHappensNext = [
+  {
+    step: '1',
+    title: 'We Review Your Message',
+    description: 'Our team reads every submission within 24 hours and assesses how we can help.',
+    icon: '📋',
+  },
+  {
+    step: '2',
+    title: 'Initial Response',
+    description: 'We send a personalized reply with next steps, usually a quick intro call or account audit.',
+    icon: '💬',
+  },
+  {
+    step: '3',
+    title: 'Free Account Analysis',
+    description: 'If you\'re interested, we audit your Google Ads account and identify opportunities (no strings attached).',
+    icon: '🔍',
+  },
+  {
+    step: '4',
+    title: 'Custom Proposal',
+    description: 'We present a 90-day AI training roadmap specific to your business goals and ad spend.',
+    icon: '🎯',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How quickly will I get a response?',
+    a: 'We respond to all inquiries within 24 hours during business days (Monday-Friday). Urgent requests may get faster replies.',
+  },
+  {
+    q: 'Do I need to be spending a certain amount on ads?',
+    a: 'No minimum ad spend required to contact us. However, our AI training process works best with at least $5K/month in ad spend. We\'ll be honest if your budget isn\'t a fit yet.',
+  },
+  {
+    q: 'Will you try to sell me something?',
+    a: 'We\'ll have a conversation about your goals and challenges. If we can help, we\'ll explain how. If we can\'t, we\'ll tell you that too and point you in the right direction.',
+  },
+  {
+    q: 'What information should I include in my message?',
+    a: 'The more context the better: current ad spend, main challenges, what you\'ve tried, and your goals. But don\'t stress—we can figure it out on a call.',
+  },
+];
 ---
 
 <BaseLayout
   title="Contact Us - Get in Touch - ProfitSEM"
   description="Contact ProfitSEM for Google Ads management, PPC audits, or any questions. We respond within 24 hours."
 >
-  <!-- Hero -->
-  <Section background="gradient" spacing="lg">
+  <!-- Hero Section -->
+  <Section background="gradient" spacing="xl">
     <Container>
-      <div class="max-w-3xl mx-auto text-center text-white">
-        <Heading as="h1" size="5xl" className="mb-6">
-          Let's Talk About Your Google Ads
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Get In Touch
+        </Badge>
+        <Heading as="h1" size="6xl" className="mb-6">
+          Let's Talk About
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Your Google Ads
+          </span>
         </Heading>
-        <p class="text-xl text-blue-100">
-          Have questions? Need help with your campaigns? We're here to help.
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Have questions about AI training for Google Ads? Want to discuss your campaigns? We're here to help. No sales pressure, just honest advice.
         </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="#contact-form">
+            Send Us a Message
+          </Button>
+          <Button variant="secondary" size="lg" href="/free-analysis">
+            Book Free Analysis
+          </Button>
+        </div>
       </div>
     </Container>
   </Section>
 
-  <!-- Contact Form -->
-  <Section background="white" spacing="xl">
-    <Container size="md">
-      <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
-        <div class="max-w-2xl mx-auto">
-          <Heading as="h2" size="2xl" className="mb-4 text-center">
-            Send Us a Message
-          </Heading>
-          <p class="text-gray-600 text-center mb-8">
-            Fill out the form below and we'll respond within 24 hours.
-          </p>
-          <ContactForm client:load />
+  <!-- Stats Section -->
+  <Section background="white" spacing="lg">
+    <Container>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.value}{stat.suffix}
+            </div>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Contact Methods Section -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          How to Reach Us
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Choose the method that works best for you
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {contactMethods.map((method) => (
+          <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+            <div class="text-5xl mb-4">{method.icon}</div>
+            <Heading as="h3" size="xl" className="mb-3">
+              {method.title}
+            </Heading>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              {method.description}
+            </p>
+            <div class="mb-4">
+              <Badge variant="info" size="md">
+                {method.detail}
+              </Badge>
+            </div>
+            {method.link && (
+              <Button variant="ghost" size="sm" href={method.link}>
+                {method.title.includes('Email') ? 'Send Email' : method.title.includes('Schedule') ? 'Book Now' : 'Learn More'} →
+              </Button>
+            )}
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Contact Form Section -->
+  <Section background="white" spacing="xl" id="contact-form">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Send Us a Message
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Fill out the form below and we'll respond within 24 hours
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        {/* Left Sidebar - Contact Info */}
+        <div class="lg:col-span-1">
+          <Card className="p-6 bg-gradient-to-br from-emerald-50 to-blue-50 border-2 border-emerald-200">
+            <Heading as="h3" size="xl" className="mb-6">
+              Why Contact Us?
+            </Heading>
+            <div class="space-y-4">
+              {[
+                'Free Google Ads account audit',
+                'Honest assessment of your situation',
+                'No-pressure consultation',
+                'Custom 90-day AI training roadmap',
+                'Expert guidance from day one',
+              ].map((item) => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700 text-sm leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-emerald-300">
+              <p class="text-sm text-gray-600 mb-4 font-semibold">Prefer to talk?</p>
+              <Button variant="primary" size="md" fullWidth href="/free-analysis">
+                Book Free Call →
+              </Button>
+            </div>
+          </Card>
+        </div>
+
+        {/* Right Side - Form */}
+        <div class="lg:col-span-2">
+          <Card className="p-8">
+            <ContactForm client:load />
+          </Card>
         </div>
       </div>
+    </Container>
+  </Section>
+
+  <!-- What Happens Next Section -->
+  <Section background="gray" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          What Happens After You Contact Us?
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Here's our simple, transparent process
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whatHappensNext.map((phase, index) => (
+          <div class="text-center relative">
+            {index < whatHappensNext.length - 1 && (
+              <div class="hidden lg:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-emerald-500 to-transparent"></div>
+            )}
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg relative z-10">
+              {phase.step}
+            </div>
+            <div class="text-4xl mb-3">{phase.icon}</div>
+            <Heading as="h3" size="xl" className="mb-3">
+              {phase.title}
+            </Heading>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {phase.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <Card className="inline-block p-6 bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200">
+          <p class="text-gray-700 font-semibold">
+            Average time from first contact to starting AI training: <span class="text-emerald-600">7-10 days</span>
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- FAQs Section -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Contact Questions Answered
+        </Heading>
+        <p class="text-xl text-gray-600">
+          Common questions about reaching out
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        {faqs.map((faq) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <h3 class="font-semibold text-lg text-gray-900 mb-3">{faq.q}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.a}</p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Trust Section -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <Card variant="bordered" className="overflow-hidden">
+        <div class="bg-gradient-to-r from-emerald-50 to-blue-50 p-12 text-center">
+          <div class="max-w-2xl mx-auto">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <Heading as="h3" size="3xl" className="mb-4">
+              No Pressure, Just Honest Conversation
+            </Heading>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+              We know reaching out to an agency can feel like opening the floodgates to aggressive sales tactics. That's not us. We'll have a real conversation about your business, and if we're not the right fit, we'll tell you—and suggest alternatives.
+            </p>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Trusted by 200+ businesses managing $47M+ in ad spend.
+            </p>
+          </div>
+        </div>
+      </Card>
     </Container>
   </Section>
 </BaseLayout>

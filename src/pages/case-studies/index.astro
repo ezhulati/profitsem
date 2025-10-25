@@ -58,33 +58,113 @@ const caseStudies = [
     ],
   },
 ];
+
+const aggregateStats = [
+  { value: '247', suffix: '%', label: 'Average ROAS Increase' },
+  { value: '60', suffix: '-90', label: 'Days to Results' },
+  { prefix: '$', value: '47M', suffix: '+', label: 'Revenue Managed' },
+  { value: '200', suffix: '+', label: 'Success Stories' },
+];
+
+const methodology = [
+  {
+    title: 'CRM Integration First',
+    description: 'We connected their CRM so Google\'s AI could learn from actual customers and revenue, not just clicks and form fills.',
+    icon: '🔗',
+  },
+  {
+    title: 'Consolidated Campaign Structure',
+    description: 'We rebuilt fragmented campaigns into consolidated structures that feed AI concentrated conversion data for faster learning.',
+    icon: '🎯',
+  },
+  {
+    title: 'Smart Bidding Implementation',
+    description: 'After sufficient data volume, we activated AI-powered bidding strategies that optimize for actual business outcomes.',
+    icon: '🤖',
+  },
+  {
+    title: 'Strategic Patience',
+    description: 'We guided clients through the 60-90 day learning period without constant changes that reset AI progress.',
+    icon: '⏱️',
+  },
+];
+
+const industries = [
+  'E-commerce',
+  'SaaS',
+  'B2B Services',
+  'Home Services',
+  'Finance',
+  'Health & Wellness',
+  'Education',
+  'Legal',
+];
 ---
 
 <BaseLayout
   title="Case Studies - Real Results from Real Businesses - ProfitSEM"
   description="See how we've helped e-commerce, SaaS, and service businesses turn Google Ads into profit machines."
 >
-  <!-- Hero -->
+  <!-- Hero Section -->
   <Section background="gradient" spacing="xl">
     <Container>
       <div class="max-w-4xl mx-auto text-center text-white">
+        <Badge variant="success" size="lg" className="mb-6">
+          Proven Results
+        </Badge>
         <Heading as="h1" size="6xl" className="mb-6">
-          Real Results, Real Businesses
+          Real Results from
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+            Real Businesses
+          </span>
         </Heading>
-        <p class="text-xl text-blue-100 mb-8">
+        <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
           See how we trained Google's AI to find high-value customers for e-commerce, SaaS, and service-based businesses. Quality data, consolidated campaigns, and strategic patience delivered predictable results in 60-90 days.
         </p>
-        <p class="text-sm text-blue-200">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/free-analysis">
+            Get Your Free Analysis →
+          </Button>
+          <Button variant="secondary" size="lg" href="#case-studies">
+            View Success Stories
+          </Button>
+        </div>
+        <p class="text-sm text-blue-200 mt-6">
           * All results verified and from actual client accounts. Individual results may vary.
         </p>
       </div>
     </Container>
   </Section>
 
-  <!-- Case Studies Grid -->
-  <Section background="white" spacing="xl">
+  <!-- Aggregate Stats Section -->
+  <Section background="white" spacing="lg">
     <Container>
-      <div class="space-y-12">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        {aggregateStats.map((stat) => (
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              {stat.prefix}{stat.value}{stat.suffix}
+            </div>
+            <div class="text-gray-600 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Case Studies Grid -->
+  <Section background="gray" spacing="xl" id="case-studies">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Success Stories
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          See the specific strategies and results that transformed these businesses
+        </p>
+      </div>
+
+      <div class="space-y-8">
         {caseStudies.map((study, index) => (
           <Card variant="bordered" padding="none" className="overflow-hidden hover:shadow-xl transition-shadow">
             <div class="grid lg:grid-cols-5 gap-0">
@@ -99,13 +179,13 @@ const caseStudies = [
                     {study.logo}
                   </div>
 
-                  <Heading as="h2" size="2xl" className="mb-3">
+                  <Heading as="h2" size="3xl" className="mb-4">
                     {study.company}
                   </Heading>
 
                   <div class="mb-6">
-                    <p class="text-sm text-white/80 mb-2">Challenge:</p>
-                    <p class="text-white/90">{study.challenge}</p>
+                    <p class="text-sm text-white/80 mb-2 font-semibold">The Challenge:</p>
+                    <p class="text-white/95 leading-relaxed">{study.challenge}</p>
                   </div>
                 </div>
 
@@ -125,16 +205,16 @@ const caseStudies = [
               </div>
 
               {/* Right Side - Metrics */}
-              <div class="lg:col-span-3 p-8">
-                <Heading as="h3" size="xl" className="mb-6">
-                  Key Metrics
+              <div class="lg:col-span-3 p-8 bg-white">
+                <Heading as="h3" size="xl" className="mb-6 text-gray-900">
+                  Key Metrics Transformed
                 </Heading>
 
                 <div class="space-y-4 mb-8">
                   {study.metrics.map((metric) => (
                     <div class="flex items-center justify-between pb-4 border-b border-gray-200 last:border-0">
                       <div class="flex-1">
-                        <p class="text-sm font-medium text-gray-600 mb-1">{metric.label}</p>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">{metric.label}</p>
                         <div class="flex items-center gap-3">
                           <span class="text-gray-400 line-through text-sm">{metric.before}</span>
                           <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
@@ -153,7 +233,7 @@ const caseStudies = [
                 </div>
 
                 <Button variant="primary" size="md" href={`/case-studies/${study.slug}`}>
-                  Read Full Case Study
+                  Read Full Case Study →
                 </Button>
               </div>
             </div>
@@ -163,24 +243,110 @@ const caseStudies = [
     </Container>
   </Section>
 
-  <!-- Industries Served -->
-  <Section background="gray" spacing="lg">
+  <!-- Methodology Section -->
+  <Section background="white" spacing="xl">
     <Container>
-      <div class="text-center">
-        <Heading as="h2" size="3xl" className="mb-8">
-          Industries We've Helped Scale
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          How We Achieved These Results
         </Heading>
-        <div class="flex flex-wrap justify-center gap-4">
-          {['E-commerce', 'SaaS', 'B2B Services', 'Home Services', 'Finance', 'Health & Wellness', 'Education', 'Legal'].map((industry) => (
-            <div class="px-6 py-3 bg-white rounded-full border border-gray-200 text-gray-700 font-medium hover:border-blue-500 hover:shadow-md transition-all">
-              {industry}
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our AI training methodology is the same across all clients—what changes are the specific tactics
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {methodology.map((method) => (
+          <Card className="p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="text-4xl">{method.icon}</div>
+              <div class="flex-1">
+                <Heading as="h3" size="xl" className="mb-3">
+                  {method.title}
+                </Heading>
+                <p class="text-gray-600 leading-relaxed">
+                  {method.description}
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
+          </Card>
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <Button variant="primary" size="lg" href="/process">
+          See Our Complete 90-Day Process →
+        </Button>
       </div>
     </Container>
   </Section>
 
-  <!-- CTA -->
+  <!-- Industries Served -->
+  <Section background="gray" spacing="lg">
+    <Container>
+      <div class="text-center mb-8">
+        <Heading as="h2" size="3xl" className="mb-4">
+          Industries We've Helped Scale
+        </Heading>
+        <p class="text-gray-600">
+          We've successfully trained Google's AI across multiple verticals
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        {industries.map((industry) => (
+          <div class="px-6 py-3 bg-white rounded-full border-2 border-gray-200 text-gray-700 font-semibold hover:border-emerald-500 hover:text-emerald-600 hover:shadow-md transition-all cursor-pointer">
+            {industry}
+          </div>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Social Proof Section -->
+  <Section background="white" spacing="xl">
+    <Container>
+      <div class="text-center mb-12">
+        <Heading as="h2" size="4xl" className="mb-4">
+          Why Clients Choose ProfitSEM
+        </Heading>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We don't just manage campaigns—we train AI systems to find your best customers
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Transparent Reporting',
+            description: 'Every case study includes actual before/after metrics. We don\'t hide behind vanity metrics—we report what matters: ROAS, CAC, and revenue.',
+          },
+          {
+            title: 'AI Training Experts',
+            description: 'We\'ve trained Google\'s AI hundreds of times. We know how to feed it quality data, when to be patient, and when to scale.',
+          },
+          {
+            title: '90-Day Guarantee',
+            description: 'We\'re confident in our AI training process. If we don\'t improve your ROI within 90 days, you get a full refund.',
+          },
+        ].map((benefit) => (
+          <Card className="p-6 text-center">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <Heading as="h3" size="xl" className="mb-3">
+              {benefit.title}
+            </Heading>
+            <p class="text-gray-600">
+              {benefit.description}
+            </p>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
   <CTASection client:visible />
 </BaseLayout>
