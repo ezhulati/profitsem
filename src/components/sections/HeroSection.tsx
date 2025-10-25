@@ -33,12 +33,18 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="primary" size="lg" href="/process">
-                Show Me How This Works →
-              </Button>
-              <Button variant="secondary" size="lg" href="/free-analysis">
-                Assess My Account
-              </Button>
+              <a
+                href="/process"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-lg hover:shadow-xl magnetic-hover"
+              >
+                Learn About Our Process →
+              </a>
+              <a
+                href="/free-analysis"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white text-navy-900 hover:bg-gray-100 active:bg-gray-200 shadow-lg hover:shadow-xl magnetic-hover"
+              >
+                Get Free Analysis
+              </a>
             </div>
 
             {/* Specific Trust Indicators */}
