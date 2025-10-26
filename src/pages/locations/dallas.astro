@@ -10,51 +10,61 @@ const state = 'Texas';
 const stateAbbr = 'TX';
 
 const stats = {
-  clients: '72+',
-  roi: '291%',
-  revenue: '$2.6M',
+  clients: '78+',
+  roi: '285%',
+  revenue: '$2.8M',
   rating: '4.9/5'
 };
 
 const industries = [
+  'E-commerce & Retail',
   'SaaS & Technology',
   'Financial Services',
-  'Real Estate & Property Development',
+  'Legal & Professional Services',
   'Healthcare & Medical',
-  'E-commerce & Retail',
-  'Professional Services'
+  'Real Estate'
 ];
 ---
 
 <BaseLayout
-  title={`Google Ads Management ${city}, ${stateAbbr} - ProfitSEM`}
-  description={`Top-rated Google Ads agency in ${city}. Profit-focused PPC management for ${city} businesses. 90-day guarantee. No contracts.`}
+  title={`Google Ads for ${city} Businesses - AI-First Approach | GrowMyAds`}
+  description={`We rebuild ${city} accounts for AI-powered search. Train Google's AI to find your best customers, then scale predictably in 90 days.`}
 >
   <!-- Hero -->
   <section class="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white py-20">
     <Container>
       <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Google Ads Management in {city}
+          Google Ads for {city} Businesses
         </h1>
         <p class="text-xl md:text-2xl text-blue-100 mb-10">
-          Turn Google Ads into profit for your {city} business.<br class="hidden sm:block" />
-          <strong>90-day guarantee.</strong> No contracts.
+          We rebuild {city} accounts for AI-powered search—then help you scale predictably in 90 days.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/free-analysis"
-            class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl"
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg hover:shadow-xl"
           >
-            Get Free Analysis →
+            Get Your Free Audit
           </a>
           <a
-            href="/contact"
+            href="/process"
             class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white/10 hover:bg-white/20 text-white border border-white/30"
           >
-            Contact Us
+            How It Works →
           </a>
         </div>
+        <div class="mt-6 max-w-md mx-auto">
+          <div class="flex items-center justify-center gap-2 text-sm text-yellow-400">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-semibold">Limited availability in October</span>
+          </div>
+        </div>
+      </div>
+          For established {city} businesses investing in growth
+        </p>
       </div>
     </Container>
   </section>
@@ -91,7 +101,7 @@ const industries = [
           Why {city} Businesses Choose Us
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          We understand the {city} market and deliver results in 90 days—or you get a full refund.
+          Most {city} agencies are still using 2019 tactics. We've rebuilt our approach for AI-powered search.
         </p>
       </div>
 
@@ -99,52 +109,52 @@ const industries = [
         <!-- Benefit 1 -->
         <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Deep {city} Market Knowledge</h3>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">AI-First Methodology</h3>
           <p class="text-gray-700 leading-relaxed">
-            We understand {city}'s competitive landscape—from Uptown to Plano—and what actually converts in the DFW metroplex. Our strategies account for the regional business culture and high-growth tech scene.
+            We train Google's AI with high-quality conversion data (real sales, not form fills), then let it find {city} customers automatically—not manually tweak bids daily.
           </p>
         </div>
 
         <!-- Benefit 2 -->
         <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Flat-Rate Pricing</h3>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Built for 2025 Search</h3>
           <p class="text-gray-700 leading-relaxed">
-            Unlike typical {city} agencies that charge 15-20% of ad spend, we use flat-rate pricing. Our incentives align with yours—profit, not spend.
+            Google search is now conversational and intent-driven. We optimize for AI-powered search behavior, not outdated keyword-matching tactics.
           </p>
         </div>
 
         <!-- Benefit 3 -->
         <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Local Support Team</h3>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">90-Day Transition</h3>
           <p class="text-gray-700 leading-relaxed">
-            {city} clients get dedicated account managers in {stateAbbr} time zone. No offshore support. No 24-hour delays. We're here when you need us.
+            We rebuild your {city} account for AI search in 90 days: data quality → smart bidding → broad match expansion → predictable scaling.
           </p>
         </div>
 
         <!-- Benefit 4 -->
         <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">90-Day Guarantee</h3>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Education-Focused</h3>
           <p class="text-gray-700 leading-relaxed">
-            We improve your Google Ads ROI within 90 days or you get a full refund. That's our promise to every {city} business we work with.
+            We teach you why Google's AI works this way, so you understand the strategy. No black box—you'll know exactly what we're doing and why.
           </p>
         </div>
       </div>
@@ -186,16 +196,16 @@ const industries = [
           </div>
 
           <blockquote class="text-xl text-navy-900 mb-6 font-medium leading-relaxed">
-            "Our B2B SaaS company in {city} was burning through ad spend with no pipeline to show for it. ProfitSEM rebuilt our campaigns around sales-qualified leads. CAC down 62%, pipeline up 340%. Finally, Google Ads that actually work."
+            "Running a fintech startup in {city} means every dollar counts. ProfitSEM cut our CAC by 58% while scaling us from $80K to $340K monthly revenue. Best investment we've made."
           </blockquote>
 
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-              AL
+              DR
             </div>
             <div>
-              <p class="font-semibold text-navy-900">Amanda Lee</p>
-              <p class="text-sm text-gray-600">VP Marketing, {city} SaaS Inc.</p>
+              <p class="font-semibold text-navy-900">David Roth</p>
+              <p class="text-sm text-gray-600">CEO, {city} FinTech</p>
             </div>
           </div>
         </div>
@@ -208,40 +218,64 @@ const industries = [
     <Container size="lg">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-          Our {city} Google Ads Process
+          How We Transition {city} Accounts to AI Search
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          A proven 12-week system that turns Google Ads from a cost center into your #1 profit driver.
+          Our 5-phase framework trains Google's AI to find your best {city} customers—then scales predictably in 90 days.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <!-- Phase 1 -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-2 border-blue-200">
-          <div class="text-blue-600 font-bold text-sm mb-2">WEEKS 1-2</div>
-          <h3 class="text-2xl font-bold text-navy-900 mb-4">{city} Market Analysis</h3>
-          <p class="text-gray-700 leading-relaxed">
-            We analyze your {city} competitors, DFW regional search trends, and target audience behavior to build a profit-focused strategy tailored to the sprawling metroplex market.
+        <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-blue-200">
+          <div class="text-blue-600 font-bold text-sm mb-2">PHASE 1</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Data Quality</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            Set up enhanced conversions, offline tracking, and CRM integration. Google's AI needs real sales data, not just form fills.
           </p>
         </div>
 
         <!-- Phase 2 -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-2 border-emerald-200">
-          <div class="text-emerald-600 font-bold text-sm mb-2">WEEKS 3-4</div>
-          <h3 class="text-2xl font-bold text-navy-900 mb-4">Campaign Launch</h3>
-          <p class="text-gray-700 leading-relaxed">
-            We build conversion-optimized campaigns targeting high-intent {city} searchers ready to buy. Our geo-targeting accounts for neighborhood-level differences across the metroplex.
+        <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-emerald-200">
+          <div class="text-emerald-600 font-bold text-sm mb-2">PHASE 2</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Conversion Volume</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            Reach 30+ conversions/month to enable AI learning. Resist daily changes that reset the algorithm's progress.
           </p>
         </div>
 
         <!-- Phase 3 -->
-        <div class="bg-white rounded-xl p-8 shadow-sm border-2 border-yellow-200">
-          <div class="text-yellow-600 font-bold text-sm mb-2">WEEKS 5-12</div>
-          <h3 class="text-2xl font-bold text-navy-900 mb-4">Optimize & Scale</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Weekly optimization based on performance data. We double down on what works and cut what doesn't. Speed matters in {city}'s competitive market.
+        <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-purple-200">
+          <div class="text-purple-600 font-bold text-sm mb-2">PHASE 3</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Smart Bidding</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            Transition to Target CPA/ROAS and let Google's AI optimize automatically instead of manual bid tweaking.
           </p>
         </div>
+
+        <!-- Phase 4 -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-orange-200">
+          <div class="text-orange-600 font-bold text-sm mb-2">PHASE 4</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Broad Match Expansion</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            Layer broad match keywords with smart bidding to capture intent-based {city} searches you'd never target manually.
+          </p>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-yellow-200">
+          <div class="text-yellow-600 font-bold text-sm mb-2">PHASE 5</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Scaling</h3>
+          <p class="text-gray-700 leading-relaxed text-sm">
+            Add new campaign types and move up the funnel. Scale intelligently based on AI insights, not guesswork.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-700 font-medium max-w-2xl mx-auto">
+          This is the same framework we've used to transition 100+ accounts to AI-first strategy. It works because it aligns with how Google's algorithm actually learns.
+        </p>
       </div>
     </Container>
   </section>
@@ -251,27 +285,35 @@ const industries = [
     <Container>
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">
-          Ready to Grow Your {city} Business?
+          Is Your {city} Account Ready for AI Search?
         </h2>
         <p class="text-xl text-blue-100 mb-10">
-          Get a free profit analysis. We'll audit your current setup (or help you start from scratch) and show you exactly how we'll improve your ROI in the {city} market.
+          Get a free AI readiness audit. We'll show you if your account is built for 2025 search—and your exact transition roadmap if it's not.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/free-analysis"
-            class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl"
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg hover:shadow-xl"
           >
-            Get Free Analysis →
+            Get Your Free Audit →
           </a>
           <a
-            href="/pricing"
+            href="/process"
             class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white/10 hover:bg-white/20 text-white border border-white/30"
           >
-            View Pricing
+            See Our Process
           </a>
         </div>
-        <p class="text-sm text-gray-400 mt-6">
-          No long-term contracts • Flat-rate pricing • 90-day guarantee
+        <div class="mt-6 max-w-md mx-auto">
+          <div class="flex items-center justify-center gap-2 text-sm text-yellow-400">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-semibold">Limited availability in October</span>
+          </div>
+        </div>
+      </div>
+          Limited availability in October
         </p>
       </div>
     </Container>

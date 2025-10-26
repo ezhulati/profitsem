@@ -25,11 +25,11 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="lg:col-span-2 text-center lg:text-left">
             <Heading as="h1" size="6xl" align="left" className="mb-6">
-              Spending $10k+/Month<br/>But <span className="gradient-text">Stuck at a Ceiling?</span>
+              Google's AI Can Find<br/>Your <span className="gradient-text">Best Customers</span>
             </Heading>
 
             <p className="text-2xl sm:text-3xl text-gray-300 mb-8 max-w-2xl font-medium">
-              We fix accounts that stopped scaling—then build you a predictable customer acquisition machine in 90 days.
+              But only if you train it right. We rebuild accounts for AI-powered search—then help you scale predictably in 90 days.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12 relative z-20">
@@ -43,24 +43,23 @@ export function HeroSection() {
                 href="/process"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 bg-white/10 text-white hover:bg-white/20 active:bg-white/30 border-2 border-white/20 shadow-lg hover:shadow-xl magnetic-hover relative z-20"
               >
-                How We Do It →
+                How It Works →
               </a>
             </div>
 
             {/* Specific Trust Indicators */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col gap-3 text-sm">
+              <div className="flex items-center gap-2 text-gray-400">
                 <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>For accounts spending $10k-$100k+/month</span>
+                <span>100+ accounts transitioned to AI-first strategy</span>
               </div>
-              <span className="hidden sm:inline text-gray-600">•</span>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              <div className="flex items-center gap-2 text-yellow-400">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                <span>Avg. client ROI: 247%</span>
+                <span className="font-semibold">Limited availability in October</span>
               </div>
             </div>
           </div>
