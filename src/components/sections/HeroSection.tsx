@@ -28,7 +28,7 @@ export function HeroSection() {
               Google's AI Can Find<br/>Your <span className="gradient-text">Best Customers</span>
             </Heading>
 
-            <p className="text-2xl sm:text-3xl text-gray-300 mb-8 max-w-2xl font-medium">
+            <p className="text-left text-2xl sm:text-3xl text-gray-300 mb-8 max-w-2xl font-medium">
               But only if you train it right. We rebuild accounts for AI-powered search—then help you scale predictably in 90 days.
             </p>
 
