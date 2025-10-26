@@ -25,7 +25,7 @@ add_env_var() {
 
     for env in "${envs[@]}"; do
         echo "Adding $name to $env..."
-        echo "$value" | vercel env add "$name" "$env" 2>&1 | grep -v "Vercel CLI" || true
+        printf "%s" "$value" | vercel env add "$name" "$env" 2>&1 | grep -v "Vercel CLI" || true
     done
 }
 
