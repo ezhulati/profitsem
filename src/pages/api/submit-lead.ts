@@ -1,20 +1,82 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { createLead } from '../../lib/api/airtable';
 
 /**
  * Lead submission API endpoint
  *
- * Receives form data, validates it, and sends email notifications via Resend
+ * Receives form data, validates it, saves to Airtable, and sends email notifications
  * Returns success/error response
  */
 
 // Ensure this route is server-rendered, not prerendered
 export const prerender = false;
 
+/**
+ * Map form values to Airtable select options
+ */
+function mapAdSpendToAirtable(value: string): string {
+  const mapping: { [key: string]: string } = {
+    '0-1k': '$0 - $5,000',
+    '1k-3k': '$5,000 - $15,000',
+    '3k-5k': '$5,000 - $15,000',
+    '5k-10k': '$5,000 - $15,000',
+    '10k-20k': '$15,000 - $50,000',
+    '20k-50k': '$15,000 - $50,000',
+    '50k+': '$50,000+',
+  };
+  return mapping[value] || 'Not currently advertising';
+}
+
+function mapRevenueToAirtable(value: string): string {
+  const mapping: { [key: string]: string } = {
+    '0-10k': 'Under $100,000',
+    '10k-50k': 'Under $100,000',
+    '50k-100k': '$100,000 - $500,000',
+    '100k-250k': '$100,000 - $500,000',
+    '250k-500k': '$500,000 - $2,000,000',
+    '500k+': '$2,000,000 - $10,000,000',
+  };
+  return mapping[value] || 'Under $100,000';
+}
+
+function mapTimelineToAirtable(value: string): string {
+  const mapping: { [key: string]: string } = {
+    'asap': 'Immediate (Next 30 days)',
+    'within-month': 'Immediate (Next 30 days)',
+    '1-3-months': '1-3 months',
+    '3-6-months': '3-6 months',
+    'just-researching': 'Just exploring options',
+  };
+  return mapping[value] || 'Just exploring options';
+}
+
+function mapDecisionMakerToAirtable(value: string): string {
+  const mapping: { [key: string]: string } = {
+    'final-decision': 'Yes',
+    'shared-decision': 'Shared decision',
+    'recommender': 'No',
+    'influencer': 'No',
+  };
+  return mapping[value] || 'No';
+}
+
+function mapGoalToAirtable(value: string): string {
+  const mapping: { [key: string]: string } = {
+    'roi': 'Improve ROAS/ROI',
+    'sales': 'Scale profitable campaigns',
+    'leads': 'Fix underperforming campaigns',
+    'traffic': 'Enter new markets',
+    'brand-awareness': 'Explore Google Ads potential',
+  };
+  return mapping[value] || 'Explore Google Ads potential';
+}
+
 interface LeadSubmission {
   fullName: string;
   email: string;
   company: string;
+  website?: string;
   phone: string;
   monthlyAdSpend: string;
   monthlyRevenue: string;
@@ -75,6 +137,41 @@ export const POST: APIRoute = async ({ request }) => {
           headers: { 'Content-Type': 'application/json' },
         }
       );
+    }
+
+    // Save to Airtable
+    let airtableRecordId: string | null = null;
+    try {
+      // Split fullName into firstName and lastName
+      const nameParts = data.fullName.trim().split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ') || '';
+
+      airtableRecordId = await createLead({
+        firstName,
+        lastName,
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+        website: data.website || '',
+        monthlyAdSpend: mapAdSpendToAirtable(data.monthlyAdSpend),
+        monthlyRevenue: mapRevenueToAirtable(data.monthlyRevenue),
+        timeline: mapTimelineToAirtable(data.timeline),
+        isDecisionMaker: mapDecisionMakerToAirtable(data.decisionMaker),
+        primaryGoals: [mapGoalToAirtable(data.primaryGoal)], // Array for multiple select
+        currentChallenges: data.currentChallenges,
+        currentlyRunningAds: data.previousAgency ? 'Yes' : 'No',
+        leadScore: data.score,
+        leadType: data.category,
+        submittedAt: data.submittedAt,
+        source: 'Qualification Form',
+        status: 'new',
+      });
+
+      console.log('✅ Lead saved to Airtable:', airtableRecordId);
+    } catch (airtableError) {
+      console.error('❌ Failed to save to Airtable:', airtableError);
+      // Don't fail the request if Airtable fails - continue with email
     }
 
     // Initialize Resend
@@ -169,6 +266,7 @@ export const POST: APIRoute = async ({ request }) => {
       company: data.company,
       score: data.score,
       category: data.category,
+      airtableId: airtableRecordId,
       timestamp: data.submittedAt,
     });
 
@@ -178,6 +276,7 @@ export const POST: APIRoute = async ({ request }) => {
         success: true,
         category: data.category,
         score: data.score,
+        airtableId: airtableRecordId,
         message: 'Lead submitted successfully',
       }),
       {

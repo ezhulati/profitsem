@@ -11,6 +11,10 @@ export interface ButtonProps extends Omit<ComponentPropsWithoutRef<'button'>, 'h
   isLoading?: boolean;
   /** URL to navigate to (renders as <a> tag) */
   href?: string;
+  /** Target attribute for links (only used when href is provided) */
+  target?: string;
+  /** Rel attribute for links (only used when href is provided) */
+  rel?: string;
 }
 
 /**

@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { Input, TextArea, Select } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { Heading } from '../ui/Heading';
@@ -45,6 +45,8 @@ interface FieldErrors {
  */
 
 export function QualificationForm() {
+  const formRef = useRef<HTMLDivElement>(null);
+
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
@@ -169,13 +171,15 @@ export function QualificationForm() {
   const handleNext = () => {
     if (validateStep(currentStep)) {
       setCurrentStep(currentStep + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Scroll to form, not top of page
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   const handleBack = () => {
     setCurrentStep(currentStep - 1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to form, not top of page
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -234,7 +238,7 @@ export function QualificationForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div ref={formRef} className="max-w-2xl mx-auto">
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">

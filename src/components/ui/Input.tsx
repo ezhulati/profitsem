@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react';
 
-export interface InputProps extends ComponentPropsWithoutRef<'input'> {
+export interface InputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'size'> {
   /** Input label */
   label?: string;
   /** Error message to display */
@@ -26,7 +26,7 @@ export interface TextAreaProps extends ComponentPropsWithoutRef<'textarea'> {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export interface SelectProps extends ComponentPropsWithoutRef<'select'> {
+export interface SelectProps extends Omit<ComponentPropsWithoutRef<'select'>, 'size'> {
   /** Select label */
   label?: string;
   /** Error message to display */
