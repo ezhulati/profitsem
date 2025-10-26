@@ -10,65 +10,74 @@ import { QualificationForm } from '../components/forms/QualificationForm';
   description="Google search is now AI-powered. Is your account optimized for it? Get a free audit to see if you're ready for AI-driven search and your exact transition roadmap."
 >
   <Section background="gray" spacing="xl">
-    <Container size="lg">
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 border border-yellow-300 rounded-full mb-6">
-          <svg class="w-4 h-4 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-          </svg>
-          <span class="text-yellow-900 text-sm font-semibold">
-            Limited Availability in October
-          </span>
-        </div>
+    <Container size="xl">
+      {/* Two-column layout: Content left, Form right */}
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Is Your Account Built for<br/>AI-Powered Search?
-        </h1>
-        <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto mb-8">
-          Google fundamentally changed how search works in 2024-2025. If your account is still optimized for keyword-based search, you're working against the algorithm.
-        </p>
+        {/* Left Column - Content */}
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 border border-yellow-300 rounded-full mb-6">
+            <svg class="w-4 h-4 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-yellow-900 text-sm font-semibold">
+              Limited Availability in October
+            </span>
+          </div>
 
-        <div class="max-w-2xl mx-auto bg-gradient-to-br from-navy-50 to-blue-50 border-2 border-blue-200 rounded-xl p-8">
-          <p class="font-bold text-navy-950 mb-4 text-lg">Your AI Readiness Audit includes:</p>
-          <div class="space-y-3 text-left">
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="text-gray-800 font-medium"><strong>Data Quality Assessment:</strong> Is your conversion tracking feeding Google the signals it needs to train its AI? (Most accounts track the wrong things)</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="text-gray-800 font-medium"><strong>Structure Analysis:</strong> Is your account consolidated for AI learning or fragmented using 2019 keyword segmentation tactics?</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="text-gray-800 font-medium"><strong>AI Training Roadmap:</strong> Your exact path from current state to AI-optimized: data quality → conversion volume → smart bidding → broad match → scale</span>
+          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Is Your Account Built for AI-Powered Search?
+          </h1>
+
+          <p class="text-xl text-gray-700 mb-8">
+            Google fundamentally changed how search works in 2024-2025. If your account is still optimized for keyword-based search, you're working against the algorithm.
+          </p>
+
+          <div class="bg-gradient-to-br from-navy-50 to-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-6">
+            <p class="font-bold text-navy-950 mb-4">Your AI Readiness Audit includes:</p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-800 text-sm"><strong>Data Quality Assessment:</strong> Is your conversion tracking feeding Google the signals it needs to train its AI?</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-800 text-sm"><strong>Structure Analysis:</strong> Is your account consolidated for AI learning or fragmented using 2019 tactics?</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-800 text-sm"><strong>AI Training Roadmap:</strong> Your exact path from current state to AI-optimized</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <p class="text-sm text-gray-500 mt-8">Answer 10 questions below → Schedule 30-min strategy call → Get your AI transition roadmap</p>
-
-        <div class="mt-8 max-w-2xl mx-auto">
-          <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+          <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg mb-6">
             <p class="text-sm text-gray-800 leading-relaxed">
               <strong class="text-blue-900">Note:</strong> This audit helps us both determine if we're a good fit. Not every business is ready for the AI transition—and that's okay. We'll be honest about whether we can help.
             </p>
           </div>
+
+          <p class="text-sm text-gray-500">
+            Answer 10 questions → Schedule 30-min strategy call → Get your AI transition roadmap
+          </p>
+        </div>
+
+        {/* Right Column - Form (above the fold) */}
+        <div class="lg:sticky lg:top-8">
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <QualificationForm client:load />
+          </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-        <QualificationForm client:load />
-      </div>
-
       {/* Trust Badges */}
-      <div class="mt-12 text-center">
+      <div class="mt-16 text-center">
         <p class="text-sm text-gray-600 mb-4 font-medium">100+ accounts transitioned to AI-first strategy</p>
         <div class="flex items-center justify-center gap-6 sm:gap-8 text-sm">
           <div class="text-gray-600 font-semibold">Google Partner</div>

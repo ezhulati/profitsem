@@ -79,13 +79,6 @@ export function ProblemSection() {
                     </p>
                   </div>
 
-                  {/* Divider */}
-                  <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      {item.iconSvg}
-                    </div>
-                  </div>
-
                   {/* New Way */}
                   <div className="text-center md:text-left">
                     <div className="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-2 flex items-center justify-center md:justify-start gap-2">
